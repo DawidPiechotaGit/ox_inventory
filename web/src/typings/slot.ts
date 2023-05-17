@@ -19,5 +19,4 @@ export type SlotWithItem = Slot & {
   ingredients?: { [key: string]: number };
   duration?: number;
   image?: string;
-  grade?: number | number[];
 };

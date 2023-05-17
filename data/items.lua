@@ -764,7 +764,7 @@ return {
 
 	['dirtyrag'] = {
         consume = 0.0,
-        label = 'Dirty Ol' Rag',
+        label = 'Dirty Ol Rag',
         weight = 200,
         stack = true,
         description = 'Gross, but probably fine.',

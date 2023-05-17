@@ -6,47 +6,10 @@ import { Items } from '../store/items';
 import { imagepath } from '../store/imagepath';
 import { fetchNui } from '../utils/fetchNui';
 
-export const canPurchaseItem = (item: Slot, inventory: Inventory) => {
-  if (inventory.type !== 'shop' || !isSlotWithItem(item)) return true;
+export const isShopStockEmpty = (itemCount: number | undefined, inventoryType: string) => {
+  if (inventoryType === 'shop' && itemCount !== undefined && itemCount === 0) return true;
 
-  if (item.count !== undefined && item.count === 0) return false;
-
-  if (item.grade === undefined || !inventory.groups) return true;
-
-  const leftInventory = store.getState().inventory.leftInventory;
-
-  // Shop requires groups but player has none
-  if (!leftInventory.groups) return false;
-
-  const reqGroups = Object.keys(inventory.groups);
-
-  if (Array.isArray(item.grade)) {
-    for (let i = 0; i < reqGroups.length; i++) {
-      const reqGroup = reqGroups[i];
-
-      if (leftInventory.groups[reqGroup] !== undefined) {
-        const playerGrade = leftInventory.groups[reqGroup];
-        for (let j = 0; j < item.grade.length; j++) {
-          const reqGrade = item.grade[j];
-
-          if (playerGrade === reqGrade) return true;
-        }
-      }
-    }
-
-    return false;
-  } else {
-    for (let i = 0; i < reqGroups.length; i++) {
-      const reqGroup = reqGroups[i];
-      if (leftInventory.groups[reqGroup] !== undefined) {
-        const playerGrade = leftInventory.groups[reqGroup];
-
-        if (playerGrade >= item.grade) return true;
-      }
-    }
-
-    return false;
-  }
+  return false;
 };
 
 // I hate this
@@ -134,31 +97,24 @@ export const getItemData = async (itemName: string) => {
   const resp: ItemData | null = await fetchNui('getItemData', itemName);
 
   if (resp?.name) {
-    Items[itemName] = resp;
-    return resp;
+    Items[itemName] = resp
+    return resp
   }
 };
 
-export const getItemUrl = (item: string | SlotWithItem) => {
-  const isObj = typeof item === 'object';
+export const getItemUrl = (item: SlotWithItem) => {
+  const metadata = item.metadata;
 
-  if (isObj) {
-    if (!item.name) return;
+  // @todo validate urls and support webp
+  if (metadata?.imageurl) return `url(${metadata.imageurl})`;
+  if (metadata?.image) return `url(${imagepath}/${metadata.image}.png)`;
 
-    const metadata = item.metadata;
+  const itemData = Items[item.name];
 
-    // @todo validate urls and support webp
-    if (metadata?.imageurl) return `${metadata.imageurl}`;
-    if (metadata?.image) return `${imagepath}/${metadata.image}.png`;
-  }
-
-  const itemName = isObj ? item.name as string : item;
-  const itemData = Items[itemName];
-
-  if (!itemData) return `${imagepath}/${itemName}.png`;
+  if (!itemData) return `url(${imagepath}/${item.name}.png)`;
   if (itemData.image) return itemData.image;
 
-  itemData.image = `${imagepath}/${itemName}.png`;
+  itemData.image = `url(${imagepath}/${item.name}.png)`;
 
   return itemData.image;
 };
