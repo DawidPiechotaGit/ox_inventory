@@ -175,13 +175,13 @@ end
 
 if shared.target then
 	local ox_target = GetResourceState('ox_target'):find('start')
-	local qtarget = GetResourceState('qtarget'):find('start')
+	local qtarget = GetResourceState('qb-target'):find('start')
 
 	if not ox_target and not qtarget then
 		shared.target = false
 		warn('targeting resource is not loaded - it should start before ox_inventory')
 	else
-		shared.target = ox_target and 'ox_target' or 'qtarget'
+		shared.target = ox_target and 'ox_target' or 'qb-target'
 	end
 end
 

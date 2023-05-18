@@ -19,7 +19,7 @@ function Inventory.OpenDumpster(entity)
 end
 
 if shared.target then
-	exports.qtarget:AddTargetModel(Inventory.Dumpsters, {
+	exports['qb-target']:AddTargetModel(Inventory.Dumpsters, {
 		options = {
 			{
 				icon = 'fas fa-dumpster',
@@ -239,8 +239,8 @@ Inventory.Evidence = setmetatable(data('evidence'), {
 			if client.hasGroup(shared.police) then
 				if shared.target then
 					if evidence.target then
-						exports.qtarget:RemoveZone(evidence.target.name)
-						exports.qtarget:AddBoxZone(evidence.target.name, evidence.target.loc, evidence.target.length or 0.5, evidence.target.width or 0.5,
+						exports['qb-target']:RemoveZone(evidence.target.name)
+						exports['qb-target']:AddBoxZone(evidence.target.name, evidence.target.loc, evidence.target.length or 0.5, evidence.target.width or 0.5,
 						{
 							name = evidence.target.name,
 							heading = evidence.target.heading or 0.0,
@@ -292,8 +292,8 @@ Inventory.Stashes = setmetatable(data('stashes'), {
 			if not stash.groups or client.hasGroup(stash.groups) then
 				if shared.target then
 					if stash.target then
-						exports.qtarget:RemoveZone(stash.name)
-						exports.qtarget:AddBoxZone(stash.name, stash.target.loc, stash.target.length or 0.5, stash.target.width or 0.5,
+						exports['qb-target']:RemoveZone(stash.name)
+						exports['qb-target']:AddBoxZone(stash.name, stash.target.loc, stash.target.length or 0.5, stash.target.width or 0.5,
 						{
 							name = stash.name,
 							heading = stash.target.heading or 0.0,

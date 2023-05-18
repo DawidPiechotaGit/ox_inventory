@@ -1,5 +1,5 @@
 $mainColor: #161a1dd0;
-$textColor: #c1c4c58f;
+$textColor: #ffffff;
 $mainFont: Roboto;
 $customFont: Rajdhani;
 
@@ -10,7 +10,7 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 $gridCols: 5;
 $gridRows: 5;
 $gridSize: 10.2vh;
-$gridGap: 2px;
+$gridGap: 3px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
 body {
@@ -236,17 +236,17 @@ button:active {
 
 // inventory slots
 .inventory-slot {
-  background-color: $seconaryColor;
+  background-color: #1a1f24d0;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 2.5%;
+  border-radius: 7%;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
   background-size: 7vh;
   color: $textColor;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: inset;
-  border-width: 1px;
+  border-color: #424f5cd0;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .inventory-slot-label-box {
@@ -261,19 +261,20 @@ button:active {
 }
 
 .inventory-slot-label-text {
-  text-transform: uppercase;
+  text-transform: capitalize;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 2px 3px;
-  font-weight: 400;
+  // font-weight: bold;
   font-family: $customFont;
   font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 .inventory-slot-number {
   background-color: transparent;
-  color: rgba(128, 128, 128, 0.466);
+  color: rgba(179, 179, 179, 0.658);
   height: 12px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;

@@ -18,9 +18,11 @@ const COLORS = {
   primaryColor: [231, 76, 60], // Red (Pomegranate)
   secondColor: [39, 174, 96], // Green (Nephritis)
   accentColor: [211, 84, 0], // Orange (Oragne)
-  primaryColor1: [11, 71, 84], // Red (Pomegranate)
+  // primaryColor1: [11, 71, 84], // Red (Pomegranate)
+  primaryColor1: [25, 171, 202], // Red (Pomegranate)
   secondColor1: [25, 171, 202], // Green (Nephritis)
-  accentColor1: [20, 130, 153], // Orange (Oragne)
+  // accentColor1: [20, 130, 153], // Orange (Oragne)
+  accentColor1: [25, 171, 202], // Orange (Oragne)
 };
 
 const WeightBar: React.FC<{ percent: number; durability?: boolean }> = ({ percent, durability }) => {
