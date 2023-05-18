@@ -1,6 +1,7 @@
-$mainColor: #22232c;
-$textColor: #c1c2c5;
+$mainColor: #161a1dd0;
+$textColor: #c1c4c58f;
 $mainFont: Roboto;
+$customFont: Rajdhani;
 
 $seconaryColor: rgba(12, 12, 12, 0.4);
 $secondaryColorLight: rgba(0, 0, 0, 0.5);
@@ -39,7 +40,7 @@ code {
 p {
   margin: 0;
   padding: 0;
-  font-family: $mainFont;
+  font-family: $customFont;
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -67,6 +68,7 @@ input[type='number']::-webkit-outer-spin-button {
 .MuiMenuItem-gutters {
   padding: 4px 16px !important;
   font-size: 16px !important;
+  font-family: $customFont !important;
 }
 
 .tooltip-description {
@@ -114,13 +116,20 @@ button:active {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    background-color: #161a1dd0;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .inventory-control-wrapper > img {
+    width: 150px;
   }
 
   .inventory-control-input {
     transition: 200ms;
     padding: 16px 8px;
     border-radius: 2.5%;
-    font-family: $mainFont;
+    font-family: $customFont;
     font-size: 16px;
     text-align: center;
     outline: none;
@@ -141,7 +150,7 @@ button:active {
     border-radius: 2.5%;
     border: none;
     text-transform: uppercase;
-    font-family: $mainFont;
+    font-family: $customFont;
     width: 100%;
     font-weight: 500;
     &:hover {
@@ -152,6 +161,7 @@ button:active {
 
 .useful-controls-dialog {
   font-size: 18px;
+  font-family: $customFont;
 }
 
 .useful-controls-content-wrapper {
@@ -201,6 +211,9 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: calc($gridGap * 2);
+  background-color: #161a1dd0;
+  padding: 15px;
+  border-radius: 5px;
 }
 .inventory-grid-header-wrapper {
   display: flex;
@@ -208,6 +221,7 @@ button:active {
   justify-content: space-between;
   p {
     font-size: 16px;
+    color: #ffffff;
   }
 }
 
@@ -236,14 +250,14 @@ button:active {
 }
 
 .inventory-slot-label-box {
-  background-color: $mainColor;
+  background-color: transparent;
   color: $textColor;
   text-align: center;
   border-bottom-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-top-style: inset;
-  border-top-width: 1px;
+  border-top-width: 0px;
 }
 
 .inventory-slot-label-text {
@@ -253,19 +267,19 @@ button:active {
   text-overflow: ellipsis;
   padding: 2px 3px;
   font-weight: 400;
-  font-family: $mainFont;
+  font-family: $customFont;
   font-size: 12px;
 }
 
 .inventory-slot-number {
-  background-color: white;
-  color: black;
+  background-color: transparent;
+  color: rgba(128, 128, 128, 0.466);
   height: 12px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
-  font-size: 12px;
-  font-family: $mainFont;
+  font-size: 20px;
+  font-family: $customFont;
 }
 
 .item-slot-wrapper {
@@ -328,7 +342,7 @@ button:active {
   background-color: $mainColor !important;
   min-width: 200px !important;
   color: $textColor !important;
-  font-family: $mainFont !important;
+  font-family: $customFont !important;
   border-radius: 4px !important;
   border-color: rgba(0, 0, 0, 0.2) !important;
   border-style: inset !important;
@@ -429,7 +443,7 @@ button:active {
   text-align: center;
   border-top-left-radius: 0.25vh;
   border-top-right-radius: 0.25vh;
-  font-family: $mainFont;
+  font-family: $customFont;
   p {
     font-size: 11px;
     padding: 2px;
@@ -444,7 +458,7 @@ button:active {
 }
 
 .durability-bar {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.199);
   height: 3px;
   overflow: hidden;
 }

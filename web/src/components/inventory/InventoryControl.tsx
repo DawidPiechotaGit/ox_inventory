@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Locale } from '../../store/locale';
 import { IconButton } from '@mui/material';
 import UsefulControls from './UsefulControls';
+import pulse from '../../../images/pulse.png';
 
 const InventoryControl: React.FC = () => {
   const itemAmount = useAppSelector(selectItemAmount);
@@ -43,6 +44,7 @@ const InventoryControl: React.FC = () => {
       <UsefulControls infoVisible={infoVisible} setInfoVisible={setInfoVisible} />
       <div className="inventory-control">
         <div className="inventory-control-wrapper">
+          <img src={pulse}></img>
           <input className="inventory-control-input" type="number" defaultValue={itemAmount} onChange={inputHandler} />
           <button className="inventory-control-button" ref={use}>
             {Locale.ui_use || 'Use'}
