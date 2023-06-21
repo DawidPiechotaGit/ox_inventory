@@ -56,13 +56,15 @@ end
 ---@param ped number
 ---@return boolean
 local function canOpenTarget(ped)
-	return IsPedFatallyInjured(ped)
-	or IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3)
+	return 
+	-- IsPedFatallyInjured(ped)
+	IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3)
 	or IsPedCuffed(ped)
 	or IsEntityPlayingAnim(ped, 'mp_arresting', 'idle', 3)
 	or IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_base', 3)
 	or IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_enter', 3)
 	or IsEntityPlayingAnim(ped, 'random@mugging3', 'handsup_standing_base', 3)
+	or IsEntityPlayingAnim(ped, 'combat@damage@writh', 'writhe_loop', 3)
 end
 
 local defaultInventory = {
@@ -336,9 +338,10 @@ lib.callback.register('ox_inventory:usingItem', function(data)
 			item.disable.combat = true
 		end
 
-		local success = (not item.usetime or lib.progressBar({
+		local success = (not item.usetime or lib.progressCircle({
 			duration = item.usetime,
 			label = item.label or locale('using', data.metadata.label or data.label),
+			position = 'bottom',
 			useWhileDead = item.useWhileDead,
 			canCancel = item.cancel,
 			disable = item.disable,
@@ -1812,4 +1815,41 @@ lib.callback.register('ox_inventory:getVehicleData', function(netid)
 	if entity then
 		return GetEntityModel(entity), GetVehicleClass(entity)
 	end
+end)
+
+RegisterCommand('weapondetails', function()	
+	if currentWeapon and client.hasGroup(shared.police) then	
+		local msg	
+		if currentWeapon.metadata.registered then 
+			--msg = ('Weapon Registered', currentWeapon.label, currentWeapon.metadata.serial, currentWeapon.metadata.registered)	
+			lib.notify({text = 'Weapon Registered  '..currentWeapon.label..' '..currentWeapon.metadata.serial..' '..currentWeapon.metadata.registered..'', duration = 8000})
+		else 
+			--msg = ('Weapon Not Registered', currentWeapon.label) 
+			lib.notify({text = 'Weapon Not Registered '..currentWeapon.label..'', duration = 8000})
+		end	
+			--lib.notify({text = msg, duration = 8000})	
+	end	
+end)
+
+RegisterCommand('slimjim', function()	
+	local ped = PlayerPedId()	
+	if client.hasGroup(shared.police) and IsPedInAnyVehicle(ped, false) then	
+		local slimjim = GetVehiclePedIsIn(ped, false)	
+		if lib.progressCircle({	
+			duration = 8000,	
+			position = 'bottom',	
+			useWhileDead = false,	
+			canCancel = true,	
+			disable = {	
+				car = true,	
+				move = true,	
+			},	
+		}) then 	
+			local vehicle = GetVehiclePedIsIn(ped, false)	
+			-- TriggerEvent('cd_garage:AddKeys', GetVehicleNumberPlateText(slimjim):gsub("^%s*(.-)%s*$", "%1"))	
+			lib.notify({text = 'You managed to start the vehicle', duration = 8000})	
+		else 	
+			lib.notify({text = 'You stopped trying...', duration = 8000})	
+		end	
+	end	
 end)

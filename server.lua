@@ -416,19 +416,19 @@ local function conversionScript()
 	conversionScript = func()
 end
 
-RegisterCommand('convertinventory', function(source, args)
-	if source ~= 0 then return warn('This command can only be executed with the server console.') end
-	if type(conversionScript) == 'function' then conversionScript() end
-	local arg = args[1]
+-- RegisterCommand('convertinventory', function(source, args)
+-- 	if source ~= 0 then return warn('This command can only be executed with the server console.') end
+-- 	if type(conversionScript) == 'function' then conversionScript() end
+-- 	local arg = args[1]
 
-	local convert = arg and conversionScript[arg]
+-- 	local convert = arg and conversionScript[arg]
 
-	if not convert then
-		return warn('Invalid conversion argument. Valid options: esx, esxproperty, qb, linden')
-	end
+-- 	if not convert then
+-- 		return warn('Invalid conversion argument. Valid options: esx, esxproperty, qb, linden')
+-- 	end
 
-	CreateThread(convert)
-end, true)
+-- 	CreateThread(convert)
+-- end, true)
 
 
 lib.addCommand({'additem', 'giveitem'}, {

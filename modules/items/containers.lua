@@ -63,4 +63,46 @@ setContainerProperties('pizzabox', {
 	whitelist = { 'pizza' }
 })
 
+setContainerProperties('cameraalbum', {
+	slots = 150,
+	maxWeight = 1000,
+	whitelist = { 'photo' }
+})
+
+setContainerProperties('tacobag', {
+	slots = 5,
+	maxWeight = 5000,
+	whitelist = { 'fishtaco', 'classictaco','burritotaco','taco','mexsalad','nachos','sprite','cola','photo','tequila','beer','quesadilla' }
+})
+
+setContainerProperties('bm_cup_holders', {
+	slots = 6,
+	maxWeight = 5000,
+	whitelist = { 'coffe', 'bmstrawtea','bmtea','taco','bmfrenchlatte','bmhotchoc','frapcc','iceoffee','frap' }
+})
+
+setContainerProperties('bm_dessert_box', {
+	slots = 5,
+	maxWeight = 5000,
+	whitelist = { 'cookies', 'croissant','glazeddonut','muffin2','creampie','bmcheesecake','bmchocstrawcake','bmchocstraw' }
+})
+
+setContainerProperties('sowjar', {
+	slots = 10,
+	maxWeight = 5000,
+	whitelist = { 'og_kush_joint', 'joint_stardawg','purple_haze_joint','banana_kush_joint','bud_stardawg','bud_bananakush','bud_purplehaze','bud_ogkush' }
+})
+
+setContainerProperties('hollowtaco', {
+	slots = 3,
+	maxWeight = 5000,
+	blacklist = { 'weapon_glock', 'weapon_glock20','weapon_bat','weapon_bats','weapon_flashlight','WEAPON_TASER','WEAPON_DP9','WEAPON_LTL','WEAPON_CERAMICPISTOL','WEAPON_BROWNING','weapon_dildo' }
+})
+
+setContainerProperties('wallet', {
+	slots = 5,
+	maxWeight = 3000,
+	whitelist = { 'id_card', 'driver_license', 'weaponlicense', 'money' }
+})
+
 return containers

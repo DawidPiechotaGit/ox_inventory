@@ -54,7 +54,7 @@ local function onEnterShop(point)
 		SetEntityInvincible(entity, true)
 		SetBlockingOfNonTemporaryEvents(entity, true)
 
-		exports['qb-target']:AddTargetEntity(entity, {
+		exports.qtarget:AddTargetEntity(entity, {
 			options = {
 				{
 					icon = point.icon or 'fas fa-shopping-basket',
@@ -81,7 +81,7 @@ local function onExitShop(point)
 
 	if not entity then return end
 
-	exports['qb-target']:RemoveTargetEntity(entity, point.label)
+	exports.qtarget:RemoveTargetEntity(entity, point.label)
 	Utils.DeleteEntity(entity)
 
 	point.entity = nil
@@ -96,7 +96,7 @@ local function wipeShops()
 		local shop = shops[i]
 
 		if shop.zoneId then
-			exports['qb-target']:RemoveZone(shop.zoneId)
+            pcall(exports.qtarget.RemoveZone, nil, shop.zoneId)
 		end
 
 		if shop.remove then
@@ -126,8 +126,8 @@ local function refreshShops()
 			if shop.model then
 				if not hasShopAccess(shop) then goto skipLoop end
 
-				exports['qb-target']:RemoveTargetModel(shop.model, label)
-				exports['qb-target']:AddTargetModel(shop.model, {
+				exports.qtarget:RemoveTargetModel(shop.model, label)
+				exports.qtarget:AddTargetModel(shop.model, {
 					options = {
 						{
 							icon = shop.icon or 'fas fa-shopping-basket',
@@ -175,7 +175,7 @@ local function refreshShops()
 							blip = blip and createBlip(blip, target.loc)
 						}
 
-						exports['qb-target']:AddBoxZone(shopid, target.loc, target.length or 0.5, target.width or 0.5, {
+						exports.qtarget:AddBoxZone(shopid, target.loc, target.length or 0.5, target.width or 0.5, {
 							name = shopid,
 							heading = target.heading or 0.0,
 							debugPoly = target.debug,

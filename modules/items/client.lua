@@ -56,6 +56,189 @@ Item('bandage', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		if data then
 			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_batman', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_camo', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_kitty', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_racecar', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_strawberry', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_mlp', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_unicorn', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_barbie', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_tmnt', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_power', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_teentitan', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_galaxy', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
+			lib.notify({ description = 'You feel better already' })
+		end
+	end)
+end)
+
+Item('bandaid_mustache', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			--TriggerEvent('mythic_hospital:client:RemoveBleed')
+            --TriggerEvent('mythic_hospital:client:ResetLimbs')
+			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
+			TriggerEvent('hospital:client:HealInjuries', 'full')
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -69,6 +252,19 @@ Item('armour', function(data, slot)
 				SetPedArmour(cache.ped, 100)
 			end
 		end)
+	end
+end)
+
+Item('harness', function(data, slot)
+	if IsPedInAnyVehicle(cache.ped, false) then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				TriggerEvent('seatbelt:client:UseHarness')
+				lib.notify({ description = 'Harness Clicked' })
+			end
+		end)
+	else
+		lib.notify({ description = 'You are not in a vehicle' })
 	end
 end)
 
@@ -88,16 +284,6 @@ Item('parachute', function(data, slot)
 				end
 			end
 		end)
-	end
-end)
-
-Item('phone', function(data, slot)
-	local success, result = pcall(function()
-		return exports.npwd:isPhoneVisible()
-	end)
-
-	if success then
-		exports.npwd:setPhoneVisible(not result)
 	end
 end)
 
@@ -146,6 +332,407 @@ Item('clothing', function(data, slot)
 			end
 		end
 	end)
+end)
+
+Item('xanax', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	-- if health < maxHealth then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				--TriggerEvent('mythic_hospital:client:RemoveBleed')
+               -- TriggerEvent('mythic_hospital:client:ResetLimbs')
+				TriggerServerEvent('hud:server:RelieveStress', 100)
+				TriggerServerEvent('evidence:server:SetDrugStatus', {drug = 'xanax'})
+				--SetEntityHealth(cache.ped, math.min(maxHealth, health + 30))
+				--ox_inventory:notify({text = 'These make you feel really good'})
+				lib.notify({ description = 'Your stress levels are lower...' })
+			end
+		end)
+	-- end
+end)
+
+Item('medkit', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	-- if health < maxHealth then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				--TriggerEvent('mythic_hospital:client:RemoveBleed')
+				--TriggerEvent('mythic_hospital:client:ResetLimbs')
+				TriggerEvent('hospital:client:HealInjuries', 'full')
+				SetEntityHealth(cache.ped, math.min(maxHealth, health + 100))
+				lib.notify({ description = 'You feel better already...' })
+			end
+		end)
+	-- end
+end)
+
+Item('ifak', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	-- if health < maxHealth then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				--TriggerEvent('mythic_hospital:client:RemoveBleed')
+				--TriggerEvent('mythic_hospital:client:ResetLimbs')
+				TriggerEvent('hospital:client:HealInjuries', 'full')
+				SetEntityHealth(cache.ped, math.min(maxHealth, health + 100))
+				lib.notify({ description = 'You feel better already...' })
+			end
+		end)
+	-- end
+end)
+
+Item('muffin', function(data, slot)
+	ox_inventory:useItem( data, function(data)
+		if data then
+			TriggerServerEvent('hud:server:RelieveStress', 50)
+			lib.notify({ description = 'You feel relaxed...' })
+		end
+	end)
+end)
+
+Item('ctfishtaco', function(data, slot)
+	ox_inventory:useItem( data, function(data)
+		if data then
+			TriggerEvent('poop:client:poop', 15000)
+		end
+	end)
+end)
+
+Item('ctburritotaco', function(data, slot)
+	ox_inventory:useItem( data, function(data)
+		if data then
+			TriggerEvent('poop:client:poop', 7000)
+		end
+	end)
+end)
+
+Item('bmtea', function(data, slot)
+	ox_inventory:useItem( data, function(data)
+		if data then
+			TriggerServerEvent('hud:server:RelieveStress', 50)
+			lib.notify({ description = 'You feel relaxed...' })
+		end
+	end)
+end)
+
+Item('topdress', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then 
+    	-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]
+	end
+
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Drawables",
+		index = slot.metadata,
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyKitDress", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('trousers', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+	  	-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]     
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Drawables",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyDress", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('shoes', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+		-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]    
+	end
+	
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Drawables",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyDress", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('chain', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+	  	-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]     
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Props",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyProps", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('watch', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+		-- Trigger your notify here
+   		-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]   
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Props",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyProps", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('hat', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+		-- Trigger your notify here
+   		-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]   
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Props",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyProps", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('glasses', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+		-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]      
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Props",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyProps", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('earaccess', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+		-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]      
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Props",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyProps", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+-- RECREATIONAL
+-- Item('cigar', function(data, slot) -- Will lightly damage heath on use
+-- 	local maxHealth = GetEntityMaxHealth(cache.ped)
+-- 	local health = GetEntityHealth(cache.ped)
+-- 	ox_inventory:useItem(data, function(data)
+-- 		if data then
+-- 			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health - maxHealth / 32)))
+-- 			lib.notify({ description = 'You take the hit like a champ' })
+-- 		end
+-- 	end)
+-- end)
+
+-- Item('cigarette', function(data, slot) -- Will lightly damage heath on use
+-- 	local maxHealth = GetEntityMaxHealth(cache.ped)
+-- 	local health = GetEntityHealth(cache.ped)
+-- 	ox_inventory:useItem(data, function(data)
+-- 		if data then
+-- 			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health - maxHealth / 64)))
+-- 			lib.notify({ description = 'You take the hit like a champ' })
+-- 		end
+-- 	end)
+-- end)
+
+Item('vape', function(data, slot) -- Will lightly damage heath on use
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	ox_inventory:useItem(data, function(data)
+		if data then
+			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health - maxHealth / 128)))
+			TriggerServerEvent('hud:server:RelieveStress', 20)
+			lib.notify({ description = 'You take the hit like a champ' })
+		end
+	end)
+end)
+
+Item('bodyarmor_1', function(data, slot) -- Adds 30% of body armor
+	if GetPedArmour(cache.ped) < 100 then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				SetPlayerMaxArmour(PlayerData.id, 100)
+				SetPedArmour(cache.ped, 30)
+			end
+		end)
+	end
+end)
+
+Item('bodyarmor_2', function(data, slot) -- Adds 60% of body armor
+	if GetPedArmour(cache.ped) < 100 then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				SetPlayerMaxArmour(PlayerData.id, 100)
+				SetPedArmour(cache.ped, 60)
+			end
+		end)
+	end
+end)
+
+Item('bodyarmor_3', function(data, slot) -- Adds 100% of body armor
+	if GetPedArmour(cache.ped) < 100 then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				SetPlayerMaxArmour(PlayerData.id, 100)
+				SetPedArmour(cache.ped, 100)
+			end
+		end)
+	end
+end)
+
+Item('yukoncigs', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            TriggerEvent('cigarettes:client:UseCigPack')
+        end
+    end)
+end)
+
+Item('cardiaquecigs', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            TriggerEvent('cigarettes:client:UseCigPack')
+        end
+    end)
+end)
+
+Item('redwoodcigs', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            TriggerEvent('cigarettes:client:UseCigPack')
+        end
+    end)
+end)
+
+-- TESTING CIG
+-- Item('redwoods', function(data, slot)
+--     ox_inventory:useItem(data, function(data)
+--         if data then
+--             TriggerServerEvent('invsup:server:item:smoke_cig', data, {indent=true})
+--         end
+--     end)
+-- end)
+
+Item('photo', function(data, slot)
+    TriggerEvent('wert-camera:client:use-photo', slot.metadata.photourl)
+end)
+
+Item('camera', function(data, slot)
+    TriggerEvent("wert-camera:client:use-camera")
 end)
 
 -----------------------------------------------------------------------------------------------

@@ -42,6 +42,12 @@ return {
 			ammoname = 'ammo-rifle'
 		},
 
+		['WEAPON_SHOE'] = {
+			label = 'Shoe',
+			weight = 150,
+			throwable = true,
+		},
+		
 		['WEAPON_BALL'] = {
 			label = 'Ball',
 			weight = 149,
@@ -639,6 +645,13 @@ return {
 			label = 'Tazer',
 			weight = 227,
 			durability = 0.1,
+		},
+
+		['WEAPON_TASER'] = {
+			label = 'Tazer',
+			weight = 227,
+			durability = 0.1,
+			ammoname = 'ammo-taser'
 		},
 
 		['WEAPON_AUTOSHOTGUN'] = {
@@ -1630,6 +1643,11 @@ return {
 		['ammo-22'] = {
 			label = '.22 Long Rifle',
 			weight = 3,
+		},
+
+		['ammo-taser'] = {
+			label = 'Tazer Cartridge',
+			weight = 2,
 		},
 
 		['ammo-38'] = {
