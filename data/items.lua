@@ -8867,5 +8867,4 @@ return {
 			usetime = 900,
 		}
 	},
-
 }
