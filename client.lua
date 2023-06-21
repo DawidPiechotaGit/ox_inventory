@@ -301,15 +301,15 @@ end)
 
 local Animations = data 'animations'
 local Items = require 'modules.items.client'
+local usingItem = false
 
 lib.callback.register('ox_inventory:usingItem', function(data)
 	local item = Items[data.name]
 
-	if item and invBusy then
+	if item and usingItem then
 		if not item.client then return true end
 		---@cast item +OxClientProps
 		item = item.client
-		plyState.invBusy = true
 
 		if type(item.anim) == 'string' then
 			item.anim = Animations.anim[item.anim]
@@ -368,7 +368,8 @@ end)
 local function canUseItem(isAmmo)
 	local ped = cache.ped
 
-	return (not isAmmo or currentWeapon)
+	return not usingItem
+    and (not isAmmo or currentWeapon)
 	and PlayerData.loaded
 	and not PlayerData.dead
 	and not invBusy
@@ -380,23 +381,18 @@ end
 ---@param data table
 ---@param cb function?
 local function useItem(data, cb)
-	if invOpen and data.close then client.closeInventory() end
 	local slotData, result = PlayerData.inventory[data.slot]
 
-	if canUseItem(data.ammo and true) then
-		if currentWeapon and currentWeapon?.timer > 100 then return end
+	if not canUseItem(data.ammo and true) then return end
 
-		plyState.invBusy = true
-		result = lib.callback.await('ox_inventory:useItem', 200, data.name, data.slot, slotData.metadata)
+	if currentWeapon and currentWeapon?.timer > 100 then return end
 
-		if not result then
-			Wait(500)
-			plyState.invBusy = false
-			return
-		end
-	end
+    if invOpen and data.close then client.closeInventory() end
 
-	if cb then
+    usingItem = true
+    result = lib.callback.await('ox_inventory:useItem', 200, data.name, data.slot, slotData.metadata)
+
+	if result and cb then
 		local success, response = pcall(cb, result and slotData)
 
 		if not success and response then
@@ -405,7 +401,7 @@ local function useItem(data, cb)
 	end
 
 	Wait(500)
-	plyState.invBusy = false
+    usingItem = false
 end
 
 AddEventHandler('ox_inventory:item', useItem)
@@ -460,6 +456,15 @@ local function useSlot(slot)
 			if EnableWeaponWheel then return end
 
 			if IsCinematicCamRendering() then SetCinematicModeActive(false) end
+
+            GiveWeaponToPed(playerPed, data.hash, 0, false, true)
+            SetCurrentPedWeapon(playerPed, data.hash, true)
+
+            if data.hash ~= GetSelectedPedWeapon(playerPed) then
+                return lib.notify({ type = 'error', description = locale('cannot_use', data.label) })
+            end
+
+            RemoveAllPedWeapons(cache.ped, true)
 
 			if currentWeapon then
 				local weaponSlot = currentWeapon.slot
@@ -674,7 +679,7 @@ local function registerCommands()
 		end
 	end
 
-	lib.addKeybind({
+	local primary = lib.addKeybind({
 		name = 'inv',
 		description = locale('open_player_inventory'),
 		defaultKey = client.keys[1],
@@ -705,7 +710,11 @@ local function registerCommands()
 		name = 'inv2',
 		description = locale('open_secondary_inventory'),
 		defaultKey = client.keys[2],
-		onPressed = function()
+		onPressed = function(self)
+            if primary:getCurrentKey() == self:getCurrentKey() then
+                return warn(("secondary inventory keybind '%s' disabled (keybind cannot match primary inventory keybind)"):format(self:getCurrentKey()))
+            end
+
 			if invOpen then
 				return client.closeInventory()
 			end
@@ -742,11 +751,14 @@ local function registerCommands()
 
 			local position = GetEntityCoords(entity)
 
-			if #(playerCoords - position) > 6 or GetVehiclePedIsEntering(playerPed) ~= 0 or not NetworkGetEntityIsNetworked(entity) then return end
+			if #(playerCoords - position) > 7 or GetVehiclePedIsEntering(playerPed) ~= 0 or not NetworkGetEntityIsNetworked(entity) then return end
 
 			local vehicleHash = GetEntityModel(entity)
 			local vehicleClass = GetVehicleClass(entity)
 			local checkVehicle = Vehicles.Storage[vehicleHash]
+
+			local netId = VehToNet(entity)
+			local isTrailer = lib.callback.await('ox_inventory:isVehicleATrailer', false, netId)
 
 			-- No storage or no glovebox
 			if (checkVehicle == 0 or checkVehicle == 1) or (not Vehicles.trunk[vehicleClass] and not Vehicles.trunk.models[vehicleHash]) then return end
@@ -758,7 +770,11 @@ local function registerCommands()
 			local door, vehBone
 
 			if checkVehicle == nil then -- No data, normal trunk
-				door, vehBone = 5, GetEntityBoneIndexByName(entity, 'boot')
+				if isTrailer then
+					door, vehBone = 5, GetEntityBoneIndexByName(entity, 'wheel_rr')
+				else
+					door, vehBone = 5, GetEntityBoneIndexByName(entity, 'boot')
+				end
 			elseif checkVehicle == 3 then -- Trunk in hood
 				door, vehBone = 4, GetEntityBoneIndexByName(entity, 'bonnet')
 			else -- No storage or no trunk
@@ -775,7 +791,7 @@ local function registerCommands()
 
 			position = GetWorldPositionOfEntityBone(entity, vehBone)
 
-			if #(playerCoords - position) < 2 and door then
+			if #(playerCoords - position) < 3 and door then
 				local plate = GetVehicleNumberPlateText(entity)
 				local invId = 'trunk'..plate
 
@@ -802,7 +818,7 @@ local function registerCommands()
 
 					position = GetWorldPositionOfEntityBone(entity, vehBone)
 
-					if #(GetEntityCoords(playerPed) - position) >= 2 or not DoesEntityExist(entity) then
+					if #(GetEntityCoords(playerPed) - position) >= 3 or not DoesEntityExist(entity) then
 						break
 					end
 
@@ -1697,8 +1713,14 @@ lib.callback.register('ox_inventory:startCrafting', function(id, recipe)
 	})
 end)
 
+local swapActive = false
+
 ---Synchronise and validate all item movement between the NUI and server.
 RegisterNUICallback('swapItems', function(data, cb)
+    if swapActive or not invOpen or invBusy then return end
+
+    swapActive = true
+
 	if data.toType == 'newdrop' then
 		if cache.vehicle or IsPedFalling(playerPed) then return cb(false) end
 
@@ -1736,15 +1758,16 @@ RegisterNUICallback('swapItems', function(data, cb)
 	end
 
 	local success, response, weaponSlot = lib.callback.await('ox_inventory:swapItems', false, data)
+    swapActive = false
 
 	cb(success or false)
 
 	if success then
-		if response then
-			if weaponSlot and currentWeapon then
-				currentWeapon.slot = weaponSlot
-			end
+        if weaponSlot and currentWeapon then
+            currentWeapon.slot = weaponSlot
+        end
 
+		if response then
 			updateInventory(response.items, response.weight)
 		end
 	elseif response then
