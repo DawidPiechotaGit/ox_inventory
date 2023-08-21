@@ -2,6 +2,7 @@ $mainColor: #161a1dd0;
 $textColor: #ffffff;
 $mainFont: Roboto;
 $customFont: Rajdhani;
+// $customFont: Orbitron;
 
 $seconaryColor: rgba(12, 12, 12, 0.4);
 $secondaryColorLight: rgba(0, 0, 0, 0.5);
@@ -9,8 +10,8 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
 $gridRows: 5;
-$gridSize: 10.2vh;
-$gridGap: 3px;
+$gridSize: 11.2vh;
+$gridGap: 4px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
 body {
@@ -116,7 +117,7 @@ button:active {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    background-color: #161a1dd0;
+    // background-color: #161a1dd0;
     padding: 15px;
     border-radius: 5px;
   }
@@ -127,24 +128,28 @@ button:active {
 
   .inventory-control-input {
     transition: 200ms;
-    padding: 16px 8px;
-    border-radius: 2.5%;
+    padding: 10px 8px;
     font-family: $customFont;
     font-size: 16px;
     text-align: center;
     outline: none;
     border: none;
     color: #fff;
-    background-color: $seconaryColor;
+    // background-color: $seconaryColor;
+    background: radial-gradient(#36495ed0, #1a1f24d0);
     &:focus-within {
       background-color: $secondaryColorDark;
     }
   }
 
+  // input[type='number'] {
+  //   transform: skewX(25deg) scaleY(cos(-25deg));
+  // }
+
   .inventory-control-button {
     font-size: 14px;
     color: #fff;
-    background-color: $seconaryColor;
+    // background-color: $seconaryColor;
     transition: 200ms;
     padding: 12px 8px;
     border-radius: 2.5%;
@@ -153,9 +158,15 @@ button:active {
     font-family: $customFont;
     width: 100%;
     font-weight: 500;
+    background: radial-gradient(#36495ed0, #1a1f24d0);
+    transform: skewX(-25deg) scaleY(cos(25deg));
     &:hover {
       background-color: $secondaryColorDark;
     }
+  }
+
+  .inventory-control-button > p {
+    transform: skewX(25deg) scaleY(cos(-25deg));
   }
 }
 
@@ -192,17 +203,17 @@ button:active {
 
 // Dialog is used fro useful controls window
 .MuiDialogContent-root {
-  background-color: $mainColor;
+  background-color: #1a1f24d0;
   color: $textColor;
 }
 
 .MuiDialogTitle-root {
-  background-color: $mainColor;
+  background-color: #1a1f24d0;
   color: $textColor;
 }
 
 .MuiDialogActions-root {
-  background-color: $mainColor;
+  background-color: #1a1f24d0;
   color: $textColor;
 }
 
@@ -211,7 +222,7 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: calc($gridGap * 2);
-  background-color: #161a1dd0;
+  // background-color: #161a1dd0;
   padding: 15px;
   border-radius: 5px;
 }
@@ -220,8 +231,19 @@ button:active {
   flex-direction: row;
   justify-content: space-between;
   p {
-    font-size: 16px;
+    font-size: 26px;
     color: #ffffff;
+    text-transform: capitalize;
+  }
+}
+
+.inventory-grid-wrapper > p {
+  text-align: end;
+  font-size: 26px;
+  font-weight: 550;
+  span {
+    font-size: 16px;
+    color: #ffffff8a;
   }
 }
 
@@ -234,19 +256,30 @@ button:active {
   overflow-y: scroll;
 }
 
+.inventory-grid-container-right {
+  display: grid;
+  height: $containerSize;
+  grid-template-columns: repeat($gridCols, $gridSize);
+  grid-auto-rows: $gridSize + 0.22vh;
+  gap: $gridGap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 // inventory slots
 .inventory-slot {
-  background-color: #1a1f24d0;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 7%;
-  image-rendering: -webkit-optimize-contrast;
+  // background-color: #1a1f24d0;
+  background: radial-gradient(#36495ed0, #1a1f24d0);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  border-radius: 0%;
+  // image-rendering: -webkit-optimize-contrast;
   position: relative;
-  background-size: 7vh;
+  // background-size: 7vh;
   color: $textColor;
-  border-color: #424f5cd0;
-  border-style: solid;
-  border-width: 2px;
+  // border-color: #424f5cd0;
+  // border-style: solid;
+  // border-width: 2px;
 }
 
 .inventory-slot-label-box {
@@ -288,6 +321,13 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  // background: radial-gradient(#36495ed0, #1a1f24d0);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0%;
+  image-rendering: -webkit-optimize-contrast;
+  position: relative;
+  background-size: 7vh;
   p {
     font-size: 12px;
   }
@@ -398,6 +438,30 @@ button:active {
   }
 }
 
+.hotslot-wrapper {
+  display: grid;
+  width: $gridSize;
+  height: calc(#{$gridRows} * #{11.5vh + 0.22vh} + #{$gridRows} * #{$gridGap});
+  grid-template-columns: repeat(1, $gridSize);
+  grid-template-rows: repeat(5, $gridSize + 0.22vh);
+  gap: $gridGap;
+}
+
+.hotslot-container {
+  // background-color: rgba(12, 12, 17, 0.966);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 5px;
+  // border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: $containerSize;
+  width: fit-content;
+  // margin-top: 5px;
+}
+
 // hotbar
 .hotbar-container {
   display: flex;
@@ -465,9 +529,10 @@ button:active {
 }
 
 .weight-bar {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px inset rgba(0, 0, 0, 0.1);
-  height: 0.8vh;
-  border-radius: 5%;
+  // background: rgba(0, 0, 0, 0.4);
+  background: radial-gradient(#36495ed0, #1a1f24d0);
+  // border: 1px inset rgba(0, 0, 0, 0.1);
+  height: 0.6vh;
+  border-radius: 40%;
   overflow: hidden;
 }

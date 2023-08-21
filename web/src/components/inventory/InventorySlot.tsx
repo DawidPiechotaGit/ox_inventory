@@ -146,12 +146,17 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item }) => {
               ? 'brightness(80%) grayscale(100%)'
               : undefined,
           opacity: isDragging ? 0.4 : 1.0,
-          backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+          // backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
           border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
         }}
       >
         {isSlotWithItem(item) && (
-          <div className="item-slot-wrapper">
+          <div
+            className="item-slot-wrapper"
+            style={{
+              backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+            }}
+          >
             <div
               className={
                 inventory.type === 'player' && item.slot <= 5
