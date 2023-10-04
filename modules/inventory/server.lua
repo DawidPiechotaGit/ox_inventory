@@ -28,9 +28,9 @@ end
 ---Close a player's inventory.
 ---@param noEvent? boolean
 function OxInventory:closeInventory(noEvent)
-	if not self.player then return end
+	if not self.player or not self.open then return end
 
-	local inv = self.open and Inventory(self.open)
+	local inv = Inventory(self.open)
 
 	if not inv then return end
 
@@ -158,18 +158,8 @@ local function loadInventoryData(data, player)
 
 			local model, class = lib.callback.await('ox_inventory:getVehicleData', source, data.netid)
 			local storage = Vehicles[data.type].models[model] or Vehicles[data.type][class]
-
-			if Ox then
-				local vehicle = Ox.GetVehicle(entity)
-
-				if vehicle then
-					inventory = Inventory.Create(vehicle.id or vehicle.plate, plate, data.type, storage[1], 0, storage[2], false)
-				end
-			end
-
-			if not inventory then
-				inventory = Inventory.Create(data.id, plate, data.type, storage[1], 0, storage[2], false)
-			end
+            local vehicleId = server.getOwnedVehicleId and server.getOwnedVehicleId(entity)
+            inventory = Inventory.Create(vehicleId or data.id, plate, data.type, storage[1], 0, storage[2], false)
 		end
 	elseif data.type == 'policeevidence' then
 		inventory = Inventory.Create(data.id, locale('police_evidence'), data.type, 100, 0, 100000, false)
@@ -210,7 +200,7 @@ setmetatable(Inventory, {
 		if not inv then
 			return self
 		elseif type(inv) == 'table' then
-			if inv.items then return inv end
+			if inv.__index then return inv end
 
 			return not inv.owner and Inventories[inv.id] or loadInventoryData(inv, player)
 		end
@@ -287,7 +277,9 @@ function Inventory.CloseAll(inv, ignoreId)
 	for playerId in pairs(inv.openedBy) do
 		local playerInv = Inventory(playerId)
 
-		if playerInv and (not ignoreId or playerId ~= ignoreId) then playerInv:closeInventory() end
+		if playerInv and playerId ~= ignoreId then
+            playerInv:closeInventory()
+        end
 	end
 end
 
@@ -457,6 +449,10 @@ local function hasActiveInventory(playerId, owner)
 	local activePlayer = activeIdentifiers[owner]
 
 	if activePlayer then
+        if activePlayer == playerId then
+            error('attempted to load active player\'s inventory a secondary time', 0)
+        end
+
 		local inventory = Inventory(activePlayer)
 
 		if inventory then
@@ -571,17 +567,17 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 				self.id = ('%s:%s'):format(self.id, owner)
 			end
 		else
-			if Ox then
-				self.dbId = id
-				self.id = (invType == 'glovebox' and 'glove' or invType)..label
-			else
-				self.dbId = label
-			end
+            if string.find(id, '^glove') or string.find(id, '^trunk') then
+                self.dbId = id:sub(6)
+            else
+                self.dbId = id
+                self.id = (invType == 'glovebox' and 'glove' or invType) .. label
+            end
 		end
 	end
 
 	if not items then
-		self.items, self.weight = Inventory.Load(self.dbId or self.id, invType, owner)
+		self.items, self.weight = Inventory.Load(self.dbId or self.id, invType, owner, self.datastore)
 	elseif weight == 0 and next(items) then
 		self.weight = Inventory.CalculateWeight(items)
 	end
@@ -619,6 +615,8 @@ function Inventory.Remove(inv)
 		Inventories[inv.id] = nil
 	end
 end
+
+exports('RemoveInventory', Inventory.Remove)
 
 ---Update the internal reference to vehicle stashes. Does not trigger a save or update the database.
 ---@param oldPlate string
@@ -758,7 +756,8 @@ end
 ---@param id string|number
 ---@param invType string
 ---@param owner string | number | boolean
-function Inventory.Load(id, invType, owner)
+---@param datastore? boolean
+function Inventory.Load(id, invType, owner, datastore)
 	local result
 
 	if id and invType then
@@ -774,7 +773,7 @@ function Inventory.Load(id, invType, owner)
 					return generateItems(id, 'vehicle')
                 end
 			else result = result[invType] end
-		else
+		elseif not datastore then
 			result = db.loadStash(owner or '', id)
 		end
 	end
@@ -1426,14 +1425,11 @@ end
 
 local function CustomDrop(prefix, items, coords, slots, maxWeight, instance, model)
 	local dropId = generateInvId()
-	local inventory = Inventory.Create(dropId, ('%s %s'):format(prefix, dropId:gsub('%D', '')), 'drop', slots or shared.playerslots, 0, maxWeight or shared.playerweight, false)
+	local inventory = Inventory.Create(dropId, ('%s %s'):format(prefix, dropId:gsub('%D', '')), 'drop', slots or shared.playerslots, 0, maxWeight or shared.playerweight, false, {})
 
 	if not inventory then return end
 
-	local items, weight = generateItems(inventory, 'drop', items)
-
-	inventory.items = items
-	inventory.weight = weight
+	inventory.items, inventory.weight = generateItems(inventory, 'drop', items)
 	inventory.coords = coords
 	Inventory.Drops[dropId] = {
 		coords = inventory.coords,
@@ -1442,6 +1438,8 @@ local function CustomDrop(prefix, items, coords, slots, maxWeight, instance, mod
 	}
 
 	TriggerClientEvent('ox_inventory:createDrop', -1, dropId, Inventory.Drops[dropId])
+
+    return dropId
 end
 
 AddEventHandler('ox_inventory:customDrop', CustomDrop)
@@ -2242,17 +2240,29 @@ local function saveInventories(clearInventories)
 	local parameters = { {}, {}, {}, {} }
 	local size = { 0, 0, 0, 0 }
     local buffer = {}
+    local total = 0
 
 	for _, inv in pairs(Inventories) do
         local index, data = prepareInventorySave(inv, buffer, time)
 
-        if index then
-            size[index] += 1
-            parameters[index][size[index]] = data
+        if index and data then
+            total += 1
+
+            if index == 4 then
+                for i = 1, 3 do
+                    size[index] += 1
+                    parameters[index][size[index]] = data[i]
+                end
+            else
+                size[index] += 1
+                parameters[index][size[index]] = data
+            end
         end
 	end
 
-	db.saveInventories(parameters[1], parameters[2], parameters[3], parameters[4])
+    if total > 0 then
+	    db.saveInventories(parameters[1], parameters[2], parameters[3], parameters[4], total)
+    end
 
 	isSaving = false
 
@@ -2261,7 +2271,7 @@ local function saveInventories(clearInventories)
     for _, inv in pairs(Inventories) do
         if not inv.open and not inv.player then
             -- clear inventory from memory if unused for 10 minutes, or invalid entity
-            if time - inv.time >= 600 or (inv.netid and NetworkGetEntityFromNetworkId(inv.netid) == 0) then
+            if (not inv.netid and time - inv.time >= 600) or (inv.netid and NetworkGetEntityFromNetworkId(inv.netid) == 0) then
                 Inventory.Remove(inv)
             end
         end
