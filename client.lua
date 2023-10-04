@@ -61,6 +61,10 @@ local function canOpenInventory()
         return shared.info('cannot open inventory', '(cuffed)')
     end
 
+	if IsEntityPlayingAnim(playerPed, 'mp_arresting', 'idle', 3) then
+		return shared.info('cannot open inventory', '(cuffed)')
+	end
+
     return true
 end
 

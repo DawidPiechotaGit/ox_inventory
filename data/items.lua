@@ -54,11 +54,11 @@ return {
 
 	['bandage'] = {
 		label = 'Bandage',
-		weight = 115,
+		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
-			disable = { move = true, car = true, combat = true },
+			disable = { move = false, car = false, combat = true },
 			usetime = 2500,
 		}
 	},
@@ -223,7 +223,7 @@ return {
 	},
 
 	['cola'] = {
-		label = 'eCola',
+		label = 'Coca Cola',
 		weight = 350,
 		-- consume = 0.01,
 		client = {
@@ -335,7 +335,7 @@ return {
 		label = 'Pepsi',
 		weight = 350,
 		client = {
-			status = { thirst = 20000 },
+			status = { thirst = 30 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `wasabi_pepsi_1`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, 40.5) },
 			usetime = 3500,
@@ -347,7 +347,7 @@ return {
 		label = 'Pepsi Original',
 		weight = 350,
 		client = {
-			status = { thirst = 20000 },
+			status = { thirst = 30 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `wasabi_pepsi_2`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, 0.5) },
 			usetime = 3500,
@@ -356,7 +356,7 @@ return {
 	},
 
 	['coke_1'] = {
-		label = 'Coke Cola',
+		label = 'Coca Cola',
 		weight = 350,
 		client = {
 			status = { thirst = 20 },
@@ -364,6 +364,18 @@ return {
 			prop = { model = `wasabi_coke_1`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, 0.5) },
 			usetime = 3500,
 			notification = 'You quenched your thirst with Coke'
+		}
+	},
+
+	['drpep'] = {
+		label = 'Dr Pepper',
+		weight = 350,
+		client = {
+			status = { thirst = 20 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_can_dppepper`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, 0.5) },
+			usetime = 3500,
+			notification = 'You feel an addiction coming'
 		}
 	},
 
@@ -389,6 +401,13 @@ return {
 		consume = 0
 	},
 
+	['pepper'] = {
+		label = 'Carolina Reaper Pepper',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
 	['identification'] = {
 		label = 'Identification',
 	},
@@ -412,7 +431,7 @@ return {
 
 	['phone'] = {
 		label = 'Phone',
-		weight = 190,
+		weight = 200,
 		stack = false,
 		consume = 0,
 		-- client = {
@@ -436,7 +455,7 @@ return {
 
 	['mustard'] = {
 		label = 'Mustard',
-		weight = 500,
+		weight = 50,
 		client = {
 			status = { hunger = 25000, thirst = 25000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -448,7 +467,7 @@ return {
 
 	['water'] = {
 		label = 'Water',
-		weight = 500,
+		weight = 50,
 		client = {
 			status = { thirst = 200000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -461,14 +480,14 @@ return {
 
 	['radio'] = {
 		label = 'Radio',
-		weight = 1000,
+		weight = 200,
 		stack = false,
 		allowArmed = true
 	},
 
 	['armour'] = {
 		label = 'Bulletproof Vest',
-		weight = 3000,
+		weight = 1000,
 		stack = true,
 		client = {
 			anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
@@ -717,7 +736,7 @@ return {
 
 	['laptop'] = {
 		label = 'Laptop',
-		weight = 1,
+		weight = 1000,
 		stack = false,
 		close = true,
 		description = ''
@@ -1594,7 +1613,7 @@ return {
 		close = true,
 	},
 	['wetshroom'] = {
-		label = 'Wetshroom',
+		label = 'Wet Shroom',
 		weight = 250,
 		close = true,
 	},
@@ -1631,7 +1650,7 @@ return {
 	-- Chopshop
 	['carparts'] = {
 		label = 'Car Parts',
-		weight = 1000,
+		weight = 500,
 		stack = true,
 		close = false,
 	},
@@ -1814,18 +1833,18 @@ return {
 
 	["ducttape"] = {
 		label = "Duct Tape",
-		weight = 0,
-		stack = false,
+		weight = 10,
+		stack = true,
 		close = true,
 		description = "Good for quick fixes",
 	},
 
 	["classic_phone"] = {
-		label = "Classic Phone",
+		label = "Phone",
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = "A phone",
 	},
 
 	["suspension2"] = {
@@ -2046,7 +2065,7 @@ return {
 
 	["repairkit"] = {
 		label = "Repairkit",
-		weight = 2500,
+		weight = 1000,
 		stack = true,
 		close = true,
 		description = "A nice toolbox with stuff to repair your vehicle",
@@ -2141,7 +2160,7 @@ return {
 	},
 
 	["crack_baggy"] = {
-		label = "Bag of Crack",
+		label = "Bag of Cocaine",
 		weight = 0,
 		stack = true,
 		close = true,
@@ -2395,12 +2414,20 @@ return {
 		description = "Some delicious candy :O",
 	},
 
-	["goldbar"] = {
-		label = "Gold Bar",
-		weight = 7000,
+	["goldbaroz"] = {
+		label = "Gold Bar 1oz",
+		weight = 100,
 		stack = true,
-		close = true,
-		description = "Looks pretty expensive to me",
+		close = false,
+		description = "1 ounce of gold",
+	},
+
+	["goldbarkg"] = {
+		label = "Gold Bar 1kg",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "A whole kilogram of gold!",
 	},
 
 	["casino_member"] = {
@@ -2825,7 +2852,6 @@ return {
         weight = 0,
         stack = false,
         close = true,
-        description = "Your Description",
         client = {image = 'idcard.png'}
     },
     ['driver_license'] = {
@@ -2833,24 +2859,18 @@ return {
         weight = 0,
         stack = false,
         close = true,
-        description = "Your Description",
-        client = {image = 'driverlicense.png'}
     },
     ['weaponlicense'] = {
         label = 'Weapon License',
         weight = 0,
         stack = false,
         close = true,
-        description = "Your Description",
-        client = {image = 'weaponlicense.png'}
     },
     ['lawyerpass'] = {
         label = 'Lawyer Pass',
         weight = 0,
         stack = false,
         close = true,
-        description = "Your Description",
-        client = {image = 'lawyerpass.png'}
     },
 
 	["horn"] = {
@@ -3183,7 +3203,7 @@ return {
 
 	["hack_laptop"] = {
 		label = "Hacking Laptop",
-		weight = 20,
+		weight = 1000,
 		stack = true,
 		close = false,
 		description = "",
@@ -4045,8 +4065,24 @@ return {
 	["markedbills"] = {
 		label = "Marked Money",
 		weight = 1000,
-		stack = false,
-		close = true,
+		stack = true,
+		close = false,
+		description = "Marked money from a bank",
+	},
+
+	["bands"] = {
+		label = "Bands of Cash",
+		weight = 200,
+		stack = true,
+		close = false,
+		description = "Marked money from a bank",
+	},
+
+	["rolls"] = {
+		label = "Rolls of Cash",
+		weight = 200,
+		stack = true,
+		close = false,
 		description = "Marked money from a bank",
 	},
 
@@ -4205,7 +4241,7 @@ return {
 
 	["rolex"] = {
 		label = "Golden Watch",
-		weight = 1500,
+		weight = 150,
 		stack = true,
 		close = true,
 		description = "A golden watch seems like the jackpot to me!",
@@ -4807,7 +4843,6 @@ return {
 			usetime = 2500,
 			notification = 'Perhaps you should not eat food cooked by a rat',
 			cancel = true,
-			image = 'ricebowl.png'
 		},
 	},
 
@@ -4821,7 +4856,6 @@ return {
 			usetime = 2500,
 			notification = 'Yummm... cinnamon and plastic',
 			cancel = true,
-			image = 'churros.png'
 		},
 	},
 
@@ -4902,23 +4936,11 @@ return {
 	['grnoodles'] = {
 		label = 'Noodles',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['gronigiri'] = {
 		label = 'Onigiri',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['grsake'] = {
@@ -4926,45 +4948,21 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['grbowlramen'] = {
 		label = 'Ramen Bowl',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['grsoup'] = {
 		label = 'Soup',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['grmisosoup'] = {
 		label = 'Miso Soup',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	["grcappucc"] = {
@@ -5441,7 +5439,7 @@ return {
 
 	['medkit'] = {
 		label = 'Medkit',
-		weight = 300,
+		weight = 200,
 		close = true,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -5622,12 +5620,6 @@ return {
 		close = true,
 	},
 	
-	['rolex'] = {
-		label = 'Rolex',
-		weight = 25,
-		close = true,
-	},
-	
 	['ring'] = {
 		label = 'Ring',
 		weight = 10,
@@ -5677,11 +5669,11 @@ return {
 		close = true,
 	},
 
-	['goldbar'] = {
-		label = 'Gold Bar',
-		weight = 500,
-		close = true,
-	},
+	-- ['goldbar'] = {
+	-- 	label = 'Gold Bar',
+	-- 	weight = 500,
+	-- 	close = true,
+	-- },
 	
 	['goldnecklace'] = {
 		label = 'Gold Necklace',
@@ -6107,6 +6099,30 @@ return {
 		stack = true,
 		close = true,
 		description = 'Coffee from Bean Machine with a secret ingredient'
+	},
+
+	['muffin'] = {
+		label = 'Muffin ',
+			weight = 100,
+			close = true,
+			client = {
+			status = { hunger = 250000 },
+			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
+		 --  prop = { model = 'prop_sandwich_01', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
+			usetime = 5000,
+			}
+	},
+
+	['bmdonut'] = {
+		label = 'Donut',
+			weight = 100,
+			close = true,
+			client = {
+			status = { hunger = 300000 },
+			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
+			prop = { model = 'prop_donut_02', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
+			usetime = 2000,
+			}
 	},
 
 	['bmcookies'] = {
@@ -6645,12 +6661,6 @@ return {
 	['uwuriceballs'] = {
 		label = 'Rice Balls',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwupboba'] = {
@@ -6658,12 +6668,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwubboba'] = {
@@ -6671,12 +6675,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwulatte'] = {
@@ -6684,112 +6682,52 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwukittycake'] = {
 		label = 'Kitty Cake',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwusushi'] = {
 		label = 'Cutie Sushi',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwubruschetta'] = {
 		label = 'PB Toasties',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwuberrysurprise'] = {
 		label = 'Berry Surprise',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwubreakfast'] = {
 		label = 'UwU Breakfast',
 		weight = 50,
 		description = 'Ooooooodles of Pooooodles',
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwubearysandwich'] = {
 		label = 'Bear-y Sandwich',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwucupcakes2'] = {
 		label = 'Pink Cupcakes',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwucookies'] = {
 		label = 'Cookie Platter',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwubentobox'] = {
 		label = 'Bento Box',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwublueboba'] = {
@@ -6797,34 +6735,16 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwucake'] = {
 		label = 'Cake',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwucatdonut'] = {
 		label = 'Cat Donut',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwucatcoffee'] = {
@@ -6832,23 +6752,11 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwucatcookie'] = {
 		label = 'Cat Cookie',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwugreenboba'] = {
@@ -6856,23 +6764,11 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwukittycakepop'] = {
 		label = 'Kitty Cakepop',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	["uwucakepop"] = {
@@ -6892,12 +6788,6 @@ return {
 	['uwukittypizza'] = {
 		label = 'Kitty Pizza',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwumocha'] = {
@@ -6905,12 +6795,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwuorangeboba'] = {
@@ -6918,34 +6802,16 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwuorangemochi'] = {
 		label = 'Orange Mochi',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwupinkmochi'] = {
 		label = 'Pink Mochi',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwupinkboba'] = {
@@ -6953,12 +6819,6 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwupurpleboba'] = {
@@ -6966,46 +6826,22 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
-		client = {
-			status = { thirst = 250000 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-		--	prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-		}
 	},
 
 	['uwupurpmochi'] = {
 		label = 'Purple Mochi',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 
 	['uwupurrito'] = {
 			label = 'Purrito',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 	['uwubluemochi'] = {
 		label = 'Blue Mochi',
 		weight = 50,
-		client = {
-			status = { hunger = 250000 },
-			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
-			--prop = { model = `prop_cs_burger_01`, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
-			usetime = 2500,
-		},
 	},
 
 		
@@ -7032,9 +6868,6 @@ return {
 		close = true,
 		description = "",
 		client = {
-			status = {
-				hunger = 44,
-			},
 			image = "uwupawcakes.png",
 		}
 	},
@@ -7591,7 +7424,7 @@ return {
 	},
 	['ammonia'] = {
 		label = 'Ammonia',
-		weight = 1,
+		weight = 500,
 		stack = true,
 		close = true,
 		description = nil
@@ -7605,8 +7438,8 @@ return {
 	},
 	['meth1g'] = {
 		label = '1g Meth',
-		weight = 1,
-		stack = true,
+		weight = 10,
+		stack = false,
 		close = true,
 		description = nil
 	},
@@ -7684,8 +7517,8 @@ return {
 
     ['bodyarmor_1'] = { --  Use to set body armor to 30%
         label = 'Light Ballistic Vest',
-        weight = 3000,
-        stack = false,
+        weight = 500,
+        stack = true,
         description = "Bullts hurt a bit less with this",
         client = {
             anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
@@ -7695,8 +7528,8 @@ return {
 
     ['bodyarmor_2'] = { --  Use to set body armor to 60%
         label = 'Medium Ballistic Vest',
-        weight = 4500,
-        stack = false,
+        weight = 750,
+        stack = true,
         description = "Bullets hurt a lot less with this",
         client = {
             anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
@@ -7706,8 +7539,8 @@ return {
 
     ['bodyarmor_3'] = { --  Use to set body armor to 100%
         label = 'Heavy Ballistic Vest',
-        weight = 4500,
-        stack = false,
+        weight = 1000,
+        stack = true,
         description = "Keep the extra bullets for personal vest flair",
         client = {
             anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
@@ -7833,7 +7666,7 @@ return {
 
 	-- USABLES: Pizza boxes
     ['box_pizza_chs'] = { -- idea: Player uses item to show badge prop
-        label = 'Box of Cheese Pizza',
+        label = 'Cheese Pizza',
         weight = 3500,
         --consume = 0,
         description = "A box of cheesy goodness, my guy",
@@ -7849,7 +7682,7 @@ return {
     },
 
     ['box_pizza_pep'] = { -- idea: Player uses item to show badge prop
-        label = 'Box of Pepperoni Pizza',
+        label = 'Pepperoni Pizza',
         weight = 3500,
         --consume = 0,
         description = "A box of cheesy goodness, my guy",
@@ -7865,7 +7698,7 @@ return {
     },
 
     ['box_pizza_msh'] = { -- idea: Player uses item to show badge prop
-        label = 'Box of Mushroom Pizza',
+        label = 'Mushroom Pizza',
         weight = 3500,
         --consume = 0,
         description = "A box of cheesy goodness, my guy",
@@ -7881,7 +7714,7 @@ return {
     },
 
     ['box_pizza_mgt'] = { -- idea: Player uses item to show badge prop
-        label = 'Box of Margherita Pizza',
+        label = 'Margherita Pizza',
         weight = 3500,
         --consume = 0,
         description = "A box of cheesy goodness, my guy",
@@ -7897,7 +7730,7 @@ return {
     },
 
     ['box_pizza_dmt'] = { -- idea: Player uses item to show badge prop
-        label = 'Box of Double Meat Pizza',
+        label = 'Double Meat Pizza',
         weight = 3500,
         --consume = 0,
         description = "A box of cheesy goodness, my guy",
@@ -8865,6 +8698,169 @@ return {
 		client = {
 			anim = { dict = 'nmt_3_rcm-10', clip = 'cs_nigel_dual-10', flag = 51 },
 			usetime = 900,
+		}
+	},
+
+	["ecola"] = {
+		label = "eCola",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "",
+		client = {
+			status = {
+				thirst = 21,
+			},
+			image = "ecola.png",
+		}
+	},
+
+	["goldbar"] = {
+		label = "Gold Bar",
+		weight = 7000,
+		stack = true,
+		close = true,
+		description = "Looks pretty expensive to me",
+		client = {
+			image = "goldbar.png",
+		}
+	},
+
+	--Drugs
+	['cokebrick'] = {
+		label = 'Cocaine Brick',
+		weight = 1000,
+		close = true,
+		stack = true,
+	},
+
+	['coke'] = {
+		label = 'Cocaine Powder',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['lsd'] = {
+		label = 'LSD',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['steroids'] = {
+		label = 'Steroids',
+		weight = 100,
+		close = true,
+		stack = true,
+	},
+
+	['chemicals'] = {
+		label = 'Crack Chemicals',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['chemicals2'] = {
+		label = 'Opium Chemicals',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['chemicals1'] = {
+		label = 'D-Asperatic Acid',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['macaroot'] = {
+		label = 'Maca Root',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['guaranaleaves'] = {
+		label = 'Guarana Leaves',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['magnesium'] = {
+		label = 'Magnesium',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['vitaminb3'] = {
+		label = 'Vitamin B3',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['wheyprotein'] = {
+		label = 'Whey Protein',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['proteinshake'] = {
+		label = 'Protein Shake',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['wheatgrass'] = {
+		label = 'Wheat Grass Shot',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['preworkout'] = {
+		label = 'Pre-workout Supplement',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['vitamind'] = {
+		label = 'Vitamin D',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['choline'] = {
+		label = 'Choline',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	['melatonin'] = {
+		label = 'Melatonin 10mg',
+		weight = 50,
+		close = true,
+		stack = true,
+	},
+
+	["tacosauce"] = {
+		label = "Crack Taco Sauce",
+		weight = 10,
+		stack = true,
+		close = false,
+		description = "",
+		client = {
+			image = "tacosauce.png",
 		}
 	},
 }

@@ -1,3 +1,16 @@
+---wip types
+
+---@class OxStash
+---@field name string
+---@field label string
+---@field owner? boolean | string | number
+---@field slots number
+---@field weight number
+---@field groups? string | string[] | table<string, number>
+---@field blip? { id: number, colour: number, scale: number }
+---@field coords? vector3
+---@field target? { loc: vector3, length: number, width: number, heading: number, minZ: number, maxZ: number, distance: number, debug?: boolean, drawSprite?: boolean }
+
 return {
 	{
 		coords = vec3(461.8044, -995.8342, 30.6896),
@@ -114,14 +127,14 @@ return {
 	},
 
 	{
-		coords = vec3(298.6590, -598.1292, 43.2841),
+		coords = vec3(305.3284, -599.7742, 43.2676),
 		target = {
-			loc = vec3(298.6590, -598.1292, 43.2841),
+			loc = vec3(305.3284, -599.7742, 43.2676),
 			length = 1.6,
 			width = 2.8,
-			heading = 62,
+			heading = 77,
 			minZ = 42.34,
-			maxZ = 45.74
+			maxZ = 44.74
 		},
 		name = 'emslocker',
 		label = 'Personal Locker',
@@ -131,24 +144,24 @@ return {
 		groups = {['ambulance'] = 0}
 	},
 
-	{
-		coords = vec3(301.3, -600.23, 43.28),
-		target = {
-			loc = vec3(301.82, -600.99, 43.29),
-			length = 0.6,
-			width = 1.8,
-			heading = 340,
-			minZ = 43.34,
-			maxZ = 44.74,
-			label = 'Open personal locker'
-		},
-		name = 'emslocker',
-		label = 'Personal Locker',
-		owner = true,
-		slots = 70,
-		weight = 70000,
-		groups = {['ambulance'] = 0}
-	},
+	-- {
+	-- 	coords = vec3(301.3, -600.23, 43.28),
+	-- 	target = {
+	-- 		loc = vec3(301.82, -600.99, 43.29),
+	-- 		length = 0.6,
+	-- 		width = 1.8,
+	-- 		heading = 340,
+	-- 		minZ = 43.34,
+	-- 		maxZ = 44.74,
+	-- 		label = 'Open personal locker'
+	-- 	},
+	-- 	name = 'emslocker',
+	-- 	label = 'Personal Locker',
+	-- 	owner = true,
+	-- 	slots = 70,
+	-- 	weight = 70000,
+	-- 	groups = {['ambulance'] = 0}
+	-- },
 
 	{
 		coords = vec3(133.3358, -3015.2903, 6.6768),

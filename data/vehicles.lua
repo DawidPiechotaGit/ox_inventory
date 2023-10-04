@@ -37,45 +37,45 @@ return {
 
 	-- slots, maxWeight; default weight is 8000 per slot
 	glovebox = {
-		[0] = {11, 88000},		-- Compact
-		[1] = {11, 88000},		-- Sedan
-		[2] = {11, 88000},		-- SUV
-		[3] = {11, 88000},		-- Coupe
-		[4] = {11, 88000},		-- Muscle
-		[5] = {11, 88000},		-- Sports Classic
-		[6] = {11, 88000},		-- Sports
-		[7] = {11, 88000},		-- Super
-		[8] = {5, 40000},		-- Motorcycle
-		[9] = {11, 88000},		-- Offroad
-		[10] = {11, 88000},		-- Industrial
-		[11] = {11, 88000},		-- Utility
-		[12] = {11, 88000},		-- Van
+		[0] = {10, 11000},		-- Compact
+		[1] = {10, 11000},		-- Sedan
+		[2] = {10, 11000},		-- SUV
+		[3] = {10, 11000},		-- Coupe
+		[4] = {10, 11000},		-- Muscle
+		[5] = {10, 11000},		-- Sports Classic
+		[6] = {10, 11000},		-- Sports
+		[7] = {10, 11000},		-- Super
+		[8] = {5, 6000},		-- Motorcycle
+		[9] = {10, 11000},		-- Offroad
+		[10] = {10, 11000},		-- Industrial
+		[11] = {10, 11000},		-- Utility
+		[12] = {10, 11000},		-- Van
 		[14] = {31, 248000},	-- Boat
 		[15] = {31, 248000},	-- Helicopter
 		[16] = {51, 408000},	-- Plane
-		[17] = {11, 88000},		-- Service
-		[18] = {11, 88000},		-- Emergency
-		[19] = {11, 88000},		-- Military
-		[20] = {11, 88000},		-- Commercial (trucks)
+		[17] = {10, 11000},		-- Service
+		[18] = {10, 11000},		-- Emergency
+		[19] = {10, 11000},		-- Military
+		[20] = {10, 11000},		-- Commercial (trucks)
 		models = {
 			[`xa21`] = {11, 88000}
 		}
 	},
 
 	trunk = {
-		[0] = {21, 168000},		-- Compact
-		[1] = {41, 328000},		-- Sedan
-		[2] = {51, 408000},		-- SUV
-		[3] = {31, 248000},		-- Coupe
-		[4] = {41, 328000},		-- Muscle
-		[5] = {31, 248000},		-- Sports Classic
-		[6] = {31, 248000},		-- Sports
-		[7] = {21, 168000},		-- Super
-		[8] = {5, 40000},		-- Motorcycle
-		[9] = {51, 408000},		-- Offroad
-		[10] = {51, 408000},	-- Industrial
-		[11] = {41, 328000},	-- Utility
-		[12] = {61, 488000},	-- Van
+		[0] = {21, 42000},		-- Compact
+		[1] = {41, 82000},		-- Sedan
+		[2] = {51, 102000},		-- SUV
+		[3] = {31, 62000},		-- Coupe
+		[4] = {41, 82000},		-- Muscle
+		[5] = {31, 62000},		-- Sports Classic
+		[6] = {31, 62000},		-- Sports
+		[7] = {21, 41000},		-- Super
+		[8] = {5, 10000},		-- Motorcycle
+		[9] = {51, 92000},		-- Offroad
+		[10] = {51, 102000},	-- Industrial
+		[11] = {41, 82000},	-- Utility
+		[12] = {61, 122000},	-- Van
 		-- [14] -- Boat
 		-- [15] -- Helicopter
 		-- [16] -- Plane
@@ -84,7 +84,13 @@ return {
 		[19] = {41, 328000},	-- Military
 		[20] = {61, 488000},	-- Commercial
 		models = {
-			[`xa21`] = {11, 10000}
+			[`xa21`] = {11, 10000},
+			--[`brioso`] = {60, 150000},
 		},
+		boneIndex = {
+			[`pounder`] = 'wheel_rr',
+			[`manssrt`] = 'wheel_rr',
+			[`hevo`] = 'wheel_rr',
+		}
 	}
 }

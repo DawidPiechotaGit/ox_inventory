@@ -100,6 +100,42 @@ return {
 				duration = 5000,
 				count = 1,
 			},
+			{
+				name = 'newoil',
+				ingredients = {
+					carparts = 1,
+					WEAPON_HAMMER = 0.05
+				},
+				duration = 5000,
+				count = 1,
+			},
+			{
+				name = 'axleparts',
+				ingredients = {
+					carparts = 1,
+					WEAPON_HAMMER = 0.05
+				},
+				duration = 5000,
+				count = 1,
+			},
+			{
+				name = 'sparkplugs',
+				ingredients = {
+					carparts = 1,
+					WEAPON_HAMMER = 0.05
+				},
+				duration = 5000,
+				count = 1,
+			},
+			{
+				name = 'carbattery',
+				ingredients = {
+					battery = 5,
+					WEAPON_HAMMER = 0.05
+				},
+				duration = 5000,
+				count = 1,
+			},
 		},
 		groups = {["bennys"] = 0, ["lsc"] = 0, ["tuner"] = 0},
 		points = {
