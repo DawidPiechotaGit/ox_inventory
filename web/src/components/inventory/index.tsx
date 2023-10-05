@@ -48,9 +48,9 @@ const Inventory: React.FC = () => {
       <InventoryHotbar /> */}
       <Fade in={inventoryVisible}>
         <div className="inventory-wrapper">
-          <div className="hotslot-container">
+          {/* <div className="hotslot-container">
             <HotslotInventory />
-          </div>
+          </div> */}
           {/* <div className="inventory-wrapper-container"> */}
           <LeftInventory />
           <InventoryControl />

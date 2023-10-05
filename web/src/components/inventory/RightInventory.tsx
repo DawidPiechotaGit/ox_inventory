@@ -6,7 +6,13 @@ const RightInventory: React.FC = () => {
   const rightInventory = useAppSelector(selectRightInventory);
 
   // return <InventoryGrid inventory={rightInventory} />;
-  return <InventoryGrid inventory={rightInventory} direction="right" />;
+  return (
+    <>
+      <div className="rightinv-wrapper" style={{ marginTop: '7.6%' }}>
+        <InventoryGrid inventory={rightInventory} direction="right" />
+      </div>
+    </>
+  );
 };
 
 export default RightInventory;

@@ -21,17 +21,6 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
   return (
     <>
       <div className="inventory-grid-wrapper">
-        <div>
-          <div className="inventory-grid-header-wrapper">
-            <p>{inventory.label}</p>
-            {/* {inventory.maxWeight && (
-              <p>
-                {weight / 1000}/{inventory.maxWeight / 1000}kg
-              </p>
-            )} */}
-          </div>
-          {/* <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} /> */}
-        </div>
         {/* <div className="inventory-grid-container"> */}
         <div className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}>
           {/* <>
@@ -55,6 +44,17 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
             })}
             {inventory.type === 'player' && createPortal(<InventoryContext />, document.body)}
           </>
+        </div>
+        <div>
+          <div className="inventory-grid-header-wrapper">
+            <p>{inventory.label}</p>
+            {/* {inventory.maxWeight && (
+              <p>
+                {weight / 1000}/{inventory.maxWeight / 1000}kg
+              </p>
+            )} */}
+          </div>
+          {/* <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} /> */}
         </div>
         <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
         {inventory.maxWeight && (

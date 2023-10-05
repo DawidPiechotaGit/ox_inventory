@@ -9,8 +9,8 @@ $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
-$gridRows: 5;
-$gridSize: 11.2vh;
+$gridRows: 4;
+$gridSize: 10.6vh;
 $gridGap: 4px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
@@ -104,8 +104,13 @@ button:active {
   justify-content: center;
   align-items: center;
   height: 100%;
-
   gap: 20px;
+  background: linear-gradient(
+    0deg,
+    rgba(65, 92, 114, 0.6727065826330532) 0%,
+    rgba(133, 184, 226, 0.4430147058823529) 43%,
+    rgba(173, 135, 233, 0.27494747899159666) 84%
+  );
 }
 
 .inventory-control {
@@ -123,18 +128,22 @@ button:active {
   }
 
   .inventory-control-wrapper > img {
-    width: 150px;
+    width: 450px;
+    opacity: 0.6;
   }
 
   .inventory-control-input {
     transition: 200ms;
-    padding: 10px 8px;
+    padding: 12px 8px;
     font-family: $customFont;
     font-size: 16px;
+    font-weight: 700;
+    border-radius: 2.5%;
     text-align: center;
     outline: none;
     border: none;
     color: #fff;
+    width: 70%;
     // background-color: $seconaryColor;
     background: radial-gradient(#36495ed0, #1a1f24d0);
     &:focus-within {
@@ -147,7 +156,8 @@ button:active {
   // }
 
   .inventory-control-button {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 700;
     color: #fff;
     // background-color: $seconaryColor;
     transition: 200ms;
@@ -156,17 +166,26 @@ button:active {
     border: none;
     text-transform: uppercase;
     font-family: $customFont;
-    width: 100%;
-    font-weight: 500;
+    width: 80%;
     background: radial-gradient(#36495ed0, #1a1f24d0);
-    transform: skewX(-25deg) scaleY(cos(25deg));
+    // transform: skewX(-25deg) scaleY(cos(25deg));
     &:hover {
       background-color: $secondaryColorDark;
     }
   }
 
-  .inventory-control-button > p {
-    transform: skewX(25deg) scaleY(cos(-25deg));
+  // .inventory-control-button > p {
+  //   transform: skewX(25deg) scaleY(cos(-25deg));
+  // }
+
+  .use-container > img {
+    width: 100px;
+    filter: invert(1);
+  }
+
+  .btn-use {
+    background: none;
+    padding: 0px;
   }
 }
 
@@ -221,12 +240,19 @@ button:active {
 .inventory-grid-wrapper {
   display: flex;
   flex-direction: column;
-  gap: calc($gridGap * 2);
+  // gap: calc($gridGap * 2);
   // background-color: #161a1dd0;
   padding: 15px;
+  padding: 0px 15px 0px 15px;
   border-radius: 5px;
 }
 .inventory-grid-header-wrapper {
+  // position: relative;
+  // top: -15vh;
+  // left: -16vw;
+  // left: 8%;
+  // top: 40%;
+  // transform: rotate(-90deg);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -234,6 +260,7 @@ button:active {
     font-size: 26px;
     color: #ffffff;
     text-transform: capitalize;
+    font-weight: 500;
   }
 }
 
@@ -272,11 +299,12 @@ button:active {
   background: radial-gradient(#36495ed0, #1a1f24d0);
   // background-repeat: no-repeat;
   // background-position: center;
-  border-radius: 0%;
+  border-radius: 3%;
   // image-rendering: -webkit-optimize-contrast;
   position: relative;
   // background-size: 7vh;
   color: $textColor;
+  border: solid 1px #1f465c;
   // border-color: #424f5cd0;
   // border-style: solid;
   // border-width: 2px;
@@ -441,9 +469,10 @@ button:active {
 .hotslot-wrapper {
   display: grid;
   width: $gridSize;
-  height: calc(#{$gridRows} * #{11.5vh + 0.22vh} + #{$gridRows} * #{$gridGap});
-  grid-template-columns: repeat(1, $gridSize);
-  grid-template-rows: repeat(5, $gridSize + 0.22vh);
+  // height: calc(#{$gridRows} * #{11.5vh + 0.22vh} + #{$gridRows} * #{$gridGap});
+  height: $gridSize;
+  grid-template-columns: repeat(5, $gridSize);
+  grid-template-rows: repeat(1, $gridSize + 0.22vh);
   gap: $gridGap;
 }
 
@@ -457,9 +486,32 @@ button:active {
   // border-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  height: $containerSize;
-  width: fit-content;
+  // height: $containerSize;
+  height: $gridSize;
+  width: 23.5%;
   // margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+.line {
+  align-self: center;
+  width: 94%;
+  color: white;
+  border: solid 1px white;
+  // margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.hotslot-header {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 2.8%;
+  text-transform: uppercase;
+  position: relative;
+  top: -16vh;
+  left: -15.8vw;
+  transform: rotate(-90deg);
 }
 
 // hotbar
@@ -529,10 +581,11 @@ button:active {
 }
 
 .weight-bar {
+  margin-top: 15px;
   // background: rgba(0, 0, 0, 0.4);
   background: radial-gradient(#36495ed0, #1a1f24d0);
   // border: 1px inset rgba(0, 0, 0, 0.1);
   height: 0.6vh;
-  border-radius: 40%;
+  border-radius: 0%;
   overflow: hidden;
 }

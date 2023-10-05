@@ -43,10 +43,13 @@ const InventoryControl: React.FC = () => {
       <UsefulControls infoVisible={infoVisible} setInfoVisible={setInfoVisible} />
       <div className="inventory-control">
         <div className="inventory-control-wrapper">
-          {/* <img src="https://i.imgur.com/w8VkuC1.png"></img> */}
+          <img style={{ position: 'absolute', top: '1%' }} src="https://i.imgur.com/w8VkuC1.png"></img>
           <input className="inventory-control-input" type="number" defaultValue={itemAmount} onChange={inputHandler} />
-          <button className="inventory-control-button" ref={use}>
-            <p>{Locale.ui_use || 'Use'}</p>
+          <button className="inventory-control-button btn-use" ref={use}>
+            <div className="use-container">
+              <img src="../../images/use-icon.png"></img>
+              <p>{Locale.ui_use || 'Use'}</p>
+            </div>
           </button>
           <button className="inventory-control-button" ref={give}>
             <p>{Locale.ui_give || 'Give'}</p>
