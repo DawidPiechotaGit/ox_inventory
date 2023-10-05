@@ -334,13 +334,17 @@ button:active {
 }
 
 .inventory-slot-number {
+  position: absolute;
+  right: 37%;
+  top: 20%;
   background-color: transparent;
-  color: rgba(179, 179, 179, 0.658);
+  color: rgba(29, 29, 29, 0.288);
   height: 12px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
-  font-size: 20px;
+  font-size: 50px;
+  font-weight: 700;
   font-family: $customFont;
 }
 
@@ -375,9 +379,11 @@ button:active {
 .item-slot-info-wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-self: flex-end;
-  padding: 3px;
+  padding: 3px 8px 0px 8px;
   gap: 3px;
+  width: 100%;
   p {
     font-size: 12px;
   }
