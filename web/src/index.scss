@@ -285,7 +285,7 @@ button:active {
 
 .inventory-grid-container-right {
   display: grid;
-  height: $containerSize;
+  height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
   grid-template-columns: repeat($gridCols, $gridSize);
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;

@@ -172,13 +172,30 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item }) => {
                   {item.weight > 0
                     ? item.weight >= 1000
                       ? `${(item.weight / 1000).toLocaleString('en-us', {
-                          minimumFractionDigits: 2,
-                        })}kg `
-                      : `${item.weight.toLocaleString('en-us', {
                           minimumFractionDigits: 0,
-                        })}g `
+                        })}`
+                      : `${(item.weight / 1000).toLocaleString('en-us', {
+                          minimumFractionDigits: 0,
+                        })}`
                     : ''}
                 </p>
+                {item.weight > 0 ? (
+                  <img
+                    style={{
+                      color: 'white',
+                      filter: 'invert(1)',
+                      width: '12px',
+                      alignItems: 'center',
+                      // paddingLeft: '-1px',
+                      paddingRight: '2px',
+                    }}
+                    // src="../../images/weight-hanging-solid.svg"
+                    src="../../images/scale-unbalanced-solid.svg"
+                    // src="../../images/dumbbell-solid.svg"
+                  ></img>
+                ) : (
+                  ''
+                )}
                 <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
               </div>
             </div>

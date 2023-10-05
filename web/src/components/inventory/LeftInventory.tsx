@@ -9,7 +9,7 @@ const LeftInventory: React.FC = () => {
   // return <InventoryGrid inventory={leftInventory} />;
   return (
     <>
-      <div className="leftinv-wrapper" style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="leftinv-wrapper" style={{ display: 'flex', flexDirection: 'column', marginTop: '7%' }}>
         <p className="hotslot-header">Fast Slots</p>
         {/* <div className="line"></div> */}
         <div className="hotslot-container">
