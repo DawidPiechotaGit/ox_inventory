@@ -20,7 +20,13 @@ const InventoryHotslot: React.FC<{ inventory: Inventory; direction: 'left' | 'ri
         <>
           <div className="hotslot-wrapper">
             {hotInv.map((item) => (
-              <InventorySlot key={`${inventory.type}-${inventory.id}-${item.slot}`} item={item} inventory={inventory} />
+              <InventorySlot
+                key={`${inventory.type}-${inventory.id}-${item.slot}`}
+                item={item}
+                inventoryType={inventory.type}
+                inventoryGroups={inventory.groups}
+                inventoryId={inventory.id}
+              />
             ))}
             {inventory.type === 'player' && createPortal(<InventoryContext />, document.body)}
           </div>

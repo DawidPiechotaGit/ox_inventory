@@ -8,13 +8,8 @@ import { useIntersection } from '../../hooks/useIntersection';
 
 const PAGE_SIZE = 30;
 
-// const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
-//   const weight = React.useMemo(
 const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right' }> = ({ inventory, direction }) => {
   const weight = React.useMemo(
-    //   () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
-    //   [inventory.maxWeight, inventory.items]
-    // );
     () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
     [inventory.maxWeight, inventory.items]
   );
@@ -33,13 +28,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
     <>
       <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
         {/* <div className="inventory-grid-container"> */}
-        <div className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}>
-          {/* <>
-            {inventory.items.map((item) => (
-              <InventorySlot key={`${inventory.type}-${inventory.id}-${item.slot}`} item={item} inventory={inventory} />
-            ))}
-            {inventory.type === 'player' && createPortal(<InventoryContext />, document.body)}
-          </> */}
+        {/* <div className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}>
           <>
             {inventory.items.map((item, index) => {
               if (index < 5 && inventory.type === 'player') {
@@ -55,30 +44,32 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
             })}
             {inventory.type === 'player' && createPortal(<InventoryContext />, document.body)}
           </>
-        </div>
+        </div> */}
         <div>
           <div className="inventory-grid-header-wrapper">
             <p>{inventory.label}</p>
-            {/* {inventory.maxWeight && (
-              <p>
-                {weight / 1000}/{inventory.maxWeight / 1000}kg
-              </p>
-            )} */}
           </div>
-          {/* <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} /> */}
         </div>
-        <div className="inventory-grid-container" ref={containerRef}>
+        <div
+          className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}
+          ref={containerRef}
+        >
           <>
-            {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => (
-              <InventorySlot
-                key={`${inventory.type}-${inventory.id}-${item.slot}`}
-                item={item}
-                ref={index === (page + 1) * PAGE_SIZE - 1 ? ref : null}
-                inventoryType={inventory.type}
-                inventoryGroups={inventory.groups}
-                inventoryId={inventory.id}
-              />
-            ))}
+            {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => {
+              if (index < 5 && inventory.type === 'player') {
+                return '';
+              }
+              return (
+                <InventorySlot
+                  key={`${inventory.type}-${inventory.id}-${item.slot}`}
+                  item={item}
+                  ref={index === (page + 1) * PAGE_SIZE - 1 ? ref : null}
+                  inventoryType={inventory.type}
+                  inventoryGroups={inventory.groups}
+                  inventoryId={inventory.id}
+                />
+              );
+            })}
           </>
         </div>
         <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />

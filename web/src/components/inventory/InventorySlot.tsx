@@ -131,13 +131,16 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
             ? 'brightness(80%) grayscale(100%)'
             : undefined,
         opacity: isDragging ? 0.4 : 1.0,
-        backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+        // backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
         border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
       }}
     >
       {isSlotWithItem(item) && (
         <div
           className="item-slot-wrapper"
+          style={{
+            backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+          }}
           onMouseEnter={() => {
             timerRef.current = setTimeout(() => {
               dispatch(openTooltip({ item, inventoryType }));
@@ -163,10 +166,10 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                   ? item.weight >= 1000
                     ? `${(item.weight / 1000).toLocaleString('en-us', {
                         minimumFractionDigits: 2,
-                      })}kg `
-                    : `${item.weight.toLocaleString('en-us', {
-                        minimumFractionDigits: 0,
-                      })}g `
+                      })} kg`
+                    : `${(item.weight / 1000).toLocaleString('en-us', {
+                        minimumFractionDigits: 2,
+                      })} kg`
                   : ''}
               </p>
               <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
