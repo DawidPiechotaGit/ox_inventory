@@ -376,7 +376,7 @@ lib.callback.register('ox_inventory:usingItem', function(data)
 			item.disable.combat = true
 		end
 
-		local success = (not item.usetime or lib.progressCircle({
+		local success = (not item.usetime or lib.progressBar({
 			duration = item.usetime,
 			label = item.label or locale('using', data.metadata.label or data.label),
 			position = 'bottom',
@@ -1672,7 +1672,7 @@ end)
 lib.callback.register('ox_inventory:startCrafting', function(id, recipe)
 	recipe = CraftingBenches[id].items[recipe]
 
-	return lib.progressCircle({
+	return lib.progressBar({
 		label = locale('crafting_item', recipe.metadata?.label or Items[recipe.name].label),
 		duration = recipe.duration or 3000,
 		canCancel = true,
@@ -1832,7 +1832,7 @@ RegisterCommand('slimjim', function()
 	local ped = PlayerPedId()	
 	if client.hasGroup(shared.police) and IsPedInAnyVehicle(ped, false) then	
 		local slimjim = GetVehiclePedIsIn(ped, false)	
-		if lib.progressCircle({	
+		if lib.progressBar({	
 			duration = 8000,	
 			position = 'bottom',	
 			useWhileDead = false,	

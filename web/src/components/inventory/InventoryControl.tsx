@@ -50,7 +50,7 @@ const InventoryControl: React.FC = () => {
           />
           <button className="inventory-control-button btn-use" ref={use}>
             <div className="use-container">
-              <img src="../../images/use-icon.png"></img>
+              <img src="https://i.imgur.com/LvBeWUY.png"></img>
               <p>{Locale.ui_use || 'Use'}</p>
             </div>
           </button>
