@@ -11,7 +11,7 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
 $gridRows: 4;
-$gridSize: 10.6vh;
+$gridSize: 10.79vh;
 $gridGap: 4px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
@@ -595,7 +595,7 @@ button:active {
   height: $gridSize;
   width: 23.5%;
   // margin-top: 5px;
-  margin-bottom: 6px;
+  margin-bottom: 6.5px;
 }
 
 .line {
@@ -693,6 +693,7 @@ button:active {
   height: 0.6vh;
   border-radius: 0%;
   overflow: hidden;
+  transform: skew(-25deg);
 }
 
 .transition-fade-enter {

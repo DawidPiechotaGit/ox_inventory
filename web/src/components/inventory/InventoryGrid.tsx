@@ -46,9 +46,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
           </>
         </div> */}
         <div>
-          <div className="inventory-grid-header-wrapper">
-            <p>{inventory.label}</p>
-          </div>
+          <div className="inventory-grid-header-wrapper">{/* <p>{inventory.label}</p> */}</div>
         </div>
         <div
           className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}
