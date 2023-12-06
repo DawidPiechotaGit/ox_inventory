@@ -75,7 +75,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
           <div
             className={
               inventory.type == 'crafting' || inventory.type == 'shop'
-                ? 'inventory-grid-container'
+                ? 'shop-inventory-grid-container'
                 : 'inventory-grid-container'
             }
             ref={containerRef}
@@ -97,7 +97,8 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
         <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
         {inventory.maxWeight && (
           <p>
-            {weight / 100}/<span>{inventory.maxWeight / 100}</span>
+            {weight / 100}
+            <span>/{inventory.maxWeight / 100}</span>
           </p>
         )}
       </div>

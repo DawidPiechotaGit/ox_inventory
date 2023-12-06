@@ -170,7 +170,7 @@ button:active {
     box-shadow: 0px 0px 20px 4px rgba(39, 53, 71, 0.816);
     // background-color: $seconaryColor;
     // background: radial-gradient(#36495ed0, #1a1f24d0);
-    background: #1a1f24d0;
+    background: #1a1f2496;
     border: solid 0.12em rgba(255, 255, 255, 0.651);
     &:focus-within {
       background-color: $secondaryColorDark;
@@ -381,7 +381,7 @@ button:active {
   font-weight: 400;
   span {
     font-size: 16px;
-    color: #ffffff8a;
+    color: rgb(109, 187, 218);
   }
 }
 
@@ -408,7 +408,7 @@ button:active {
   display: grid;
   height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
   grid-template-columns: repeat(1, 50vh);
-  grid-auto-rows: $gridSize + 0.22vh;
+  grid-auto-rows: $gridSize + 0.24vh;
   gap: $gridGap;
   overflow-y: scroll;
 }
@@ -459,7 +459,8 @@ button:active {
   right: 37%;
   top: 20%;
   background-color: transparent;
-  color: rgba(184, 184, 184, 0.26);
+  color: rgba(133, 198, 235, 0.486);
+  text-shadow: 0.2vh 0.2vh 0 rgba(0, 0, 0, 0.5);
   height: 12px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
@@ -648,16 +649,16 @@ button:active {
   font-weight: 400;
   padding-left: 2.8%;
   text-transform: uppercase;
-  position: fixed;
-  top: 55%;
-  left: 6%;
+  position: absolute;
+  top: 24vh;
+  left: -4.8vh;
   transform: rotate(-90deg);
 }
 
 .fade-line1 {
-  position: fixed;
-  top: 42%;
-  left: 4.8%;
+  position: absolute;
+  top: 37vh;
+  left: -9vh;
   height: 1px;
   background-color: #e6e6e6;
   width: 10em;
@@ -667,15 +668,15 @@ button:active {
 }
 
 .fade-line2 {
-  position: fixed;
-  top: 66%;
-  left: 4.8%;
+  position: absolute;
+  top: 13vh;
+  left: -9vh;
   height: 1px;
   background-color: #e6e6e6;
   width: 10em;
   margin: 0 auto;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
-  transform: rotate(-90deg);
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), color-stop(20%, rgb(255, 255, 255)));
+  transform: rotate(90deg);
 }
 
 // hotbar

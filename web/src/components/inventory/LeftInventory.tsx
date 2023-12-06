@@ -10,11 +10,12 @@ const LeftInventory: React.FC = () => {
   return (
     <>
       <div className="leftinv-wrapper" style={{ display: 'flex', flexDirection: 'row', marginTop: '8.4%' }}>
-        <div className="fade-line1"></div>
-        <p className="hotslot-header">Fast Slots</p>
-        <div className="fade-line2"></div>
-        {/* <div className="line"></div> */}
         <div className="hotslot-container">
+          <div className="hotslot-text">
+            <div className="fade-line1"></div>
+            <p className="hotslot-header">Fast Slots</p>
+            <div className="fade-line2"></div>
+          </div>
           <HotslotInventory />
         </div>
         {/* <div className="line"></div> */}
