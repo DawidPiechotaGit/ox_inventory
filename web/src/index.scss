@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
 $mainColor: #161a1dd0;
 $textColor: #ffffff;
 $mainFont: Roboto;
-$customFont: Rajdhani;
+$customFont: Teko;
 // $customFont: Orbitron;
 
 $secondaryColor: rgba(12, 12, 12, 0.4);
@@ -10,7 +12,7 @@ $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
-$gridRows: 4;
+$gridRows: 5;
 $gridSize: 10.79vh;
 $gridGap: 4px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
@@ -139,11 +141,11 @@ button:active {
   .inventory-control-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     // background-color: #161a1dd0;
-    padding: 15px;
+    // padding: 15px;
     border-radius: 5px;
   }
 
@@ -157,15 +159,19 @@ button:active {
     padding: 12px 8px;
     font-family: $customFont;
     font-size: 16px;
-    font-weight: 700;
-    border-radius: 2.5%;
+    font-weight: 400;
+    border-radius: 100%;
     text-align: center;
     outline: none;
     border: none;
     color: #fff;
-    width: 70%;
+    width: 20%;
+    height: 2vh;
+    box-shadow: 0px 0px 20px 4px rgba(39, 53, 71, 0.816);
     // background-color: $seconaryColor;
-    background: radial-gradient(#36495ed0, #1a1f24d0);
+    // background: radial-gradient(#36495ed0, #1a1f24d0);
+    background: #1a1f24d0;
+    border: solid 0.12em rgba(255, 255, 255, 0.651);
     &:focus-within {
       background-color: $secondaryColorDark;
     }
@@ -177,7 +183,7 @@ button:active {
 
   .inventory-control-button {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
     // background-color: $secondaryColor;
     transition: 200ms;
@@ -189,23 +195,40 @@ button:active {
     width: 80%;
     background: radial-gradient(#36495ed0, #1a1f24d0);
     // transform: skewX(-25deg) scaleY(cos(25deg));
-    &:hover {
-      background-color: $secondaryColorDark;
-    }
+    // &:hover {
+    // background-color: $secondaryColorDark;
+    // }
   }
 
   // .inventory-control-button > p {
   //   transform: skewX(25deg) scaleY(cos(-25deg));
   // }
 
+  .use-container {
+    padding-top: 10px;
+  }
+
   .use-container > img {
-    width: 100px;
+    width: 75px;
     filter: invert(1);
   }
 
   .btn-use {
     background: none;
     padding: 0px;
+  }
+
+  .btn-give {
+    background: none;
+  }
+
+  .btn-exit {
+    background: none;
+    padding-top: 25px;
+  }
+
+  .exit-container > p {
+    font-size: 0px;
   }
 }
 
@@ -348,14 +371,14 @@ button:active {
     font-size: 26px;
     color: #ffffff;
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
 .inventory-grid-wrapper > p {
   text-align: end;
   font-size: 26px;
-  font-weight: 550;
+  font-weight: 400;
   span {
     font-size: 16px;
     color: #ffffff8a;
@@ -381,18 +404,28 @@ button:active {
   overflow-x: hidden;
 }
 
+.shop-inventory-grid-container {
+  display: grid;
+  height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
+  grid-template-columns: repeat(1, 50vh);
+  grid-auto-rows: $gridSize + 0.22vh;
+  gap: $gridGap;
+  overflow-y: scroll;
+}
+
 // inventory slots
 .inventory-slot {
   // background-color: #1a1f24d0;
-  background: radial-gradient(#36495ed0, #1a1f24d0);
+  // background: radial-gradient(#36495ed0, #1a1f24d0);
+  background: #1a1f24d0;
   // background-repeat: no-repeat;
   // background-position: center;
-  border-radius: 3%;
+  border-radius: 2%;
   // image-rendering: -webkit-optimize-contrast;
   position: relative;
   // background-size: 7vh;
   color: $textColor;
-  border: solid 1px #1f465c;
+  // border: solid 1px #1f465c;
   // border-color: #424f5cd0;
   // border-style: solid;
   // border-width: 2px;
@@ -426,13 +459,13 @@ button:active {
   right: 37%;
   top: 20%;
   background-color: transparent;
-  color: rgba(29, 29, 29, 0.288);
+  color: rgba(184, 184, 184, 0.26);
   height: 12px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: $customFont;
 }
 
@@ -473,7 +506,7 @@ button:active {
   gap: 3px;
   width: 100%;
   p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -492,10 +525,10 @@ button:active {
 .item-slot-price-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 3px;
+  justify-content: center;
+  padding-left: 75%;
   p {
-    font-size: 14px;
+    font-size: 25px;
     text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.7);
   }
 }
@@ -575,9 +608,9 @@ button:active {
   display: grid;
   width: $gridSize;
   // height: calc(#{$gridRows} * #{11.5vh + 0.22vh} + #{$gridRows} * #{$gridGap});
-  height: $gridSize;
-  grid-template-columns: repeat(5, $gridSize);
-  grid-template-rows: repeat(1, $gridSize + 0.22vh);
+  height: 5.79vh;
+  grid-template-columns: repeat(1, 9.79vh);
+  grid-template-rows: repeat(5, 9.79vh);
   gap: $gridGap;
 }
 
@@ -592,10 +625,12 @@ button:active {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   // height: $containerSize;
-  height: $gridSize;
-  width: 23.5%;
-  // margin-top: 5px;
-  margin-bottom: 6.5px;
+  height: 5.79vh;
+  // width: 23.5%;
+  margin-top: 4%;
+  // margin-bottom: 6.5px;
+  // right: 30%;
+  // top: 11.5vh;
 }
 
 .line {
@@ -610,12 +645,36 @@ button:active {
 .hotslot-header {
   text-align: start;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   padding-left: 2.8%;
   text-transform: uppercase;
-  position: relative;
-  top: -16vh;
-  left: -15.8vw;
+  position: fixed;
+  top: 55%;
+  left: 6%;
+  transform: rotate(-90deg);
+}
+
+.fade-line1 {
+  position: fixed;
+  top: 42%;
+  left: 4.8%;
+  height: 1px;
+  background-color: #e6e6e6;
+  width: 10em;
+  margin: 0 auto;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), color-stop(20%, rgb(255, 255, 255)));
+  transform: rotate(-90deg);
+}
+
+.fade-line2 {
+  position: fixed;
+  top: 66%;
+  left: 4.8%;
+  height: 1px;
+  background-color: #e6e6e6;
+  width: 10em;
+  margin: 0 auto;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
   transform: rotate(-90deg);
 }
 
@@ -669,7 +728,7 @@ button:active {
   p {
     font-size: 11px;
     padding: 2px;
-    font-weight: 600;
+    font-weight: 400;
   }
 }
 

@@ -54,11 +54,38 @@ const InventoryControl: React.FC = () => {
               <p>{Locale.ui_use || 'Use'}</p>
             </div>
           </button>
-          <button className="inventory-control-button" ref={give}>
-            <p>{Locale.ui_give || 'Give'}</p>
+          <button className="inventory-control-button btn-give" ref={give}>
+            <div className="give-container">
+              <svg
+                stroke="currentColor"
+                fill="#f9f9f980"
+                strokeWidth="0"
+                viewBox="0 0 576 512"
+                height="3em"
+                width="3em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M565.3 328.1c-11.8-10.7-30.2-10-42.6 0L430.3 402c-11.3 9.1-25.4 14-40 14H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h78.3c15.9 0 30.7-10.9 33.3-26.6 3.3-20-12.1-37.4-31.6-37.4H192c-27 0-53.1 9.3-74.1 26.3L71.4 384H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h356.8c14.5 0 28.6-4.9 40-14L564 377c15.2-12.1 16.4-35.3 1.3-48.9z"></path>
+              </svg>
+              <p>{Locale.ui_give || 'Give'}</p>
+            </div>
           </button>
-          <button className="inventory-control-button" onClick={() => fetchNui('exit')}>
-            <p>{Locale.ui_close || 'Close'}</p>
+          <button className="inventory-control-button btn-exit" onClick={() => fetchNui('exit')}>
+            <div className="exit-container">
+              <svg
+                stroke="none"
+                fill="#f9f9f980"
+                strokeWidth="0"
+                version="1.1"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M15.854 12.854c-0-0-0-0-0-0l-4.854-4.854 4.854-4.854c0-0 0-0 0-0 0.052-0.052 0.090-0.113 0.114-0.178 0.066-0.178 0.028-0.386-0.114-0.529l-2.293-2.293c-0.143-0.143-0.351-0.181-0.529-0.114-0.065 0.024-0.126 0.062-0.178 0.114 0 0-0 0-0 0l-4.854 4.854-4.854-4.854c-0-0-0-0-0-0-0.052-0.052-0.113-0.090-0.178-0.114-0.178-0.066-0.386-0.029-0.529 0.114l-2.293 2.293c-0.143 0.143-0.181 0.351-0.114 0.529 0.024 0.065 0.062 0.126 0.114 0.178 0 0 0 0 0 0l4.854 4.854-4.854 4.854c-0 0-0 0-0 0-0.052 0.052-0.090 0.113-0.114 0.178-0.066 0.178-0.029 0.386 0.114 0.529l2.293 2.293c0.143 0.143 0.351 0.181 0.529 0.114 0.065-0.024 0.126-0.062 0.178-0.114 0-0 0-0 0-0l4.854-4.854 4.854 4.854c0 0 0 0 0 0 0.052 0.052 0.113 0.090 0.178 0.114 0.178 0.066 0.386 0.029 0.529-0.114l2.293-2.293c0.143-0.143 0.181-0.351 0.114-0.529-0.024-0.065-0.062-0.126-0.114-0.178z"></path>
+              </svg>
+              <p>{Locale.ui_close || 'Close'}</p>
+            </div>
           </button>
         </div>
       </div>

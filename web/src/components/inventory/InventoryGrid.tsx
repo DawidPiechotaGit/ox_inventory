@@ -48,16 +48,40 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
         <div>
           <div className="inventory-grid-header-wrapper">{/* <p>{inventory.label}</p> */}</div>
         </div>
-        <div
-          className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}
-          ref={containerRef}
-        >
-          <>
-            {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => {
-              if (index < 5 && inventory.type === 'player') {
-                return '';
-              }
-              return (
+        {inventory.type == 'player' ? (
+          <div
+            className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}
+            ref={containerRef}
+          >
+            <>
+              {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => {
+                if (index < 5 && inventory.type === 'player') {
+                  return '';
+                }
+                return (
+                  <InventorySlot
+                    key={`${inventory.type}-${inventory.id}-${item.slot}`}
+                    item={item}
+                    ref={index === (page + 1) * PAGE_SIZE - 1 ? ref : null}
+                    inventoryType={inventory.type}
+                    inventoryGroups={inventory.groups}
+                    inventoryId={inventory.id}
+                  />
+                );
+              })}
+            </>
+          </div>
+        ) : (
+          <div
+            className={
+              inventory.type == 'crafting' || inventory.type == 'shop'
+                ? 'inventory-grid-container'
+                : 'inventory-grid-container'
+            }
+            ref={containerRef}
+          >
+            <>
+              {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => (
                 <InventorySlot
                   key={`${inventory.type}-${inventory.id}-${item.slot}`}
                   item={item}
@@ -66,10 +90,10 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
                   inventoryGroups={inventory.groups}
                   inventoryId={inventory.id}
                 />
-              );
-            })}
-          </>
-        </div>
+              ))}
+            </>
+          </div>
+        )}
         <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
         {inventory.maxWeight && (
           <p>
