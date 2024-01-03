@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 $mainColor: #161a1dd0;
 $textColor: #ffffff;
 $mainFont: Roboto;
-$customFont: Teko;
+$customFont: Roboto;
 // $customFont: Orbitron;
 
 $secondaryColor: rgba(12, 12, 12, 0.4);
@@ -61,7 +63,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .context-menu-list {
-  min-width: 200px;
+  min-width: 100px;
   background-color: $mainColor;
   color: $textColor;
   padding: 4px;
@@ -120,6 +122,48 @@ button:active {
   image-rendering: -webkit-optimize-contrast;
 }
 
+.infobox i,
+.infobox2 i {
+  color: #19abca;
+  transform: rotate(-45deg);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.infobox {
+  width: 40px;
+  height: 40px;
+  left: 0;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  rotate: 150%;
+  transform: rotate(45deg);
+}
+
+.background {
+  background-image: url('nui://ox_inventory/web/images/pngfirst.png');
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  position: absolute;
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.4;
+}
+
+.inventory-grid-header-wrapper a {
+  position: relative;
+  color: #19abca;
+  font-size: 23px;
+  text-shadow: #19abca 1px 0 10px;
+  letter-spacing: -1;
+  font-style: bold;
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .inventory-wrapper {
   display: flex;
   flex-direction: row;
@@ -156,7 +200,8 @@ button:active {
 
   .inventory-control-input {
     transition: 200ms;
-    padding: 12px 8px;
+    // padding: 12px 8px;
+    padding: 15px 8px;
     font-family: $customFont;
     font-size: 16px;
     font-weight: 400;
@@ -356,6 +401,7 @@ button:active {
   padding: 15px;
   padding: 0px 15px 0px 15px;
   border-radius: 5px;
+  gap: 10px;
 }
 .inventory-grid-header-wrapper {
   // position: relative;
@@ -366,16 +412,22 @@ button:active {
   // transform: rotate(-90deg);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  // justify-content: space-between;
   p {
     font-size: 26px;
-    color: #ffffff;
+    // color: #ffffff;
     text-transform: capitalize;
     font-weight: 400;
+    margin-left: auto;
+    position: relative;
+    top: 30px;
   }
 }
 
-.inventory-grid-wrapper > p {
+.inventory-grid-header-wrapper > p {
   text-align: end;
   font-size: 26px;
   font-weight: 400;
@@ -407,7 +459,7 @@ button:active {
 .shop-inventory-grid-container {
   display: grid;
   height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
-  grid-template-columns: repeat(1, 50vh);
+  grid-template-columns: repeat(2, 24vh);
   grid-auto-rows: $gridSize + 0.24vh;
   gap: $gridGap;
   overflow-y: scroll;
@@ -415,16 +467,17 @@ button:active {
 
 // inventory slots
 .inventory-slot {
-  // background-color: #1a1f24d0;
+  background-color: #1a1f24d0;
   // background: radial-gradient(#36495ed0, #1a1f24d0);
-  background: #1a1f24d0;
-  // background-repeat: no-repeat;
-  // background-position: center;
+  // background: #1a1f24d0;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 5px;
-  // image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-optimize-contrast;
   position: relative;
   // background-size: 7vh;
   color: $textColor;
+  background-size: 7vh;
   // border: solid 1px #1f465c;
   // border-color: #424f5cd0;
   // border-style: solid;
@@ -452,6 +505,7 @@ button:active {
   font-family: $customFont;
   font-size: 12px;
   letter-spacing: 0.5px;
+  font-weight: 100;
 }
 
 .inventory-slot-number {
@@ -484,6 +538,7 @@ button:active {
   background-size: 7vh;
   p {
     font-size: 12px;
+    font-weight: 100;
   }
 }
 
@@ -529,8 +584,11 @@ button:active {
   justify-content: center;
   padding-left: 75%;
   p {
-    font-size: 25px;
+    // font-size: 25px;
+    font-size: 18px;
     text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.7);
+    // font-weight: 300;
+    font-weight: 100;
   }
 }
 
@@ -628,7 +686,7 @@ button:active {
   // height: $containerSize;
   height: 5.79vh;
   // width: 23.5%;
-  margin-top: 4%;
+  margin-top: 17%;
   // margin-bottom: 6.5px;
   // right: 30%;
   // top: 11.5vh;
@@ -645,13 +703,16 @@ button:active {
 
 .hotslot-header {
   text-align: start;
-  font-size: 20px;
-  font-weight: 400;
+  // font-size: 20px;
+  // font-weight: 400;
+  font-size: 13px;
+  font-weight: 300;
   padding-left: 2.8%;
   text-transform: uppercase;
   position: absolute;
   top: 24vh;
-  left: -4.8vh;
+  // left: -4.8vh;
+  left: -5vh;
   transform: rotate(-90deg);
 }
 
