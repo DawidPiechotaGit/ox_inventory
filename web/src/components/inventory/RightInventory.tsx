@@ -8,7 +8,7 @@ const RightInventory: React.FC = () => {
   // return <InventoryGrid inventory={rightInventory} />;
   return (
     <>
-      <div className="rightinv-wrapper">
+      <div className="rightinv-wrapper" style={{ marginRight: '6%' }}>
         <InventoryGrid inventory={rightInventory} direction="right" />
       </div>
     </>

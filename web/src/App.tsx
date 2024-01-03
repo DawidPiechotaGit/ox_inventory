@@ -61,7 +61,7 @@ debugData([
       },
       rightInventory: {
         id: 'shop',
-        type: 'shop',
+        type: 'player',
         slots: 5000,
         label: 'Bob Smith',
         weight: 3000,

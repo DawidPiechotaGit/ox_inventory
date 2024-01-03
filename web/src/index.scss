@@ -265,11 +265,19 @@ button:active {
 
   .btn-give {
     background: none;
+    position: relative;
   }
 
   .btn-exit {
     background: none;
     padding-top: 25px;
+    position: relative;
+  }
+
+  .btn-use,
+  .btn-give,
+  .btn-exit:hover {
+    cursor: pointer;
   }
 
   .exit-container > p {
