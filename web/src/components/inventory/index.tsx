@@ -44,6 +44,7 @@ const Inventory: React.FC = () => {
   return (
     <>
       <Fade in={inventoryVisible}>
+        <div className="background"></div>
         <div className="inventory-wrapper">
           {/* <div className="hotslot-container">
             <HotslotInventory />

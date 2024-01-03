@@ -46,8 +46,21 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
           </>
         </div> */}
         <div>
-          <div className="inventory-grid-header-wrapper">{/* <p>{inventory.label}</p> */}</div>
+          <div className="inventory-grid-header-wrapper">
+            <span className="infobox">
+              <i className={inventory.type == 'player' ? 'fa-solid fa-person-rays' : 'fas fa-box-open'}></i>
+            </span>
+            <a>{inventory.label}</a>
+            {inventory.maxWeight && (
+              <p>
+                {weight / 100}
+                <span>/{inventory.maxWeight / 100}</span>
+              </p>
+            )}
+          </div>
         </div>
+        <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
+
         {inventory.type == 'player' ? (
           <div
             className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}
@@ -93,13 +106,6 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
               ))}
             </>
           </div>
-        )}
-        <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
-        {inventory.maxWeight && (
-          <p>
-            {weight / 100}
-            <span>/{inventory.maxWeight / 100}</span>
-          </p>
         )}
       </div>
     </>
