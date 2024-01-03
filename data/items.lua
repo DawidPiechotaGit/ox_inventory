@@ -981,6 +981,13 @@ return {
 		close = true,
 		description = "This is a seed that grows heroin."
 	},
+
+	['rotten_seeds'] = {
+		label = 'Rotten Seeds',
+		weight = 1,
+		stack = true,
+		description = "Seeds that arent any good to grow"
+	},
 	
 	['heroin_raw'] = {
 		label = 'Raw Heroin',
@@ -1009,6 +1016,38 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
+	},
+
+	['wood'] = {
+		label = 'Wood',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+	
+	['metal'] = {
+		label = 'Metal',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+	
+	['rope'] = {
+		label = 'Rope',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
+	},
+	
+	['shovel'] = {
+		label = 'Shovel',
+		weight = 1,
+		stack = true,
+		close = true,
+		description = nil
 	},
 
 	--Evidence
@@ -1808,7 +1847,7 @@ return {
 
 	["harness"] = {
 		label = "Race Harness",
-		consume = 0.04,
+		-- consume = 0.04,
 		weight = 1000,
 		stack = false,
 		close = true,
@@ -5657,6 +5696,18 @@ return {
 		close = true,
 	},
 
+	['drugbag'] = {
+		label = 'Throw',
+		weight = 10,
+		close = true,
+	},
+
+	['fullbag'] = {
+		label = 'Full Bag',
+		weight = 10,
+		close = true,
+	},
+
 	['needle'] = {
 		label = 'Hypodermic Needle',
 		weight = 15,
@@ -8863,4 +8914,214 @@ return {
 			image = "tacosauce.png",
 		}
 	},
+
+	['forceps'] = {
+        label = 'forceps',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['gauze'] = {
+        label = 'gauze',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['iodine'] = {
+        label = 'iodine',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['bandageg'] = {
+        label = 'Bandage',
+        description = "Stops Bleeding",
+        weight = 30,
+        stack = true
+    },
+    ['pill'] = {
+        label = 'pill',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['surgical_gloves'] = {
+        label = 'surgical gloves',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['surgical_staple'] = {
+        label = 'surgical staple',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['surgical_tray'] = {
+        label = 'surgical tray',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['syringe'] = {
+        label = 'Syringe',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+    ['tape'] = {
+        label = 'Tape',
+        description = "",
+        weight = 30,
+        stack = true
+    },
+
+	--add these to ox_inventory/data/items.lua
+
+	["salmon"] = {
+		label = "Salmon",
+		weight = 2,
+		stack = true,
+	},
+
+	["scrapcloth"] = {
+		label = "Scrap Cloth",
+		weight = 2,
+		stack = true,
+	},
+
+	["seaturtle"] = {
+		label = "Sea Turtle",
+		weight = 2,
+		stack = true,
+	},
+
+	["shad"] = {
+		label = "Shad",
+		weight = 2,
+		stack = true,
+	},
+
+	["fishingrod"] = {
+		label = "Fishing Rod",
+		weight = 2,
+		stack = true,
+	},
+
+	["swordfish"] = {
+		label = "Sword Fish",
+		weight = 2,
+		stack = true,
+	},
+
+	["tilapia"] = {
+		label = "Tilapia",
+		weight = 2,
+		stack = true,
+	},
+
+	["tunafish"] = {
+		label = "Tuna Fish",
+		weight = 2,
+		stack = true,
+	},
+
+	["greatwhite"] = {
+		label = "Great White",
+		weight = 5,
+		stack = true,
+	},
+
+	["halibut"] = {
+		label = "Halibut",
+		weight = 2,
+		stack = true,
+	},
+
+	["hammerhead"] = {
+		label = "Hammerhead",
+		weight = 5,
+		stack = true,
+	},
+
+	["shark_bait"] = {
+		label = "Shark Bait",
+		weight = 2,
+		stack = true,
+	},
+
+	["worm_bait"] = {
+		label = "Worms",
+		weight = 2,
+		stack = true,
+	},
+
+	["mahifish"] = {
+		label = "Mahi-Mahi",
+		weight = 2,
+		stack = true,
+	},
+
+	["perch"] = {
+		label = "Perch",
+		weight = 2,
+		stack = true,
+	},
+
+	["rainbowfish"] = {
+		label = "Rainbow Fish",
+		weight = 2,
+		stack = true,
+	},
+
+	["redfish"] = {
+		label = "Red Fish",
+		weight = 2,
+		stack = true,
+	},
+
+	["bluefish"] = {
+		label = "Blue Fish",
+		weight = 2,
+		stack = true,
+	},
+
+	["bass"] = {
+		label = "Bass",
+		weight = 2,
+		stack = true,
+	},
+
+	["catfish"] = {
+		label = "Catfish",
+		weight = 2,
+		stack = true,
+	},
+
+	["pufferfish"] = {
+		label = "Puffer Fish",
+		weight = 2,
+		stack = true,
+	},
+
+	["piranha"] = {
+		label = "Piranha",
+		weight = 2,
+		stack = true,
+	},
+
+	["fishing_chest_money"] = {
+        label = "Chest",
+        weight = 2,
+        stack = true,
+    },
+	
+	['contract'] = {
+		label = 'Contract',
+		weight = 1,
+		stack = false,
+		close = true,
+		description = 'Used to buy vehicles for dealership'
+		},
+
 }
