@@ -41,6 +41,7 @@ end)
 
 plyState:set('invBusy', true, false)
 plyState:set('invHotkeys', false, false)
+plyState:set('canUseWeapons', false, false)
 
 local function canOpenInventory()
     if not PlayerData.loaded then
@@ -115,7 +116,7 @@ local function closeTrunk()
 end
 
 local CraftingBenches = require 'modules.crafting.client'
-local Vehicles = data 'vehicles'
+local Vehicles = lib.load('data.vehicles')
 local Inventory = require 'modules.inventory.client'
 
 ---@param inv string?
@@ -337,10 +338,11 @@ RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 	})
 end)
 
-local Animations = data 'animations'
+local Animations = lib.load('data.animations')
 local Items = require 'modules.items.client'
 local usingItem = false
 
+---@param data { name: string, label: string, count: number, slot: number, metadata: table<string, any>, weight: number }
 lib.callback.register('ox_inventory:usingItem', function(data)
 	local item = Items[data.name]
 
@@ -417,17 +419,18 @@ local function canUseItem(isAmmo)
 end
 
 ---@param data table
----@param cb function?
+---@param cb fun(response: SlotWithItem | false)?
 local function useItem(data, cb)
 	local slotData, result = PlayerData.inventory[data.slot]
 
-	if not canUseItem(data.ammo and true) then return end
+	if not slotData or not canUseItem(data.ammo and true) then return end
 
-	if currentWeapon and currentWeapon?.timer > 100 then return end
+	if currentWeapon?.timer and currentWeapon.timer > 100 then return end
 
     if invOpen and data.close then client.closeInventory() end
 
     usingItem = true
+    ---@type boolean?
     result = lib.callback.await('ox_inventory:useItem', 200, data.name, data.slot, slotData.metadata)
 
 	if result and cb then
@@ -438,9 +441,17 @@ local function useItem(data, cb)
 		end
 	end
 
+    if result then
+        TriggerEvent('ox_inventory:usedItem', slotData.name, slotData.slot, next(slotData.metadata) and slotData.metadata)
+    end
+
 	Wait(500)
     usingItem = false
 end
+
+AddEventHandler('ox_inventory:usedItem', function(name, slot, metadata)
+    TriggerServerEvent('ox_inventory:usedItemInternal', slot)
+end)
 
 AddEventHandler('ox_inventory:item', useItem)
 exports('useItem', useItem)
@@ -491,7 +502,7 @@ local function useSlot(slot)
 		if data.effect then
 			data:effect({name = item.name, slot = item.slot, metadata = item.metadata})
 		elseif data.weapon then
-			if EnableWeaponWheel then return end
+			if EnableWeaponWheel or not plyState.canUseWeapons then return end
 
 			if IsCinematicCamRendering() then SetCinematicModeActive(false) end
 
@@ -607,6 +618,9 @@ local function useSlot(slot)
 				end)
 			elseif data.component then
 				local components = data.client.component
+
+                if not components then return end
+
 				local componentType = data.type
 				local weaponComponents = PlayerData.inventory[currentWeapon.slot].metadata.components
 
@@ -630,6 +644,7 @@ local function useSlot(slot)
 
 									if success then
 										GiveWeaponComponentToPed(playerPed, currentWeapon.hash, component)
+										TriggerEvent('ox_inventory:updateWeaponComponent', 'added', component, data.name)
 									end
 								end
 							end)
@@ -885,7 +900,7 @@ local function updateInventory(data, weight)
 
 			local curItem = PlayerData.inventory[item.slot]
 
-			if curItem?.name then
+			if curItem and curItem.name then
 				itemCount[curItem.name] = (itemCount[curItem.name] or 0) - curItem.count
 			end
 
@@ -1065,8 +1080,6 @@ RegisterNetEvent('ox_inventory:removeDrop', function(dropId)
 	end
 end)
 
-local uiLoaded = false
-
 ---@type function?
 local function setStateBagHandler(stateId)
 	AddStateBagChangeHandler('invOpen', stateId, function(_, _, value)
@@ -1076,6 +1089,12 @@ local function setStateBagHandler(stateId)
 	AddStateBagChangeHandler('invBusy', stateId, function(_, _, value)
 		invBusy = value
 	end)
+
+    AddStateBagChangeHandler('canUseWeapons', stateId, function(_, _, value)
+        if not value and currentWeapon then
+            currentWeapon = Weapon.Disarm(currentWeapon)
+        end
+    end)
 
 	AddStateBagChangeHandler('instance', stateId, function(_, _, value)
 		currentInstance = value
@@ -1131,6 +1150,9 @@ end)
 RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inventory, weight, player)
 	if source == '' then return end
 
+    ---@class PlayerData
+    ---@field inventory table<number, SlotWithItem?>
+    ---@field weight number
 	PlayerData = player
 	PlayerData.id = cache.playerId
 	PlayerData.source = cache.serverId
@@ -1245,7 +1267,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 		end
 	end
 
-	for id, data in pairs(data('licenses')) do
+	for id, data in pairs(lib.load('data.licenses')) do
 		lib.points.new({
 			coords = data.coords,
 			distance = 16,
@@ -1258,7 +1280,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 		})
 	end
 
-	while not uiLoaded do Wait(50) end
+	while not client.uiLoaded do Wait(50) end
 
 	SendNUIMessage({
 		action = 'init',
@@ -1493,6 +1515,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 	plyState:set('invBusy', false, false)
 	plyState:set('invOpen', false, false)
 	plyState:set('invHotkeys', true, false)
+	plyState:set('canUseWeapons', true, false)
 	collectgarbage('collect')
 end)
 
@@ -1502,27 +1525,35 @@ AddEventHandler('onResourceStop', function(resourceName)
 	end
 end)
 
-RegisterNetEvent('ox_inventory:viewInventory', function(data)
-	if data and invOpen == false then
-		data.type = 'admin'
-		plyState.invOpen = true
-		currentInventory = data
-		currentInventory.ignoreSecurityChecks = true
+RegisterNetEvent('ox_inventory:viewInventory', function(left, right)
+	if source == '' then return end
 
-		SendNUIMessage({
-			action = 'setupInventory',
-			data = {
-				rightInventory = currentInventory,
-			}
-		})
-		SetNuiFocus(true, true)
+	plyState.invOpen = true
 
-		if client.screenblur then TriggerScreenblurFadeIn(0) end
-	end
+	SetInterval(client.interval, 100)
+	SetNuiFocus(true, true)
+	SetNuiFocusKeepInput(true)
+	closeTrunk()
+
+	if client.screenblur then TriggerScreenblurFadeIn(0) end
+
+	currentInventory = right or defaultInventory
+	currentInventory.ignoreSecurityChecks = true
+    currentInventory.type = 'inspect'
+	left.items = PlayerData.inventory
+	left.groups = PlayerData.groups
+
+	SendNUIMessage({
+		action = 'setupInventory',
+		data = {
+			leftInventory = left,
+			rightInventory = currentInventory
+		}
+	})
 end)
 
 RegisterNUICallback('uiLoaded', function(_, cb)
-	uiLoaded = true
+	client.uiLoaded = true
 	cb(1)
 end)
 
@@ -1543,6 +1574,8 @@ RegisterNUICallback('removeComponent', function(data, cb)
 
 	local itemSlot = PlayerData.inventory[currentWeapon.slot]
 
+    if not itemSlot then return end
+
 	for _, component in pairs(Items[data.component].client.component) do
 		if HasPedGotWeaponComponent(playerPed, currentWeapon.hash, component) then
 			for k, v in pairs(itemSlot.metadata.components) do
@@ -1551,6 +1584,7 @@ RegisterNUICallback('removeComponent', function(data, cb)
 
 					if success then
 						RemoveWeaponComponentFromPed(playerPed, currentWeapon.hash, component)
+						TriggerEvent('ox_inventory:updateWeaponComponent', 'removed', component, data.component)
 					end
 
 					break
@@ -1592,6 +1626,16 @@ end
 
 exports('giveItemToTarget', giveItemToTarget)
 
+local function isGiveTargetValid(ped, coords)
+    if cache.vehicle and GetVehiclePedIsIn(ped, false) == cache.vehicle then
+        return true
+    end
+
+    local entity = Utils.Raycast(1|2|4|8|16, coords + vec3(0, 0, 0.5), 0.2)
+
+    return entity == ped and IsEntityVisible(ped)
+end
+
 RegisterNUICallback('giveItem', function(data, cb)
 	cb(1)
 
@@ -1603,9 +1647,8 @@ RegisterNUICallback('giveItem', function(data, cb)
 
         if nearbyCount == 1 then
 			local option = nearbyPlayers[1]
-            local entity = Utils.Raycast(1|2|4|8|16, option.coords + vec3(0, 0, 0.5), 0.2)
 
-			if entity ~= option.ped or not IsEntityVisible(option.ped) then return end
+            if not isGiveTargetValid(option.ped, option.coords) then return end
 
             return giveItemToTarget(GetPlayerServerId(option.id), data.slot, data.count)
         end
@@ -1614,11 +1657,11 @@ RegisterNUICallback('giveItem', function(data, cb)
 
 		for i = 1, #nearbyPlayers do
 			local option = nearbyPlayers[i]
-            local entity = Utils.Raycast(1|2|4|8|16, option.coords + vec3(0, 0, 0.5), 0.2)
 
-			if entity == option.ped and IsEntityVisible(option.ped) then
+            if isGiveTargetValid(option.ped, option.coords) then
 				local playerName = GetPlayerName(option.id)
 				option.id = GetPlayerServerId(option.id)
+                ---@diagnostic disable-next-line: inject-field
 				option.label = ('[%s] %s'):format(option.id, playerName)
 				n += 1
 				giveList[n] = option
@@ -1691,7 +1734,7 @@ local swapActive = false
 
 ---Synchronise and validate all item movement between the NUI and server.
 RegisterNUICallback('swapItems', function(data, cb)
-    if swapActive or not invOpen or invBusy then return end
+    if swapActive or not invOpen or invBusy or usingItem then return cb(false) end
 
     swapActive = true
 

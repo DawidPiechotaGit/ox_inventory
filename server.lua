@@ -232,7 +232,7 @@ exports('forceOpenInventory', function(playerId, invType, data)
 	end
 end)
 
-local Licenses = data 'licenses'
+local Licenses = lib.load('data.licenses')
 
 lib.callback.register('ox_inventory:buyLicense', function(source, id)
 	local license = Licenses[id]
@@ -261,6 +261,25 @@ lib.callback.register('ox_inventory:getInventory', function(source, id)
 		owned = inventory.owner and true or false,
 		items = inventory.items
 	}
+end)
+
+RegisterNetEvent('ox_inventory:usedItemInternal', function(slot)
+    local inventory = Inventory(source)
+
+    if not inventory then return end
+
+    local item = inventory.usingItem
+
+    if not item or item.slot ~= slot then
+        ---@todo
+        DropPlayer(inventory.id, 'sussy')
+
+        return
+    end
+
+    TriggerEvent('ox_inventory:usedItem', inventory.id, item.name, item.slot, next(item.metadata) and item.metadata)
+
+    inventory.usingItem = nil
 end)
 
 ---@param source number
@@ -335,6 +354,7 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 					return TriggerClientEvent('ox_lib:notify', source, { type = 'error', description = locale('item_not_enough', item.name) })
 				end
 			elseif not item.weapon and server.UseItem then
+                inventory.usingItem = data
 				-- This is used to call an external useItem function, i.e. ESX.UseItem / QBCore.Functions.CanUseItem
 				-- If an error is being thrown on item use there is no internal solution. We previously kept a list
 				-- of usable items which led to issues when restarting resources (for obvious reasons), but config
@@ -345,6 +365,7 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 
 			data.consume = consume
 
+            ---@type boolean
 			local success = lib.callback.await('ox_inventory:usingItem', source, data)
 
 			if item.weapon then
@@ -352,6 +373,8 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 			end
 
 			if not success then return end
+
+            inventory.usingItem = data
 
 			if consume and consume ~= 0 and not data.component then
 				data = inventory.items[data.slot]
@@ -530,7 +553,7 @@ lib.addCommand('clearevidence', {
 	local hasPermission = group and server.isPlayerBoss(source, group, grade)
 
 	if hasPermission then
-		MySQL.query('DELETE FROM ox_inventory WHERE name = ?', {('evidence-%s'):format(args.evidence)})
+		MySQL.query('DELETE FROM ox_inventory WHERE name = ?', {('evidence-%s'):format(args.locker)})
 	end
 end)
 
@@ -581,12 +604,5 @@ lib.addCommand('viewinv', {
 	},
 	restricted = 'group.admin',
 }, function(source, args)
-	local invId = tonumber(args.invId) or args.invId
-	local inventory = invId ~= source and Inventory(invId)
-	local playerInventory = Inventory(source)
-
-	if playerInventory and inventory then
-		playerInventory:openInventory(inventory)
-		TriggerClientEvent('ox_inventory:viewInventory', source, inventory)
-	end
+	Inventory.InspectInventory(source, tonumber(args.invId) or args.invId)
 end)
