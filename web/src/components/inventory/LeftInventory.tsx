@@ -9,7 +9,7 @@ const LeftInventory: React.FC = () => {
   // return <InventoryGrid inventory={leftInventory} />;
   return (
     <>
-      <div className="leftinv-wrapper" style={{ display: 'flex', flexDirection: 'row', marginTop: '8.4%' }}>
+      <div className="leftinv-wrapper" style={{ display: 'flex', flexDirection: 'row' }}>
         <div className="hotslot-container">
           <div className="hotslot-text">
             <div className="fade-line1"></div>
