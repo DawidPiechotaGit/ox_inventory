@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Inventory } from '../../typings';
 import WeightBar from '../utils/WeightBar';
 import InventorySlot from './InventorySlot';
@@ -19,7 +19,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
   const { ref, entry } = useIntersection({ threshold: 0.5 });
   const isBusy = useAppSelector((state) => state.inventory.isBusy);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (entry && entry.isIntersecting) {
       setPage((prev) => ++prev);
     }

@@ -897,6 +897,7 @@ return {
 			weight = 280,
 			type = 'muzzle',
 			client = {
+                image = 'at_suppressor.png',
 				component = {
 					`COMPONENT_AT_PI_SUPP`,
 					`COMPONENT_AT_PI_SUPP_02`,
@@ -912,6 +913,7 @@ return {
 			weight = 280,
 			type = 'muzzle',
 			client = {
+                image = 'at_suppressor.png',
 				component = {
 					`COMPONENT_AT_AR_SUPP`,
 					`COMPONENT_AT_AR_SUPP_02`,
@@ -959,6 +961,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended.png',
 				component = {
 					`COMPONENT_APPISTOL_CLIP_02`,
 					`COMPONENT_CERAMICPISTOL_CLIP_02`,
@@ -980,6 +983,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended.png',
 				component = {
 					`COMPONENT_ASSAULTSMG_CLIP_02`,
 					`COMPONENT_COMBATPDW_CLIP_02`,
@@ -998,6 +1002,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_ASSAULTSHOTGUN_CLIP_02`,
 					`COMPONENT_HEAVYSHOTGUN_CLIP_02`,
@@ -1011,6 +1016,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_ADVANCEDRIFLE_CLIP_02`,
 					`COMPONENT_ASSAULTRIFLE_CLIP_02`,
@@ -1035,6 +1041,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_GUSENBERG_CLIP_02`,
 					`COMPONENT_MG_CLIP_02`,
@@ -1050,6 +1057,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_HEAVYSNIPER_MK2_CLIP_02`,
 					`COMPONENT_MARKSMANRIFLE_CLIP_02`,
@@ -1064,6 +1072,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_COMBATPDW_CLIP_03`,
 					`COMPONENT_MACHINEPISTOL_CLIP_03`,
@@ -1078,6 +1087,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_HEAVYSHOTGUN_CLIP_03`
 				},
@@ -1090,6 +1100,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_ASSAULTRIFLE_CLIP_03`,
 					`COMPONENT_COMPACTRIFLE_CLIP_03`,

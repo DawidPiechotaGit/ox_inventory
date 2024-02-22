@@ -4,6 +4,7 @@ return {
 		weight = 220,
 		degrade = 60,
 		client = {
+			image = 'burger_chicken.png',
 			status = { hunger = 200000 },
 			anim = 'eating',
 			prop = 'burger',
@@ -229,9 +230,9 @@ return {
 		client = {
 			status = { thirst = 200000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `prop_ld_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
-			notification = 'You quenched your thirst with cola'
+			notification = 'You quenched your thirst with a sprunk'
 		}
 	},
 
@@ -410,6 +411,9 @@ return {
 
 	['identification'] = {
 		label = 'Identification',
+		client = {
+			image = 'card_id.png'
+		}
 	},
 
 	['panties'] = {
@@ -501,9 +505,12 @@ return {
 	},
 
 	['mastercard'] = {
-		label = 'Mastercard',
+		label = 'Fleeca Card',
 		stack = false,
 		weight = 10,
+		client = {
+			image = 'card_bank.png'
+		}
 	},
 
 	['scrapmetal'] = {
