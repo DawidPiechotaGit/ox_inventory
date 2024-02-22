@@ -4,7 +4,6 @@ return {
 		weight = 220,
 		degrade = 60,
 		client = {
-			image = 'burger_chicken.png',
 			status = { hunger = 200000 },
 			anim = 'eating',
 			prop = 'burger',
@@ -60,7 +59,35 @@ return {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
 			disable = { move = false, car = false, combat = true },
-			usetime = 2500,
+			usetime = 4750,
+			disable = { move = false, car = false, combat = true },
+			cancel = true
+		}
+	},
+	
+	['tourniquet'] = {
+		label = 'Tourniquet',
+		weight = 25,
+		client = {
+			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
+			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
+			disable = { move = false, car = false, combat = true },
+			usetime = 1500,
+			disable = { move = false, car = false, combat = true },
+			cancel = true
+		}
+	},
+	
+	['gauze'] = {
+		label = 'Gauze',
+		weight = 25,
+		client = {
+			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
+			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
+			disable = { move = false, car = false, combat = true },
+			usetime = 3000,
+			disable = { move = false, car = false, combat = true },
+			cancel = true
 		}
 	},
 
@@ -230,9 +257,9 @@ return {
 		client = {
 			status = { thirst = 200000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ld_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
-			notification = 'You quenched your thirst with a sprunk'
+			notification = 'You quenched your thirst with cola'
 		}
 	},
 
@@ -411,9 +438,6 @@ return {
 
 	['identification'] = {
 		label = 'Identification',
-		client = {
-			image = 'card_id.png'
-		}
 	},
 
 	['panties'] = {
@@ -505,12 +529,9 @@ return {
 	},
 
 	['mastercard'] = {
-		label = 'Fleeca Card',
+		label = 'Mastercard',
 		stack = false,
 		weight = 10,
-		client = {
-			image = 'card_bank.png'
-		}
 	},
 
 	['scrapmetal'] = {
@@ -719,10 +740,17 @@ return {
 	
 	['hacking_device'] = {
 		label = 'Hacking Device',
-		weight = 1,
+		weight = 25,
 		stack = true,
 		close = true,
 		description = ''
+	},
+	['drug_package'] = {
+		label = 'Illegal Package',
+		weight = 250,
+		stack = false,
+		close = false,
+		description = 'Marked for police seizure'
 	},
 
 	['spray'] = {
@@ -1696,7 +1724,7 @@ return {
 	-- Chopshop
 	['carparts'] = {
 		label = 'Car Parts',
-		weight = 500,
+		weight = 25,
 		stack = true,
 		close = false,
 	},
@@ -1853,12 +1881,8 @@ return {
 	},
 
 	["harness"] = {
-		label = "Race Harness",
-		-- consume = 0.04,
-		weight = 1000,
-		stack = false,
-		close = true,
-		description = "Racing Harness so no matter what you stay in the car",
+		label = "Race Harness", weight = 0, stack = true, close = true, description = "Racing Harness so no matter what you stay in the car",
+		client = { image = "harness.png", event = "jim-mechanic:client:applyHarness", remove = false },
 	},
 
 	["grape"] = {
@@ -1878,11 +1902,8 @@ return {
 	},
 
 	["ducttape"] = {
-		label = "Duct Tape",
-		weight = 10,
-		stack = true,
-		close = true,
-		description = "Good for quick fixes",
+		label = "Duct Tape", weight = 0, stack = false, close = true, description = "Good for quick fixes",
+		client = { image = "bodyrepair.png", event = "jim-mechanic:quickrepair" }
 	},
 
 	["classic_phone"] = {
@@ -1893,28 +1914,9 @@ return {
 		description = "A phone",
 	},
 
-	["suspension2"] = {
-		label = "Tier 2 Suspension",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
-	},
-
 	["exhaust"] = {
-		label = "Vehicle Exhaust",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
-	},
-
-	["transmission4"] = {
-		label = "Tier 4 Transmission",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Exhaust", weight = 0, stack = false, close = true, description = "",
+		client = { image = "exhaust.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["bong"] = {
@@ -1926,11 +1928,8 @@ return {
 	},
 
 	["skirts"] = {
-		label = "Vehicle Skirts",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Skirts", weight = 0, stack = false, close = true, description = "",
+		client = { image = "skirts.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["cloth_dirty"] = {
@@ -1942,11 +1941,8 @@ return {
 	},
 
 	["bumper"] = {
-		label = "Vehicle Bumper",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Bumper", weight = 0, stack = false, close = true, description = "",
+		client = { image = "bumper.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["coke_small_brick"] = {
@@ -2006,19 +2002,13 @@ return {
 	},
 
 	["seat"] = {
-		label = "Seat Cosmetics",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Seat Cosmetics", weight = 0, stack = false, close = true, description = "",
+		client = { image = "seat.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["hood"] = {
-		label = "Vehicle Hood",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Hood", weight = 0, stack = false, close = true, description = "",
+		client = { image = "hood.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["iron"] = {
@@ -2086,11 +2076,12 @@ return {
 	},
 
 	["bprooftires"] = {
-		label = "Bulletproof Tires",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Bulletproof Tires", weight = 0, stack = false, close = true, description = "",
+		client = { image = "bprooftires.png", event = "jim-mechanic:client:applyBulletProof", remove = false },
+	},
+	["drifttires"] = {
+		label = "Drift Tires", weight = 0, stack = false, close = true, description = "",
+		client = { image = "drifttires.png", event = "jim-mechanic:client:applyDrift", remove = false },
 	},
 
 	["b52"] = {
@@ -2109,12 +2100,21 @@ return {
 		description = "",
 	},
 
+	-- ["repairkit"] = {
+	-- 	label = "Repairkit",
+	-- 	weight = 1000,
+	-- 	stack = true,
+	-- 	close = true,
+	-- 	description = "A nice toolbox with stuff to repair your vehicle",
+	-- },
+
 	["repairkit"] = {
-		label = "Repairkit",
-		weight = 1000,
-		stack = true,
-		close = true,
-		description = "A nice toolbox with stuff to repair your vehicle",
+    label = "Repairkit", weight = 0, stack = true, close = true, description = "A nice toolbox with stuff to repair your vehicle",
+    client = { image = "repairkit.png", event = "jim-mechanic:vehFailure:RepairVehicle", item = "repairkit", full = false },
+	},
+	["advancedrepairkit"] = {
+		label = "Advanced Repairkit", weight = 0, stack = true, close = true, description = "A nice toolbox with stuff to repair your vehicle",
+		client = { image = "advancedkit.png", event = "jim-mechanic:vehFailure:RepairVehicle", item = "advancedrepairkit", full = true },
 	},
 
 	['fakeplate'] = {
@@ -2131,6 +2131,22 @@ return {
 		stack = true,
 		close = true,
 		description = "A security card... I wonder what it goes to",
+	},
+	
+	["blackcard"] = {
+		label = "Black Security Card",
+		weight = 0,
+		stack = true,
+		close = false,
+		description = "A security card... I wonder what it goes to",
+	},
+	
+	["gruppesechnote"] = {
+		label = "A note...",
+		weight = 0,
+		stack = true,
+		close = false,
+		description = "In the back of armored steel we ride,  \n A word holds sway, where secrets abide.  \n Not red, not blue, but natures serene,  \n Whisper softly, the hue of leaves unseen",
 	},
 
 	["samsungphone"] = {
@@ -2230,19 +2246,8 @@ return {
 	},
 
 	["paintcan"] = {
-		label = "Vehicle Spray Can",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
-	},
-
-	["suspension5"] = {
-		label = "Tier 5 Suspension",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Spray Can", weight = 0, stack = false, close = true, description = "",
+		client = { image = "spraycan.png", event = "jim-mechanic:client:Paints:Check", },
 	},
 
 	["weed_ak47"] = {
@@ -2259,14 +2264,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A diamond ring",
-	},
-
-	["drifttires"] = {
-		label = "Drift Tires",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["pisswasser"] = {
@@ -2373,11 +2370,8 @@ return {
 	},
 
 	["livery"] = {
-		label = "Livery Roll",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Livery Roll", weight = 0, stack = false, close = true, description = "",
+		client = { image = "livery.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["tosti"] = {
@@ -2389,11 +2383,8 @@ return {
 	},
 
 	["toolbox"] = {
-		label = "Toolbox",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "Needed for Performance part removal",
+		label = "Toolbox", weight = 0, stack = false, close = true, description = "Needed for Performance part removal",
+		client = { image = "toolbox.png", event = "jim-mechanic:client:Menu" }
 	},
 
 	["coffee"] = {
@@ -2425,14 +2416,6 @@ return {
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
-	},
-
-	["suspension3"] = {
-		label = "Tier 3 Suspension",
-		weight = 0,
-		stack = false,
-		close = true,
 		description = "",
 	},
 
@@ -2549,11 +2532,8 @@ return {
 	},
 
 	["sparkplugs"] = {
-		label = "Spark Plugs",
-		weight = 0,
-		stack = true,
-		close = false,
-		description = "",
+		label = "Spark Plugs", weight = 0, stack = false, close = true, description = "",
+		client = { image = "sparkplugs.png", },
 	},
 
 	["coke_brick"] = {
@@ -2741,33 +2721,36 @@ return {
 	},
 
 	["customplate"] = {
-		label = "Customized Plates",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Customized Plates", weight = 0, stack = false, close = true, description = "",
+		client = { image = "plate.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	},
+
+	["tint_supplies"] = {
+		label = "Window Tint Kit", weight = 0, stack = false, close = true, description = "",
+		client = { image = "tint_supplies.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["transmission1"] = {
-		label = "Tier 1 Transmission",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Tier 1 Transmission", weight = 0, stack = false, close = true, description = "",
+		client = { image = "transmission1.png",  event = "jim-mechanic:client:applyTransmission", level = 0, remove = false },
+	},
+	["transmission2"] = {
+		label = "Tier 2 Transmission", weight = 0, stack = false, close = true, description = "",
+		client = { image = "transmission2.png",  event = "jim-mechanic:client:applyTransmission", level = 1, remove = false },
+	},
+	["transmission3"] = {
+		label = "Tier 3 Transmission", weight = 0, stack = false, close = true, description = "",
+		client = { image = "transmission3.png",  event = "jim-mechanic:client:applyTransmission", level = 2, remove = false },
+	},
+	["transmission4"] = {
+		label = "Tier 4 Transmission", weight = 0, stack = false, close = true, description = "",
+		client = { image = "transmission4.png",  event = "jim-mechanic:client:applyTransmission", level = 3, remove = false },
 	},
 
 	["metal_wand"] = {
 		label = "Metal Wand",
 		weight = 1,
 		stack = true,
-		close = true,
-		description = "",
-	},
-
-	["brakes2"] = {
-		label = "Tier 2 Brakes",
-		weight = 0,
-		stack = false,
 		close = true,
 		description = "",
 	},
@@ -2805,11 +2788,8 @@ return {
 	},
 
 	["nos"] = {
-		label = "NOS Bottle",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "A full bottle of NOS",
+		label = "NOS Bottle", weight = 0, stack = false, close = true, description = "A full bottle of NOS",
+		client = { image = "nos.png", event = "jim-mechanic:client:applyNOS", },
 	},
 
 	["visa"] = {
@@ -2821,11 +2801,8 @@ return {
 	},
 
 	["rims"] = {
-		label = "Custom Wheel Rims",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Custom Wheel Rims", weight = 0, stack = false, close = true, description = "",
+		client = { image = "rims.png", event = "jim-mechanic:client:Rims:Check", },
 	},
 
 	["photo"] = {
@@ -2844,21 +2821,18 @@ return {
 		description = "The Label Has Been Ripped Off",
 	},
 
-	["advancedrepairkit"] = {
-		label = "Advanced Repairkit",
-		weight = 1000,
-		stack = true,
-		close = true,
-		description = "A nice toolbox with stuff to repair your vehicle",
-		image = 'advrepairkit.png'
-	},
+	-- ["advancedrepairkit"] = {
+	-- 	label = "Advanced Repairkit",
+	-- 	weight = 1000,
+	-- 	stack = true,
+	-- 	close = true,
+	-- 	description = "A nice toolbox with stuff to repair your vehicle",
+	-- 	image = 'advrepairkit.png'
+	-- },
 
 	["externals"] = {
-		label = "Exterior Cosmetics",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Exterior Cosmetics", weight = 0, stack = false, close = true, description = "",
+		client = { image = "mirror.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["tunerlaptop"] = {
@@ -2920,19 +2894,13 @@ return {
     },
 
 	["horn"] = {
-		label = "Custom Vehicle Horn",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Custom Vehicle Horn", weight = 0, stack = false, close = true, description = "",
+		client = { image = "horn.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["noscan"] = {
-		label = "Empty NOS Bottle",
-		weight = 0,
-		stack = true,
-		close = true,
-		description = "An Empty bottle of NOS",
+		label = "Empty NOS Bottle", weight = 0, stack = true, close = true, description = "An Empty bottle of NOS",
+		client = { image = "noscan.png", }
 	},
 
 	["trojan_usb"] = {
@@ -3008,27 +2976,18 @@ return {
 	},
 
 	["mechanic_tools"] = {
-		label = "Mechanic tools",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "Needed for vehicle repairs",
+		label = "Mechanic tools", weight = 0, stack = false, close = true, description = "Needed for vehicle repairs",
+		client = { image = "mechanic_tools.png", event = "jim-mechanic:client:Repair:Check" }
 	},
 
 	["spoiler"] = {
-		label = "Vehicle Spoiler",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Spoiler", weight = 0, stack = false, close = true, description = "",
+		client = { image = "spoiler.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["carbattery"] = {
-		label = "Car Battery",
-		weight = 0,
-		stack = true,
-		close = false,
-		description = "",
+		label = "Car Battery", weight = 0, stack = false, close = true, description = "",
+		client = { image = "carbattery.png", },
 	},
 
 	["greenlight_phone"] = {
@@ -3056,27 +3015,18 @@ return {
 	},
 
 	["underglow_controller"] = {
-		label = "Neon Controller",
-		weight = 0,
-		stack = true,
-		close = true,
-		description = "RGB LED Vehicle Remote",
+		label = "Neon Controller", weight = 0, stack = false, close = true, description = "",
+		client = { image = "underglow_controller.png", event = "jim-mechanic:client:neonMenu", },
 	},
 
 	["turbo"] = {
-		label = "Supercharger Turbo",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "Who doesn't need a 65mm Turbo??",
+		label = "Supercharger Turbo", weight = 0, stack = false, close = true, description = "Who doesn't need a 65mm Turbo??",
+		client = { image = "turbo.png", event = "jim-mechanic:client:applyTurbo", remove = false },
 	},
 
 	["axleparts"] = {
-		label = "Axle Parts",
-		weight = 0,
-		stack = true,
-		close = false,
-		description = "",
+		label = "Axle Parts", weight = 0, stack = false, close = true, description = "",
+		client = { image = "axleparts.png", },
 	},
 
 	["toiletry"] = {
@@ -3120,11 +3070,8 @@ return {
 	},
 
 	["newoil"] = {
-		label = "Car Oil",
-		weight = 0,
-		stack = true,
-		close = false,
-		description = "",
+		label = "Car Oil", weight = 0, stack = false, close = true, description = "",
+		client = { image = "caroil.png", },
 	},
 
 	["weed_purple-haze_seed"] = {
@@ -3144,11 +3091,24 @@ return {
 	},
 
 	["suspension1"] = {
-		label = "Tier 1 Suspension",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Tier 1 Suspension", weight = 0, stack = false, close = true, description = "",
+		client = { image = "suspension1.png", event = "jim-mechanic:client:applySuspension",  level = 0, remove = false },
+	},
+	["suspension2"] = {
+		label = "Tier 2 Suspension", weight = 0, stack = false, close = true, description = "",
+		client = { image = "suspension2.png", event = "jim-mechanic:client:applySuspension", level = 1, remove = false },
+	},
+	["suspension3"] = {
+		label = "Tier 3 Suspension", weight = 0, stack = false, close = true, description = "",
+		client = { image = "suspension3.png", event = "jim-mechanic:client:applySuspension", level = 2, remove = false },
+	},
+	["suspension4"] = {
+		label = "Tier 4 Suspension", weight = 0, stack = false, close = true, description = "",
+		client = { image = "suspension4.png", event = "jim-mechanic:client:applySuspension", level = 3, remove = false },
+	},
+	["suspension5"] = {
+		label = "Tier 5 Suspension", weight = 0, stack = false, close = true, description = "",
+		client = { image = "suspension5.png", event = "jim-mechanic:client:applySuspension", level = 4, remove = false },
 	},
 
 	["meth"] = {
@@ -3208,11 +3168,8 @@ return {
 	},
 
 	["cleaningkit"] = {
-		label = "Cleaning Kit",
-		weight = 250,
-		stack = true,
-		close = true,
-		description = "A microfiber cloth with some soap will let your car sparkle again!",
+		label = "Cleaning Kit", weight = 0, stack = true, close = true, description = "A microfiber cloth with some soap will let your car sparkle again!",
+		client = { image = "cleaningkit.png", event = "jim-mechanic:client:cleanVehicle"},
 	},
 
 	["weed_white-widow"] = {
@@ -3311,28 +3268,40 @@ return {
 		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
 	},
 
-	["mechboard"] = {
-		label = "Mechanic Sheet",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+	['mechboard'] = { label = 'Mechanic Sheet', weight = 0, stack = false, close = false,
+    buttons = {
+        { 	label = 'Copy Parts List',
+            action = function(slot)
+                local item = exports.ox_inventory:Search('slots', 'mechboard')
+                for _, v in pairs(item) do
+                    if (v.slot == slot) then lib.setClipboard(v.metadata.info.vehlist) break end
+                end
+            end },
+        { 	label = 'Copy Plate Number',
+            action = function(slot)
+                local item = exports.ox_inventory:Search('slots', 'mechboard')
+                for _, v in pairs(item) do
+                    if (v.slot == slot) then lib.setClipboard(v.metadata.info.vehplate) break end
+                end
+            end },
+        {	label = 'Copy Vehicle Model',
+            action = function(slot)
+                local item = exports.ox_inventory:Search('slots', 'mechboard')
+                for _, v in pairs(item) do
+                    if (v.slot == slot) then lib.setClipboard(v.metadata.info.veh) break  end
+                end
+            end },
+		},
 	},
 
 	["car_armor"] = {
-		label = "Vehicle Armor",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Armor", weight = 0, stack = false, close = true, description = "",
+		client = { image = "armour.png", event = "jim-mechanic:client:applyArmour", remove = false },
 	},
 
 	["noscolour"] = {
-		label = "NOS Colour Injector",
-		weight = 0,
-		stack = true,
-		close = true,
-		description = "Make that purge spray",
+		label = "NOS Colour Injector", weight = 0, stack = true, close = true, description = "Make that purge spray",
+		client = { image = "noscolour.png", }
 	},
 
 	["schnapps"] = {
@@ -3407,14 +3376,6 @@ return {
 		description = "Expensive tablet",
 	},
 
-	["transmission3"] = {
-		label = "Tier 3 Transmission",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
-	},
-
 	["wet_greenlight_phone"] = {
 		label = "Wet Green Light Phone",
 		weight = 700,
@@ -3437,14 +3398,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Handy software to tear down some fences",
-	},
-
-	["engine5"] = {
-		label = "Tier 5 Engine",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["firework2"] = {
@@ -3480,11 +3433,8 @@ return {
 	},
 
 	["sparetire"] = {
-		label = "Spare Tire",
-		weight = 0,
-		stack = false,
-		close = false,
-		description = "",
+		label = "Spare Tire", weight = 0, stack = false, close = true, description = "",
+		client = { image = "sparetire.png", },
 	},
 
 	["thermite"] = {
@@ -3509,14 +3459,6 @@ return {
 		stack = false,
 		close = true,
 		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
-	},
-
-	["engine3"] = {
-		label = "Tier 3 Engine",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["wet_green_phone"] = {
@@ -3550,6 +3492,22 @@ return {
 		close = true,
 		description = "Comes in handy when people misbehave. Maybe it can be used for something else?",
 	},
+	
+	["cuffs"] = {
+        labal = "Handcuffs",
+        weight = 150,
+        client = {
+            export = "ND_Police.cuff"
+        }
+    },
+	
+    ["zipties"] = {
+        labal = "Zipties",
+        weight = 10,
+        client = {
+            export = "ND_Police.ziptie"
+        }
+    },
 
 	["fitbit"] = {
 		label = "Fitbit",
@@ -3573,14 +3531,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Black Russian Cocktail",
-	},
-
-	["brakes3"] = {
-		label = "Tier 3 Brakes",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["black_phone"] = {
@@ -3621,14 +3571,6 @@ return {
 		stack = false,
 		close = false,
 		description = "A kit made to siphon gasoline from vehicles.",
-	},
-
-	["transmission2"] = {
-		label = "Tier 2 Transmission",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["sprunk"] = {
@@ -3750,19 +3692,24 @@ return {
 	},
 
 	["engine1"] = {
-		label = "Tier 1 Engine",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Tier 1 Engine", weight = 0, stack = false, close = true, description = "",
+		client = { image = "engine1.png",  event = "jim-mechanic:client:applyEngine", level = 0, remove = false },
 	},
-
 	["engine2"] = {
-		label = "Tier 2 Engine",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Tier 2 Engine", weight = 0, stack = false, close = true, description = "",
+		client = { image = "engine2.png",  event = "jim-mechanic:client:applyEngine", level = 1, remove = false },
+	},
+	["engine3"] = {
+		label = "Tier 3 Engine", weight = 0, stack = false, close = true, description = "",
+		client = { image = "engine3.png",  event = "jim-mechanic:client:applyEngine", level = 2, remove = false },
+	},
+	["engine4"] = {
+		label = "Tier 4 Engine", weight = 0, stack = false, close = true, description = "",
+		client = { image = "engine4.png",  event = "jim-mechanic:client:applyEngine", level = 3, remove = false },
+	},
+	["engine5"] = {
+		label = "Tier 5 Engine", weight = 0, stack = false, close = true, description = "",
+		client = { image = "engine5.png",  event = "jim-mechanic:client:applyEngine", level = 4, remove = false },
 	},
 
 	["ecolalight"] = {
@@ -3821,11 +3768,8 @@ return {
 	},
 
 	["tires"] = {
-		label = "Drift Smoke Tires",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Drift Smoke Tires", weight = 0, stack = false, close = true, description = "",
+		client = { image = "tires.png", event = "jim-mechanic:client:Tires:Check", },
 	},
 
 	["weed_og-kush"] = {
@@ -3866,14 +3810,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A nice document",
-	},
-
-	["engine4"] = {
-		label = "Tier 4 Engine",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["monitor"] = {
@@ -3965,11 +3901,8 @@ return {
 	},
 
 	["internals"] = {
-		label = "Internal Cosmetics",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Internal Cosmetics", weight = 0, stack = false, close = true, description = "",
+		client = { image = "internals.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["rolling_paper"] = {
@@ -4109,27 +4042,27 @@ return {
 	-- },
 
 	["markedbills"] = {
-		label = "Marked Money",
-		weight = 1000,
+		label = "Loose Bills",
+		weight = 0,
 		stack = true,
 		close = false,
-		description = "Marked money from a bank",
+		description = "Marked loose bills",
 	},
 
 	["bands"] = {
 		label = "Bands of Cash",
-		weight = 200,
+		weight = 50,
 		stack = true,
 		close = false,
-		description = "Marked money from a bank",
+		description = "Marked bands of cash",
 	},
 
 	["rolls"] = {
 		label = "Rolls of Cash",
-		weight = 200,
+		weight = 25,
 		stack = true,
 		close = false,
-		description = "Marked money from a bank",
+		description = "Marked rolls of cash",
 	},
 
 	["flat_television"] = {
@@ -4189,11 +4122,8 @@ return {
 	},
 
 	["roof"] = {
-		label = "Vehicle Roof",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Vehicle Roof", weight = 0, stack = false, close = true, description = "",
+		client = { image = "roof.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["diamond"] = {
@@ -4205,11 +4135,8 @@ return {
 	},
 
 	["rollcage"] = {
-		label = "Roll Cage",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Roll Cage", weight = 0, stack = false, close = true, description = "",
+		client = { image = "rollcage.png", event = "jim-mechanic:client:Cosmetic:Check", },
 	},
 
 	["keys"] = {
@@ -4230,11 +4157,16 @@ return {
 	},
 
 	["brakes1"] = {
-		label = "Tier 1 Brakes",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
+		label = "Tier 1 Brakes", weight = 0, stack = false, close = true, description = "",
+		client = { image = "brakes1.png",  event = "jim-mechanic:client:applyBrakes", level = 0, remove = false },
+	},
+	["brakes2"] = {
+		label = "Tier 2 Brakes", weight = 0, stack = false, close = true, description = "",
+		client = { image = "brakes2.png",  event = "jim-mechanic:client:applyBrakes", level = 1, remove = false },
+	},
+	["brakes3"] = {
+		label = "Tier 3 Brakes", weight = 0, stack = false, close = true, description = "",
+		client = { image = "brakes3.png",  event = "jim-mechanic:client:applyBrakes", level = 2, remove = false },
 	},
 
 	["sbullet"] = {
@@ -4278,11 +4210,8 @@ return {
 	},
 
 	["headlights"] = {
-		label = "Xenon Headlights",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "8k HID headlights",
+		label = "Xenon Headlights", weight = 0, stack = false, close = true, description = "",
+		client = { image = "headlights.png", event = "jim-mechanic:client:applyXenons", },
 	},
 
 	["rolex"] = {
@@ -4291,14 +4220,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A golden watch seems like the jackpot to me!",
-	},
-
-	["suspension4"] = {
-		label = "Tier 4 Suspension",
-		weight = 0,
-		stack = false,
-		close = true,
-		description = "",
 	},
 
 	["twerks_candy"] = {
@@ -4345,6 +4266,27 @@ return {
 	},
 
 	-- Duffel Bags
+
+	["duffelbag"] = {
+		label = "Duffel Bag",
+		weight = 15000,
+		stack = false,
+		close = false,
+		allowArmed = true,
+		description = "A duffel bag",
+	},
+
+	["tag_item"] = {
+		label = "Tag",
+		description = "Add a custom tag to items!",
+		weight = 25,
+	},
+	
+	["tag_remover"] = {
+		label = "Tag Remover",
+		description = "Remove a custom tag from items!",
+		weight = 50,
+	},
 
 	["duffle1"] = {
 		label = "Duffel Bag",
@@ -5426,7 +5368,7 @@ return {
 
 	['package'] = {
 		label = 'Package',
-		weight = 500,
+		weight = 250,
 		description = 'A duct taped package including stolen goods... Marked for police seizure',
 	},
 
@@ -5583,6 +5525,12 @@ return {
 
 	['gruppesechstablet'] = {
 		label = 'Gruppe Tablet',
+		weight = 1000,
+		close = true,
+	},
+	
+	['grimetablet'] = {
+		label = 'Grime Tablet',
 		weight = 1000,
 		close = true,
 	},
@@ -7026,7 +6974,6 @@ return {
 		stack = false,
 	},
 
-
 	["ramen"] = {
 		label = "Bowl of Ramen",
 		weight = 100,
@@ -7621,7 +7568,7 @@ return {
 
 	-- USABLES: Ammo cases
 	['box_ammo_rifle9'] = { -- idea: Player uses item to show badge prop
-        label = 'Ammo Case: 9mm (x120)',
+        label = 'Ammo Case: 9mm (x30)',
         weight = 2000,
         --consume = 0,
         description = "A case of stuff to make problems go away",
@@ -7638,7 +7585,7 @@ return {
     },
 
 	['box_ammo_rifle45'] = { -- idea: Player uses item to show badge prop
-        label = 'Ammo Case: .45 (x120)',
+        label = 'Ammo Case: .45 (x30)',
         weight = 2000,
         --consume = 0,
         description = "A case of stuff to make problems go away",
@@ -7655,7 +7602,7 @@ return {
     },
 
     ['box_ammo_rifle1'] = { -- idea: Player uses item to show badge prop
-        label = 'Ammo Case: 5.56x45 (x120)',
+        label = 'Ammo Case: 5.56x45 (x30)',
         weight = 2000,
         --consume = 0,
         description = "A case of stuff to make problems go away",
@@ -7672,7 +7619,7 @@ return {
     },
 
     ['box_ammo_rifle2'] = { -- idea: Player uses item to show badge prop
-        label = 'Ammo Case: 7.62x39 (x120)',
+        label = 'Ammo Case: 7.62x39 (x30)',
         weight = 2000,
         --consume = 0,
         description = "A case of stuff to make problems go away",
@@ -7689,7 +7636,7 @@ return {
     },
 
     ['box_ammo_shotgun'] = { -- idea: Player uses item to show badge prop
-        label = 'Ammo Case: 12 Gauge (x60)',
+        label = 'Ammo Case: 12 Gauge (x15)',
         weight = 2000,
         --consume = 0,
         description = "A case of stuff to make problems go away",
@@ -7706,7 +7653,7 @@ return {
     },
 
     ['box_ammo_sniper'] = { -- idea: Player uses item to show badge prop
-        label = 'Ammo Case: 7.62x51 (x30)',
+        label = 'Ammo Case: 7.62x51 (x8)',
         weight = 2000,
         --consume = 0,
         description = "A case of stuff to make problems go away",
@@ -8692,6 +8639,27 @@ return {
 			usetime = 1200,
 		}
 	},
+	['mask'] = {
+        label = 'Mask',
+        weight = 100,
+        price = 10,
+        stack = false,
+        client = {
+            image = 'mask.png',
+            export = 'mp-masks.mask'
+        }
+    },
+
+    ['hat'] = {
+        label = 'Hat',
+        price = 10,
+        weight = 100,
+        stack = false,
+        client = {
+            image = 'hat.png',
+            export = 'mp-masks.hat'
+        }
+    },
 	['shoes'] = {
 		label 		= 'Shoes',
 		description = 'YOUR_DESCRIPTION',
@@ -8700,17 +8668,6 @@ return {
 		close 		= true,
 		client = {
 			anim = { dict = 'random@domestic', clip = 'pickup_low', flag = 0 },
-			usetime = 1200,
-		}
-	},
-	['hat'] = {
-		label 		= 'Hat',
-		description = 'YOUR_DESCRIPTION',
-		weight 		= 100,
-		stack 		= true,
-		close 		= true,
-		client = {
-			anim = { dict = 'missheist_agency2ahelmet', clip = 'take_off_helmet_stand', flag = 51 },
 			usetime = 1200,
 		}
 	},
@@ -8928,12 +8885,12 @@ return {
         weight = 30,
         stack = true
     },
-    ['gauze'] = {
-        label = 'gauze',
-        description = "",
-        weight = 30,
-        stack = true
-    },
+    -- ['gauze'] = {
+        -- label = 'gauze',
+        -- description = "",
+        -- weight = 30,
+        -- stack = true
+    -- },
     ['iodine'] = {
         label = 'iodine',
         description = "",
@@ -9129,6 +9086,970 @@ return {
 		stack = false,
 		close = true,
 		description = 'Used to buy vehicles for dealership'
-		},
+	},
 
+	["vehiclekey"] = {
+		label = "Vehicle Keys",
+		description = 'This is a car key, take good care of it, if you lose it you probably won\'t be able to use your car',
+		weight = 10,
+		stack = false
+	},
+	
+	["keybag"] = {
+		label = "Key Bag",
+		description = 'This is a key bag, you can store all your keys in it',
+		weight = 10,
+		stack = false
+	},
+
+	["acrylic"] = {
+		label = "Acrylic",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_blazer"] = {
+		label = "Basic Blazer",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_blouse"] = {
+		label = "Basic Blouse",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_bralet"] = {
+		label = "Basic Bralet",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_jean"] = {
+		label = "Basic Jean",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_jumpsuit"] = {
+		label = "Basic Jumpsuit",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_shirt"] = {
+		label = "Basic Shir",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_short"] = {
+		label = "Basic Short",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_singlet"] = {
+		label = "Basic Singlet",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_sweatshirt"] = {
+		label = "Basic Sweatshirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_tshirt"] = {
+		label = "Basic Tshirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["binco_basic_vest"] = {
+		label = "Basic Vest",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["cashmere"] = {
+		label = "Cashmere",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["cotton"] = {
+		label = "Cotton",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["cupro"] = {
+		label = "Cupro",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["fiber"] = {
+		label = "Acetate Fiber",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["hemp"] = {
+		label = "Hemp",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["iron"] = {
+		label = "Iron",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["jute"] = {
+		label = "Jute",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["knitting_wheel"] = {
+		label = "Knitting Wheel",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["linen"] = {
+		label = "Linen",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["lyocell"] = {
+		label = "Lyocell",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["metal_bobbin"] = {
+		label = "Metal Bobbin",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["nubuck"] = {
+		label = "Nubuck",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["paint"] = {
+		label = "Gold Paint",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["polyester"] = {
+		label = "Polyester",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_belt"] = {
+		label = "Classy Belt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_chino"] = {
+		label = "Chino",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_jacket"] = {
+		label = "Suit Jacket",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_shirt"] = {
+		label = "Grey Shirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_suit"] = {
+		label = "Full Suit",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_tie"] = {
+		label = "Tie",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["ponsonbys_waistcoats"] = {
+		label = "Waistcoats",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["quality_silk"] = {
+		label = "Quality Silk",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["rope_reel"] = {
+		label = "Rope Reel",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["silver"] = {
+		label = "Silver",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["spandex"] = {
+		label = "Spandex",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["steel_bobbin"] = {
+		label = "Steel Bobbin",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_bralet"] = {
+		label = "Suburban Bralet",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_chain"] = {
+		label = "Chain",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_dress"] = {
+		label = "Suburban Dress",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_jogger"] = {
+		label = "Suburban Jogger",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_shirt"] = {
+		label = "Suburban Shirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_short"] = {
+		label = "Suburban Jean",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_skirt"] = {
+		label = "Skirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_sweatshirt"] = {
+		label = "Suburban Sweatshirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["suburban_tshirt"] = {
+		label = "Suburban Tshirt",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["thin_needle"] = {
+		label = "Thin Needle",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["wool"] = {
+		label = "Wool Yarn",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["flight_artpiece"] = {
+		label = "ART",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["flight_television"] = {
+		label = "TV",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["musicequipment"] = {
+		label = "Music Equipment",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["pcequipment"] = {
+		label = "Computer Equipment",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["microwave"] = {
+		label = "Microwave",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["coffeemaker"] = {
+		label = "Coffee Machine",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["flight_painting"] = {
+		label = "Painting",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["flight_painting2"] = {
+		label = "Painting",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["flight_guitar"] = {
+		label = "Guitar",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+	["flight_suitcase"] = {
+		label = "Suitcase",
+		description = '',
+		weight = 10,
+		stack = true
+	},
+
+	["circuitboard"] = {
+		label = "Circuit Board",
+		weight = 10,
+		stack = true
+	},
+
+	["screws"] = {
+		label = "Screws",
+		weight = 10,
+		stack = true
+	},
+
+	["nutsbolts"] = {
+		label = "Nuts n Bolts",
+		weight = 2,
+		stack = true
+	},
+
+	["threadneedle"] = {
+		label = "Thread n Needle",
+		weight = 10,
+		stack = true
+	},
+
+	["treasuremap"] = {
+		label = "Treasure Map",
+		weight = 25,
+		stack = false,
+		close = true,
+		description = "X Marks the spot!",
+	},
+
+	["spade"] = {
+		label = "Spade",
+		weight = 350,
+		stack = false,
+		close = true,
+		description = "use for digging!",
+	},
+
+	["crypto_server"] = {
+		label = "Server",
+		weight = 350,
+		stack = false,
+		close = true,
+		description = "",
+	},
+
+	["graphic_card"] = {
+		label = "Graphics Card",
+		weight = 350,
+		stack = false,
+		close = true,
+		description = "",
+	},
+
+	["power_supply"] = {
+		label = "Power Supply",
+		weight = 350,
+		stack = false,
+		close = true,
+		description = "",
+	},
+
+	["diving_gear"] = {
+		label = "Diving Gear",
+		weight = 350,
+		stack = false,
+		close = true,
+		description = "",
+	},
+
+	["diving_fill"] = {
+		label = "Oxygen Tank",
+		weight = 350,
+		stack = false,
+		close = true,
+		description = "",
+	},
+
+	["oilp1"] = {
+		label = "Tier 1 Oil Pump", weight = 0, stack = false, close = true, description = "",
+		client = { image = "oilp1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "oilp", remove = false },
+	},
+	["oilp2"] = {
+		label = "Tier 2 Oil Pump", weight = 0, stack = false, close = true, description = "",
+		client = { image = "oilp2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "oilp", remove = false },
+	},
+	["oilp3"] = {
+		label = "Tier 3 Oil Pump", weight = 0, stack = false, close = true, description = "",
+		client = { image = "oilp3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "oilp", remove = false },
+	},
+
+	["drives1"] = {
+		label = "Tier 1 Drive Shaft", weight = 0, stack = false, close = true, description = "",
+		client = { image = "drives1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "drives", remove = false },
+	},
+	["drives2"] = {
+		label = "Tier 2 Drive Shaft", weight = 0, stack = false, close = true, description = "",
+		client = { image = "drives2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "drives", remove = false },
+	},
+	["drives3"] = {
+		label = "Tier 3 Drive Shaft", weight = 0, stack = false, close = true, description = "",
+		client = { image = "drives3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "drives", remove = false },
+	},
+
+	["cylind1"] = {
+		label = "Tier 1 Cylinder Head", weight = 0, stack = false, close = true, description = "",
+		client = { image = "cylind1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "cylind", remove = false },
+	},
+	["cylind2"] = {
+		label = "Tier 2 Cylinder Head", weight = 0, stack = false, close = true, description = "",
+		client = { image = "cylind2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "cylind", remove = false },
+	},
+	["cylind3"] = {
+		label = "Tier 3 Cylinder Head", weight = 0, stack = false, close = true, description = "",
+		client = { image = "cylind3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "cylind", remove = false },
+	},
+
+	["cables1"] = {
+		label = "Tier 1 Battery Cables", weight = 0, stack = false, close = true, description = "",
+		client = { image = "cables1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "cables", remove = false },
+	},
+	["cables2"] = {
+		label = "Tier 2 Battery Cables", weight = 0, stack = false, close = true, description = "",
+		client = { image = "cables2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "cables", remove = false },
+	},
+	["cables3"] = {
+		label = "Tier 3 Battery Cables", weight = 0, stack = false, close = true, description = "",
+		client = { image = "cables3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "cables", remove = false },
+	},
+
+	["fueltank1"] = {
+		label = "Tier 1 Fuel Tank", weight = 0, stack = false, close = true, description = "",
+		client = { image = "fueltank1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "fueltank", remove = false },
+	},
+	["fueltank2"] = {
+		label = "Tier 2 Fuel Tank", weight = 0, stack = false, close = true, description = "",
+		client = { image = "fueltank2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "fueltank", remove = false },
+	},
+	["fueltank3"] = {
+		label = "Tier 3 Fuel Tank", weight = 0, stack = false, close = true, description = "",
+		client = { image = "fueltank3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "fueltank", remove = false },
+	},
+
+	["antilag"] = {
+		label = "AntiLag", weight = 0, stack = false, close = true, description = "",
+		client = { image = "antiLag.png", event = "jim-mechanic:client:applyAntiLag", remove = false },
+	},
+	
+	["shield"] = {
+        label = "Police shield",
+        weight = 8000,
+        stack = false,
+        consume = 0,
+        client = {
+            export = "ND_Police.useShield",
+            add = function(total)
+                if total > 0 then
+                        pcall(function() return exports["ND_Police"]:hasShield(true) end)
+                    end
+                end,
+            remove = function(total)
+                if total < 1 then
+                    pcall(function() return exports["ND_Police"]:hasShield(false) end)
+                end
+            end
+        }
+    },
+	
+	["tools"] = {
+		label = "Tools",
+        description = "Can be used to hotwire vehicles.",
+		weight = 800,
+		consume = 1,
+        stack = true,
+        close = true,
+		client = {
+            export = "ND_Core.hotwire",
+            event = "ND_Police:unziptie"
+		}
+	},
+	
+    ["handcuffkey"] = {
+        label = "Handcuff key",
+        weight = 10,
+        client = {
+            export = "ND_Police.uncuff"
+        }
+    },
+	
+	["grapple"] = {
+        label = "Grapple Gun",
+        weight = 1000,
+		stack = false,
+        close = true,
+    },
+	
+		['burgerbag'] = {
+		label = 'To Go Bag',
+		weight = 100,
+		stack = false,
+		description = "To go bag from Burgershot container your food!"
+	},
+
+	["rawbeef"] = {
+		label = "Raw Beef",
+		weight = 100,
+		stack = true,
+		description = "Raw beef!!",
+	},
+
+	["rawchicken"] = {
+		label = "Raw Chicken",
+		weight = 100,
+		stack = true,
+		description = "Raw chicken breast!",
+	},
+
+	["rawpotato"] = {
+		label = "Raw Potato",
+		weight = 100,
+		stack = true,
+		description = "Uncooked Potato!",
+	},
+
+	["rawonion"] = {
+		label = "Raw Onion",
+		weight = 100,
+		stack = true,
+		description = "Uncooked Onion!",
+	},
+
+	["slicedonion"] = {
+		label = "Sliced Onion",
+		weight = 100,
+		stack = true,
+		description = "Onion Slices!",
+	},
+
+	["rawbacon"] = {
+		label = "Raw Bacon",
+		weight = 100,
+		stack = true,
+		description = "Raw BACON!!",
+	},
+
+	["cookedbacon"] = {
+		label = "Cooked Bacon",
+		weight = 100,
+		stack = true,
+		description = "Cooked Bacon!",
+	},
+
+	["burgerpatty"] = {
+		label = "Burger Patty",
+		weight = 100,
+		stack = true,
+		description = "Cooked Burger Patty!",
+	},
+
+	["salt"] = {
+		label = "Salt",
+		weight = 100,
+		stack = true,
+		description = "Salt!",
+	},
+
+	["breadcrumbs"] = {
+		label = "Breadcrumbs",
+		weight = 100,
+		stack = true,
+	},
+
+	["burger_shotnuggets"] = {
+		label = "Burgershot Chicken Nuggets",
+		weight = 100,
+		stack = true,
+		description = "Best nuggets in town!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burger_fries"] = {
+		label = "Burgershot Fries",
+		weight = 100,
+		stack = true,
+		description = "Best fries in town!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burger_shotrings"] = {
+		label = "Burgershot Onion Rings",
+		weight = 100,
+		stack = true,
+		description = "Best onion rings in town!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["bacon_cheeseburger"] = {
+		label = "Bacon Cheeseburger",
+		weight = 100,
+		stack = true,
+		description = "Burgershots finest!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burger_bleeder"] = {
+		label = "Bleeder Burger",
+		weight = 100,
+		stack = true,
+		description = "Bleeder burger!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burger_heartstopper"] = {
+		label = "Heartstopper Burger",
+		weight = 100,
+		stack = true,
+		description = "Heartstopper burger!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burger_moneyshot"] = {
+		label = "Moneyshot Burger",
+		weight = 100,
+		stack = true,
+		description = "Moneyshot burger!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burger_torpedo"] = {
+		label = "Torpedo Burger",
+		weight = 100,
+		stack = true,
+		description = "Torpedo burger!",
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+		},
+	},
+
+	["burgerbun"] = {
+		label = "Burger Buns",
+		weight = 100,
+		stack = true,
+	},
+
+	["cheese"] = {
+		label = "Cheese",
+		weight = 100,
+		stack = true,
+	},
+
+	["burger_softdrink"] = {
+		label = "Soft Drink",
+		weight = 100,
+		stack = true,
+		client = {
+			status = { thirst = 200000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+		}
+	},
+
+	["burger_coffee"] = {
+		label = "Coffee",
+		weight = 100,
+		stack = true,
+		client = {
+			status = { thirst = 200000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+		}
+	},
+
+	["cola"] = {
+		label = "Cola",
+		weight = 100,
+		stack = true,
+	},
+
+	["emptycup"] = {
+		label = "Empty Cup",
+		weight = 100,
+		stack = true,
+	},
+
+	["coffeebeans"] = {
+		label = "Coffee Beans",
+		weight = 100,
+		stack = true,
+	},
+
+	["creamer"] = {
+		label = "Creamer",
+		weight = 100,
+		stack = true,
+	},
+
+	["groundbeef"] = {
+		label = "Ground Beef",
+		weight = 100,
+		stack = true,
+	},
+
+	["groundchicken"] = {
+		label = "Ground Chicken",
+		weight = 100,
+		stack = true,
+	},
+
+	["slicedpotato"] = {
+		label = "Sliced Potatoes",
+		weight = 100,
+		stack = true,
+	},
+	
+	["towremote"] = {
+		label = "Tow Remote",
+		weight = 100,
+		stack = true,
+	},
+
+	["reponote"] = {
+		label = "Tow Note",
+		weight = 100,
+		stack = false,
+	},
+	
+	-- Add items into ox_inventory/data/items.lua
+	['watering_can'] = {
+		label = 'Watering Can',
+		weight = 325,
+	},
+
+	['fertilizer'] = {
+		label = 'Fertilizer',
+		weight = 175,
+	},
+
+	['plant_pot'] = {
+		label = 'Plant Pot',
+		weight = 25,
+	},
+
+	['plant_shovel'] = {
+		label = 'Shovel',
+		weight = 75,
+	},
+
+	['plant_shears'] = {
+		label = 'Shears',
+		weight = 10,
+	},
+
+	['rolling_paper'] = {
+		label = 'Rolling Paper',
+		weight = 5,
+	},
+
+	['regweed_seed'] = {
+		label = 'Weed Seed',
+		weight = 15,
+	},
+
+	['bananakush_seed'] = {
+		label = 'Banana Kush Seed',
+		weight = 10,
+	},
+
+	['purplehaze_seed'] = {
+		label = 'Purple Haze Seed',
+		weight = 10,
+	},
+
+	['bluedream_seed'] = {
+		label = 'Blue Dream Seed',
+		weight = 10,
+	},
+
+	['regweed_bud'] = {
+		label = 'Weed Bud',
+		weight = 15,
+	},
+
+	['bananakush_bud'] = {
+		label = 'Banana Kush Bud',
+		weight = 15,
+	},
+
+	['purplehaze_bud'] = {
+		label = 'Purple Haze Bud',
+		weight = 15,
+	},
+
+	['bluedream_bud'] = {
+		label = 'Blue Dream Bud',
+		weight = 15,
+	},
+
+	['regweed_joint'] = {
+		label = 'Weed Joint',
+		weight = 15,
+	},
+
+	['bananakush_joint'] = {
+		label = 'Banana Kush Joint',
+		weight = 15,
+	},
+
+	['purplehaze_joint'] = {
+		label = 'Purple Haze Joint',
+		weight = 15,
+	},
+
+	['bluedream_joint'] = {
+		label = 'Blue Dream Joint',
+		weight = 15,
+	},
+		
+		-- Add items into ox_inventory/data/items.lua
+	['auto_parts'] = {
+		label = 'Auto Parts',
+		weight = 5,
+	},
+
+	['chop_lockpick'] = {
+		label = 'Lockpick',
+		weight = 150,
+	},
+
+	['chop_torch'] = {
+		label = 'Torch',
+		weight = 275,
+	},
+
+	['chop_lugwrench'] = {
+		label = 'Lug Wrench',
+		weight = 225,
+	},
+
+	['burnerphone'] = { 
+		label = 'Burner Phone', 
+		weight = 150, 
+		stack = false, 
+		close = true, 
+		description = 'Somekind of lost Phone?' 
+	},
+
+	['burnerphonevpn'] = { 
+		label = 'Soleware VPN', 
+		weight = 250, 
+		stack = false, 
+		close = true, 
+		description = 'Somekind of lost VPN from Soleware?' 
+	},
 }
