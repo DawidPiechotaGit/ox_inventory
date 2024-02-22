@@ -61,11 +61,11 @@ debugData([
       },
       rightInventory: {
         id: 'shop',
-        type: 'player',
+        type: 'stash',
         slots: 5000,
         label: 'Bob Smith',
         weight: 3000,
-        maxWeight: 5000,
+        maxWeight: 35000,
         items: [
           {
             slot: 1,

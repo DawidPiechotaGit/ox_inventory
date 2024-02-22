@@ -127,18 +127,24 @@ button:active {
   color: #19abca;
   transform: rotate(-45deg);
   font-size: 20px;
-  padding: 10px;
+  // padding: 10px;
 }
 
 .infobox {
   width: 40px;
   height: 40px;
   left: 0;
-  border: 2px solid white;
+  border: 2px solid #19abca;
+  box-shadow: 0px 0px 20px 2px #19abca;
   border-radius: 5px;
   color: white;
   rotate: 150%;
+  background-color: #3c5268;
   transform: rotate(45deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .background {
@@ -217,7 +223,7 @@ button:active {
     // background-color: $seconaryColor;
     // background: radial-gradient(#36495ed0, #1a1f24d0);
     background: #1a1f2496;
-    border: solid 0.12em rgba(255, 255, 255, 0.651);
+    // border: solid 1px #19abca;
     &:focus-within {
       background-color: $secondaryColorDark;
     }
@@ -252,6 +258,7 @@ button:active {
 
   .use-container {
     padding-top: 10px;
+    position: relative;
   }
 
   .use-container > img {
@@ -519,18 +526,33 @@ button:active {
 
 .inventory-slot-number {
   position: absolute;
-  right: 37%;
-  top: 20%;
-  background-color: transparent;
-  color: rgba(133, 198, 235, 0.486);
-  text-shadow: 0.2vh 0.2vh 0 rgba(0, 0, 0, 0.5);
+  right: -9%;
+  top: 40%;
+  background-color: #3c5268;
+  // color: #19abca;
+  // text-shadow: 0.2vh 0.2vh 0 rgba(0, 0, 0, 0.5);
+  // height: 12px;
+  width: 12px;
   height: 12px;
-  border-top-left-radius: 0.25vh;
-  border-bottom-right-radius: 0.25vh;
+  // border-top-left-radius: 0.25vh;
+  // border-bottom-right-radius: 0.25vh;
+  border: 1px solid #19abca;
+  border-radius: 2px;
   padding: 3px;
-  font-size: 50px;
-  font-weight: 400;
-  font-family: $customFont;
+  // font-size: 12px;
+  // font-weight: 700;
+  // font-family: $customFont;
+  // text-align: center;
+  transform: rotate(-45deg);
+}
+
+.inventory-slot-number > p {
+  text-align: center;
+  color: #19abca;
+  font-family: $customFont !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  transform: rotate(45deg);
 }
 
 .item-slot-wrapper {

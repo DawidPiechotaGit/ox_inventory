@@ -48,13 +48,13 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
         <div>
           <div className="inventory-grid-header-wrapper">
             <span className="infobox">
-              <i className={inventory.type == 'player' ? 'fa-solid fa-person-rays' : 'fas fa-box-open'}></i>
+              <i className={inventory.type == 'player' ? 'fa-solid fa-person' : 'fas fa-box-open'}></i>
             </span>
             <a>{inventory.label}</a>
             {inventory.maxWeight && (
               <p>
-                {weight / 100}
-                <span>/{inventory.maxWeight / 100}</span>
+                {weight / 1000}
+                <span>/{inventory.maxWeight / 1000}</span>
               </p>
             )}
           </div>

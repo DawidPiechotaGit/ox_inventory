@@ -159,7 +159,11 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
               inventoryType === 'player' && item.slot <= 5 ? 'item-hotslot-header-wrapper' : 'item-slot-header-wrapper'
             }
           >
-            {inventoryType === 'player' && item.slot <= 5 && <div className="inventory-slot-number">{item.slot}</div>}
+            {inventoryType === 'player' && item.slot <= 5 && (
+              <div className="inventory-slot-number">
+                <p>{item.slot}</p>
+              </div>
+            )}
             <div className="item-slot-info-wrapper">
               <p>
                 {item.weight > 0
