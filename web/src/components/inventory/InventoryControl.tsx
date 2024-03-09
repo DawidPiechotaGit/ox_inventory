@@ -40,7 +40,7 @@ const InventoryControl: React.FC = () => {
       <UsefulControls infoVisible={infoVisible} setInfoVisible={setInfoVisible} />
       <div className="inventory-control">
         <div className="inventory-control-wrapper">
-          <img style={{ position: 'absolute', top: '1%' }} src="https://i.imgur.com/w8VkuC1.png"></img>
+          <img style={{ position: 'absolute', top: '1%' }} src="https://i.postimg.cc/PJJTy5XN/w8VkuC1.png"></img>
           <input
             className="inventory-control-input"
             type="number"
@@ -50,7 +50,7 @@ const InventoryControl: React.FC = () => {
           />
           <button className="inventory-control-button btn-use" ref={use}>
             <div className="use-container">
-              <img src="https://i.imgur.com/LvBeWUY.png"></img>
+              <img src="https://i.postimg.cc/nh80YSTt/LvBeWUY.png"></img>
               <p>{Locale.ui_use || 'Use'}</p>
             </div>
           </button>

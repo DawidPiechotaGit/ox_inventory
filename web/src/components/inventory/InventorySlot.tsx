@@ -165,7 +165,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
               </div>
             )}
             <div className="item-slot-info-wrapper">
-              <p>
+              {/* <p>
                 {item.weight > 0
                   ? item.weight >= 1000
                     ? `${(item.weight / 1000).toLocaleString('en-us', {
@@ -175,8 +175,8 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                         minimumFractionDigits: 2,
                       })} kg`
                   : ''}
-              </p>
-              <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
+              </p> */}
+              <p>{item.count ? `X` + item.count.toLocaleString('en-us') : ''}</p>
             </div>
           </div>
           <div>
