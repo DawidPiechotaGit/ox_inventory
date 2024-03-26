@@ -117,6 +117,12 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
     }
   };
 
+  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.button === 1) {
+      onUse(item);
+    }
+  };
+
   const refs = useMergeRefs([connectRef, ref]);
 
   return (
@@ -124,6 +130,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
       ref={refs}
       onContextMenu={handleContext}
       onClick={handleClick}
+      onMouseDown={handleMouseDown}
       className="inventory-slot"
       style={{
         filter:
@@ -176,7 +183,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                       })} kg`
                   : ''}
               </p> */}
-              <p>{item.count ? `X` + item.count.toLocaleString('en-us') : ''}</p>
+              <p>{item.count >= 2 ? (item.count ? `X` + item.count.toLocaleString('en-us') : '') : ''}</p>
             </div>
           </div>
           <div>

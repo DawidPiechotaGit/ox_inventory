@@ -149,7 +149,7 @@ button:active {
 }
 
 .background {
-  background-image: url('nui://ox_inventory/web/images/pngfirst.png');
+  // background-image: url('nui://ox_inventory/web/images/pngfirst.png');
   width: 100%;
   height: 100%;
   background-color: #17202efc;
@@ -485,7 +485,7 @@ button:active {
 
 // inventory slots
 .inventory-slot {
-  // background-color: #1a1f24d0;
+  background-color: #1a1f24d0;
   background: radial-gradient(circle, rgba(67, 82, 122, 0.288), rgba(48, 64, 85, 0.329));
   // background: radial-gradient(#36495ed0, #1a1f24d0);
   // background: #1a1f24d0;
@@ -531,7 +531,8 @@ button:active {
   position: absolute;
   right: -9%;
   top: 40%;
-  background-color: #3c5268;
+  // background-color: #3c5268;
+  background: radial-gradient(circle, rgba(67, 82, 122, 0.288), rgba(48, 64, 85, 0.329));
   // color: #19abca;
   // text-shadow: 0.2vh 0.2vh 0 rgba(0, 0, 0, 0.5);
   // height: 12px;
@@ -596,8 +597,10 @@ button:active {
   gap: 3px;
   // width: 100%;
   p {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
+    color: #19abca;
+    font-family: teko;
   }
 }
 
@@ -790,6 +793,7 @@ button:active {
   @extend .inventory-slot;
   width: $gridSize;
   height: $gridSize;
+  background-color: #1a1f24d0 !important;
 }
 
 .hotbar-slot-header-wrapper {
@@ -833,6 +837,7 @@ button:active {
   @extend .inventory-slot;
   height: $gridSize;
   width: $gridSize;
+  background-color: #1a1f24d0 !important;
 }
 
 .durability-bar {

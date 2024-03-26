@@ -32,10 +32,10 @@ const SlotTooltip: React.ForwardRefRenderFunction<
                 ? item.weight >= 1000
                   ? `${(item.weight / 1000).toLocaleString('en-us', {
                       minimumFractionDigits: 2,
-                    })} kg`
+                    })} KG`
                   : `${(item.weight / 1000).toLocaleString('en-us', {
                       minimumFractionDigits: 2,
-                    })} kg`
+                    })} KG`
                 : ''}
             </p>
           </div>
@@ -45,6 +45,17 @@ const SlotTooltip: React.ForwardRefRenderFunction<
         <div style={{ ...style }} className="tooltip-wrapper" ref={ref}>
           <div className="tooltip-header-wrapper">
             <p>{item.metadata?.label || itemData.label || item.name}</p>
+            <p>
+              {item.weight > 0
+                ? item.weight >= 1000
+                  ? `${(item.weight / 1000).toLocaleString('en-us', {
+                      minimumFractionDigits: 2,
+                    })} KG`
+                  : `${(item.weight / 1000).toLocaleString('en-us', {
+                      minimumFractionDigits: 2,
+                    })} KG`
+                : ''}
+            </p>
             {inventoryType === 'crafting' ? (
               <div className="tooltip-crafting-duration">
                 <ClockIcon />
