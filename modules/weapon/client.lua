@@ -15,10 +15,20 @@ local function vehicleIsCycle(vehicle)
 	return class == 8 or class == 13
 end
 
+local Holsters = {205,181,3,6,8}
+
 function Weapon.Equip(item, data, noWeaponAnim)
 	local playerPed = cache.ped
 	local coords = GetEntityCoords(playerPed, true)
     local sleep
+
+	local HolsterVariant = GetPedDrawableVariation(playerPed, 7)
+        WearingHolster = false
+        for i = 1,#Holsters,1 do
+            if HolsterVariant == Holsters[i] then
+            WearingHolster = true
+        end
+    end
 
 	if client.weaponanims then
 		if noWeaponAnim or (cache.vehicle and vehicleIsCycle(cache.vehicle)) then
@@ -27,7 +37,13 @@ function Weapon.Equip(item, data, noWeaponAnim)
 
 		local anim = data.anim or anims[GetWeapontypeGroup(data.hash)]
 
-		if anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
+		-- if anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
+		-- 	anim = nil
+		-- end
+
+		if anim == anims[`GROUP_PISTOL`] and WearingHolster == true and not client.hasGroup(shared.police) then
+			anim = anims[`GROUP_PISTOL`]
+		elseif anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
 			anim = nil
 		end
 
@@ -112,7 +128,13 @@ function Weapon.Disarm(currentWeapon, noAnim)
 			local coords = GetEntityCoords(cache.ped, true)
 			local anim = item.anim or anims[GetWeapontypeGroup(currentWeapon.hash)]
 
-			if anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
+			-- if anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
+			-- 	anim = nil
+			-- end
+
+			if anim == anims[`GROUP_PISTOL`] and WearingHolster == true and not client.hasGroup(shared.police) then
+				anim = anims[`GROUP_PISTOL`]
+			elseif anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
 				anim = nil
 			end
 

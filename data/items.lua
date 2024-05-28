@@ -55,6 +55,7 @@ return {
 	['bandage'] = {
 		label = 'Bandage',
 		weight = 25,
+        allowArmed = true,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
@@ -68,6 +69,7 @@ return {
 	['tourniquet'] = {
 		label = 'Tourniquet',
 		weight = 25,
+		allowArmed = true,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
@@ -81,6 +83,7 @@ return {
 	['gauze'] = {
 		label = 'Gauze',
 		weight = 25,
+		allowArmed = true,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
@@ -93,6 +96,7 @@ return {
 
 	['bandaid_batman'] = {
 		label = 'Band-Aid',
+		allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -104,6 +108,7 @@ return {
 
 	['bandaid_camo'] = {
 		label = 'Band-Aid',
+		allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -115,6 +120,7 @@ return {
 
 	['bandaid_kitty'] = {
 		label = 'Band-Aid',
+		allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -126,6 +132,7 @@ return {
 
 	['bandaid_racecar'] = {
 		label = 'Bandaid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -137,6 +144,7 @@ return {
 
 	['bandaid_strawberry'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -148,6 +156,7 @@ return {
 
 	['bandaid_mlp'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -159,6 +168,7 @@ return {
 
 	['bandaid_unicorn'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -170,6 +180,7 @@ return {
 
 	['bandaid_barbie'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -181,6 +192,7 @@ return {
 
 	['bandaid_teentitan'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -192,6 +204,7 @@ return {
 
 	['bandaid_tmnt'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -203,6 +216,7 @@ return {
 
 	['bandaid_power'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -214,6 +228,7 @@ return {
 
 	['bandaid_galaxy'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -225,6 +240,7 @@ return {
 
 	['bandaid_mustache'] = {
 		label = 'Band-Aid',
+        allowArmed = true,
 		weight = 25,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -240,9 +256,9 @@ return {
 
 	['burger'] = {
 		label = 'Burger',
-		weight = 220,
+		weight = 25,
 		client = {
-			status = { hunger = 200000 },
+			status = { hunger = 100000 },
 			anim = 'eating',
 			prop = 'burger',
 			usetime = 2500,
@@ -252,7 +268,7 @@ return {
 
 	['cola'] = {
 		label = 'Coca Cola',
-		weight = 350,
+		weight = 25,
 		-- consume = 0.01,
 		client = {
 			status = { thirst = 200000 },
@@ -265,7 +281,7 @@ return {
 
 	['7up_1'] = {---Spawn name 
 		label = '7 UP', ---Inventory Lable
-		weight = 350, ----Weight
+		weight = 25, ----Weight
 		client = {
 			status = { thirst = 20 }, --Status change amount
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },----Animation
@@ -277,7 +293,7 @@ return {
 
 	['7up_2'] = {
 		label = '7 UP Special',
-		weight = 350,
+		weight = 25,
 		client = {
 			status = { thirst = 20000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -301,7 +317,7 @@ return {
 
 	['forange'] = {
 		label = 'Fanta Orange',
-		weight = 350,
+		weight = 25,
 		client = {
 			status = { thirst = 20000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -313,7 +329,7 @@ return {
 
 	['dew_1'] = {
 		label = 'Mountaindew',
-		weight = 350,
+		weight = 25,
 		client = {
 			status = { thirst = 20000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -337,7 +353,7 @@ return {
 
 	['dew_3'] = {
 		label = 'Mountaindew',
-		weight = 350,
+		weight = 25,
 		client = {
 			status = { thirst = 20000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -349,7 +365,7 @@ return {
 
 	['monster'] = {
 		label = 'Monster energy',
-		weight = 350,
+		weight = 25,
 		client = {
 			status = { thirst = 20000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -454,14 +470,15 @@ return {
 
 	['lockpick'] = {
 		label = 'Lockpick',
-		weight = 160,
+		weight = 25,
+        allowArmed = true,
 	},
 
-	['phone'] = {
-		label = 'Phone',
-		weight = 200,
-		stack = false,
-		consume = 0,
+	-- ['phone'] = {
+		-- label = 'Phone',
+		-- weight = 200,
+		-- stack = false,
+		-- consume = 0,
 		-- client = {
 		-- 	add = function(total)
 		-- 		if total > 0 then
@@ -475,7 +492,207 @@ return {
 		-- 		end
 		-- 	end
 		-- }
-	},
+	-- },
+	
+	['phone'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'yphone or maybe yflip?',
+    client = {
+        image = 'yflip_graphite.png',
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yphone'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'YPhone? Cuz Y not.',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yflipphone'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'Flip it.. won\'t break',
+    client = {
+        image = 'yflip_graphite.png',
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yphone_natural'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'YPhone? Cuz Y not.',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yphone_black'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'YPhone? Cuz Y not.',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yphone_white'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'YPhone? Cuz Y not.',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yphone_blue'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'YPhone? Cuz Y not.',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yflip_mint'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'Flip it.. won\'t break',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yflip_gold'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'Flip it.. won\'t break',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yflip_graphite'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'Flip it.. won\'t break',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
+
+['yflip_lavender'] = {
+    label = 'Phone',
+    weight = 100,
+    stack = false,
+    consume = 0,
+	allowArmed = true,
+    description = 'Flip it.. won\'t break',
+    client = {
+        export = 'yseries.UsePhoneItem',
+        remove = function()
+            TriggerEvent('yseries:phone-item-removed')
+        end,
+        add = function()
+            TriggerEvent('yseries:phone-item-added')
+        end
+    }
+},
 
 	['money'] = {
 		label = 'Money',
@@ -496,8 +713,9 @@ return {
 	['water'] = {
 		label = 'Water',
 		weight = 50,
+        allowArmed = true,
 		client = {
-			status = { thirst = 200000 },
+			status = { thirst = 100000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
 			usetime = 2500,
@@ -510,6 +728,8 @@ return {
 		label = 'Radio',
 		weight = 200,
 		stack = false,
+		degrade = 40320,
+		decay = true,
 		allowArmed = true
 	},
 
@@ -718,6 +938,8 @@ return {
 		weight = 1,
 		stack = false,
 		close = true,
+		degrade = 40320,
+		decay = true,
 		description = ''
 	},
 
@@ -727,6 +949,8 @@ return {
 		consume = 0,
 		stack = true,
 		close = false,
+		degrade = 40320,
+		decay = true,
 		description = ''
 	},
 
@@ -735,6 +959,20 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
+		degrade = 40320,
+		decay = true,
+        allowArmed = true,
+		description = ''
+	},
+	
+	['gps-device'] = {
+		label = 'GPS Device',
+		weight = 1,
+		stack = true,
+		close = true,
+		degrade = 40320,
+		decay = true,
+		allowArmed = true,
 		description = ''
 	},
 	
@@ -743,6 +981,8 @@ return {
 		weight = 25,
 		stack = true,
 		close = true,
+		degrade = 40320,
+		decay = true,
 		description = ''
 	},
 	['drug_package'] = {
@@ -774,6 +1014,7 @@ return {
 		weight = 1000,
 		stack = false,
 		close = true,
+		allowArmed = true,
 		description = ''
 	},
 
@@ -790,6 +1031,8 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
+		degrade = 40320,
+		decay = true,
 		description = ''
 	},
 
@@ -807,7 +1050,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows corn."
+		description = 'This is a seed that grows corn.'
 	},
 	
 	['corn_raw'] = {
@@ -815,7 +1058,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['corn'] = {
@@ -830,7 +1073,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows a tomato."
+		description = 'This is a seed that grows a tomato.'
 	},
 	
 	['tomato_raw'] = {
@@ -838,7 +1081,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['tomato'] = {
@@ -853,7 +1096,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows Wheat."
+		description = 'This is a seed that grows Wheat.'
 	},
 	
 	['wheat_raw'] = {
@@ -861,7 +1104,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['wheat'] = {
@@ -876,7 +1119,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows broccoli."
+		description = 'This is a seed that grows broccoli.'
 	},
 	
 	['broccoli_raw'] = {
@@ -884,7 +1127,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['broccoli'] = {
@@ -899,7 +1142,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows a carrot."
+		description = 'This is a seed that grows a carrot.'
 	},
 	
 	['carrot_raw'] = {
@@ -907,7 +1150,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['carrot'] = {
@@ -922,7 +1165,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows a potato."
+		description = 'This is a seed that grows a potato.'
 	},
 	
 	['potato_raw'] = {
@@ -930,7 +1173,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['potato'] = {
@@ -945,7 +1188,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows a pickle."
+		description = 'This is a seed that grows a pickle.'
 	},
 	
 	['pickle_raw'] = {
@@ -953,7 +1196,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['pickle'] = {
@@ -968,7 +1211,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows weed."
+		description = 'This is a seed that grows weed.'
 	},
 	
 	['weed_raw'] = {
@@ -976,7 +1219,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['weed'] = {
@@ -991,7 +1234,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows cocaine."
+		description = 'This is a seed that grows cocaine.'
 	},
 	
 	['cocaine_raw'] = {
@@ -999,7 +1242,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['cocaine'] = {
@@ -1014,14 +1257,14 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "This is a seed that grows heroin."
+		description = 'This is a seed that grows heroin.'
 	},
 
 	['rotten_seeds'] = {
 		label = 'Rotten Seeds',
 		weight = 1,
 		stack = true,
-		description = "Seeds that arent any good to grow"
+		description = 'Seeds that arent any good to grow'
 	},
 	
 	['heroin_raw'] = {
@@ -1029,7 +1272,7 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "You will need to process this."
+		description = 'You will need to process this.'
 	},
 	
 	['heroin'] = {
@@ -1128,7 +1371,7 @@ return {
         weight = 100,
         stack = true,
         close = true,
-        description = "A field GSR test kit containing several test strips",
+        description = 'A field GSR test kit containing several test strips',
         server = {export = 'r14-evidence.gsrtestkit'},
     },
 
@@ -1138,7 +1381,7 @@ return {
         weight = 100,
         stack = true,
         close = true,
-        description = "A field DNA swab kit containing several vials and swabs",
+        description = 'A field DNA swab kit containing several vials and swabs',
         server = {export = 'r14-evidence.dnatestkit'},
     },
 
@@ -1158,7 +1401,7 @@ return {
         weight = 200,
         stack = true,
         close = true,
-        description = "A vintage 2000's WiWang breathalyzer engraved Property of LSPD",
+        description = 'A vintage 2000s WiWang breathalyzer engraved Property of LSPD',
         server = {export = 'r14-evidence.breathalyzer'},
     },
 
@@ -1168,7 +1411,7 @@ return {
         weight = 200,
         stack = false,
         close = true,
-        description = "A Pro Tech mobile fingerprint reader that looks like it's seen better days, currently stuck in french.",
+        description = 'A Pro Tech mobile fingerprint reader that looks like its seen better days, currently stuck in french.',
         server = {export = 'r14-evidence.fingerprintreader'},
     },
 
@@ -1187,7 +1430,7 @@ return {
         weight = 1000,
         stack = true,
         close = true,
-        description = "A small kit that includes fingerprint dust, chemicals, and a brush for developing fingerprints",
+        description = 'A small kit that includes fingerprint dust, chemicals, and a brush for developing fingerprints',
     },
 
     ['mikrosil'] = {
@@ -1196,7 +1439,7 @@ return {
         weight = 200,
         stack = true,
         close = true,
-        description = "Two tubes of silicon casting material used to lift fingerprints from irregular surfaces",
+        description = 'Two tubes of silicon casting material used to lift fingerprints from irregular surfaces',
     },
 
     ['fingerprinttape'] = {
@@ -1205,7 +1448,7 @@ return {
         weight = 200,
         stack = true,
         close = true,
-        description = "Extra clear tape used to lift fingerprints from smooth, nonporous surfaces",
+        description = 'Extra clear tape used to lift fingerprints from smooth, nonporous surfaces',
     },
 
     ['blox'] = {
@@ -1310,7 +1553,7 @@ return {
 		weight = 10000,
 		stack = true,
 		close = false,
-		description = '"A PowerMetal H420 Angle Grinder has never been used for an illegal activity. Ever." - Former CEO of PowerMetal Inc',
+		description = 'A PowerMetal H420 Angle Grinder has never been used for an illegal activity. Ever. - Former CEO of PowerMetal Inc',
 	},
 
 	-- Objects
@@ -1370,13 +1613,13 @@ return {
 		close = true,
 		description = 'Keep your drinks cool!',
 	},
-	['spikestrip'] = {
-		label = 'Spike Strip',
-		weight = 10000,
-		stack = true,
-		close = true,
-		description = 'No tires for you!',
-	},
+	 ['spikestrip'] = {
+        label = 'Spikestrip',
+        weight = 500,
+        client = {
+            export = 'ND_Police.deploySpikestrip'
+        }
+    },
 	['bomb'] = {
 		label = 'Bomb',
 		weight = 10000,
@@ -1863,258 +2106,287 @@ return {
 		description = 'a 25% coupon for Cherry Poppers!',
 	},
 	
-	["drill"] = {
-		label = "Drill",
+	['drill'] = {
+		label = 'Drill',
 		weight = 20000,
 		stack = true,
 		close = false,
-		description = "The real deal...",
+		description = 'The real deal...',
 	},
 
-	["yukoncigs"] = {
-		label = "Yukon Cigarettes",
+	['yukoncigs'] = {
+		label = 'Yukon Cigarettes',
 		consume = 0.05,
 		weight = 250,
 		stack = false,
 		close = true,
-		description = "Pack of Menthol Cigarettes, Made in USA",
+		description = 'Pack of Menthol Cigarettes, Made in USA',
 	},
 
-	["harness"] = {
-		label = "Race Harness", weight = 0, stack = true, close = true, description = "Racing Harness so no matter what you stay in the car",
-		client = { image = "harness.png", event = "jim-mechanic:client:applyHarness", remove = false },
+	['harness'] = {
+		label = 'Race Harness', weight = 0, stack = true, close = true, description = 'Racing Harness so no matter what you stay in the car',
+		client = { image = 'harness.png', event = 'jim-mechanic:client:applyHarness', remove = false },
 	},
 
-	["grape"] = {
-		label = "Grape",
+	['grape'] = {
+		label = 'Grape',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Mmmmh yummie, grapes",
+		description = 'Mmmmh yummie, grapes',
 	},
 
-	["gold_bracelet"] = {
-		label = "Gold bracelet",
+	['gold_bracelet'] = {
+		label = 'Gold bracelet',
 		weight = 45,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["ducttape"] = {
-		label = "Duct Tape", weight = 0, stack = false, close = true, description = "Good for quick fixes",
-		client = { image = "bodyrepair.png", event = "jim-mechanic:quickrepair" }
+	['ducttape'] = {
+		label = 'Duct Tape', 
+        weight = 0, 
+        stack = false, 
+        close = true, 
+        allowArmed = true,
+        description = 'Good for quick fixes',
+		client = { 
+            image = 'bodyrepair.png', 
+            event = 'jim-mechanic:quickrepair' 
+        }
 	},
 
-	["classic_phone"] = {
-		label = "Phone",
+	['classic_phone'] = {
+		label = 'Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "A phone",
+		description = 'A phone',
 	},
 
-	["exhaust"] = {
-		label = "Vehicle Exhaust", weight = 0, stack = false, close = true, description = "",
-		client = { image = "exhaust.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['exhaust'] = {
+		label = 'Vehicle Exhaust', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'exhaust.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["bong"] = {
-		label = "Bong",
+	['bong'] = {
+		label = 'Bong',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["skirts"] = {
-		label = "Vehicle Skirts", weight = 0, stack = false, close = true, description = "",
-		client = { image = "skirts.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['skirts'] = {
+		label = 'Vehicle Skirts', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'skirts.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["cloth_dirty"] = {
-		label = "Dirty Cloth",
+	['cloth_dirty'] = {
+		label = 'Dirty Cloth',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "Needs to be washed to be used again!",
+		description = 'Needs to be washed to be used again!',
 	},
 
-	["bumper"] = {
-		label = "Vehicle Bumper", weight = 0, stack = false, close = true, description = "",
-		client = { image = "bumper.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['bumper'] = {
+		label = 'Vehicle Bumper', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'bumper.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["coke_small_brick"] = {
-		label = "Coke Package",
+	['coke_small_brick'] = {
+		label = 'Coke Package',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "Small package of cocaine, mostly used for deals and takes a lot of space",
+		description = 'Small package of cocaine, mostly used for deals and takes a lot of space',
 	},
 
-	["briefcaselockpicker"] = {
-		label = "Briefcase Lockpicker",
+	['briefcaselockpicker'] = {
+		label = 'Briefcase Lockpicker',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "Briefcase Lockpicker",
+		description = 'Briefcase Lockpicker',
 	},
 
-	["diving_gear"] = {
-		label = "Diving Gear",
+	['diving_gear'] = {
+		label = 'Diving Gear',
 		weight = 30000,
 		stack = false,
 		close = true,
-		description = "An oxygen tank and a rebreather",
+		description = 'An oxygen tank and a rebreather',
 	},
 
-	["shampoo"] = {
-		label = "Shampoo",
+	['shampoo'] = {
+		label = 'Shampoo',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["wet_classic_phone"] = {
-		label = "Wet Classic Phone",
+	['wet_classic_phone'] = {
+		label = 'Wet Classic Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
+		description = 'Did you really think that swimming in the ocean with your phone was a good idea?',
 	},
 
-	["soap"] = {
-		label = "Soap",
+	['soap'] = {
+		label = 'Soap',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["cryptostick"] = {
-		label = "Crypto Stick",
+	['cryptostick'] = {
+		label = 'Crypto Stick',
 		weight = 200,
 		stack = false,
 		close = true,
-		description = "Why would someone ever buy money that doesn't exist.. How many would it contain..?",
+		description = 'Why would someone ever buy money that doesnt exist.. How many would it contain..?',
 	},
 
-	["seat"] = {
-		label = "Seat Cosmetics", weight = 0, stack = false, close = true, description = "",
-		client = { image = "seat.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['seat'] = {
+		label = 'Seat Cosmetics', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'seat.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["hood"] = {
-		label = "Vehicle Hood", weight = 0, stack = false, close = true, description = "",
-		client = { image = "hood.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['hood'] = {
+		label = 'Vehicle Hood', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'hood.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["iron"] = {
-		label = "Iron",
+	['iron'] = {
+		label = 'Iron',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Handy piece of metal that you can probably use for something",
+		description = 'Handy piece of metal that you can probably use for something',
 	},
 
-	["weedplant_branch"] = {
-		label = "Weed Branch",
+	['weedplant_branch'] = {
+		label = 'Weed Branch',
 		weight = 10000,
 		stack = false,
 		close = false,
-		description = "Weed plant",
+		description = 'Weed plant',
 	},
 
-	["hacker_phone"] = {
-		label = "Hacker Phone",
+	['hacker_phone'] = {
+		label = 'Hacker Phone',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "An encrypted phone",
+		description = 'An encrypted phone',
 	},
 
-	["aluminum"] = {
-		label = "Aluminium",
+	['aluminum'] = {
+		label = 'Aluminium',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Nice piece of metal that you can probably use for something",
+		description = 'Nice piece of metal that you can probably use for something',
 	},
 
-	["console"] = {
-		label = "Console",
+	['console'] = {
+		label = 'Console',
 		weight = 85,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["woowoo"] = {
-		label = "Woo Woo",
+	['woowoo'] = {
+		label = 'Woo Woo',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Woowoo Cocktail",
+		description = 'Woowoo Cocktail',
 	},
 
-	["ironoxide"] = {
-		label = "Iron Powder",
+	['ironoxide'] = {
+		label = 'Iron Powder',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Some powder to mix with.",
+		description = 'Some powder to mix with.',
 	},
 
-	["keya"] = {
-		label = "Labkey A",
+	['keya'] = {
+		label = 'Labkey A',
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "Labkey A..",
+		description = 'Labkey A..',
 	},
 
-	["bprooftires"] = {
-		label = "Bulletproof Tires", weight = 0, stack = false, close = true, description = "",
-		client = { image = "bprooftires.png", event = "jim-mechanic:client:applyBulletProof", remove = false },
+	['bprooftires'] = {
+		label = 'Bulletproof Tires', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'bprooftires.png', event = 'jim-mechanic:client:applyBulletProof', remove = false },
 	},
-	["drifttires"] = {
-		label = "Drift Tires", weight = 0, stack = false, close = true, description = "",
-		client = { image = "drifttires.png", event = "jim-mechanic:client:applyDrift", remove = false },
+	['drifttires'] = {
+		label = 'Drift Tires', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'drifttires.png', event = 'jim-mechanic:client:applyDrift', remove = false },
 	},
 
-	["b52"] = {
-		label = "B-52",
+	['b52'] = {
+		label = 'B-52',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "B-52 Cocktail",
+		description = 'B-52 Cocktail',
 	},
 
-	["ambeer"] = {
-		label = "AM Beer",
+	['ambeer'] = {
+		label = 'AM Beer',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	-- ["repairkit"] = {
-	-- 	label = "Repairkit",
+	-- ['repairkit'] = {
+	-- 	label = 'Repairkit',
 	-- 	weight = 1000,
 	-- 	stack = true,
 	-- 	close = true,
-	-- 	description = "A nice toolbox with stuff to repair your vehicle",
+	-- 	description = 'A nice toolbox with stuff to repair your vehicle',
 	-- },
 
-	["repairkit"] = {
-    label = "Repairkit", weight = 0, stack = true, close = true, description = "A nice toolbox with stuff to repair your vehicle",
-    client = { image = "repairkit.png", event = "jim-mechanic:vehFailure:RepairVehicle", item = "repairkit", full = false },
+	['repairkit'] = {
+        label = 'Repairkit', 
+        weight = 0, 
+        stack = true, 
+        close = true, 
+        allowArmed = true,
+        description = 'A nice toolbox with stuff to repair your vehicle',
+        client = { 
+            image = 'repairkit.png', 
+            event = 'jim-mechanic:vehFailure:RepairVehicle', 
+            item = 'repairkit', 
+            full = false 
+        },
 	},
-	["advancedrepairkit"] = {
-		label = "Advanced Repairkit", weight = 0, stack = true, close = true, description = "A nice toolbox with stuff to repair your vehicle",
-		client = { image = "advancedkit.png", event = "jim-mechanic:vehFailure:RepairVehicle", item = "advancedrepairkit", full = true },
+
+	['advancedrepairkit'] = {
+		label = 'Advanced Repairkit', 
+        weight = 0, 
+        stack = true, 
+        close = true, 
+        allowArmed = true,
+        description = 'A nice toolbox with stuff to repair your vehicle',
+		client = { 
+            image = 'advancedkit.png', 
+            event = 'jim-mechanic:vehFailure:RepairVehicle', 
+            item = 'advancedrepairkit', 
+            full = true 
+        },
 	},
 
 	['fakeplate'] = {
@@ -2125,193 +2397,193 @@ return {
 		description = 'Will get taken off by vale if put inside a garage'
 	},
 
-	["security_card_01"] = {
-		label = "Security Card A",
+	['security_card_01'] = {
+		label = 'Security Card A',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A security card... I wonder what it goes to",
+		description = 'A security card... I wonder what it goes to',
 	},
 	
-	["blackcard"] = {
-		label = "Black Security Card",
+	['blackcard'] = {
+		label = 'Black Security Card',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "A security card... I wonder what it goes to",
+		description = 'A security card... I wonder what it goes to',
 	},
 	
-	["gruppesechnote"] = {
-		label = "A note...",
+	['gruppesechnote'] = {
+		label = 'A note...',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "In the back of armored steel we ride,  \n A word holds sway, where secrets abide.  \n Not red, not blue, but natures serene,  \n Whisper softly, the hue of leaves unseen",
+		description = 'In the back of armored steel we ride,  \n A word holds sway, where secrets abide.  \n Not red, not blue, but natures serene,  \n Whisper softly, the hue of leaves unseen',
 	},
 
-	["samsungphone"] = {
-		label = "Samsung S10",
+	['samsungphone'] = {
+		label = 'Samsung S10',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Very expensive phone",
+		description = 'Very expensive phone',
 	},
 
-	["weedplant_packedweed"] = {
-		label = "Packed Weed",
+	['weedplant_packedweed'] = {
+		label = 'Packed Weed',
 		weight = 100,
 		stack = false,
 		close = false,
-		description = "Weed ready for sale",
+		description = 'Weed ready for sale',
 	},
 
-	["fan"] = {
-		label = "Fan",
+	['fan'] = {
+		label = 'Fan',
 		weight = 20,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["gym_pass"] = {
-		label = "Gym Membership",
+	['gym_pass'] = {
+		label = 'Gym Membership',
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "Lifetime Gym Membership",
+		description = 'Lifetime Gym Membership',
 	},
 
-	["weedplant_package"] = {
-		label = "Suspicious Package",
+	['weedplant_package'] = {
+		label = 'Suspicious Package',
 		weight = 10000,
 		stack = false,
 		close = false,
-		description = "Suspicious Package",
+		description = 'Suspicious Package',
 	},
 
-	["gallery_tanzanite-ring"] = {
-		label = "Tanzanite Ring",
+	['gallery_tanzanite-ring'] = {
+		label = 'Tanzanite Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["weedplant_weed"] = {
-		label = "Dried Weed",
+	['weedplant_weed'] = {
+		label = 'Dried Weed',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Weed ready for packaging",
+		description = 'Weed ready for packaging',
 	},
 
-	["firework3"] = {
-		label = "WipeOut",
+	['firework3'] = {
+		label = 'WipeOut',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Fireworks",
+		description = 'Fireworks',
 	},
 
-	["cloth"] = {
-		label = "Dirty Cloth",
+	['cloth'] = {
+		label = 'Dirty Cloth',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "Can be used to clean your car!",
+		description = 'Can be used to clean your car!',
 	},
 
-	["crack_baggy"] = {
-		label = "Bag of Cocaine",
+	['crack_baggy'] = {
+		label = 'Bag of Cocaine',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "To get happy faster",
+		description = 'To get happy faster',
 	},
 
-	["television"] = {
-		label = "TV",
+	['television'] = {
+		label = 'TV',
 		weight = 155,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["book"] = {
-		label = "Book",
+	['book'] = {
+		label = 'Book',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["paintcan"] = {
-		label = "Vehicle Spray Can", weight = 0, stack = false, close = true, description = "",
-		client = { image = "spraycan.png", event = "jim-mechanic:client:Paints:Check", },
+	['paintcan'] = {
+		label = 'Vehicle Spray Can', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'spraycan.png', event = 'jim-mechanic:client:Paints:Check', },
 	},
 
-	["weed_ak47"] = {
-		label = "AK47 2g",
+	['weed_ak47'] = {
+		label = 'AK47 2g',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A weed bag with 2g AK47",
+		description = 'A weed bag with 2g AK47',
 	},
 
-	["gallery_diamond-ring"] = {
-		label = "Diamond Ring",
+	['gallery_diamond-ring'] = {
+		label = 'Diamond Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "A diamond ring",
+		description = 'A diamond ring',
 	},
 
-	["pisswasser"] = {
-		label = "Pißwasser",
+	['pisswasser'] = {
+		label = 'Pißwasser',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["blue_phone"] = {
-		label = "Blue Phone",
+	['blue_phone'] = {
+		label = 'Blue Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["moneybag"] = {
-		label = "Money Bag",
+	['moneybag'] = {
+		label = 'Money Bag',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "A bag with cash",
+		description = 'A bag with cash',
 	},
 
-	["crisps"] = {
-		label = "Crisps",
+	['crisps'] = {
+		label = 'Crisps',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["electronickit"] = {
-		label = "Electronic Kit",
+	['electronickit'] = {
+		label = 'Electronic Kit',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "If you've always wanted to build a robot you can maybe start here. Maybe you'll be the new Elon Musk?",
+		description = 'If youve always wanted to build a robot you can maybe start here. Maybe youll be the new Elon Musk?',
 	},
 
-	["vodka"] = {
-		label = "Vodka",
+	['vodka'] = {
+		label = 'Vodka',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "For all the thirsty out there",
+		description = 'For all the thirsty out there',
 	},
 
 	['strawberry_daiquiri'] = {
@@ -2345,526 +2617,528 @@ return {
 		close = true,
 	},
 
-	["newsmic"] = {
-		label = "News Microphone",
+	['newsmic'] = {
+		label = 'News Microphone',
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "A microphone for the news",
+		description = 'A microphone for the news',
 	},
 
-	["rum"] = {
-		label = "Rum",
+	['rum'] = {
+		label = 'Rum',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Rum",
+		description = 'A bottle of Rum',
 	},
 
-	["phone_hack"] = {
-		label = "Phone Hack",
+	['phone_hack'] = {
+		label = 'Phone Hack',
 		weight = 300,
 		stack = false,
 		close = true,
-		description = "With this chip, you can access hidden areas of Discord.",
+		description = 'With this chip, you can access hidden areas of Discord.',
 	},
 
-	["livery"] = {
-		label = "Livery Roll", weight = 0, stack = false, close = true, description = "",
-		client = { image = "livery.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['livery'] = {
+		label = 'Livery Roll', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'livery.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["tosti"] = {
-		label = "Grilled Cheese Sandwich",
+	['tosti'] = {
+		label = 'Grilled Cheese Sandwich',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Nice to eat",
+		description = 'Nice to eat',
 	},
 
-	["toolbox"] = {
-		label = "Toolbox", weight = 0, stack = false, close = true, description = "Needed for Performance part removal",
-		client = { image = "toolbox.png", event = "jim-mechanic:client:Menu" }
+	['toolbox'] = {
+		label = 'Toolbox', weight = 0, stack = false, close = true, description = 'Needed for Performance part removal',
+		client = { image = 'toolbox.png', event = 'jim-mechanic:client:Menu' }
 	},
 
-	["coffee"] = {
-		label = "Coffee",
+	['coffee'] = {
+		label = 'Coffee',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Pump 4 Caffeine",
+		description = 'Pump 4 Caffeine',
 	},
 
-	["gallery_citrine-ring"] = {
-		label = "Citrine Ring",
+	['gallery_citrine-ring'] = {
+		label = 'Citrine Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["receipt"] = {
-		label = "Receipt",
+	['receipt'] = {
+		label = 'Receipt',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["payticket"] = {
-		label = "Pay Ticket",
+	['payticket'] = {
+		label = 'Pay Ticket',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["backpack1"] = {
-		label = "Backpack 1",
+	['backpack1'] = {
+		label = 'Backpack 1',
 		weight = 7500,
 		stack = false,
 		close = true,
-		description = "Backpack",
+		description = 'Backpack',
 	},
 
-	["water_bottle"] = {
-		label = "Bottle of Water",
+	['water_bottle'] = {
+		label = 'Bottle of Water',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "For all the thirsty out there",
+		description = 'For all the thirsty out there',
 	},
 
-	["snikkel_candy"] = {
-		label = "Snikkel",
+	['snikkel_candy'] = {
+		label = 'Snikkel',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "Some delicious candy :O",
+		description = 'Some delicious candy :O',
 	},
 
-	["goldbaroz"] = {
-		label = "Gold Bar 1oz",
+	['goldbaroz'] = {
+		label = 'Gold Bar 1oz',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "1 ounce of gold",
+		description = '1 ounce of gold',
 	},
 
-	["goldbarkg"] = {
-		label = "Gold Bar 1kg",
+	['goldbarkg'] = {
+		label = 'Gold Bar 1kg',
 		weight = 1000,
 		stack = true,
 		close = false,
-		description = "A whole kilogram of gold!",
+		description = 'A whole kilogram of gold!',
 	},
 
-	["casino_member"] = {
-		label = "Casino Membership",
+	['casino_member'] = {
+		label = 'Casino Membership',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "A casino membership",
+		description = 'A casino membership',
 	},
 
-	["dusche"] = {
-		label = "Dusche Gold",
+	['dusche'] = {
+		label = 'Dusche Gold',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["newscam"] = {
-		label = "News Camera",
+	['newscam'] = {
+		label = 'News Camera',
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "A camera for the news",
+		description = 'A camera for the news',
 	},
 
-	["empty_watering_can"] = {
-		label = "Empty Watering Can",
+	['empty_watering_can'] = {
+		label = 'Empty Watering Can',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "Empty watering can",
+		description = 'Empty watering can',
 	},
 
-	["firework4"] = {
-		label = "Weeping Willow",
+	['firework4'] = {
+		label = 'Weeping Willow',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Fireworks",
+		description = 'Fireworks',
 	},
 
-	["ccookie"] = {
-		label = "Cranberry Cookie",
+	['ccookie'] = {
+		label = 'Cranberry Cookie',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Cranberry Cookie Cocktail",
+		description = 'Cranberry Cookie Cocktail',
 	},
 
-	["radio_alarm"] = {
-		label = "Radio",
+	['radio_alarm'] = {
+		label = 'Radio',
 		weight = 30,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["full_watering_can"] = {
-		label = "Full Watering Can",
+	['full_watering_can'] = {
+		label = 'Full Watering Can',
 		weight = 1000,
 		stack = false,
 		close = false,
-		description = "Watering can filled with water for watering plants",
+		description = 'Watering can filled with water for watering plants',
 	},
 
-	["sprunklight"] = {
-		label = "Sprunk Light",
+	['sprunklight'] = {
+		label = 'Sprunk Light',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["sparkplugs"] = {
-		label = "Spark Plugs", weight = 0, stack = false, close = true, description = "",
-		client = { image = "sparkplugs.png", },
+	['sparkplugs'] = {
+		label = 'Spark Plugs', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'sparkplugs.png', },
 	},
 
-	["coke_brick"] = {
-		label = "Coke Brick",
+	['coke_brick'] = {
+		label = 'Coke Brick',
 		weight = 1000,
 		stack = false,
 		close = true,
-		description = "Heavy package of cocaine, mostly used for deals and takes a lot of space",
+		description = 'Heavy package of cocaine, mostly used for deals and takes a lot of space',
 	},
 
-	["empty_weed_bag"] = {
-		label = "Empty Weed Bag",
+	['empty_weed_bag'] = {
+		label = 'Empty Weed Bag',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A small empty bag",
+		description = 'A small empty bag',
 	},
 
-	["briefcase"] = {
-		label = "Briefcase",
+	['briefcase'] = {
+		label = 'Briefcase',
 		weight = 10000,
 		stack = false,
 		close = true,
-		description = "Briefcase",
+		description = 'Briefcase',
 	},
 
-	["powder"] = {
-		label = "Bag with powder",
+	['powder'] = {
+		label = 'Bag with powder',
 		weight = 50,
 		stack = true,
 		close = false,
-		description = "Good for discovering lasers that are not visible",
+		description = 'Good for discovering lasers that are not visible',
 	},
 
-	["sculpture"] = {
-		label = "Sculpture",
+	['sculpture'] = {
+		label = 'Sculpture',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["chocolate"] = {
-		label = "Chocolate",
+	['chocolate'] = {
+		label = 'Chocolate',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "Chocolate Bar",
+		description = 'Chocolate Bar',
 	},
 
-	["firstaid"] = {
-		label = "First Aid",
+	['firstaid'] = {
+		label = 'First Aid',
 		weight = 2500,
 		stack = true,
 		close = true,
-		description = "You can use this First Aid kit to get people back on their feet",
+		description = 'You can use this First Aid kit to get people back on their feet',
 	},
 
-	["lime"] = {
-		label = "Lime",
+	['lime'] = {
+		label = 'Lime',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A Lime.",
+		description = 'A Lime.',
 	},
 
-	["wet_gold_phone"] = {
-		label = "Wet Gold Phone",
+	['wet_gold_phone'] = {
+		label = 'Wet Gold Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
+		description = 'Did you really think that swimming in the ocean with your phone was a good idea?',
 	},
 
-	["security_card_02"] = {
-		label = "Security Card B",
+	['security_card_02'] = {
+		label = 'Security Card B',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A security card... I wonder what it goes to",
+		description = 'A security card... I wonder what it goes to',
 	},
 
-	["advancedlockpick"] = {
-		label = "Advanced Lockpick",
-		weight = 500,
+	['advancedlockpick'] = {
+		label = 'Advanced Lockpick',
+		weight = 25,
 		stack = true,
 		close = true,
-		description = "If you lose your keys a lot this is very useful... Also useful to open your beers",
+        allowArmed = true,
+		description = 'If you lose your keys a lot this is very useful... Also useful to open your beers',
 	},
 
-	["metalscrap"] = {
-		label = "Metal Scrap",
+	['metalscrap'] = {
+		label = 'Metal Scrap',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "You can probably make something nice out of this",
+		description = 'You can probably make something nice out of this',
 	},
 
-	["diamond_ring"] = {
-		label = "Diamond Ring",
+	['diamond_ring'] = {
+		label = 'Diamond Ring',
 		weight = 1500,
 		stack = true,
 		close = true,
-		description = "A diamond ring seems like the jackpot to me!",
+		description = 'A diamond ring seems like the jackpot to me!',
 	},
 
-	["policecard"] = {
-		label = "Police Card",
+	['policecard'] = {
+		label = 'Police Card',
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "A card containing all your information to identify yourself",
+		description = 'A card containing all your information to identify yourself',
 	},
 
-	["printer"] = {
-		label = "Printer",
+	['printer'] = {
+		label = 'Printer',
 		weight = 190,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["lighter"] = {
-		label = "Lighter",
+	['lighter'] = {
+		label = 'Lighter',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "On new years eve a nice fire to stand next to",
+		description = 'On new years eve a nice fire to stand next to',
 	},
 
-	["gallery_ruby-ring"] = {
-		label = "Ruby Ring",
+	['gallery_ruby-ring'] = {
+		label = 'Ruby Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["white_phone"] = {
-		label = "White Phone",
+	['white_phone'] = {
+		label = 'White Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["j_phone"] = {
-		label = "Phone",
+	['j_phone'] = {
+		label = 'Phone',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["gunrackkey"] = {
-		label = "Police Gun Key",
+	['gunrackkey'] = {
+		label = 'Police Gun Key',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "A key to open gun rack",
+		description = 'A key to open gun rack',
 	},
 
-	["pogo"] = {
-		label = "Art Piece",
+	['pogo'] = {
+		label = 'Art Piece',
 		weight = 155,
 		stack = true,
 		close = false,
-		description = "Pogo Statue",
+		description = 'Pogo Statue',
 	},
 
-	["wet_white_phone"] = {
-		label = "Wet White Phone",
+	['wet_white_phone'] = {
+		label = 'Wet White Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["pencil"] = {
-		label = "Pencil",
+	['pencil'] = {
+		label = 'Pencil',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["customplate"] = {
-		label = "Customized Plates", weight = 0, stack = false, close = true, description = "",
-		client = { image = "plate.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['customplate'] = {
+		label = 'Customized Plates', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'plate.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["tint_supplies"] = {
-		label = "Window Tint Kit", weight = 0, stack = false, close = true, description = "",
-		client = { image = "tint_supplies.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['tint_supplies'] = {
+		label = 'Window Tint Kit', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'tint_supplies.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["transmission1"] = {
-		label = "Tier 1 Transmission", weight = 0, stack = false, close = true, description = "",
-		client = { image = "transmission1.png",  event = "jim-mechanic:client:applyTransmission", level = 0, remove = false },
+	['transmission1'] = {
+		label = 'Tier 1 Transmission', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'transmission1.png',  event = 'jim-mechanic:client:applyTransmission', level = 0, remove = false },
 	},
-	["transmission2"] = {
-		label = "Tier 2 Transmission", weight = 0, stack = false, close = true, description = "",
-		client = { image = "transmission2.png",  event = "jim-mechanic:client:applyTransmission", level = 1, remove = false },
+	['transmission2'] = {
+		label = 'Tier 2 Transmission', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'transmission2.png',  event = 'jim-mechanic:client:applyTransmission', level = 1, remove = false },
 	},
-	["transmission3"] = {
-		label = "Tier 3 Transmission", weight = 0, stack = false, close = true, description = "",
-		client = { image = "transmission3.png",  event = "jim-mechanic:client:applyTransmission", level = 2, remove = false },
+	['transmission3'] = {
+		label = 'Tier 3 Transmission', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'transmission3.png',  event = 'jim-mechanic:client:applyTransmission', level = 2, remove = false },
 	},
-	["transmission4"] = {
-		label = "Tier 4 Transmission", weight = 0, stack = false, close = true, description = "",
-		client = { image = "transmission4.png",  event = "jim-mechanic:client:applyTransmission", level = 3, remove = false },
+	['transmission4'] = {
+		label = 'Tier 4 Transmission', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'transmission4.png',  event = 'jim-mechanic:client:applyTransmission', level = 3, remove = false },
 	},
 
-	["metal_wand"] = {
-		label = "Metal Wand",
+	['metal_wand'] = {
+		label = 'Metal Wand',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["romantic_book"] = {
-		label = "Romantic book",
+	['romantic_book'] = {
+		label = 'Romantic book',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["walkstick"] = {
-		label = "Walking Stick",
+	['walkstick'] = {
+		label = 'Walking Stick',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Walking stick for ya'll grannies out there.. HAHA",
+		description = 'Walking stick for yall grannies out there.. HAHA',
 	},
 
-	["camera"] = {
-		label = "Kamera",
+	['camera'] = {
+		label = 'Kamera',
 		weight = 1000,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["kurkakola"] = {
-		label = "Cola",
+	['kurkakola'] = {
+		label = 'Cola',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "For all the thirsty out there",
+		description = 'For all the thirsty out there',
 	},
 
-	["nos"] = {
-		label = "NOS Bottle", weight = 0, stack = false, close = true, description = "A full bottle of NOS",
-		client = { image = "nos.png", event = "jim-mechanic:client:applyNOS", },
+	['nos'] = {
+		label = 'NOS Bottle', weight = 0, stack = false, close = true, description = 'A full bottle of NOS',
+		client = { image = 'nos.png', event = 'jim-mechanic:client:applyNOS', },
 	},
 
-	["visa"] = {
-		label = "Visa Card",
+	['visa'] = {
+		label = 'Visa Card',
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "Visa can be used via ATM",
+		description = 'Visa can be used via ATM',
 	},
 
-	["rims"] = {
-		label = "Custom Wheel Rims", weight = 0, stack = false, close = true, description = "",
-		client = { image = "rims.png", event = "jim-mechanic:client:Rims:Check", },
+	['rims'] = {
+		label = 'Custom Wheel Rims', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'rims.png', event = 'jim-mechanic:client:Rims:Check', },
 	},
 
-	["photo"] = {
-		label = "Fotoğraf",
+	['photo'] = {
+		label = 'Fotoğraf',
 		weight = 20,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["oxy"] = {
-		label = "Prescription Oxy",
+	['oxy'] = {
+		label = 'Oxy',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "The Label Has Been Ripped Off",
+        allowArmed = true,
+		description = 'The Label Has Been Ripped Off',
 	},
 
-	-- ["advancedrepairkit"] = {
-	-- 	label = "Advanced Repairkit",
+	-- ['advancedrepairkit'] = {
+	-- 	label = 'Advanced Repairkit',
 	-- 	weight = 1000,
 	-- 	stack = true,
 	-- 	close = true,
-	-- 	description = "A nice toolbox with stuff to repair your vehicle",
+	-- 	description = 'A nice toolbox with stuff to repair your vehicle',
 	-- 	image = 'advrepairkit.png'
 	-- },
 
-	["externals"] = {
-		label = "Exterior Cosmetics", weight = 0, stack = false, close = true, description = "",
-		client = { image = "mirror.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['externals'] = {
+		label = 'Exterior Cosmetics', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'mirror.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["tunerlaptop"] = {
-		label = "Tunerchip",
+	['tunerlaptop'] = {
+		label = 'Tunerchip',
 		weight = 2000,
 		stack = false,
 		close = true,
-		description = "With this tunerchip you can get your car on steroids... If you know what you're doing",
+		description = 'With this tunerchip you can get your car on steroids... If you know what youre doing',
 	},
 
-	["weed_ak47_seed"] = {
-		label = "AK47 Seed",
+	['weed_ak47_seed'] = {
+		label = 'AK47 Seed',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A weed seed of AK47",
+		description = 'A weed seed of AK47',
 	},
 
-	["police_stormram"] = {
-		label = "Stormram",
+	['police_stormram'] = {
+		label = 'Stormram',
 		weight = 18000,
 		stack = true,
 		close = true,
-		description = "A nice tool to break into doors",
+		description = 'A nice tool to break into doors',
 	},
 
-	-- ["id_card"] = {
-	-- 	label = "ID Card",
+	-- ['id_card'] = {
+	-- 	label = 'ID Card',
 	-- 	weight = 0,
 	-- 	stack = false,
 	-- 	close = false,
-	-- 	description = "A card containing all your information to identify yourself",
+	-- 	description = 'A card containing all your information to identify yourself',
 	-- },
 
 	['id_card'] = {
@@ -2892,383 +3166,414 @@ return {
         stack = false,
         close = true,
     },
+	['cdl_license'] = {
+        label = 'CDL License',
+        weight = 0,
+        stack = false,
+        close = true,
+        client = {image = 'idcard.png'}
+    },
+	['bike_license'] = {
+        label = 'Bike License',
+        weight = 0,
+        stack = false,
+        close = true,
+        client = {image = 'idcard.png'}
+    },
 
-	["horn"] = {
-		label = "Custom Vehicle Horn", weight = 0, stack = false, close = true, description = "",
-		client = { image = "horn.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['horn'] = {
+		label = 'Custom Vehicle Horn', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'horn.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["noscan"] = {
-		label = "Empty NOS Bottle", weight = 0, stack = true, close = true, description = "An Empty bottle of NOS",
-		client = { image = "noscan.png", }
+	['noscan'] = {
+		label = 'Empty NOS Bottle', weight = 0, stack = true, close = true, description = 'An Empty bottle of NOS',
+		client = { image = 'noscan.png', }
 	},
 
-	["trojan_usb"] = {
-		label = "Trojan USB",
+	['trojan_usb'] = {
+		label = 'Trojan USB',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Handy software to shut down some systems",
+		degrade = 40320,
+		decay = true,
+		description = 'Handy software to shut down some systems',
 	},
 
-	["powerbank"] = {
-		label = "Power Bank",
+	['powerbank'] = {
+		label = 'Power Bank',
 		weight = 200,
 		stack = false,
 		close = true,
-		description = "Incredible portable charger!",
+		description = 'Incredible portable charger!',
 	},
 
-	["pinger"] = {
-		label = "Pinger",
+	['pinger'] = {
+		label = 'Pinger',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "With a pinger and your phone you can send out your location",
+		description = 'With a pinger and your phone you can send out your location',
 	},
 
-	["wet_phone"] = {
-		label = "Wet Phone",
+	['wet_phone'] = {
+		label = 'Wet Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
+		description = 'Did you really think that swimming in the ocean with your phone was a good idea?',
 	},
 
-	["gin"] = {
-		label = "Gin",
+	['gin'] = {
+		label = 'Gin',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Gin",
+		description = 'A bottle of Gin',
 	},
 
-	["crutch"] = {
-		label = "Crutch",
+	['crutch'] = {
+		label = 'Crutch',
 		weight = 650,
 		stack = true,
 		close = true,
-		description = "A device used to assist with walking.",
+		description = 'A device used to assist with walking.',
 	},
 
-	["weed_og-kush_seed"] = {
-		label = "OGKush Seed",
+	['weed_og-kush_seed'] = {
+		label = 'OGKush Seed',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A weed seed of OG Kush",
+		description = 'A weed seed of OG Kush',
 	},
 
-	["backpack2"] = {
-		label = "Backpack 2",
+	['backpack2'] = {
+		label = 'Backpack 2',
 		weight = 15000,
 		stack = false,
 		close = true,
-		description = "Backpack",
+		description = 'Backpack',
 	},
 
-	["plant_tub"] = {
-		label = "Plant Tub",
+	['plant_tub'] = {
+		label = 'Plant Tub',
 		weight = 1000,
 		stack = true,
 		close = false,
-		description = "Pot for planting plants",
+		description = 'Pot for planting plants',
 	},
 
-	["mechanic_tools"] = {
-		label = "Mechanic tools", weight = 0, stack = false, close = true, description = "Needed for vehicle repairs",
-		client = { image = "mechanic_tools.png", event = "jim-mechanic:client:Repair:Check" }
+	['mechanic_tools'] = {
+		label = 'Mechanic tools', weight = 0, stack = false, close = true, description = 'Needed for vehicle repairs',
+		client = { image = 'mechanic_tools.png', event = 'jim-mechanic:client:Repair:Check' }
 	},
 
-	["spoiler"] = {
-		label = "Vehicle Spoiler", weight = 0, stack = false, close = true, description = "",
-		client = { image = "spoiler.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['spoiler'] = {
+		label = 'Vehicle Spoiler', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'spoiler.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["carbattery"] = {
-		label = "Car Battery", weight = 0, stack = false, close = true, description = "",
-		client = { image = "carbattery.png", },
+	['carbattery'] = {
+		label = 'Car Battery', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'carbattery.png', },
 	},
 
-	["greenlight_phone"] = {
-		label = "Green Light Phone",
+	['greenlight_phone'] = {
+		label = 'Green Light Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["stickynote"] = {
-		label = "Sticky note",
+	['stickynote'] = {
+		label = 'Sticky note',
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "Sometimes handy to remember something :)",
+		description = 'Sometimes handy to remember something :)',
 	},
 
-	["sponge"] = {
-		label = "Sponge",
+	['sponge'] = {
+		label = 'Sponge',
 		weight = 60,
 		stack = true,
 		close = false,
-		description = "Can be used to clean your car!",
+		description = 'Can be used to clean your car!',
 	},
 
-	["underglow_controller"] = {
-		label = "Neon Controller", weight = 0, stack = false, close = true, description = "",
-		client = { image = "underglow_controller.png", event = "jim-mechanic:client:neonMenu", },
+	['underglow_controller'] = {
+		label = 'Neon Controller', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'underglow_controller.png', event = 'jim-mechanic:client:neonMenu', },
+	},
+	
+	['underglow'] = {
+    	label = 'Underglow LEDS', weight = 0, stack = true, close = true, description = 'Underglow addition for vehicles',
+    	client = { image = 'underglow.png', event = 'jim-mechanic:client:applyUnderglow', remove = false },
 	},
 
-	["turbo"] = {
-		label = "Supercharger Turbo", weight = 0, stack = false, close = true, description = "Who doesn't need a 65mm Turbo??",
-		client = { image = "turbo.png", event = "jim-mechanic:client:applyTurbo", remove = false },
+
+	['turbo'] = {
+		label = 'Supercharger Turbo', weight = 0, stack = false, close = true, description = 'Who doesnt need a 65mm Turbo??',
+		client = { image = 'turbo.png', event = 'jim-mechanic:client:applyTurbo', remove = false },
 	},
 
-	["axleparts"] = {
-		label = "Axle Parts", weight = 0, stack = false, close = true, description = "",
-		client = { image = "axleparts.png", },
+	['axleparts'] = {
+		label = 'Axle Parts', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'axleparts.png', },
 	},
 
-	["toiletry"] = {
-		label = "Toiletry",
+	['toiletry'] = {
+		label = 'Toiletry',
 		weight = 10,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["weed_brick"] = {
-		label = "Weed Brick",
+	['weed_brick'] = {
+		label = 'Weed Brick',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "1KG Weed Brick to sell to large customers.",
+		description = '1KG Weed Brick to sell to large customers.',
 	},
 
-	["dendrogyra_coral"] = {
-		label = "Dendrogyra",
+	['dendrogyra_coral'] = {
+		label = 'Dendrogyra',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Its also known as pillar coral",
+		description = 'Its also known as pillar coral',
 	},
 
-	["prescription_card"] = {
-		label = "Prescription Card",
+	['prescription_card'] = {
+		label = 'Prescription Card',
 		weight = 0,
 		stack = false,
 		close = false,
-		description = "A prescription card",
+		description = 'A prescription card',
 	},
 
-	["whiskey"] = {
-		label = "Whiskey",
+	['whiskey'] = {
+		label = 'Whiskey',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "For all the thirsty out there",
+		description = 'For all the thirsty out there',
 	},
 
-	["newoil"] = {
-		label = "Car Oil", weight = 0, stack = false, close = true, description = "",
-		client = { image = "caroil.png", },
+	['newoil'] = {
+		label = 'Car Oil', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'caroil.png', },
 	},
 
-	["weed_purple-haze_seed"] = {
-		label = "Purple Haze Seed",
+	['weed_purple-haze_seed'] = {
+		label = 'Purple Haze Seed',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A weed seed of Purple Haze",
+		description = 'A weed seed of Purple Haze',
 	},
 
-	["npc_phone"] = {
-		label = "Phone",
+	['npc_phone'] = {
+		label = 'Phone',
 		weight = 10,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["suspension1"] = {
-		label = "Tier 1 Suspension", weight = 0, stack = false, close = true, description = "",
-		client = { image = "suspension1.png", event = "jim-mechanic:client:applySuspension",  level = 0, remove = false },
+	['suspension1'] = {
+		label = 'Tier 1 Suspension', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'suspension1.png', event = 'jim-mechanic:client:applySuspension',  level = 0, remove = false },
 	},
-	["suspension2"] = {
-		label = "Tier 2 Suspension", weight = 0, stack = false, close = true, description = "",
-		client = { image = "suspension2.png", event = "jim-mechanic:client:applySuspension", level = 1, remove = false },
+	['suspension2'] = {
+		label = 'Tier 2 Suspension', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'suspension2.png', event = 'jim-mechanic:client:applySuspension', level = 1, remove = false },
 	},
-	["suspension3"] = {
-		label = "Tier 3 Suspension", weight = 0, stack = false, close = true, description = "",
-		client = { image = "suspension3.png", event = "jim-mechanic:client:applySuspension", level = 2, remove = false },
+	['suspension3'] = {
+		label = 'Tier 3 Suspension', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'suspension3.png', event = 'jim-mechanic:client:applySuspension', level = 2, remove = false },
 	},
-	["suspension4"] = {
-		label = "Tier 4 Suspension", weight = 0, stack = false, close = true, description = "",
-		client = { image = "suspension4.png", event = "jim-mechanic:client:applySuspension", level = 3, remove = false },
+	['suspension4'] = {
+		label = 'Tier 4 Suspension', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'suspension4.png', event = 'jim-mechanic:client:applySuspension', level = 3, remove = false },
 	},
-	["suspension5"] = {
-		label = "Tier 5 Suspension", weight = 0, stack = false, close = true, description = "",
-		client = { image = "suspension5.png", event = "jim-mechanic:client:applySuspension", level = 4, remove = false },
+	['suspension5'] = {
+		label = 'Tier 5 Suspension', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'suspension5.png', event = 'jim-mechanic:client:applySuspension', level = 4, remove = false },
 	},
 
-	["meth"] = {
-		label = "Meth",
+	['meth'] = {
+		label = 'Meth',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "A baggie of Meth",
+		description = 'A baggie of Meth',
 	},
 
-	["scotch"] = {
-		label = "Scotch",
+	['scotch'] = {
+		label = 'Scotch',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Scotch",
+		description = 'A bottle of Scotch',
 	},
 
-	["radioscanner"] = {
-		label = "Radio Scanner",
+	['radioscanner'] = {
+		label = 'Radio Scanner',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "With this you can get some police alerts. Not 100% effective however",
+		description = 'With this you can get some police alerts. Not 100% effective however',
 	},
 
-	["steel"] = {
-		label = "Steel",
+	['steel'] = {
+		label = 'Steel',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Nice piece of metal that you can probably use for something",
+		description = 'Nice piece of metal that you can probably use for something',
 	},
 
-	["cokebaggy"] = {
-		label = "Bag of Coke",
+	['cokebaggy'] = {
+		label = 'Bag of Coke',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "To get happy real quick",
+        allowArmed = true,
+		description = 'To get happy real quick',
 	},
 
-	["nitrous"] = {
-		label = "Nitrous",
+	['nitrous'] = {
+		label = 'Nitrous',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Speed up, gas pedal! :D",
+		description = 'Speed up, gas pedal! :D',
 	},
 
-	["painkillers"] = {
-		label = "Painkillers",
+	['painkillers'] = {
+		label = 'Painkillers',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "For pain you can't stand anymore, take this pill that'd make you feel great again",
+		description = 'For pain you cant stand anymore, take this pill thatd make you feel great again',
 	},
 
-	["cleaningkit"] = {
-		label = "Cleaning Kit", weight = 0, stack = true, close = true, description = "A microfiber cloth with some soap will let your car sparkle again!",
-		client = { image = "cleaningkit.png", event = "jim-mechanic:client:cleanVehicle"},
+	['cleaningkit'] = {
+		label = 'Cleaning Kit', 
+        weight = 0, 
+        stack = true, 
+        close = true, 
+        allowArmed = true,
+        description = 'A microfiber cloth with some soap will let your car sparkle again!',
+            client = { 
+                image = 'cleaningkit.png', 
+                event = 'jim-mechanic:client:cleanVehicle'
+            },
 	},
 
-	["weed_white-widow"] = {
-		label = "White Widow 2g",
+	['weed_white-widow'] = {
+		label = 'White Widow 2g',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A weed bag with 2g White Widow",
+		description = 'A weed bag with 2g White Widow',
 	},
 
-	["bracelet"] = {
-		label = "Bracelet",
+	['bracelet'] = {
+		label = 'Bracelet',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["loot_bag"] = {
-		label = "Duffle bag",
+	['loot_bag'] = {
+		label = 'Duffle bag',
 		weight = 50,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["rubber"] = {
-		label = "Rubber",
+	['rubber'] = {
+		label = 'Rubber',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Rubber, I believe you can make your own rubber ducky with it :D",
+		description = 'Rubber, I believe you can make your own rubber ducky with it :D',
 	},
 
-	["hack_laptop"] = {
-		label = "Hacking Laptop",
+	['hack_laptop'] = {
+		label = 'Hacking Laptop',
 		weight = 1000,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["beer"] = {
-		label = "Beer",
+	['beer'] = {
+		label = 'Beer',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "Nothing like a good cold beer!",
+		description = 'Nothing like a good cold beer!',
 	},
 
-	["necklace"] = {
-		label = "Necklace",
+	['necklace'] = {
+		label = 'Necklace',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["dj_deck"] = {
-		label = "DJ Deck",
+	['dj_deck'] = {
+		label = 'DJ Deck',
 		weight = 95,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["iphone"] = {
-		label = "iPhone",
+	['iphone'] = {
+		label = 'iPhone',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Very expensive phone",
+		description = 'Very expensive phone',
 	},
 
-	["binoculars"] = {
-		label = "Binoculars",
+	['binoculars'] = {
+		label = 'Binoculars',
 		weight = 600,
 		stack = true,
 		close = true,
-		description = "Sneaky Breaky...",
+		description = 'Sneaky Breaky...',
 	},
 
-	["keycuttingmachine"] = {
-		label = "Key Cutting Machine",
+	['keycuttingmachine'] = {
+		label = 'Key Cutting Machine',
 		weight = 40000,
 		stack = true,
 		close = true,
-		description = "A Machine to Cut Keys",
+		description = 'A Machine to Cut Keys',
 	},
 
-	["wet_blue_phone"] = {
-		label = "Wet Blue Phone",
+	['wet_blue_phone'] = {
+		label = 'Wet Blue Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
+		description = 'Did you really think that swimming in the ocean with your phone was a good idea?',
 	},
 
-	['mechboard'] = { label = 'Mechanic Sheet', weight = 0, stack = false, close = false,
+	['mechboard'] = { label = 'Mechanic Sheet', weight = 0, stack = false, close = true,
     buttons = {
         { 	label = 'Copy Parts List',
             action = function(slot)
@@ -3294,299 +3599,308 @@ return {
 		},
 	},
 
-	["car_armor"] = {
-		label = "Vehicle Armor", weight = 0, stack = false, close = true, description = "",
-		client = { image = "armour.png", event = "jim-mechanic:client:applyArmour", remove = false },
+	['car_armor'] = {
+		label = 'Vehicle Armor', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'armour.png', event = 'jim-mechanic:client:applyArmour', remove = false },
 	},
 
-	["noscolour"] = {
-		label = "NOS Colour Injector", weight = 0, stack = true, close = true, description = "Make that purge spray",
-		client = { image = "noscolour.png", }
+	['noscolour'] = {
+		label = 'NOS Colour Injector', weight = 0, stack = true, close = true, description = 'Make that purge spray',
+		client = { image = 'noscolour.png', }
 	},
 
-	["schnapps"] = {
-		label = "Peach Schnapps",
+	['schnapps'] = {
+		label = 'Peach Schnapps',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Peach Schnapps",
+		description = 'A bottle of Peach Schnapps',
 	},
 
-	["gopro"] = {
-		label = "GoPro",
+	['gopro'] = {
+		label = 'GoPro',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "A GoPro",
+		description = 'A GoPro',
 	},
-
-	["ifaks"] = {
-		label = "ifaks",
-		weight = 200,
+	
+	['cam_jammer'] = {
+		label = 'Cam Jammer',
+		weight = 500,
 		stack = true,
 		close = true,
-		description = "ifaks for healing and a complete stress remover.",
+		description = 'A camera jammer',
 	},
 
-	["labkey"] = {
-		label = "Key",
+	['ifaks'] = {
+		label = 'ifaks',
+		weight = 50,
+		stack = true,
+		close = true,
+        allowArmed = true,
+		description = 'ifaks for healing and a complete stress remover.',
+	},
+
+	['labkey'] = {
+		label = 'Key',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "Key for a lock...?",
+		description = 'Key for a lock...?',
 	},
 
-	["icream"] = {
-		label = "Irish Cream",
+	['icream'] = {
+		label = 'Irish Cream',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Irish Cream Liquer",
+		description = 'A bottle of Irish Cream Liquer',
 	},
 
-	["amaretto"] = {
-		label = "Amaretto",
+	['amaretto'] = {
+		label = 'Amaretto',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Amaretto",
+		description = 'A bottle of Amaretto',
 	},
 
-	["pink_phone"] = {
-		label = "Pink Phone",
+	['pink_phone'] = {
+		label = 'Pink Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["firework1"] = {
-		label = "2Brothers",
+	['firework1'] = {
+		label = '2Brothers',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Fireworks",
+		description = 'Fireworks',
 	},
 
-	["tablet"] = {
-		label = "Tablet",
+	['tablet'] = {
+		label = 'Tablet',
 		weight = 2000,
 		stack = true,
 		close = true,
-		description = "Expensive tablet",
+		description = 'Expensive tablet',
 	},
 
-	["wet_greenlight_phone"] = {
-		label = "Wet Green Light Phone",
+	['wet_greenlight_phone'] = {
+		label = 'Wet Green Light Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["copper"] = {
-		label = "Copper",
+	['copper'] = {
+		label = 'Copper',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Nice piece of metal that you can probably use for something",
+		description = 'Nice piece of metal that you can probably use for something',
 	},
 
-	["gatecrack"] = {
-		label = "Gatecrack",
+	['gatecrack'] = {
+		label = 'Gatecrack',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Handy software to tear down some fences",
+		description = 'Handy software to tear down some fences',
 	},
 
-	["firework2"] = {
-		label = "Poppelers",
+	['firework2'] = {
+		label = 'Poppelers',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Fireworks",
+		description = 'Fireworks',
 	},
 
-	["house_locator"] = {
-		label = "House locator",
+	['house_locator'] = {
+		label = 'House locator',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	-- ["cigarette"] = {
-	-- 	label = "Cigarette",
+	-- ['cigarette'] = {
+	-- 	label = 'Cigarette',
 	-- 	weight = 250,
 	-- 	stack = true,
 	-- 	close = true,
-	-- 	description = "Smokeable Tobacco",
+	-- 	description = 'Smokeable Tobacco',
 	-- },
 
-	["screwdriverset"] = {
-		label = "Toolkit",
+	['screwdriverset'] = {
+		label = 'Toolkit',
 		weight = 1000,
 		stack = true,
 		close = false,
-		description = "Very useful to screw... screws...",
+		description = 'Very useful to screw... screws...',
 	},
 
-	["sparetire"] = {
-		label = "Spare Tire", weight = 0, stack = false, close = true, description = "",
-		client = { image = "sparetire.png", },
+	['sparetire'] = {
+		label = 'Spare Tire', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'sparetire.png', },
 	},
 
-	["thermite"] = {
-		label = "Thermite",
+	['thermite'] = {
+		label = 'Thermite',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Sometimes you'd wish for everything to burn",
+		description = 'Sometimes youd wish for everything to burn',
 	},
 
-	["c4_bomb"] = {
-		label = "C4 Explosive",
+	['c4_bomb'] = {
+		label = 'C4 Explosive',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Boom",
+		description = 'Boom',
 	},
 
-	["wet_pink_phone"] = {
-		label = "Wet Pink Phone",
+	['wet_pink_phone'] = {
+		label = 'Wet Pink Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["wet_green_phone"] = {
-		label = "Wet Green Phone",
+	['wet_green_phone'] = {
+		label = 'Wet Green Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["stancerkit"] = {
-		label = "Stancer Kit",
+	['stancerkit'] = {
+		label = 'Stancer Kit',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["aluminumoxide"] = {
-		label = "Aluminium Powder",
+	['aluminumoxide'] = {
+		label = 'Aluminium Powder',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Some powder to mix with",
+		description = 'Some powder to mix with',
 	},
 
-	["handcuffs"] = {
-		label = "Handcuffs",
+	['handcuffs'] = {
+		label = 'Handcuffs',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "Comes in handy when people misbehave. Maybe it can be used for something else?",
+		description = 'Comes in handy when people misbehave. Maybe it can be used for something else?',
 	},
 	
-	["cuffs"] = {
-        labal = "Handcuffs",
+	['cuffs'] = {
+        labal = 'Handcuffs',
         weight = 150,
         client = {
-            export = "ND_Police.cuff"
+            export = 'ND_Police.cuff'
         }
     },
 	
-    ["zipties"] = {
-        labal = "Zipties",
+    ['zipties'] = {
+        labal = 'Zipties',
         weight = 10,
         client = {
-            export = "ND_Police.ziptie"
+            export = 'ND_Police.ziptie'
         }
     },
 
-	["fitbit"] = {
-		label = "Fitbit",
+	['fitbit'] = {
+		label = 'Fitbit',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "I like fitbit",
+		description = 'I like fitbit',
 	},
 
-	["paramedicbag"] = {
-		label = "Paramedic bag",
+	['paramedicbag'] = {
+		label = 'Paramedic bag',
 		weight = 5000,
 		stack = false,
 		close = true,
-		description = "Paramedic bag",
+		description = 'Paramedic bag',
 	},
 
-	["brussian"] = {
-		label = "Black Russian",
+	['brussian'] = {
+		label = 'Black Russian',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Black Russian Cocktail",
+		description = 'Black Russian Cocktail',
 	},
 
-	["black_phone"] = {
-		label = "Black Phone",
+	['black_phone'] = {
+		label = 'Black Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["earings"] = {
-		label = "Earings",
+	['earings'] = {
+		label = 'Earings',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["skull"] = {
-		label = "Skull Art with diamonds",
+	['skull'] = {
+		label = 'Skull Art with diamonds',
 		weight = 95,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["pisswasser2"] = {
-		label = "Pißwasser Stout",
+	['pisswasser2'] = {
+		label = 'Pißwasser Stout',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["syphoningkit"] = {
-		label = "Syphoning Kit",
+	['syphoningkit'] = {
+		label = 'Syphoning Kit',
 		weight = 5000,
 		stack = false,
 		close = false,
-		description = "A kit made to siphon gasoline from vehicles.",
+		description = 'A kit made to siphon gasoline from vehicles.',
 	},
 
-	["sprunk"] = {
-		label = "Sprunk",
+	['sprunk'] = {
+		label = 'Sprunk',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["wet_black_phone"] = {
-		label = "Wet Black Phone",
+	['wet_black_phone'] = {
+		label = 'Wet Black Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
+		description = 'Did you really think that swimming in the ocean with your phone was a good idea?',
 	},
 
 	['notepad'] = {
@@ -3603,698 +3917,736 @@ return {
 		close = true,
 	},
 
-	["weed_white-widow_seed"] = {
-		label = "White Widow Seed",
+	['weed_white-widow_seed'] = {
+		label = 'White Widow Seed',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "A weed seed of White Widow",
+		description = 'A weed seed of White Widow',
 	},
 
-	["jerrycan"] = {
-		label = "Jerry Can",
+	['jerrycan'] = {
+		label = 'Jerry Can',
 		weight = 15000,
 		stack = false,
 		close = false,
-		description = "A Jerry Can made to hold gasoline.",
+		description = 'A Jerry Can made to hold gasoline.',
 	},
 
-	["newsbmic"] = {
-		label = "Boom Microphone",
+	['newsbmic'] = {
+		label = 'Boom Microphone',
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "A Useable BoomMic",
+		description = 'A Useable BoomMic',
 	},
 
-	["payment_terminal"] = {
-		label = "Payment Terminal",
+	['payment_terminal'] = {
+		label = 'Payment Terminal',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["cardiaquecigs"] = {
-		label = "Cardiaque Cigarettes",
+	['cardiaquecigs'] = {
+		label = 'Cardiaque Cigarettes',
 		consume = 0.05,
 		weight = 250,
 		stack = false,
 		close = true,
-		description = "Pack of Cigarettes, Made in USA",
+		description = 'Pack of Cigarettes, Made in USA',
 	},
 
-	["cranberry"] = {
-		label = "Cranberry Juice",
+	['cranberry'] = {
+		label = 'Cranberry Juice',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Cranberry Juice",
+		description = 'Cranberry Juice',
 	},
 
-	["jerry_can"] = {
-		label = "Jerrycan 20L",
+	['jerry_can'] = {
+		label = 'Jerrycan 20L',
 		weight = 20000,
 		stack = true,
 		close = true,
-		description = "A can full of Fuel",
+		description = 'A can full of Fuel',
 	},
 
-	["heavyarmor"] = {
-		label = "Heavy Armor",
+	['heavyarmor'] = {
+		label = 'Heavy Armor',
 		weight = 5000,
 		stack = true,
-		description = "Some protection won't hurt... right?",
+		description = 'Some protection wont hurt... right?',
 	},
 
-	["carwax"] = {
-		label = "Car Wax",
+	['carwax'] = {
+		label = 'Car Wax',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "Can be used to Car Wax your car!",
+		description = 'Can be used to Car Wax your car!',
 	},
 
-	["watch"] = {
-		label = "Watch",
+	['watch'] = {
+		label = 'Watch',
 		weight = 35,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["weed_skunk_seed"] = {
-		label = "Skunk Seed",
+	['weed_skunk_seed'] = {
+		label = 'Skunk Seed',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A weed seed of Skunk",
+		description = 'A weed seed of Skunk',
 	},
 
-	["engine1"] = {
-		label = "Tier 1 Engine", weight = 0, stack = false, close = true, description = "",
-		client = { image = "engine1.png",  event = "jim-mechanic:client:applyEngine", level = 0, remove = false },
+	['engine1'] = {
+		label = 'Tier 1 Engine', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'engine1.png',  event = 'jim-mechanic:client:applyEngine', level = 0, remove = false },
 	},
-	["engine2"] = {
-		label = "Tier 2 Engine", weight = 0, stack = false, close = true, description = "",
-		client = { image = "engine2.png",  event = "jim-mechanic:client:applyEngine", level = 1, remove = false },
+	['engine2'] = {
+		label = 'Tier 2 Engine', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'engine2.png',  event = 'jim-mechanic:client:applyEngine', level = 1, remove = false },
 	},
-	["engine3"] = {
-		label = "Tier 3 Engine", weight = 0, stack = false, close = true, description = "",
-		client = { image = "engine3.png",  event = "jim-mechanic:client:applyEngine", level = 2, remove = false },
+	['engine3'] = {
+		label = 'Tier 3 Engine', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'engine3.png',  event = 'jim-mechanic:client:applyEngine', level = 2, remove = false },
 	},
-	["engine4"] = {
-		label = "Tier 4 Engine", weight = 0, stack = false, close = true, description = "",
-		client = { image = "engine4.png",  event = "jim-mechanic:client:applyEngine", level = 3, remove = false },
+	['engine4'] = {
+		label = 'Tier 4 Engine', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'engine4.png',  event = 'jim-mechanic:client:applyEngine', level = 3, remove = false },
 	},
-	["engine5"] = {
-		label = "Tier 5 Engine", weight = 0, stack = false, close = true, description = "",
-		client = { image = "engine5.png",  event = "jim-mechanic:client:applyEngine", level = 4, remove = false },
+	['engine5'] = {
+		label = 'Tier 5 Engine', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'engine5.png',  event = 'jim-mechanic:client:applyEngine', level = 4, remove = false },
 	},
 
-	["ecolalight"] = {
-		label = "eCola Light",
+	['ecolalight'] = {
+		label = 'eCola Light',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["gallery_sapphire-ring"] = {
-		label = "Sapphire Ring",
+	['gallery_sapphire-ring'] = {
+		label = 'Sapphire Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["xtcbaggy"] = {
-		label = "Bag of XTC",
+	['xtcbaggy'] = {
+		label = 'Bag of XTC',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Pop those pills baby",
+		description = 'Pop those pills baby',
 	},
 
-	["gold_phone"] = {
-		label = "Gold Phone",
+	['gold_phone'] = {
+		label = 'Gold Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["antipatharia_coral"] = {
-		label = "Antipatharia",
+	['antipatharia_coral'] = {
+		label = 'Antipatharia',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Its also known as black corals or thorn corals",
+		description = 'Its also known as black corals or thorn corals',
 	},
 
-	["diving_fill"] = {
-		label = "Diving Tube",
+	['diving_fill'] = {
+		label = 'Diving Tube',
 		weight = 3000,
 		stack = false,
 		close = true,
 	},
 
-	["sponge_dirty"] = {
-		label = "Dirty Sponge",
+	['sponge_dirty'] = {
+		label = 'Dirty Sponge',
 		weight = 65,
 		stack = true,
 		close = false,
-		description = "Needs to be washed to be used again!",
+		description = 'Needs to be washed to be used again!',
 	},
 
-	["tires"] = {
-		label = "Drift Smoke Tires", weight = 0, stack = false, close = true, description = "",
-		client = { image = "tires.png", event = "jim-mechanic:client:Tires:Check", },
+	['tires'] = {
+		label = 'Drift Smoke Tires', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'tires.png', event = 'jim-mechanic:client:Tires:Check', },
 	},
 
-	["weed_og-kush"] = {
-		label = "OGKush 2g",
+	['weed_og-kush'] = {
+		label = 'OGKush 2g',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A weed bag with 2g OG Kush",
+		description = 'A weed bag with 2g OG Kush',
 	},
 
-	-- ["plastic"] = {
-	-- 	label = "Plastic",
+	-- ['plastic'] = {
+	-- 	label = 'Plastic',
 	-- 	weight = 100,
 	-- 	stack = true,
 	-- 	close = false,
-	-- 	description = "RECYCLE! - Greta Thunberg 2019",
+	-- 	description = 'RECYCLE! - Greta Thunberg 2019',
 	-- },
 
-	["slaptable"] = {
-		label = "Slap Table",
+	['slaptable'] = {
+		label = 'Slap Table',
 		weight = 1,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["weed_nutrition"] = {
-		label = "Plant Fertilizer",
+	['weed_nutrition'] = {
+		label = 'Plant Fertilizer',
 		weight = 2000,
 		stack = true,
 		close = true,
-		description = "Plant nutrition",
+		description = 'Plant nutrition',
 	},
 
-	["printerdocument"] = {
-		label = "Document",
+	['printerdocument'] = {
+		label = 'Document',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "A nice document",
+		description = 'A nice document',
 	},
 
-	["monitor"] = {
-		label = "Monitor",
+	['monitor'] = {
+		label = 'Monitor',
 		weight = 50,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["gallery_aquamarine-ring"] = {
-		label = "Aquamarine Ring",
+	['gallery_aquamarine-ring'] = {
+		label = 'Aquamarine Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["10kgoldchain"] = {
-		label = "10k Gold Chain",
+	['10kgoldchain'] = {
+		label = '10k Gold Chain',
 		weight = 2000,
 		stack = true,
 		close = true,
-		description = "10 carat golden chain",
+		description = '10 carat golden chain',
 	},
 
-	["red_phone"] = {
-		label = "Red Phone",
+	['red_phone'] = {
+		label = 'Red Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["shoebox"] = {
-		label = "Shoe box",
+	['shoebox'] = {
+		label = 'Shoe box',
 		weight = 45,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["gallery_jade-ring"] = {
-		label = "Jade Ring",
+	['gallery_jade-ring'] = {
+		label = 'Jade Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["goldchain"] = {
-		label = "Golden Chain",
+	['goldchain'] = {
+		label = 'Golden Chain',
 		weight = 1500,
 		stack = true,
 		close = true,
-		description = "A golden chain seems like the jackpot to me!",
+		description = 'A golden chain seems like the jackpot to me!',
 	},
 
-	["weed_purple-haze"] = {
-		label = "Purple Haze 2g",
+	['weed_purple-haze'] = {
+		label = 'Purple Haze 2g',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A weed bag with 2g Purple Haze",
+		description = 'A weed bag with 2g Purple Haze',
 	},
 
-	["coffemachine"] = {
-		label = "Coffe machine",
+	['coffemachine'] = {
+		label = 'Coffe machine',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["giftbox"] = {
-		label = "Giftbox",
+	['giftbox'] = {
+		label = 'Giftbox',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "A small gift from us to you to start your new journey :)",
+		description = 'A small gift from us to you to start your new journey :)',
 	},
 
-	["armor"] = {
-		label = "Armor",
+	['cargo_box_race'] = {
+		label = 'Race Crate',
+		weight = 500,
+		stack = false,
+		close = true,
+		consume = 1,
+	},
+
+	['cargo_box_cargo'] = {
+		label = 'Cargo Crate',
+		weight = 500,
+		stack = false,
+		close = true,
+		consume = 1,
+	},
+
+	['cargo_box_end'] = {
+		label = 'Event Crate',
+		weight = 500,
+		stack = false,
+		close = true,
+		consume = 1,
+	},
+
+	['armor'] = {
+		label = 'Armor',
 		weight = 5000,
 		stack = true,
 		close = true,
-		description = "Some protection won't hurt... right?",
+		description = 'Some protection wont hurt... right?',
 	},
 
-	["internals"] = {
-		label = "Internal Cosmetics", weight = 0, stack = false, close = true, description = "",
-		client = { image = "internals.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['internals'] = {
+		label = 'Internal Cosmetics', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'internals.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["rolling_paper"] = {
-		label = "Rolling Paper",
+	['rolling_paper'] = {
+		label = 'Rolling Paper',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Paper made specifically for encasing and smoking tobacco or cannabis.",
+		description = 'Paper made specifically for encasing and smoking tobacco or cannabis.',
 	},
 
-	["joint"] = {
-		label = "Joint",
+	['joint'] = {
+		label = 'Joint',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Sidney would be very proud at you",
+		description = 'Sidney would be very proud at you',
 	},
 
-	["nightvision"] = {
-		label = "Night Vision goggles",
+	['nightvision'] = {
+		label = 'Night Vision goggles',
 		weight = 5000,
 		stack = false,
 		close = true,
-		description = "Bravo Six, going dark",
+		description = 'Bravo Six, going dark',
 	},
 
-	["weedplant_seedf"] = {
-		label = "Female Weed Seed",
+	['weedplant_seedf'] = {
+		label = 'Female Weed Seed',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Female Weed Seed",
+		description = 'Female Weed Seed',
 	},
 
-	["bkamikaze"] = {
-		label = "Blue Kamikaze",
+	['bkamikaze'] = {
+		label = 'Blue Kamikaze',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Blue Kamikaze Cocktail",
+		description = 'Blue Kamikaze Cocktail',
 	},
 
-	["tapeplayer"] = {
-		label = "Tape Player",
+	['tapeplayer'] = {
+		label = 'Tape Player',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["wet_red_phone"] = {
-		label = "Wet Red Phone",
+	['wet_red_phone'] = {
+		label = 'Wet Red Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "Did you really think that swimming in the ocean with your phone was a good idea?",
+		description = 'Did you really think that swimming in the ocean with your phone was a good idea?',
 	},
 
-	["weed_amnesia"] = {
-		label = "Amnesia 2g",
+	['weed_amnesia'] = {
+		label = 'Amnesia 2g',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A weed bag with 2g Amnesia",
+		description = 'A weed bag with 2g Amnesia',
 	},
 
-	["hairdryer"] = {
-		label = "Hairdryer",
+	['hairdryer'] = {
+		label = 'Hairdryer',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["weedplant_seedm"] = {
-		label = "Male Weed Seed",
+	['weedplant_seedm'] = {
+		label = 'Male Weed Seed',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "Male Weed Seed",
+		description = 'Male Weed Seed',
 	},
 
-	["phone_module"] = {
-		label = "Phone Module",
+	['phone_module'] = {
+		label = 'Phone Module',
 		weight = 300,
 		stack = false,
 		close = true,
-		description = "It seems that we can fix a wet phone with this module, interesting.",
+		description = 'It seems that we can fix a wet phone with this module, interesting.',
 	},
 
-	["green_phone"] = {
-		label = "Green Phone",
+	['green_phone'] = {
+		label = 'Green Phone',
 		weight = 700,
 		stack = false,
 		close = true,
-		description = "They say that Quasar Smartphone is the same as an iPhone, what do you think?",
+		description = 'They say that Quasar Smartphone is the same as an iPhone, what do you think?',
 	},
 
-	["toothpaste"] = {
-		label = "Toothpaste",
+	['toothpaste'] = {
+		label = 'Toothpaste',
 		weight = 15,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["curaco"] = {
-		label = "Curaco",
+	['curaco'] = {
+		label = 'Curaco',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "A bottle of Curaco",
+		description = 'A bottle of Curaco',
 	},
 
-	["gallery_onyx-ring"] = {
-		label = "Onyx Ring",
+	['gallery_onyx-ring'] = {
+		label = 'Onyx Ring',
 		weight = 0,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["policegunrack"] = {
-		label = "Police Gun Rack",
+	['policegunrack'] = {
+		label = 'Police Gun Rack',
 		weight = 15000,
 		stack = true,
 		close = true,
-		description = "Gun rack for police vehicles",
+		description = 'Gun rack for police vehicles',
+	},
+	
+	['gunrack'] = {
+		label = 'Gun Rack',
+		weight = 10000,
+		stack = false,
+		consume = 0,
+		client = {
+			export = 'prp_gunrack.placeGunRack',
+		},
 	},
 
-	-- ["ecola"] = {
-	-- 	label = "eCola",
+	-- ['ecola'] = {
+	-- 	label = 'eCola',
 	-- 	weight = 100,
 	-- 	stack = true,
 	-- 	close = true,
-	-- 	description = "",
+	-- 	description = '',
 	-- },
 
-	["markedbills"] = {
-		label = "Loose Bills",
+	['markedbills'] = {
+		label = 'Loose Bills',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "Marked loose bills",
+		description = 'Marked loose bills',
 	},
 
-	["bands"] = {
-		label = "Bands of Cash",
+	['bands'] = {
+		label = 'Bands of Cash',
 		weight = 50,
 		stack = true,
 		close = false,
-		description = "Marked bands of cash",
+		description = 'Marked bands of cash',
 	},
 
-	["rolls"] = {
-		label = "Rolls of Cash",
+	['rolls'] = {
+		label = 'Rolls of Cash',
 		weight = 25,
 		stack = true,
 		close = false,
-		description = "Marked rolls of cash",
+		description = 'Marked rolls of cash',
 	},
 
-	["flat_television"] = {
-		label = "Flat TV",
+	['flat_television'] = {
+		label = 'Flat TV',
 		weight = 155,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["casinochips"] = {
-		label = "Casino Chips",
+	['casinochips'] = {
+		label = 'Casino Chips',
 		weight = 0,
 		stack = true,
 		close = false,
-		description = "Chips For Casino Gambling",
+		description = 'Chips For Casino Gambling',
 	},
 
-	["grapejuice"] = {
-		label = "Grape Juice",
+	['grapejuice'] = {
+		label = 'Grape Juice',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "Grape juice is said to be healthy",
+		description = 'Grape juice is said to be healthy',
 	},
 
-	["wine"] = {
-		label = "Wine",
+	['wine'] = {
+		label = 'Wine',
 		weight = 300,
 		stack = true,
 		close = false,
-		description = "Some good wine to drink on a fine evening",
+		description = 'Some good wine to drink on a fine evening',
 	},
 
-	["gold_watch"] = {
-		label = "Gold watch",
+	['gold_watch'] = {
+		label = 'Gold watch',
 		weight = 55,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 	},
 
-	["logger"] = {
-		label = "Logger Beer",
+	['logger'] = {
+		label = 'Logger Beer',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["thermalvision"] = {
-		label = "Thermal goggles",
+	['thermalvision'] = {
+		label = 'Thermal goggles',
 		weight = 5000,
 		stack = false,
 		close = true,
-		description = "Bravo Six, going see through",
+		description = 'Bravo Six, going see through',
 	},
 
-	["roof"] = {
-		label = "Vehicle Roof", weight = 0, stack = false, close = true, description = "",
-		client = { image = "roof.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['roof'] = {
+		label = 'Vehicle Roof', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'roof.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["diamond"] = {
-		label = "Diamond",
+	['diamond'] = {
+		label = 'Diamond',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "A diamond seems like the jackpot to me!",
+		description = 'A diamond seems like the jackpot to me!',
 	},
 
-	["rollcage"] = {
-		label = "Roll Cage", weight = 0, stack = false, close = true, description = "",
-		client = { image = "rollcage.png", event = "jim-mechanic:client:Cosmetic:Check", },
+	['rollcage'] = {
+		label = 'Roll Cage', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'rollcage.png', event = 'jim-mechanic:client:Cosmetic:Check', },
 	},
 
-	["keys"] = {
-		label = "Motel Key",
+	['keys'] = {
+		label = 'Motel Key',
 		weight = 500,
 		stack = false,
 		close = true,
-		description = "A key to a motel room",
+		description = 'A key to a motel room',
 	},
 
-	["redwoodcigs"] = {
-		label = "Redwood Cigarettes",
+	['redwoodcigs'] = {
+		label = 'Redwood Cigarettes',
 		consume = 0.05,
 		weight = 250,
 		stack = false,
 		close = true,
-		description = "Pack of Cigarettes, Made in USA",
+		description = 'Pack of Cigarettes, Made in USA',
 	},
 
-	["brakes1"] = {
-		label = "Tier 1 Brakes", weight = 0, stack = false, close = true, description = "",
-		client = { image = "brakes1.png",  event = "jim-mechanic:client:applyBrakes", level = 0, remove = false },
+	['brakes1'] = {
+		label = 'Tier 1 Brakes', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'brakes1.png',  event = 'jim-mechanic:client:applyBrakes', level = 0, remove = false },
 	},
-	["brakes2"] = {
-		label = "Tier 2 Brakes", weight = 0, stack = false, close = true, description = "",
-		client = { image = "brakes2.png",  event = "jim-mechanic:client:applyBrakes", level = 1, remove = false },
+	['brakes2'] = {
+		label = 'Tier 2 Brakes', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'brakes2.png',  event = 'jim-mechanic:client:applyBrakes', level = 1, remove = false },
 	},
-	["brakes3"] = {
-		label = "Tier 3 Brakes", weight = 0, stack = false, close = true, description = "",
-		client = { image = "brakes3.png",  event = "jim-mechanic:client:applyBrakes", level = 2, remove = false },
+	['brakes3'] = {
+		label = 'Tier 3 Brakes', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'brakes3.png',  event = 'jim-mechanic:client:applyBrakes', level = 2, remove = false },
 	},
 
-	["sbullet"] = {
-		label = "Silver Bullet",
+	['sbullet'] = {
+		label = 'Silver Bullet',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Silver Bullet Cocktail",
+		description = 'Silver Bullet Cocktail',
 	},
 
-	["certificate"] = {
-		label = "Certificate",
+	['certificate'] = {
+		label = 'Certificate',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "Certificate that proves you own certain stuff",
+		description = 'Certificate that proves you own certain stuff',
 	},
 
-	["weed_amnesia_seed"] = {
-		label = "Amnesia Seed",
+	['weed_amnesia_seed'] = {
+		label = 'Amnesia Seed',
 		weight = 0,
 		stack = true,
 		close = true,
-		description = "A weed seed of Amnesia",
+		description = 'A weed seed of Amnesia',
 	},
 
-	["weed_skunk"] = {
-		label = "Skunk 2g",
+	['weed_skunk'] = {
+		label = 'Skunk 2g',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = "A weed bag with 2g Skunk",
+		description = 'A weed bag with 2g Skunk',
 	},
 
-	["pisswasser3"] = {
-		label = "Pißwasser Pale Ale",
+	['pisswasser3'] = {
+		label = 'Pißwasser Pale Ale',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["headlights"] = {
-		label = "Xenon Headlights", weight = 0, stack = false, close = true, description = "",
-		client = { image = "headlights.png", event = "jim-mechanic:client:applyXenons", },
+	['headlights'] = {
+		label = 'Xenon Headlights', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'headlights.png', event = 'jim-mechanic:client:applyXenons', },
 	},
 
-	["rolex"] = {
-		label = "Golden Watch",
+	['rolex'] = {
+		label = 'Golden Watch',
 		weight = 150,
 		stack = true,
 		close = true,
-		description = "A golden watch seems like the jackpot to me!",
+		description = 'A golden watch seems like the jackpot to me!',
 	},
 
-	["twerks_candy"] = {
-		label = "Twerks",
+	['twerks_candy'] = {
+		label = 'Twerks',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "Some delicious candy :O",
+		description = 'Some delicious candy :O',
 	},
 
-	["glass"] = {
-		label = "Glass",
+	['glass'] = {
+		label = 'Glass',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "It is very fragile, watch out",
+		description = 'It is very fragile, watch out',
 	},
 
-	["sandwich"] = {
-		label = "Sandwich",
+	['sandwich'] = {
+		label = 'Sandwich',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Nice bread for your stomach",
+		description = 'Nice bread for your stomach',
 	},
 
 	--Drift
-	["driftchip"] = {
-		label = "Drift Chip",
+	['driftchip'] = {
+		label = 'Drift Chip',
 		weight = 300,
 		degade = 21000,
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = "Use this to tweak the ECU to enable drift mode on or off",
+		description = 'Use this to tweak the ECU to enable drift mode on or off',
 	},
-	["driftchipbox"] = {
-		label = "Drift Chip Box",
+	['driftchipbox'] = {
+		label = 'Drift Chip Box',
 		weight = 350,
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = "Contains a drift chip",
+		description = 'Contains a drift chip',
 	},
 
 	-- Duffel Bags
 
-	["duffelbag"] = {
-		label = "Duffel Bag",
-		weight = 15000,
+	['duffelbag'] = {
+		label = 'Duffel Bag',
+		weight = 10000,
 		stack = false,
 		close = false,
+		consume = 0,
 		allowArmed = true,
-		description = "A duffel bag",
+		description = 'A duffel bag',
+		server = {
+			export = 'prp_backpacks.useBackpack'
+		}
 	},
 
-	["tag_item"] = {
-		label = "Tag",
-		description = "Add a custom tag to items!",
+	['tag_item'] = {
+		label = 'Tag',
+		description = 'Add a custom tag to items!',
 		weight = 25,
 	},
 	
-	["tag_remover"] = {
-		label = "Tag Remover",
-		description = "Remove a custom tag from items!",
+	['tag_remover'] = {
+		label = 'Tag Remover',
+		description = 'Remove a custom tag from items!',
 		weight = 50,
 	},
 
-	["duffle1"] = {
-		label = "Duffel Bag",
+	['duffle1'] = {
+		label = 'Duffel Bag',
 		weight = 15000,
 		stack = false,
 		close = false,
 		allowArmed = true,
-		description = "A duffel bag",
+		description = 'A duffel bag',
 	},
 
 	-- ATM Robbery
@@ -4353,379 +4705,372 @@ return {
 		weight = 2000,
 		stack = true,
 		close = false,
-		description = "Stone woo."
+		description = 'Stone woo.'
 	},
 	['uncut_emerald'] = {
 		label = 'Uncut Emerald',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A rough Emerald."
+		description = 'A rough Emerald.'
 	},
 	['uncut_ruby'] = {
 		label = 'Uncut Ruby',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A rough Ruby."
+		description = 'A rough Ruby.'
 	},
 	['uncut_diamond'] = {
 		label = 'Uncut Diamond',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A rough Diamond."
+		description = 'A rough Diamond.'
 	},
 	['uncut_sapphire'] = {
 		label = 'Uncut Sapphire',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A rough Sapphire."
+		description = 'A rough Sapphire.'
 	},
 	['emerald'] = {
 		label = 'Emerald',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A Emerald that shimmers."
+		description = 'A Emerald that shimmers.'
 	},
 	['ruby'] = {
 		label = 'Ruby',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A Ruby that shimmers."
+		description = 'A Ruby that shimmers.'
 	},
 	['diamond'] = {
 		label = 'Diamond',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A Diamond that shimmers."
+		description = 'A Diamond that shimmers.'
 	},
 	['sapphire'] = {
 		label = 'Sapphire',
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "A Sapphire that shimmers."
+		description = 'A Sapphire that shimmers.'
 	},
 	['gold_ring'] = {
 		label = 'Gold Ring',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
-	},
-	['diamond_ring'] = {
-		label = 'Diamond Ring',
-		weight = 200,
-		stack = true,
-		close = false,
-		description = ""
+		description = ''
 	},
 	['ruby_ring'] = {
 		label = 'Ruby Ring',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['sapphire_ring'] = {
 		label = 'Sapphire Ring',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['emerald_ring'] = {
 		label = 'Emerald Ring',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['silver_ring'] = {
 		label = 'Silver Ring',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['diamond_ring_silver'] = {
 		label = 'Diamond Ring Silver',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['ruby_ring_silver'] = {
 		label = 'Ruby Ring Silver',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['sapphire_ring_silver'] = {
 		label = 'Sapphire Ring Silver',
 		weight = 200,
 		stack = true,
 		close = false,
-		description = ""
+		description = ''
 	},
 	['emerald_ring_silver'] = {
 		label = 'Emerald Ring Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Emerald Ring Silver."
+		description = 'Emerald Ring Silver.'
 	},
 	['goldchain'] = {
 		label = 'Golden Chain',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Golden Chain."
+		description = 'Golden Chain.'
 	},
 	['diamond_necklace'] = {
 		label = 'Diamond Necklace',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Diamond Necklace."
+		description = 'Diamond Necklace.'
 	},
 	['ruby_necklace'] = {
 		label = 'Ruby Necklace',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Ruby Necklace."
+		description = 'Ruby Necklace.'
 	},
 	['sapphire_necklace'] = {
 		label = 'Sapphire Necklace',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Sapphire Necklace."
+		description = 'Sapphire Necklace.'
 	},
 	['emerald_necklace'] = {
 		label = 'Emerald Necklace',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Emerald Necklace."
+		description = 'Emerald Necklace.'
 	},
 	['silverchain'] = {
 		label = 'Silver Chain',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Silver Chain."
+		description = 'Silver Chain.'
 	},
 	['diamond_necklace_silver'] = {
 		label = 'Diamond Necklace Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Diamond Necklace Silver."
+		description = 'Diamond Necklace Silver.'
 	},
 	['ruby_necklace_silver'] = {
 		label = 'Ruby Necklace Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Ruby Necklace Silver."
+		description = 'Ruby Necklace Silver.'
 	},
 	['sapphire_necklace_silver'] = {
 		label = 'Sapphire Necklace Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Sapphire Necklace Silver."
+		description = 'Sapphire Necklace Silver.'
 	},
 	['emerald_necklace_silver'] = {
 		label = 'Emerald Necklace Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Emerald Necklace Silver."
+		description = 'Emerald Necklace Silver.'
 	},
 	['goldearring'] = {
 		label = 'Golden Earrings',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Golden Earrings."
+		description = 'Golden Earrings.'
 	},
 	['diamond_earring'] = {
 		label = 'Diamond Earrings',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Diamond Earrings."
+		description = 'Diamond Earrings.'
 	},
 	['ruby_earring'] = {
 		label = 'Ruby Earrings',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Ruby Earrings."
+		description = 'Ruby Earrings.'
 	},
 	['sapphire_earring'] = {
 		label = 'Sapphire Earrings',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Sapphire Earrings."
+		description = 'Sapphire Earrings.'
 	},
 	['emerald_earring'] = {
 		label = 'Emerald Earrings',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Emerald Earrings."
+		description = 'Emerald Earrings.'
 	},
 	['silverearring'] = {
 		label = 'Silver Earrings',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Silver Earrings."
+		description = 'Silver Earrings.'
 	},
 	['diamond_earring_silver'] = {
 		label = 'Diamond Earrings Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Diamond Earrings Silver."
+		description = 'Diamond Earrings Silver.'
 	},
 	['ruby_earring_silver'] = {
 		label = 'Ruby Earrings Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Ruby Earrings Silver."
+		description = 'Ruby Earrings Silver.'
 	},
 	['sapphire_earring_silver'] = {
 		label = 'Sapphire Earrings Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Sapphire Earrings Silver."
+		description = 'Sapphire Earrings Silver.'
 	},
 	['emerald_earring_silver'] = {
 		label = 'Emerald Earrings Silver',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Emerald Earrings Silver."
+		description = 'Emerald Earrings Silver.'
 	},
 	['carbon'] = {
 		label = 'Carbon',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Carbon, a base ore."
+		description = 'Carbon, a base ore.'
 	},
 	['ironore'] = {
 		label = 'Iron Ore',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Iron, a base ore."
+		description = 'Iron, a base ore.'
 	},
 	['copperore'] = {
 		label = 'Copper Ore',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Copper, a base ore."
+		description = 'Copper, a base ore.'
 	},
 	['goldore'] = {
 		label = 'Gold Ore',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Gold Ore."
+		description = 'Gold Ore.'
 	},
 	['silverore'] = {
 		label = 'Silver Ore',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Silver Ore."
+		description = 'Silver Ore.'
 	},
 	['goldingot'] = {
 		label = 'Gold Ingot',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Gold Ingot."
+		description = 'Gold Ingot.'
 	},
 	['silveringot'] = {
 		label = 'Silver Ingot',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Silver Ingot."
+		description = 'Silver Ingot.'
 	},
 	['pickaxe'] = {
 		label = 'Pickaxe',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Pickaxe."
+		description = 'Pickaxe.'
 	},
 	['miningdrill'] = {
 		label = 'Mining Drill',
 		weight = 1000,
 		stack = true,
 		close = true,
-		description = "Mining Drill."
+		description = 'Mining Drill.'
 	},
 	['mininglaser'] = {
 		label = 'Mining Laser',
 		weight = 900,
 		stack = true,
 		close = true,
-		description = "Mining Laser."
+		description = 'Mining Laser.'
 	},
 	['drillbit'] = {
 		label = 'Drill Bit',
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Drill Bit."
+		description = 'Drill Bit.'
 	},
 	['goldpan'] = {
 		label = 'Gold Panning Tray',
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Gold Panning Tray."
+		description = 'Gold Panning Tray.'
 	},
 	['bottle'] = {
 		label = 'Empty Bottle',
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "A glass bottle."
+		description = 'A glass bottle.'
 	},
 	['can'] = {
 		label = 'Empty Can',
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "An empty can, good for recycling."
+		description = 'An empty can, good for recycling.'
 	},
 
 	-- slapboxing
-	["slaptable"] = {
+	['slaptable'] = {
 		label = 'Slap Table',
 		weight = 1500,
 		stack = true,
-		description = ""
+		description = ''
 	},
 
 	-- RAIDJOB2
@@ -4735,7 +5080,7 @@ return {
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = "Probably used for a case"
+		description = 'Probably used for a case'
 	},
 	['cw_raidjob_case'] = {
 		label = 'Case',
@@ -4743,7 +5088,7 @@ return {
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = "Probably contains things"
+		description = 'Probably contains things'
 	},
 	['cw_raidjob_content'] = {
 		label = 'Documents',
@@ -4751,7 +5096,7 @@ return {
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = "Well above your paygrade"
+		description = 'Well above your paygrade'
 	},
 
 	--mythical
@@ -4761,7 +5106,7 @@ return {
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = ""
+		description = ''
 	},
 
 	['pixiedust'] = {
@@ -4770,13 +5115,14 @@ return {
 		stack = true,
 		close = true,
 		allowArmed = true,
-		description = ""
+		description = ''
 	},
 
 	-- Crack Taco 
 	['cttaco'] = {
 		label = 'Taco',
 		weight = 100,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4791,6 +5137,7 @@ return {
 	['ctfishtaco'] = {
 		label = 'Fish Taco',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 250000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4804,6 +5151,7 @@ return {
 	['ctclassictaco'] = {
 		label = 'Classic Taco',
 		weight = 100,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4818,12 +5166,14 @@ return {
 		weight = 50,
 		stack = false,
 		close = false,
+        allowArmed = true,
 		consume = 0
 	},
 
 	['ctricebowl'] = {
 		label = 'Rice Bowl',
 		weight = 100,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4837,6 +5187,7 @@ return {
 	['ctchurros'] = {
 		label = 'Churros',
 		weight = 100,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4851,11 +5202,13 @@ return {
 		label = 'Crack Taco Sauce',
 		weight = 100,
 		stack = true,
+        allowArmed = true,
 	},
 
 	['ctburritotaco'] = {
 		label = 'Burrito Taco',
 		weight = 100,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4869,6 +5222,7 @@ return {
 	['ctnachos'] = {
 		label = 'Nachos',
 		weight = 100,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4882,6 +5236,7 @@ return {
 	['ctquesadilla'] = {
 		label = 'Quesadilla',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4895,6 +5250,7 @@ return {
 	['ctmexsalad'] = {
 		label = 'Mexican Salad',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4907,28 +5263,31 @@ return {
 
 	-- Generic Restaurant
 
-	["grbento"] = {
-		label = "Bento Box",
+	['grbento'] = {
+		label = 'Bento Box',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 42,
 			},
-			image = "grbento.png",
+			image = 'grbento.png',
 		}
 	},
 
 	['grnoodles'] = {
 		label = 'Noodles',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['gronigiri'] = {
 		label = 'Onigiri',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['grsake'] = {
@@ -4936,50 +5295,58 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['grbowlramen'] = {
 		label = 'Ramen Bowl',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['grsoup'] = {
 		label = 'Soup',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['grmisosoup'] = {
 		label = 'Miso Soup',
 		weight = 50,
+        allowArmed = true,
 	},
 
-	["grcappucc"] = {
-		label = "Cappuccinotini",
+	['grcappucc'] = {
+		label = 'Cappuccinotini',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Cappuccinotini Cocktail",
+        allowArmed = true,
+		description = 'Cappuccinotini Cocktail',
 	},
 
-	["grkamikaze"] = {
-		label = "Kamikaze",
+	['grkamikaze'] = {
+		label = 'Kamikaze',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Kamikase Cocktail",
+        allowArmed = true,
+		description = 'Kamikase Cocktail',
 	},
 
-	["grvoodoo"] = {
-		label = "Voodoo",
+	['grvoodoo'] = {
+		label = 'Voodoo',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Voodoo Cocktail",
+        allowArmed = true,
+		description = 'Voodoo Cocktail',
 	},
 
 	['grceaser_salad'] = {
 	label = 'Ceasar Salad',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -4991,6 +5358,7 @@ return {
 	['grroasted_chicken'] = {
 		label = 'Roasted Chicken',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 450000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5002,6 +5370,7 @@ return {
 	['grprime_rib'] = {
 		label = 'Prime Rib',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5013,6 +5382,7 @@ return {
 	['grfishchips'] = {
 		label = 'Fish n Chips',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 300000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5024,6 +5394,7 @@ return {
 	['grshrimpfries'] = {
 		label = 'Shrimp Fries',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5035,6 +5406,7 @@ return {
 	['grbrisket'] = {
 		label = 'Brisket',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5046,6 +5418,7 @@ return {
 	['grlobstertail'] = {
 		label = 'Lobster Tail',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5057,6 +5430,7 @@ return {
 	['grcornbread'] = {
 		label = 'Corn Bread',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 250000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5068,6 +5442,7 @@ return {
 	['grcrab_basket'] = {
 		label = 'Crab Basket',
 		weight = 200,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5082,6 +5457,7 @@ return {
 	['vuwings'] = {
 		label = 'Wings',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5093,6 +5469,7 @@ return {
 	['vujalapeno'] = {
 		label = 'Jalapeno Poppers',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5104,6 +5481,7 @@ return {
 	['vucajunsnowcrab'] = {
 		label = 'Cajun Snow Crab Legs',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5115,6 +5493,7 @@ return {
 	['vubites'] = {
 		label = 'Alligator Nuggets',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5126,6 +5505,7 @@ return {
 	['vucrawfishbisque'] = {
 		label = 'Crawfish Bisque Bowl',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5137,6 +5517,7 @@ return {
 	['vufrog'] = {
 		label = 'Frog Legs Platter',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5148,6 +5529,7 @@ return {
 	['vumodelo'] = {
 		label = 'Modelo',
 		weight = 50,
+        allowArmed = true,
 		stack = true,
 		--[[client = {
 			status = { hunger = 400000 },
@@ -5161,6 +5543,7 @@ return {
 		label = 'Hennessey',
 		weight = 50,
 		stack = true,
+        allowArmed = true,
 		--[[client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5175,6 +5558,7 @@ return {
 	['irburger'] = {
 		label = 'Garlic Butter Burger',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5186,6 +5570,7 @@ return {
 	['irfries'] = {
 		label = 'Sea Salt Fries',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5197,6 +5582,7 @@ return {
 	['irspuds'] = {
 		label = 'Sea Salt Garlic Butter Baked Spuds',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5208,6 +5594,7 @@ return {
 	['irsteak'] = {
 		label = 'Garlic Seasoned Angus Steak',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5219,6 +5606,7 @@ return {
 	['irpork'] = {
 		label = 'The Lost McClovin Pork Tenderloin Sandwich',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -5227,36 +5615,41 @@ return {
 		},
 	},
 
-	["irflag"] = {
-		label = "Irish Flag",
+	['irflag'] = {
+		label = 'Irish Flag',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Irish Flag Cocktail",
+        allowArmed = true,
+		description = 'Irish Flag Cocktail',
 	},
 
 	['irbeer'] = {
 		label = 'The Luck Of The Irish Brewed Beer',
 		weight = 50,
 		stack = true,
+        allowArmed = true,
 	},
 
 	['irwhiskey'] = {
 		label = 'The Pot Of Gold Whiskey',
 		weight = 50,
 		stack = true,
+        allowArmed = true,
 	},
 
 	['irvodka'] = {
 		label = 'Cannon-Shot Vodka',
 		weight = 50,
 		stack = true,
+        allowArmed = true,
 	},
 
 	['irhcoffee'] = {
 		label = 'Irish Mint Caramel Coffee',
 		weight = 50,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { thirst = 500000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -5269,6 +5662,7 @@ return {
 		label = 'Irish Mint Caramel Ice Coffee',
 		weight = 50,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { thirst = 500000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -5281,6 +5675,7 @@ return {
 		label = 'Ingredients',
 		weight = 50,
 		stack = true,
+        allowArmed = true,
 	},
 
 	['tacomeet'] = {
@@ -5310,6 +5705,7 @@ return {
 	['longicetea'] = {
 		label = 'Long Island Ice Tea',
 		weight = 50,
+        allowArmed = true,
 		client = {
 			status = { thirst = 300000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -5323,6 +5719,7 @@ return {
 		weight = 100,
 		stack = false,
 		close = true,
+        allowArmed = true,
 		--consume = 0
 	},
 
@@ -5331,6 +5728,7 @@ return {
 		weight = 100,
 		stack = false,
 		close = true,
+        allowArmed = true,
 		--consume = 0
 	},
 
@@ -5339,6 +5737,7 @@ return {
 		weight = 500,
 		stack = false,
 		close = false,
+        allowArmed = true,
 		consume = 0
 	},
 
@@ -5347,6 +5746,7 @@ return {
 		weight = 50,
 		stack = false,
 		close = false,
+        allowArmed = true,
 		consume = 0
 	},
 
@@ -5355,6 +5755,7 @@ return {
 		weight = 50,
 		stack = false,
 		close = false,
+        allowArmed = true,
 		consume = 0
 	},
 
@@ -5427,8 +5828,9 @@ return {
 
 	['medkit'] = {
 		label = 'Medkit',
-		weight = 200,
+		weight = 50,
 		close = true,
+        allowArmed = true,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_ld_health_pack`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
@@ -5442,6 +5844,7 @@ return {
 		label = 'Ifak',
 		weight = 150,
 		close = true,
+        allowArmed = true,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
 			prop = { model = `prop_ld_health_pack`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
@@ -5527,21 +5930,24 @@ return {
 		label = 'Gruppe Tablet',
 		weight = 1000,
 		close = true,
+        allowArmed = true,
 	},
 	
 	['grimetablet'] = {
 		label = 'Grime Tablet',
 		weight = 1000,
 		close = true,
+        allowArmed = true,
 	},
 	
 	['rolpaper'] = {
 		label = 'Rolling Paper',
 		weight = 25,
 		close = true,
+        allowArmed = true,
 	},
 	
-	['10ct_gold_chain'] = {
+	['tenct_gold_chain'] = {
 		label = '10ct Gold Chain',
 		weight = 25,
 		close = true,
@@ -5553,7 +5959,7 @@ return {
 		close = true,
 	},
 	
-	['8ct_gold_chain'] = {
+	['eightct_gold_chain'] = {
 		label = '8ct Gold Chain',
 		weight = 25,
 		close = true,
@@ -5598,8 +6004,50 @@ return {
 	
 	['pistolmold'] = {
 		label = 'Pistol Mold',
-		weight = 1000,
-		close = true,
+		weight = 100,
+		close = false,
+	},
+	
+	['pistol_frame'] = {
+		label = 'Medium Frame',
+		weight = 10,
+		close = false,
+	},
+	
+	['pistol_trigger'] = {
+		label = 'Pistol Trigger',
+		weight = 10,
+		close = false,
+	},
+	
+	['pistol_hammer'] = {
+		label = 'Pistol Hammer',
+		weight = 10,
+		close = false,
+	},
+	
+	['pistol_mag'] = {
+		label = 'Pistol Mag',
+		weight = 10,
+		close = false,
+	},
+	
+	['pistol_barrel'] = {
+		label = 'Pistol Barrel',
+		weight = 10,
+		close = false,
+	},
+	
+	['pistol_bolt'] = {
+		label = 'Pistol Bolt',
+		weight = 10,
+		close = false,
+	},
+	
+	['spring'] = {
+		label = 'Spring',
+		weight = 10,
+		close = false,
 	},
 	
 	['gunbarrel'] = {
@@ -5633,6 +6081,7 @@ return {
 		degrade = 10080,
 		description = 'Marked for police seizure',
 		consume = 0,
+        allowArmed = true,
 		client = {
 			usetime = 5000,
 			export = 'cd_garage.vehiclelockpick',
@@ -5655,6 +6104,7 @@ return {
 		label = 'Throw',
 		weight = 10,
 		close = true,
+        allowArmed = true,
 	},
 
 	['fullbag'] = {
@@ -5701,6 +6151,7 @@ return {
 			close = true,
 			client = {
 			status = { hunger = 300000 },
+            allowArmed = true,
 			anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
 	--	   prop = { model = `prop_cs_burger_01, pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
 			usetime = 2500,
@@ -5714,6 +6165,7 @@ return {
 			close = true,
 			client = {
 			status = { hunger = 300000 },
+            allowArmed = true,
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
 		--   prop = { model = '', pos { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
 			usetime = 5000,
@@ -5726,6 +6178,7 @@ return {
 		close = true,
 		client = {
 		status = { hunger = 300000 },
+        allowArmed = true,
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
 	--   prop = { model = '', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
 		usetime = 5000,
@@ -5738,6 +6191,7 @@ return {
 		close = true,
 		client = {
 		status = { hunger = 300000 },
+        allowArmed = true,
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
 --	   prop = { model = '', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
 		usetime = 5000,
@@ -5750,6 +6204,7 @@ return {
 		close = true,
 		client = {
 		status = { hunger = 300000 },
+        allowArmed = true,
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
 --	   prop = { model = '', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
 		usetime = 5000,
@@ -5762,6 +6217,7 @@ return {
 		close = true,
 		client = {
 		status = { hunger = 300000 },
+        allowArmed = true,
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
 --	   prop = { model = '', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
 		usetime = 5000,
@@ -5774,6 +6230,7 @@ return {
 		close = true,
 		client = {
 		status = { thirst = 300000 },
+        allowArmed = true,
 		anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
 --	   prop = { model = 'prop_drink_whtwine', coords = { x = -0.1, y = 0.05, z = 0.06 }, rotation = { x = 50.0, y = -70.5, z = 50.5 } },
 			usetime = 2500,
@@ -5786,6 +6243,7 @@ return {
 		close = true,
 		client = {
 		status = { thirst = 300000 },
+        allowArmed = true,
 		anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
 --	   prop = { model = 'p_wine_glass_s', coords = { x = -0.1, y = 0.05, z = 0.06 }, rotation = { x = 50.0, y = -70.5, z = 50.5 } },
 			usetime = 2500,
@@ -5798,6 +6256,7 @@ return {
 		close = true,
 		client = {
 		status = { thirst = 300000 },
+        allowArmed = true,
 		anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
 --	   prop = { model = 'p_wine_glass_s', coords = { x = -0.1, y = 0.05, z = 0.06 }, rotation = { x = 50.0, y = -70.5, z = 50.5 } },
 			usetime = 2500,
@@ -5811,6 +6270,7 @@ return {
 		close = true,
 		client = {
 		status = { thirst = 300000 },
+        allowArmed = true,
 		anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
 --	   prop = { model = 'p_wine_glass_s', coords = { x = -0.1, y = 0.05, z = 0.06 }, rotation = { x = 50.0, y = -70.5, z = 50.5 } },
 			usetime = 2500,
@@ -5823,6 +6283,7 @@ return {
 		close = true,
 		client = {
 		status = { thirst = 300000 },
+        allowArmed = true,
 		anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
 --	   prop = { model = 'p_wine_glass_s', coords = { x = -0.1, y = 0.05, z = 0.06 }, rotation = { x = 50.0, y = -70.5, z = 50.5 } },
 			usetime = 2500,
@@ -5920,7 +6381,8 @@ return {
 		weight = 100,
 		close = true,
 		client = {
-		status = { hunger = 200000 },
+		status = { hunger = 150000 },
+        allowArmed = true,
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
 --	   prop = { model = 'prop_sandwich_01', pos = { x = 0.020000000000004, y = 0.020000000000004, y = -0.020000000000004}, rot = { x = 0.0, y = 0.0, y = 0.0} },
 		usetime = 5000,
@@ -5982,6 +6444,7 @@ return {
 		label = 'Sprite',
 		weight = 250,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { thirst = 300000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -5994,6 +6457,7 @@ return {
 		label = 'Bleeder',
 		weight = 220,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 400000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6004,8 +6468,9 @@ return {
 	
 	['bsdcburger'] = {
 		label = 'Double Cheeseburger',
-		weight = 220,
+		weight = 15,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 300000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6016,8 +6481,9 @@ return {
 	
 	['bsfvburger'] = {
 		label = 'Heartstopper',
-		weight = 520,
+		weight = 15,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 750000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6028,8 +6494,9 @@ return {
 	
 	['bschips'] = {
 		label = 'Fries',
-		weight = 70,
+		weight = 5,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 200000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6040,8 +6507,9 @@ return {
 	
 	['bsmoneyshot'] = {
 		label = 'Moneyshot',
-		weight = 220,
+		weight = 10,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 350000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6052,8 +6520,9 @@ return {
 	
 	['bsslushy'] = {
 		label = 'Slushy',
-		weight = 150,
+		weight = 10,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { thirst = 700000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6064,8 +6533,9 @@ return {
 	
 	['bsmilkshake'] = {
 		label = 'Milkshake',
-		weight = 350,
+		weight = 10,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { thirst = 700000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6078,6 +6548,7 @@ return {
 	label = 'Piña Colada',
 		weight = 300,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 200000 },
 		anim = { dict = 'anim@heists@humane_labs@finale@keycards', clip = 'ped_a_enter_loop' },
@@ -6091,26 +6562,50 @@ return {
 
 	['bmbeans'] = {
 		label = 'Coffee Beans',
-			weight = 50,
-			degrade = 2880,
-			stack = true,
-			close = true,
-			description = 'Coffee beans from Bean Machine with a secret ingredient'
-		},
+		weight = 50,
+		degrade = 2880,
+		stack = true,
+		close = false,
+		description = 'Coffee beans from Bean Machine with a secret ingredient'
+	},
+		
+	['bmteabag'] = {
+		label = 'Tea Bag',
+		weight = 50,
+		degrade = 2880,
+		stack = true,
+		close = false,
+	},
+		
+	['bmchocpowder'] = {
+		label = 'Choc Powder',
+		weight = 50,
+		degrade = 2880,
+		stack = true,
+		close = false,
+	},
 
 	['bmcoffe'] = {
-	label = 'Coffee',
+		label = 'Coffee',
 		weight = 50,
 		degrade = 2880,
 		stack = true,
 		close = true,
-		description = 'Coffee from Bean Machine with a secret ingredient'
+        allowArmed = true,
+		description = 'Coffee from Bean Machine with a secret ingredient',
+		client = {
+			status = { thirst = 200000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ng_proc_coffee_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+		}
 	},
 
 	['muffin'] = {
 		label = 'Muffin ',
 			weight = 100,
 			close = true,
+            allowArmed = true,
 			client = {
 			status = { hunger = 250000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6123,6 +6618,7 @@ return {
 		label = 'Donut',
 			weight = 100,
 			close = true,
+            allowArmed = true,
 			client = {
 			status = { hunger = 300000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6135,6 +6631,7 @@ return {
 		label = 'Cookies',
 		weight = 100,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 300000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6147,6 +6644,7 @@ return {
 		label = 'Croissant',
 		weight = 100,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6159,6 +6657,7 @@ return {
 		label = 'Glazed Donut',
 		weight = 25,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6171,6 +6670,7 @@ return {
 		label = 'Muffin',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6183,6 +6683,7 @@ return {
 		label = 'Frappuccino',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 400000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6195,6 +6696,7 @@ return {
 		label = 'Iced Coffee',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 400000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6207,6 +6709,7 @@ return {
 		label = 'CC Frappuccino',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 400000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6220,6 +6723,7 @@ return {
 		description = 'Your moms favorite dessert',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6229,9 +6733,10 @@ return {
 	},
 
 	['bmhotchoc'] = {
-		label = 'hot Chocolate',
+		label = 'Hot Chocolate',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 350000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6244,6 +6749,7 @@ return {
 		label = 'Strawberry Iced Tea',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 350000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6256,6 +6762,7 @@ return {
 		label = 'Tea',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 350000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6268,6 +6775,7 @@ return {
 		label = 'Avocado Club Sandwich',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6280,6 +6788,7 @@ return {
 		label = 'Breakfast Bagel',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6292,6 +6801,7 @@ return {
 		label = 'Mini Cheesecake',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6304,6 +6814,7 @@ return {
 		label = 'French Vanilla Latte',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { thirst = 350000 },
 		anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -6316,6 +6827,7 @@ return {
 		label = 'Strawberry Chocolate Cake',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6328,6 +6840,7 @@ return {
 		label = 'Chocolate Berries',
 		weight = 35,
 		close = true,
+        allowArmed = true,
 		client = {
 		status = { hunger = 400000 },
 		anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6341,6 +6854,7 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['davidoffcigar'] = {
@@ -6348,6 +6862,7 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['keys'] = {
@@ -6364,6 +6879,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6377,6 +6893,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6390,6 +6907,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6403,6 +6921,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6416,6 +6935,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6429,6 +6949,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6442,6 +6963,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		client = {
 			status = { hunger = 500000 },
 			anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -6535,25 +7057,35 @@ return {
 	},
 
 	['radiocar_dismounter'] = {
-		label = 'Radio Remover',
-		weight = 250,
-		close = true,
-		consume = 1,
-		client = {},
-		server = {
-			export = 'rcore_itemradio.radiocar_dismounter',
-		},
-	},
-	['radiocar'] = {
-		label = 'Car Radio',
-		weight = 1000,
-		close = true,
-		consume = 1,
-		client = {},
-		server = {
-			export = 'rcore_itemradio.radiocar',
-		},
-	},
+    label = 'radiocar_dismounter',
+    weight = 250,
+    close = true,
+    consume = 0,
+    client = {},
+    server = {
+        export = 'rcore_itemradio.radiocar_dismounter',
+    },
+},
+['radiocar'] = {
+    label = 'radiocar gray style',
+    weight = 250,
+    close = true,
+    consume = 0,
+    client = {},
+    server = {
+        export = 'rcore_itemradio.radiocar',
+    },
+},
+['radiocar_blue'] = {
+    label = 'radiocar blue style',
+    weight = 250,
+    close = true,
+    consume = 0,
+    client = {},
+    server = {
+        export = 'rcore_itemradio.radiocar_blue',
+    },
+},
 
 	--[[['boombox'] = {
 		label = 'Boombox',
@@ -6667,6 +7199,7 @@ return {
 	['uwuriceballs'] = {
 		label = 'Rice Balls',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwupboba'] = {
@@ -6674,6 +7207,7 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwubboba'] = {
@@ -6681,6 +7215,7 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwulatte'] = {
@@ -6688,52 +7223,62 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwukittycake'] = {
 		label = 'Kitty Cake',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwusushi'] = {
 		label = 'Cutie Sushi',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwubruschetta'] = {
 		label = 'PB Toasties',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwuberrysurprise'] = {
 		label = 'Berry Surprise',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwubreakfast'] = {
 		label = 'UwU Breakfast',
 		weight = 50,
 		description = 'Ooooooodles of Pooooodles',
+        allowArmed = true,
 	},
 
 	['uwubearysandwich'] = {
 		label = 'Bear-y Sandwich',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwucupcakes2'] = {
 		label = 'Pink Cupcakes',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwucookies'] = {
 		label = 'Cookie Platter',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwubentobox'] = {
 		label = 'Bento Box',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwublueboba'] = {
@@ -6741,16 +7286,19 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwucake'] = {
 		label = 'Cake',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwucatdonut'] = {
 		label = 'Cat Donut',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwucatcoffee'] = {
@@ -6758,11 +7306,13 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwucatcookie'] = {
 		label = 'Cat Cookie',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwugreenboba'] = {
@@ -6770,30 +7320,34 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwukittycakepop'] = {
 		label = 'Kitty Cakepop',
 		weight = 50,
+        allowArmed = true,
 	},
 
-	["uwucakepop"] = {
-		label = "Cat Cake-Pop",
+	['uwucakepop'] = {
+		label = 'Cat Cake-Pop',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 45,
 			},
-			image = "uwucakepop.png",
+			image = 'uwucakepop.png',
 		}
 	},
 
 	['uwukittypizza'] = {
 		label = 'Kitty Pizza',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwumocha'] = {
@@ -6801,6 +7355,7 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwuorangeboba'] = {
@@ -6808,16 +7363,19 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwuorangemochi'] = {
 		label = 'Orange Mochi',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwupinkmochi'] = {
 		label = 'Pink Mochi',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwupinkboba'] = {
@@ -6825,6 +7383,7 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwupurpleboba'] = {
@@ -6832,22 +7391,26 @@ return {
 		weight = 50,
 		stack = true,
 		close = true,
+        allowArmed = true,
 	},
 
 	['uwupurpmochi'] = {
 		label = 'Purple Mochi',
 		weight = 50,
+        allowArmed = true,
 	},
 
 
 	['uwupurrito'] = {
 			label = 'Purrito',
 		weight = 50,
+        allowArmed = true,
 	},
 
 	['uwubluemochi'] = {
 		label = 'Blue Mochi',
 		weight = 50,
+        allowArmed = true,
 	},
 
 		
@@ -6856,6 +7419,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		description = '',
 	},	
 
@@ -6864,17 +7428,19 @@ return {
 		weight = 100,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		description = '',
 	},
 
-	["uwupancake"] = {
-		label = "PawCake",
+	['uwupancake'] = {
+		label = 'PawCake',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
-			image = "uwupawcakes.png",
+			image = 'uwupawcakes.png',
 		}
 	},
 
@@ -6907,6 +7473,7 @@ return {
 		weight = 1000,
 		stack = false,
 		close = true,
+        allowArmed = true,
 		--consume = 1,
 		--[[description = 'Put the weapon you want cleaned into your first pocket slot then use the cleaning kit',
 		buttons = {
@@ -6955,6 +7522,7 @@ return {
 		weight = 5000,
 		stack = true,
 		close = true,
+        allowArmed = true,
 		buttons = {
 			{
 				label = 'Unload Bullets',
@@ -6972,437 +7540,468 @@ return {
 		weight = 1000,
 		close = true,
 		stack = false,
+        allowArmed = true,
 	},
 
-	["ramen"] = {
-		label = "Bowl of Ramen",
+	['ramen'] = {
+		label = 'Bowl of Ramen',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 		client = {
 			status = {
 				hunger = 44,
 			},
-			image = "ramen.png",
+			image = 'ramen.png',
 		}
 	},
 
-	["noodlebowl"] = {
-		label = "Bowl of Noodles",
+	['noodlebowl'] = {
+		label = 'Bowl of Noodles',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
+        allowArmed = true,
 		client = {
 			status = {
 				hunger = 48,
 			},
-			image = "noodlebowl.png",
+			image = 'noodlebowl.png',
 		}
 	},
 
-	["pbobatea"] = {
-		label = "Pink Boba Tea",
+	['pbobatea'] = {
+		label = 'Pink Boba Tea',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
+        allowArmed = true,
 		client = {
 			status = {
 				thirst = 42,
 			},
-			image = "bubbleteapink.png",
+			image = 'bubbleteapink.png',
 		}
 	},
 
-	["obobatea"] = {
-		label = "Orange Boba Tea",
+	['obobatea'] = {
+		label = 'Orange Boba Tea',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
+        allowArmed = true,
 		client = {
 			status = {
 				thirst = 46,
 			},
-			image = "bubbleteaorange.png",
+			image = 'bubbleteaorange.png',
 		}
 	},
 
-	["gmochi"] = {
-		label = "Green Mochi",
+	['gmochi'] = {
+		label = 'Green Mochi',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
+        allowArmed = true,
 		client = {
 			status = {
 				hunger = 40,
 			},
-			image = "mochigreen.png",
+			image = 'mochigreen.png',
 		}
 	},
 
-	["bmochi"] = {
-		label = "Blue Mochi",
+	['bmochi'] = {
+		label = 'Blue Mochi',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
+        allowArmed = true,
 		client = {
 			status = {
 				hunger = 41,
 			},
-			image = "mochiblue.png",
+			image = 'mochiblue.png',
 		}
 	},
 
-	["voodoo"] = {
-		label = "Voodoo",
+	['voodoo'] = {
+		label = 'Voodoo',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Voodoo Cocktail",
+        allowArmed = true,
+		description = 'Voodoo Cocktail',
 		client = {
 			status = {
 				thirst = 26,
 			},
-			image = "voodoo.png",
+			image = 'voodoo.png',
 		}
 	},
 
-	["bbobatea"] = {
-		label = "Blue Boba Tea",
+	['bbobatea'] = {
+		label = 'Blue Boba Tea',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 41,
 			},
-			image = "bubbleteablue.png",
+			image = 'bubbleteablue.png',
 		}
 	},
 
-	["cappucc"] = {
-		label = "Cappuccinotini",
+	['cappucc'] = {
+		label = 'Cappuccinotini',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Cappuccinotini Cocktail",
+        allowArmed = true,
+		description = 'Cappuccinotini Cocktail',
 		client = {
 			status = {
 				thirst = 27,
 			},
-			image = "cappucc.png",
+			image = 'cappucc.png',
 		}
 	},
 
-	["nekocookie"] = {
-		label = "Neko Cookie",
+	['nekocookie'] = {
+		label = 'Neko Cookie',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 42,
 			},
-			image = "catcookie.png",
+			image = 'catcookie.png',
 		}
 	},
 
-	["kamikaze"] = {
-		label = "Kamikaze",
+	['kamikaze'] = {
+		label = 'Kamikaze',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Kamikase Cocktail",
+        allowArmed = true,
+		description = 'Kamikase Cocktail',
 		client = {
 			status = {
 				thirst = 20,
 			},
-			image = "kamikaze.png",
+			image = 'kamikaze.png',
 		}
 	},
 
-	["noodles"] = {
-		label = "Instant Noodles",
+	['noodles'] = {
+		label = 'Instant Noodles',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
-			image = "noodles.png",
+			image = 'noodles.png',
 		}
 	},
 
-	["iflag"] = {
-		label = "Irish Flag",
+	['iflag'] = {
+		label = 'Irish Flag',
 		weight = 200,
 		stack = true,
 		close = true,
-		description = "Irish Flag Cocktail",
+        allowArmed = true,
+		description = 'Irish Flag Cocktail',
 		client = {
 			status = {
 				thirst = 22,
 			},
-			image = "iflag.png",
+			image = 'iflag.png',
 		}
 	},
 
-	["miso"] = {
-		label = "Miso Soup",
+	['miso'] = {
+		label = 'Miso Soup',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 40,
 			},
-			image = "miso.png",
+			image = 'miso.png',
 		}
 	},
 
-	["sake"] = {
-		label = "Sake",
+	['sake'] = {
+		label = 'Sake',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 49,
 			},
-			image = "sake.png",
+			image = 'sake.png',
 		}
 	},
 
-	["boba"] = {
-		label = "Boba",
+	['boba'] = {
+		label = 'Boba',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 42,
 			},
-			image = "boba.png",
+			image = 'boba.png',
 		}
 	},
 
-	["nekolatte"] = {
-		label = "Neko Latte",
+	['nekolatte'] = {
+		label = 'Neko Latte',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 24,
 			},
-			image = "latte.png",
+			image = 'latte.png',
 		}
 	},
 
-	["catcoffee"] = {
-		label = "Cat Coffee",
+	['catcoffee'] = {
+		label = 'Cat Coffee',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 30,
 			},
-			image = "catcoffee.png",
+			image = 'catcoffee.png',
 		}
 	},
 
-	["bobatea"] = {
-		label = "Boba Tea",
+	['bobatea'] = {
+		label = 'Boba Tea',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 45,
 			},
-			image = "bubbletea.png",
+			image = 'bubbletea.png',
 		}
 	},
 
-	["cake"] = {
-		label = "Strawberry Cake",
+	['cake'] = {
+		label = 'Strawberry Cake',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 47,
 			},
-			image = "cake.png",
+			image = 'cake.png',
 		}
 	},
 
-	["nekodonut"] = {
-		label = "Neko Donut",
+	['nekodonut'] = {
+		label = 'Neko Donut',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 45,
 			},
-			image = "catdonut.png",
+			image = 'catdonut.png',
 		}
 	},
 
-	["pmochi"] = {
-		label = "Pink Mochi",
+	['pmochi'] = {
+		label = 'Pink Mochi',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 49,
 			},
-			image = "mochipink.png",
+			image = 'mochipink.png',
 		}
 	},
 
-	["omochi"] = {
-		label = "Orange Mochi",
+	['omochi'] = {
+		label = 'Orange Mochi',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 50,
 			},
-			image = "mochiorange.png",
+			image = 'mochiorange.png',
 		}
 	},
 
-	["gbobatea"] = {
-		label = "Green Boba Tea",
+	['gbobatea'] = {
+		label = 'Green Boba Tea',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 47,
 			},
-			image = "bubbleteagreen.png",
+			image = 'bubbleteagreen.png',
 		}
 	},
 
-	["riceball"] = {
-		label = "Neko Onigiri",
+	['riceball'] = {
+		label = 'Neko Onigiri',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 41,
 			},
-			image = "catrice.png",
+			image = 'catrice.png',
 		}
 	},
 
-	["purrito"] = {
-		label = "Purrito",
+	['purrito'] = {
+		label = 'Purrito',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 47,
 			},
-			image = "purrito.png",
+			image = 'purrito.png',
 		}
 	},
 
 
-	["cakepop"] = {
-		label = "Cat Cake-Pop",
+	['cakepop'] = {
+		label = 'Cat Cake-Pop',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 41,
 			},
-			image = "cakepop.png",
+			image = 'cakepop.png',
 		}
 	},
 
-	["pancake"] = {
-		label = "PawCake",
+	['pancake'] = {
+		label = 'PawCake',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 47,
 			},
-			image = "pawcakes.png",
+			image = 'pawcakes.png',
 		}
 	},
 
-	["mocha"] = {
-		label = "Mocha Meow",
+	['mocha'] = {
+		label = 'Mocha Meow',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				thirst = 43,
 			},
-			image = "mochameow.png",
+			image = 'mochameow.png',
 		}
 	},
 
-	["pizza"] = {
-		label = "Kitty Pizza",
+	['pizza'] = {
+		label = 'Kitty Pizza',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 49,
 			},
-			image = "catpizza.png",
+			image = 'catpizza.png',
 		}
 	},
 
-	["bento"] = {
-		label = "Bento Box",
+	['bento'] = {
+		label = 'Bento Box',
 		weight = 500,
 		stack = true,
 		close = true,
-		description = "",
+        allowArmed = true,
+		description = '',
 		client = {
 			status = {
 				hunger = 48,
 			},
-			image = "bento.png",
+			image = 'bento.png',
 		}
 	},
 
@@ -7411,6 +8010,7 @@ return {
 		weight = 1,
 		stack = false,
 		close = true,
+        allowArmed = true,
 		description = 'A Table'
 	},
 	['lab_key'] = {
@@ -7442,10 +8042,11 @@ return {
 		description = nil
 	},
 	['meth1g'] = {
-		label = '1g Meth',
+		label = 'Meth 1g',
 		weight = 10,
 		stack = false,
 		close = true,
+        allowArmed = true,
 		description = nil
 	},
 
@@ -7453,7 +8054,8 @@ return {
 	['cigarette'] = { -- social item that causes slight damage to health
         label = 'Cigarettes',
         weight = 115,
-        description = "These probably aren't good for you, but fuck it",
+        description = 'These probably arent good for you, but fuck it',
+        allowArmed = true,
         -- client = {
         --     anim = { dict = 'amb@world_human_aa_smoke@male@idle_a', clip = 'idle_c', flag = 49 },
         --     prop = { model = 'bzzz_cigarpack_cig002', 
@@ -7493,7 +8095,7 @@ return {
     -- ['cigar'] = { -- social item that causes slight damage to health
     --     label = 'Cigar',
     --     weight = 115,
-    --     description = "These REALLY aren't good for you, but fuck it",
+    --     description = 'These REALLY aren't good for you, but fuck it',
     --     client = {
     --         anim = { dict = 'amb@world_human_aa_smoke@male@idle_a', clip = 'idle_c', flag = 49 },
     --         prop = { model = 'bzzz_cigarpack_cig001', 
@@ -7507,7 +8109,7 @@ return {
     ['vape'] = { -- social item that causes slight damage to health
         label = 'Vape',
         weight = 115,
-        description = "Vape-nash bruh, tastes like dissapointment",
+        description = 'Vape-nash bruh, tastes like dissapointment',
         consume = 0.02,
         -- degrade = 60,
         client = {
@@ -7524,7 +8126,8 @@ return {
         label = 'Light Ballistic Vest',
         weight = 500,
         stack = true,
-        description = "Bullts hurt a bit less with this",
+        description = 'Bullts hurt a bit less with this',
+		allowArmed = true,
         client = {
             anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
             usetime = 6500
@@ -7535,7 +8138,8 @@ return {
         label = 'Medium Ballistic Vest',
         weight = 750,
         stack = true,
-        description = "Bullets hurt a lot less with this",
+		allowArmed = true,
+        description = 'Bullets hurt a lot less with this',
         client = {
             anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
             usetime = 6500
@@ -7546,7 +8150,8 @@ return {
         label = 'Heavy Ballistic Vest',
         weight = 1000,
         stack = true,
-        description = "Keep the extra bullets for personal vest flair",
+		allowArmed = true,
+        description = 'Keep the extra bullets for personal vest flair',
         client = {
             anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
             usetime = 6500
@@ -7556,7 +8161,7 @@ return {
 	['wallet'] = { -- Use to hold licenses
         label = 'Wallet',
         weight = 115,
-        description = "If you lose this, you're gonna be sorry",
+        description = 'If you lose this, youre gonna be sorry',
         client = {
             anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
             prop = { model = 'prop_rolled_sock_02', 
@@ -7571,7 +8176,7 @@ return {
         label = 'Ammo Case: 9mm (x30)',
         weight = 2000,
         --consume = 0,
-        description = "A case of stuff to make problems go away",
+        description = 'A case of stuff to make problems go away',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7588,7 +8193,7 @@ return {
         label = 'Ammo Case: .45 (x30)',
         weight = 2000,
         --consume = 0,
-        description = "A case of stuff to make problems go away",
+        description = 'A case of stuff to make problems go away',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7605,7 +8210,7 @@ return {
         label = 'Ammo Case: 5.56x45 (x30)',
         weight = 2000,
         --consume = 0,
-        description = "A case of stuff to make problems go away",
+        description = 'A case of stuff to make problems go away',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7622,7 +8227,7 @@ return {
         label = 'Ammo Case: 7.62x39 (x30)',
         weight = 2000,
         --consume = 0,
-        description = "A case of stuff to make problems go away",
+        description = 'A case of stuff to make problems go away',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7639,7 +8244,75 @@ return {
         label = 'Ammo Case: 12 Gauge (x15)',
         weight = 2000,
         --consume = 0,
-        description = "A case of stuff to make problems go away",
+        description = 'A case of stuff to make problems go away',
+        client = {
+            anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
+            clip = 'machinic_loop_mechandplayer', flag = 3 },
+            prop = { model = 'prop_box_ammo02a', -- need badge props repo
+            pos = vec3(0.0, 0.7, -0.40), 
+            rot = vec3(0.00, 0.00, 90.00), 
+            bone = 56604  },
+            disable = { move = false, car = false, combat = false },
+            usetime = 5000,
+        }
+    },
+	
+	['box_ammo_ammo50'] = { -- idea: Player uses item to show badge prop
+        label = 'Ammo Case: .50 (x20)',
+        weight = 2000,
+        --consume = 0,
+        description = 'A case of stuff to make problems go away',
+        client = {
+            anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
+            clip = 'machinic_loop_mechandplayer', flag = 3 },
+            prop = { model = 'prop_box_ammo02a', -- need badge props repo
+            pos = vec3(0.0, 0.7, -0.40), 
+            rot = vec3(0.00, 0.00, 90.00), 
+            bone = 56604  },
+            disable = { move = false, car = false, combat = false },
+            usetime = 5000,
+        }
+    },
+	
+	['box_ammo_ammo38'] = { -- idea: Player uses item to show badge prop
+        label = 'Ammo Case: .38 (x20)',
+        weight = 2000,
+        --consume = 0,
+        description = 'A case of stuff to make problems go away',
+        client = {
+            anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
+            clip = 'machinic_loop_mechandplayer', flag = 3 },
+            prop = { model = 'prop_box_ammo02a', -- need badge props repo
+            pos = vec3(0.0, 0.7, -0.40), 
+            rot = vec3(0.00, 0.00, 90.00), 
+            bone = 56604  },
+            disable = { move = false, car = false, combat = false },
+            usetime = 5000,
+        }
+    },
+	
+	['box_ammo_ammo22'] = { -- idea: Player uses item to show badge prop
+        label = 'Ammo Case: .22 (x20)',
+        weight = 2000,
+        --consume = 0,
+        description = 'A case of stuff to make problems go away',
+        client = {
+            anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
+            clip = 'machinic_loop_mechandplayer', flag = 3 },
+            prop = { model = 'prop_box_ammo02a', -- need badge props repo
+            pos = vec3(0.0, 0.7, -0.40), 
+            rot = vec3(0.00, 0.00, 90.00), 
+            bone = 56604  },
+            disable = { move = false, car = false, combat = false },
+            usetime = 5000,
+        }
+    },
+
+	['box_ammo_ammo9'] = { -- idea: Player uses item to show badge prop
+        label = 'Ammo Case: 9mm (x30)',
+        weight = 2000,
+        --consume = 0,
+        description = 'A case of stuff to make problems go away',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7656,7 +8329,7 @@ return {
         label = 'Ammo Case: 7.62x51 (x8)',
         weight = 2000,
         --consume = 0,
-        description = "A case of stuff to make problems go away",
+        description = 'A case of stuff to make problems go away',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7674,7 +8347,7 @@ return {
         label = 'Cheese Pizza',
         weight = 3500,
         --consume = 0,
-        description = "A box of cheesy goodness, my guy",
+        description = 'A box of cheesy goodness, my guy',
         client = {
             anim = { dict = 'anim@heists@box_carry@', clip = 'idle', flag = 49 },
             prop = { model = 'bzzz_pizzahut_box_a', -- need badge props repo
@@ -7690,7 +8363,7 @@ return {
         label = 'Pepperoni Pizza',
         weight = 3500,
         --consume = 0,
-        description = "A box of cheesy goodness, my guy",
+        description = 'A box of cheesy goodness, my guy',
         client = {
             anim = { dict = 'anim@heists@box_carry@', clip = 'idle', flag = 49 },
             prop = { model = 'bzzz_pizzahut_box_a', -- need badge props repo
@@ -7706,7 +8379,7 @@ return {
         label = 'Mushroom Pizza',
         weight = 3500,
         --consume = 0,
-        description = "A box of cheesy goodness, my guy",
+        description = 'A box of cheesy goodness, my guy',
         client = {
             anim = { dict = 'anim@heists@box_carry@', clip = 'idle', flag = 49 },
             prop = { model = 'bzzz_pizzahut_box_a', -- need badge props repo
@@ -7722,7 +8395,7 @@ return {
         label = 'Margherita Pizza',
         weight = 3500,
         --consume = 0,
-        description = "A box of cheesy goodness, my guy",
+        description = 'A box of cheesy goodness, my guy',
         client = {
             anim = { dict = 'anim@heists@box_carry@', clip = 'idle', flag = 49 },
             prop = { model = 'bzzz_pizzahut_box_a', -- need badge props repo
@@ -7738,7 +8411,7 @@ return {
         label = 'Double Meat Pizza',
         weight = 3500,
         --consume = 0,
-        description = "A box of cheesy goodness, my guy",
+        description = 'A box of cheesy goodness, my guy',
         client = {
             anim = { dict = 'anim@heists@box_carry@', clip = 'idle', flag = 49 },
             prop = { model = 'bzzz_pizzahut_box_a', -- need badge props repo
@@ -7755,7 +8428,7 @@ return {
         label = 'Case of Rancho Beer',
         weight = 3500,
         --consume = 0,
-        description = "Oh boy I love beer",
+        description = 'Oh boy I love beer',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7772,7 +8445,7 @@ return {
         label = 'Case of Dusche Beer',
         weight = 3500,
         --consume = 0,
-        description = "Oh boy I love beer",
+        description = 'Oh boy I love beer',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7789,7 +8462,7 @@ return {
         label = 'Case of Stronzo Beer',
         weight = 3500,
         --consume = 0,
-        description = "Oh boy I love beer",
+        description = 'Oh boy I love beer',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7806,7 +8479,7 @@ return {
         label = 'Case of Patriot Beer',
         weight = 3500,
         --consume = 0,
-        description = "Oh boy I love beer",
+        description = 'Oh boy I love beer',
         client = {
             anim = { dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', 
             clip = 'machinic_loop_mechandplayer', flag = 3 },
@@ -7825,7 +8498,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7840,7 +8513,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7855,7 +8528,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "For those fancy events",
+        description = 'For those fancy events',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7870,7 +8543,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "A pirates drink for me",
+        description = 'A pirates drink for me',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7885,7 +8558,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "For extra kick, add snake venom",
+        description = 'For extra kick, add snake venom',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7900,7 +8573,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Chilled like the mountains of Siberia",
+        description = 'Chilled like the mountains of Siberia',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7915,7 +8588,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "The cowboy's choice for getting plastered",
+        description = 'The cowboys choice for getting plastered',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7930,7 +8603,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "For the refined taste buds you so clearly have",
+        description = 'For the refined taste buds you so clearly have',
         client = {
             status = { drunk = 180000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7946,7 +8619,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -7963,7 +8636,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -7980,7 +8653,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -7996,7 +8669,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8012,7 +8685,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8029,7 +8702,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8046,7 +8719,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8063,7 +8736,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8080,7 +8753,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8096,7 +8769,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8113,7 +8786,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8129,7 +8802,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8146,7 +8819,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'amb@world_human_drinking@coffee@male@idle_a', clip = 'idle_c' },
@@ -8163,7 +8836,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8179,7 +8852,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Like whiskey, but more ouch",
+        description = 'Like whiskey, but more ouch',
         client = {
             status = { drunk = 10000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8196,7 +8869,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Good ol imported beer from mexico",
+        description = 'Good ol imported beer from mexico',
         client = {
             status = { drunk = 90000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8211,7 +8884,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Good ol imported beer from germany",
+        description = 'Good ol imported beer from germany',
         client = {
             status = { drunk = 90000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8226,7 +8899,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Good ol imported beer from italy",
+        description = 'Good ol imported beer from italy',
         client = {
             status = { drunk = 90000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8241,7 +8914,7 @@ return {
         weight = 290,
         stack = true,
         close = true,
-        description = "Good ol homemade beer from the brewery",
+        description = 'Good ol homemade beer from the brewery',
         client = {
             status = { drunk = 90000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8258,7 +8931,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Mmmmm, refrence",
+        description = 'Mmmmm, refrence',
         client = {
             status = { hunger = 150000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8275,7 +8948,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Mmmmm, refrence",
+        description = 'Mmmmm, refrence',
         client = {
             status = { hunger = 150000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8292,7 +8965,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Mmmmm, refrence",
+        description = 'Mmmmm, refrence',
         client = {
             status = { hunger = 90000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8309,7 +8982,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8326,7 +8999,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8343,7 +9016,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8360,7 +9033,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8377,7 +9050,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8394,7 +9067,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8411,7 +9084,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8428,7 +9101,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Why yes, your brain is freezing",
+        description = 'Why yes, your brain is freezing',
         client = {
             status = { hunger = 50000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8448,7 +9121,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Rib flavored chips, made with real wood chips",
+        description = 'Rib flavored chips, made with real wood chips',
         client = {
             status = { hunger = 120000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8463,7 +9136,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Cheese flavored chips, made with real rats",
+        description = 'Cheese flavored chips, made with real rats',
         client = {
             status = { hunger = 120000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8478,7 +9151,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Candy make your tongue go brrrr",
+        description = 'Candy make your tongue go brrrr',
         client = {
             status = { hunger = 650000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -8493,7 +9166,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Yes, from the trees comes deez apples",
+        description = 'Yes, from the trees comes deez apples',
         client = {
             status = { hunger = 90000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8508,7 +9181,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "b a n a n a n a n a n a",
+        description = 'b a n a n a n a n a n a',
         client = {
             status = { hunger = 90000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8526,7 +9199,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Who put cheese on my pepperoni",
+        description = 'Who put cheese on my pepperoni',
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8543,7 +9216,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Is it enough cheese? No",
+        description = 'Is it enough cheese? No',
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8560,7 +9233,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "Fungi on my pizza? Who thought of this?",
+        description = 'Fungi on my pizza? Who thought of this?',
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8577,7 +9250,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "I know, I thought it was alcohol pizza too",
+        description = 'I know, I thought it was alcohol pizza too',
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8594,7 +9267,7 @@ return {
         weight = 350,
         stack = true,
         close = true,
-        description = "When one meat isn't enough and 3 is weird",
+        description = 'When one meat isnt enough and 3 is weird',
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
@@ -8716,28 +9389,28 @@ return {
 		}
 	},
 
-	["ecola"] = {
-		label = "eCola",
+	['ecola'] = {
+		label = 'eCola',
 		weight = 100,
 		stack = true,
 		close = true,
-		description = "",
+		description = '',
 		client = {
 			status = {
 				thirst = 21,
 			},
-			image = "ecola.png",
+			image = 'ecola.png',
 		}
 	},
 
-	["goldbar"] = {
-		label = "Gold Bar",
+	['goldbar'] = {
+		label = 'Gold Bar',
 		weight = 7000,
 		stack = true,
 		close = true,
-		description = "Looks pretty expensive to me",
+		description = 'Looks pretty expensive to me',
 		client = {
-			image = "goldbar.png",
+			image = 'goldbar.png',
 		}
 	},
 
@@ -8868,214 +9541,214 @@ return {
 		stack = true,
 	},
 
-	["tacosauce"] = {
-		label = "Crack Taco Sauce",
+	['tacosauce'] = {
+		label = 'Crack Taco Sauce',
 		weight = 10,
 		stack = true,
 		close = false,
-		description = "",
+		description = '',
 		client = {
-			image = "tacosauce.png",
+			image = 'tacosauce.png',
 		}
 	},
 
 	['forceps'] = {
         label = 'forceps',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     -- ['gauze'] = {
         -- label = 'gauze',
-        -- description = "",
+        -- description = '',
         -- weight = 30,
         -- stack = true
     -- },
     ['iodine'] = {
         label = 'iodine',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     ['bandageg'] = {
         label = 'Bandage',
-        description = "Stops Bleeding",
-        weight = 30,
+        description = 'Stops Bleeding',
+        weight = 5,
         stack = true
     },
     ['pill'] = {
         label = 'pill',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     ['surgical_gloves'] = {
         label = 'surgical gloves',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     ['surgical_staple'] = {
         label = 'surgical staple',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     ['surgical_tray'] = {
         label = 'surgical tray',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     ['syringe'] = {
         label = 'Syringe',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
     ['tape'] = {
         label = 'Tape',
-        description = "",
+        description = '',
         weight = 30,
         stack = true
     },
 
 	--add these to ox_inventory/data/items.lua
 
-	["salmon"] = {
-		label = "Salmon",
+	['salmon'] = {
+		label = 'Salmon',
 		weight = 2,
 		stack = true,
 	},
 
-	["scrapcloth"] = {
-		label = "Scrap Cloth",
+	['scrapcloth'] = {
+		label = 'Scrap Cloth',
 		weight = 2,
 		stack = true,
 	},
 
-	["seaturtle"] = {
-		label = "Sea Turtle",
+	['seaturtle'] = {
+		label = 'Sea Turtle',
 		weight = 2,
 		stack = true,
 	},
 
-	["shad"] = {
-		label = "Shad",
+	['shad'] = {
+		label = 'Shad',
 		weight = 2,
 		stack = true,
 	},
 
-	["fishingrod"] = {
-		label = "Fishing Rod",
+	['fishingrod'] = {
+		label = 'Fishing Rod',
 		weight = 2,
 		stack = true,
 	},
 
-	["swordfish"] = {
-		label = "Sword Fish",
+	['swordfish'] = {
+		label = 'Sword Fish',
 		weight = 2,
 		stack = true,
 	},
 
-	["tilapia"] = {
-		label = "Tilapia",
+	['tilapia'] = {
+		label = 'Tilapia',
 		weight = 2,
 		stack = true,
 	},
 
-	["tunafish"] = {
-		label = "Tuna Fish",
+	['tunafish'] = {
+		label = 'Tuna Fish',
 		weight = 2,
 		stack = true,
 	},
 
-	["greatwhite"] = {
-		label = "Great White",
+	['greatwhite'] = {
+		label = 'Great White',
 		weight = 5,
 		stack = true,
 	},
 
-	["halibut"] = {
-		label = "Halibut",
+	['halibut'] = {
+		label = 'Halibut',
 		weight = 2,
 		stack = true,
 	},
 
-	["hammerhead"] = {
-		label = "Hammerhead",
+	['hammerhead'] = {
+		label = 'Hammerhead',
 		weight = 5,
 		stack = true,
 	},
 
-	["shark_bait"] = {
-		label = "Shark Bait",
+	['shark_bait'] = {
+		label = 'Shark Bait',
 		weight = 2,
 		stack = true,
 	},
 
-	["worm_bait"] = {
-		label = "Worms",
+	['worm_bait'] = {
+		label = 'Worms',
 		weight = 2,
 		stack = true,
 	},
 
-	["mahifish"] = {
-		label = "Mahi-Mahi",
+	['mahifish'] = {
+		label = 'Mahi-Mahi',
 		weight = 2,
 		stack = true,
 	},
 
-	["perch"] = {
-		label = "Perch",
+	['perch'] = {
+		label = 'Perch',
 		weight = 2,
 		stack = true,
 	},
 
-	["rainbowfish"] = {
-		label = "Rainbow Fish",
+	['rainbowfish'] = {
+		label = 'Rainbow Fish',
 		weight = 2,
 		stack = true,
 	},
 
-	["redfish"] = {
-		label = "Red Fish",
+	['redfish'] = {
+		label = 'Red Fish',
 		weight = 2,
 		stack = true,
 	},
 
-	["bluefish"] = {
-		label = "Blue Fish",
+	['bluefish'] = {
+		label = 'Blue Fish',
 		weight = 2,
 		stack = true,
 	},
 
-	["bass"] = {
-		label = "Bass",
+	['bass'] = {
+		label = 'Bass',
 		weight = 2,
 		stack = true,
 	},
 
-	["catfish"] = {
-		label = "Catfish",
+	['catfish'] = {
+		label = 'Catfish',
 		weight = 2,
 		stack = true,
 	},
 
-	["pufferfish"] = {
-		label = "Puffer Fish",
+	['pufferfish'] = {
+		label = 'Puffer Fish',
 		weight = 2,
 		stack = true,
 	},
 
-	["piranha"] = {
-		label = "Piranha",
+	['piranha'] = {
+		label = 'Piranha',
 		weight = 2,
 		stack = true,
 	},
 
-	["fishing_chest_money"] = {
-        label = "Chest",
+	['fishing_chest_money'] = {
+        label = 'Chest',
         weight = 2,
         stack = true,
     },
@@ -9088,568 +9761,574 @@ return {
 		description = 'Used to buy vehicles for dealership'
 	},
 
-	["vehiclekey"] = {
-		label = "Vehicle Keys",
+	['vehiclekey'] = {
+		label = 'Vehicle Keys',
 		description = 'This is a car key, take good care of it, if you lose it you probably won\'t be able to use your car',
 		weight = 10,
 		stack = false
 	},
 	
-	["keybag"] = {
-		label = "Key Bag",
+	['keybag'] = {
+		label = 'Key Bag',
 		description = 'This is a key bag, you can store all your keys in it',
 		weight = 10,
 		stack = false
 	},
 
-	["acrylic"] = {
-		label = "Acrylic",
+	['acrylic'] = {
+		label = 'Acrylic',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_blazer"] = {
-		label = "Basic Blazer",
+	['binco_basic_blazer'] = {
+		label = 'Basic Blazer',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_blouse"] = {
-		label = "Basic Blouse",
+	['binco_basic_blouse'] = {
+		label = 'Basic Blouse',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_bralet"] = {
-		label = "Basic Bralet",
+	['binco_basic_bralet'] = {
+		label = 'Basic Bralet',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_jean"] = {
-		label = "Basic Jean",
+	['binco_basic_jean'] = {
+		label = 'Basic Jean',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_jumpsuit"] = {
-		label = "Basic Jumpsuit",
+	['binco_basic_jumpsuit'] = {
+		label = 'Basic Jumpsuit',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_shirt"] = {
-		label = "Basic Shir",
+	['binco_basic_shirt'] = {
+		label = 'Basic Shir',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_short"] = {
-		label = "Basic Short",
+	['binco_basic_short'] = {
+		label = 'Basic Short',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_singlet"] = {
-		label = "Basic Singlet",
+	['binco_basic_singlet'] = {
+		label = 'Basic Singlet',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_sweatshirt"] = {
-		label = "Basic Sweatshirt",
+	['binco_basic_sweatshirt'] = {
+		label = 'Basic Sweatshirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_tshirt"] = {
-		label = "Basic Tshirt",
+	['binco_basic_tshirt'] = {
+		label = 'Basic Tshirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["binco_basic_vest"] = {
-		label = "Basic Vest",
+	['binco_basic_vest'] = {
+		label = 'Basic Vest',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["cashmere"] = {
-		label = "Cashmere",
+	['cashmere'] = {
+		label = 'Cashmere',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["cotton"] = {
-		label = "Cotton",
+	['cotton'] = {
+		label = 'Cotton',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["cupro"] = {
-		label = "Cupro",
+	['cupro'] = {
+		label = 'Cupro',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["fiber"] = {
-		label = "Acetate Fiber",
+	['fiber'] = {
+		label = 'Acetate Fiber',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["hemp"] = {
-		label = "Hemp",
+	['hemp'] = {
+		label = 'Hemp',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["iron"] = {
-		label = "Iron",
+	['iron'] = {
+		label = 'Iron',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["jute"] = {
-		label = "Jute",
+	['jute'] = {
+		label = 'Jute',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["knitting_wheel"] = {
-		label = "Knitting Wheel",
+	['knitting_wheel'] = {
+		label = 'Knitting Wheel',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["linen"] = {
-		label = "Linen",
+	['linen'] = {
+		label = 'Linen',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["lyocell"] = {
-		label = "Lyocell",
+	['lyocell'] = {
+		label = 'Lyocell',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["metal_bobbin"] = {
-		label = "Metal Bobbin",
+	['metal_bobbin'] = {
+		label = 'Metal Bobbin',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["nubuck"] = {
-		label = "Nubuck",
+	['nubuck'] = {
+		label = 'Nubuck',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["paint"] = {
-		label = "Gold Paint",
+	['paint'] = {
+		label = 'Gold Paint',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["polyester"] = {
-		label = "Polyester",
+	['polyester'] = {
+		label = 'Polyester',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_belt"] = {
-		label = "Classy Belt",
+	['ponsonbys_belt'] = {
+		label = 'Classy Belt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_chino"] = {
-		label = "Chino",
+	['ponsonbys_chino'] = {
+		label = 'Chino',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_jacket"] = {
-		label = "Suit Jacket",
+	['ponsonbys_jacket'] = {
+		label = 'Suit Jacket',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_shirt"] = {
-		label = "Grey Shirt",
+	['ponsonbys_shirt'] = {
+		label = 'Grey Shirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_suit"] = {
-		label = "Full Suit",
+	['ponsonbys_suit'] = {
+		label = 'Full Suit',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_tie"] = {
-		label = "Tie",
+	['ponsonbys_tie'] = {
+		label = 'Tie',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["ponsonbys_waistcoats"] = {
-		label = "Waistcoats",
+	['ponsonbys_waistcoats'] = {
+		label = 'Waistcoats',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["quality_silk"] = {
-		label = "Quality Silk",
+	['quality_silk'] = {
+		label = 'Quality Silk',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["rope_reel"] = {
-		label = "Rope Reel",
+	['rope_reel'] = {
+		label = 'Rope Reel',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["silver"] = {
-		label = "Silver",
+	['silver'] = {
+		label = 'Silver',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["spandex"] = {
-		label = "Spandex",
+	['spandex'] = {
+		label = 'Spandex',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["steel_bobbin"] = {
-		label = "Steel Bobbin",
+	['steel_bobbin'] = {
+		label = 'Steel Bobbin',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_bralet"] = {
-		label = "Suburban Bralet",
+	['suburban_bralet'] = {
+		label = 'Suburban Bralet',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_chain"] = {
-		label = "Chain",
+	['suburban_chain'] = {
+		label = 'Chain',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_dress"] = {
-		label = "Suburban Dress",
+	['suburban_dress'] = {
+		label = 'Suburban Dress',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_jogger"] = {
-		label = "Suburban Jogger",
+	['suburban_jogger'] = {
+		label = 'Suburban Jogger',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_shirt"] = {
-		label = "Suburban Shirt",
+	['suburban_shirt'] = {
+		label = 'Suburban Shirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_short"] = {
-		label = "Suburban Jean",
+	['suburban_short'] = {
+		label = 'Suburban Jean',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_skirt"] = {
-		label = "Skirt",
+	['suburban_skirt'] = {
+		label = 'Skirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_sweatshirt"] = {
-		label = "Suburban Sweatshirt",
+	['suburban_sweatshirt'] = {
+		label = 'Suburban Sweatshirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["suburban_tshirt"] = {
-		label = "Suburban Tshirt",
+	['suburban_tshirt'] = {
+		label = 'Suburban Tshirt',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["thin_needle"] = {
-		label = "Thin Needle",
+	['thin_needle'] = {
+		label = 'Thin Needle',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["wool"] = {
-		label = "Wool Yarn",
+	['wool'] = {
+		label = 'Wool Yarn',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["flight_artpiece"] = {
-		label = "ART",
+	['flight_artpiece'] = {
+		label = 'Art',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["flight_television"] = {
-		label = "TV",
+	['flight_television'] = {
+		label = 'TV',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["musicequipment"] = {
-		label = "Music Equipment",
+	['musicequipment'] = {
+		label = 'Music Equipment',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["pcequipment"] = {
-		label = "Computer Equipment",
+	['pcequipment'] = {
+		label = 'Computer Equipment',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["microwave"] = {
-		label = "Microwave",
+	['microwave'] = {
+		label = 'Microwave',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["coffeemaker"] = {
-		label = "Coffee Machine",
+	['coffeemaker'] = {
+		label = 'Coffee Machine',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["flight_painting"] = {
-		label = "Painting",
+	['flight_painting'] = {
+		label = 'Painting',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["flight_painting2"] = {
-		label = "Painting",
+	['flight_painting2'] = {
+		label = 'Painting',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["flight_guitar"] = {
-		label = "Guitar",
+	['flight_guitar'] = {
+		label = 'Guitar',
 		description = '',
 		weight = 10,
 		stack = true
 	},
-	["flight_suitcase"] = {
-		label = "Suitcase",
+	['flight_suitcase'] = {
+		label = 'Suitcase',
 		description = '',
 		weight = 10,
 		stack = true
 	},
 
-	["circuitboard"] = {
-		label = "Circuit Board",
+	['circuitboard'] = {
+		label = 'Circuit Board',
 		weight = 10,
 		stack = true
 	},
 
-	["screws"] = {
-		label = "Screws",
+	['screws'] = {
+		label = 'Screws',
 		weight = 10,
 		stack = true
 	},
 
-	["nutsbolts"] = {
-		label = "Nuts n Bolts",
+	['nutsbolts'] = {
+		label = 'Nuts n Bolts',
+		weight = 2,
+		stack = true
+	},
+	
+	['wires'] = {
+		label = 'Wires',
 		weight = 2,
 		stack = true
 	},
 
-	["threadneedle"] = {
-		label = "Thread n Needle",
+	['threadneedle'] = {
+		label = 'Thread n Needle',
 		weight = 10,
 		stack = true
 	},
 
-	["treasuremap"] = {
-		label = "Treasure Map",
+	['treasuremap'] = {
+		label = 'Treasure Map',
 		weight = 25,
 		stack = false,
 		close = true,
-		description = "X Marks the spot!",
+		description = 'X Marks the spot!',
 	},
 
-	["spade"] = {
-		label = "Spade",
+	['spade'] = {
+		label = 'Spade',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "use for digging!",
+		description = 'use for digging!',
 	},
 
-	["crypto_server"] = {
-		label = "Server",
+	['crypto_server'] = {
+		label = 'Server',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["graphic_card"] = {
-		label = "Graphics Card",
+	['graphic_card'] = {
+		label = 'Graphics Card',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["power_supply"] = {
-		label = "Power Supply",
+	['power_supply'] = {
+		label = 'Power Supply',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["diving_gear"] = {
-		label = "Diving Gear",
+	['diving_gear'] = {
+		label = 'Diving Gear',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["diving_fill"] = {
-		label = "Oxygen Tank",
+	['diving_fill'] = {
+		label = 'Oxygen Tank',
 		weight = 350,
 		stack = false,
 		close = true,
-		description = "",
+		description = '',
 	},
 
-	["oilp1"] = {
-		label = "Tier 1 Oil Pump", weight = 0, stack = false, close = true, description = "",
-		client = { image = "oilp1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "oilp", remove = false },
+	['oilp1'] = {
+		label = 'Tier 1 Oil Pump', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'oilp1.png', event = 'jim-mechanic:client:applyExtraPart', level = 1, mod = 'oilp', remove = false },
 	},
-	["oilp2"] = {
-		label = "Tier 2 Oil Pump", weight = 0, stack = false, close = true, description = "",
-		client = { image = "oilp2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "oilp", remove = false },
+	['oilp2'] = {
+		label = 'Tier 2 Oil Pump', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'oilp2.png', event = 'jim-mechanic:client:applyExtraPart', level = 2, mod = 'oilp', remove = false },
 	},
-	["oilp3"] = {
-		label = "Tier 3 Oil Pump", weight = 0, stack = false, close = true, description = "",
-		client = { image = "oilp3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "oilp", remove = false },
-	},
-
-	["drives1"] = {
-		label = "Tier 1 Drive Shaft", weight = 0, stack = false, close = true, description = "",
-		client = { image = "drives1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "drives", remove = false },
-	},
-	["drives2"] = {
-		label = "Tier 2 Drive Shaft", weight = 0, stack = false, close = true, description = "",
-		client = { image = "drives2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "drives", remove = false },
-	},
-	["drives3"] = {
-		label = "Tier 3 Drive Shaft", weight = 0, stack = false, close = true, description = "",
-		client = { image = "drives3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "drives", remove = false },
+	['oilp3'] = {
+		label = 'Tier 3 Oil Pump', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'oilp3.png', event = 'jim-mechanic:client:applyExtraPart', level = 3, mod = 'oilp', remove = false },
 	},
 
-	["cylind1"] = {
-		label = "Tier 1 Cylinder Head", weight = 0, stack = false, close = true, description = "",
-		client = { image = "cylind1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "cylind", remove = false },
+	['drives1'] = {
+		label = 'Tier 1 Drive Shaft', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'drives1.png', event = 'jim-mechanic:client:applyExtraPart', level = 1, mod = 'drives', remove = false },
 	},
-	["cylind2"] = {
-		label = "Tier 2 Cylinder Head", weight = 0, stack = false, close = true, description = "",
-		client = { image = "cylind2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "cylind", remove = false },
+	['drives2'] = {
+		label = 'Tier 2 Drive Shaft', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'drives2.png', event = 'jim-mechanic:client:applyExtraPart', level = 2, mod = 'drives', remove = false },
 	},
-	["cylind3"] = {
-		label = "Tier 3 Cylinder Head", weight = 0, stack = false, close = true, description = "",
-		client = { image = "cylind3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "cylind", remove = false },
-	},
-
-	["cables1"] = {
-		label = "Tier 1 Battery Cables", weight = 0, stack = false, close = true, description = "",
-		client = { image = "cables1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "cables", remove = false },
-	},
-	["cables2"] = {
-		label = "Tier 2 Battery Cables", weight = 0, stack = false, close = true, description = "",
-		client = { image = "cables2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "cables", remove = false },
-	},
-	["cables3"] = {
-		label = "Tier 3 Battery Cables", weight = 0, stack = false, close = true, description = "",
-		client = { image = "cables3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "cables", remove = false },
+	['drives3'] = {
+		label = 'Tier 3 Drive Shaft', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'drives3.png', event = 'jim-mechanic:client:applyExtraPart', level = 3, mod = 'drives', remove = false },
 	},
 
-	["fueltank1"] = {
-		label = "Tier 1 Fuel Tank", weight = 0, stack = false, close = true, description = "",
-		client = { image = "fueltank1.png", event = "jim-mechanic:client:applyExtraPart", level = 1, mod = "fueltank", remove = false },
+	['cylind1'] = {
+		label = 'Tier 1 Cylinder Head', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'cylind1.png', event = 'jim-mechanic:client:applyExtraPart', level = 1, mod = 'cylind', remove = false },
 	},
-	["fueltank2"] = {
-		label = "Tier 2 Fuel Tank", weight = 0, stack = false, close = true, description = "",
-		client = { image = "fueltank2.png", event = "jim-mechanic:client:applyExtraPart", level = 2, mod = "fueltank", remove = false },
+	['cylind2'] = {
+		label = 'Tier 2 Cylinder Head', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'cylind2.png', event = 'jim-mechanic:client:applyExtraPart', level = 2, mod = 'cylind', remove = false },
 	},
-	["fueltank3"] = {
-		label = "Tier 3 Fuel Tank", weight = 0, stack = false, close = true, description = "",
-		client = { image = "fueltank3.png", event = "jim-mechanic:client:applyExtraPart", level = 3, mod = "fueltank", remove = false },
+	['cylind3'] = {
+		label = 'Tier 3 Cylinder Head', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'cylind3.png', event = 'jim-mechanic:client:applyExtraPart', level = 3, mod = 'cylind', remove = false },
 	},
 
-	["antilag"] = {
-		label = "AntiLag", weight = 0, stack = false, close = true, description = "",
-		client = { image = "antiLag.png", event = "jim-mechanic:client:applyAntiLag", remove = false },
+	['cables1'] = {
+		label = 'Tier 1 Battery Cables', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'cables1.png', event = 'jim-mechanic:client:applyExtraPart', level = 1, mod = 'cables', remove = false },
+	},
+	['cables2'] = {
+		label = 'Tier 2 Battery Cables', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'cables2.png', event = 'jim-mechanic:client:applyExtraPart', level = 2, mod = 'cables', remove = false },
+	},
+	['cables3'] = {
+		label = 'Tier 3 Battery Cables', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'cables3.png', event = 'jim-mechanic:client:applyExtraPart', level = 3, mod = 'cables', remove = false },
+	},
+
+	['fueltank1'] = {
+		label = 'Tier 1 Fuel Tank', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'fueltank1.png', event = 'jim-mechanic:client:applyExtraPart', level = 1, mod = 'fueltank', remove = false },
+	},
+	['fueltank2'] = {
+		label = 'Tier 2 Fuel Tank', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'fueltank2.png', event = 'jim-mechanic:client:applyExtraPart', level = 2, mod = 'fueltank', remove = false },
+	},
+	['fueltank3'] = {
+		label = 'Tier 3 Fuel Tank', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'fueltank3.png', event = 'jim-mechanic:client:applyExtraPart', level = 3, mod = 'fueltank', remove = false },
+	},
+
+	['antilag'] = {
+		label = 'AntiLag', weight = 0, stack = false, close = true, description = '',
+		client = { image = 'antiLag.png', event = 'jim-mechanic:client:applyAntiLag', remove = false },
 	},
 	
-	["shield"] = {
-        label = "Police shield",
+	['shield'] = {
+        label = 'Police shield',
         weight = 8000,
         stack = false,
         consume = 0,
         client = {
-            export = "ND_Police.useShield",
+            export = 'ND_Police.useShield',
             add = function(total)
                 if total > 0 then
-                        pcall(function() return exports["ND_Police"]:hasShield(true) end)
+                        pcall(function() return exports['ND_Police']:hasShield(true) end)
                     end
                 end,
             remove = function(total)
                 if total < 1 then
-                    pcall(function() return exports["ND_Police"]:hasShield(false) end)
+                    pcall(function() return exports['ND_Police']:hasShield(false) end)
                 end
             end
         }
     },
 	
-	["tools"] = {
-		label = "Tools",
-        description = "Can be used to hotwire vehicles.",
+	['tools'] = {
+		label = 'Tools',
+        description = 'Can be used to hotwire vehicles.',
 		weight = 800,
 		consume = 1,
         stack = true,
         close = true,
 		client = {
-            export = "ND_Core.hotwire",
-            event = "ND_Police:unziptie"
+            export = 'ND_Core.hotwire',
+            event = 'ND_Police:unziptie'
 		}
 	},
 	
-    ["handcuffkey"] = {
-        label = "Handcuff key",
+    ['handcuffkey'] = {
+        label = 'Handcuff key',
         weight = 10,
         client = {
-            export = "ND_Police.uncuff"
+            export = 'ND_Police.uncuff'
         }
     },
 	
-	["grapple"] = {
-        label = "Grapple Gun",
+	['grapple'] = {
+        label = 'Grapple Gun',
         weight = 1000,
 		stack = false,
         close = true,
@@ -9659,83 +10338,83 @@ return {
 		label = 'To Go Bag',
 		weight = 100,
 		stack = false,
-		description = "To go bag from Burgershot container your food!"
+		description = 'To go bag from Burgershot container your food!'
 	},
 
-	["rawbeef"] = {
-		label = "Raw Beef",
+	['rawbeef'] = {
+		label = 'Raw Beef',
 		weight = 100,
 		stack = true,
-		description = "Raw beef!!",
+		description = 'Raw beef!!',
 	},
 
-	["rawchicken"] = {
-		label = "Raw Chicken",
+	['rawchicken'] = {
+		label = 'Raw Chicken',
 		weight = 100,
 		stack = true,
-		description = "Raw chicken breast!",
+		description = 'Raw chicken breast!',
 	},
 
-	["rawpotato"] = {
-		label = "Raw Potato",
+	['rawpotato'] = {
+		label = 'Raw Potato',
 		weight = 100,
 		stack = true,
-		description = "Uncooked Potato!",
+		description = 'Uncooked Potato!',
 	},
 
-	["rawonion"] = {
-		label = "Raw Onion",
+	['rawonion'] = {
+		label = 'Raw Onion',
 		weight = 100,
 		stack = true,
-		description = "Uncooked Onion!",
+		description = 'Uncooked Onion!',
 	},
 
-	["slicedonion"] = {
-		label = "Sliced Onion",
+	['slicedonion'] = {
+		label = 'Sliced Onion',
 		weight = 100,
 		stack = true,
-		description = "Onion Slices!",
+		description = 'Onion Slices!',
 	},
 
-	["rawbacon"] = {
-		label = "Raw Bacon",
+	['rawbacon'] = {
+		label = 'Raw Bacon',
 		weight = 100,
 		stack = true,
-		description = "Raw BACON!!",
+		description = 'Raw BACON!!',
 	},
 
-	["cookedbacon"] = {
-		label = "Cooked Bacon",
+	['cookedbacon'] = {
+		label = 'Cooked Bacon',
 		weight = 100,
 		stack = true,
-		description = "Cooked Bacon!",
+		description = 'Cooked Bacon!',
 	},
 
-	["burgerpatty"] = {
-		label = "Burger Patty",
+	['burgerpatty'] = {
+		label = 'Burger Patty',
 		weight = 100,
 		stack = true,
-		description = "Cooked Burger Patty!",
+		description = 'Cooked Burger Patty!',
 	},
 
-	["salt"] = {
-		label = "Salt",
+	['salt'] = {
+		label = 'Salt',
 		weight = 100,
 		stack = true,
-		description = "Salt!",
+		description = 'Salt!',
 	},
 
-	["breadcrumbs"] = {
-		label = "Breadcrumbs",
+	['breadcrumbs'] = {
+		label = 'Breadcrumbs',
 		weight = 100,
 		stack = true,
 	},
 
-	["burger_shotnuggets"] = {
-		label = "Burgershot Chicken Nuggets",
+	['burger_shotnuggets'] = {
+		label = 'Burgershot Chicken Nuggets',
 		weight = 100,
 		stack = true,
-		description = "Best nuggets in town!",
+		description = 'Best nuggets in town!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9744,11 +10423,11 @@ return {
 		},
 	},
 
-	["burger_fries"] = {
-		label = "Burgershot Fries",
+	['burger_fries'] = {
+		label = 'Burgershot Fries',
 		weight = 100,
 		stack = true,
-		description = "Best fries in town!",
+		description = 'Best fries in town!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9757,11 +10436,11 @@ return {
 		},
 	},
 
-	["burger_shotrings"] = {
-		label = "Burgershot Onion Rings",
+	['burger_shotrings'] = {
+		label = 'Burgershot Onion Rings',
 		weight = 100,
 		stack = true,
-		description = "Best onion rings in town!",
+		description = 'Best onion rings in town!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9770,11 +10449,11 @@ return {
 		},
 	},
 
-	["bacon_cheeseburger"] = {
-		label = "Bacon Cheeseburger",
+	['bacon_cheeseburger'] = {
+		label = 'Bacon Cheeseburger',
 		weight = 100,
 		stack = true,
-		description = "Burgershots finest!",
+		description = 'Burgershots finest!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9783,11 +10462,11 @@ return {
 		},
 	},
 
-	["burger_bleeder"] = {
-		label = "Bleeder Burger",
+	['burger_bleeder'] = {
+		label = 'Bleeder Burger',
 		weight = 100,
 		stack = true,
-		description = "Bleeder burger!",
+		description = 'Bleeder burger!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9796,11 +10475,11 @@ return {
 		},
 	},
 
-	["burger_heartstopper"] = {
-		label = "Heartstopper Burger",
+	['burger_heartstopper'] = {
+		label = 'Heartstopper Burger',
 		weight = 100,
 		stack = true,
-		description = "Heartstopper burger!",
+		description = 'Heartstopper burger!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9809,11 +10488,11 @@ return {
 		},
 	},
 
-	["burger_moneyshot"] = {
-		label = "Moneyshot Burger",
+	['burger_moneyshot'] = {
+		label = 'Moneyshot Burger',
 		weight = 100,
 		stack = true,
-		description = "Moneyshot burger!",
+		description = 'Moneyshot burger!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9822,11 +10501,11 @@ return {
 		},
 	},
 
-	["burger_torpedo"] = {
-		label = "Torpedo Burger",
+	['burger_torpedo'] = {
+		label = 'Torpedo Burger',
 		weight = 100,
 		stack = true,
-		description = "Torpedo burger!",
+		description = 'Torpedo burger!',
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
@@ -9835,20 +10514,20 @@ return {
 		},
 	},
 
-	["burgerbun"] = {
-		label = "Burger Buns",
+	['burgerbun'] = {
+		label = 'Burger Buns',
 		weight = 100,
 		stack = true,
 	},
 
-	["cheese"] = {
-		label = "Cheese",
+	['cheese'] = {
+		label = 'Cheese',
 		weight = 100,
 		stack = true,
 	},
 
-	["burger_softdrink"] = {
-		label = "Soft Drink",
+	['burger_softdrink'] = {
+		label = 'Soft Drink',
 		weight = 100,
 		stack = true,
 		client = {
@@ -9859,8 +10538,8 @@ return {
 		}
 	},
 
-	["burger_coffee"] = {
-		label = "Coffee",
+	['burger_coffee'] = {
+		label = 'Coffee',
 		weight = 100,
 		stack = true,
 		client = {
@@ -9871,61 +10550,60 @@ return {
 		}
 	},
 
-	["cola"] = {
-		label = "Cola",
+	['cola'] = {
+		label = 'Cola',
 		weight = 100,
 		stack = true,
 	},
 
-	["emptycup"] = {
-		label = "Empty Cup",
+	['emptycup'] = {
+		label = 'Empty Cup',
 		weight = 100,
 		stack = true,
 	},
 
-	["coffeebeans"] = {
-		label = "Coffee Beans",
+	['coffeebeans'] = {
+		label = 'Coffee Beans',
 		weight = 100,
 		stack = true,
 	},
 
-	["creamer"] = {
-		label = "Creamer",
+	['creamer'] = {
+		label = 'Creamer',
 		weight = 100,
 		stack = true,
 	},
 
-	["groundbeef"] = {
-		label = "Ground Beef",
+	['groundbeef'] = {
+		label = 'Ground Beef',
 		weight = 100,
 		stack = true,
 	},
 
-	["groundchicken"] = {
-		label = "Ground Chicken",
+	['groundchicken'] = {
+		label = 'Ground Chicken',
 		weight = 100,
 		stack = true,
 	},
 
-	["slicedpotato"] = {
-		label = "Sliced Potatoes",
+	['slicedpotato'] = {
+		label = 'Sliced Potatoes',
 		weight = 100,
 		stack = true,
 	},
 	
-	["towremote"] = {
-		label = "Tow Remote",
+	['towremote'] = {
+		label = 'Tow Remote',
 		weight = 100,
 		stack = true,
 	},
 
-	["reponote"] = {
-		label = "Tow Note",
+	['reponote'] = {
+		label = 'Tow Note',
 		weight = 100,
 		stack = false,
 	},
 	
-	-- Add items into ox_inventory/data/items.lua
 	['watering_can'] = {
 		label = 'Watering Can',
 		weight = 325,
@@ -9999,32 +10677,41 @@ return {
 	['regweed_joint'] = {
 		label = 'Weed Joint',
 		weight = 15,
+        allowArmed = true,
 	},
 
 	['bananakush_joint'] = {
 		label = 'Banana Kush Joint',
 		weight = 15,
+        allowArmed = true,
 	},
 
 	['purplehaze_joint'] = {
 		label = 'Purple Haze Joint',
 		weight = 15,
+        allowArmed = true,
 	},
 
 	['bluedream_joint'] = {
 		label = 'Blue Dream Joint',
 		weight = 15,
+        allowArmed = true,
 	},
 		
-		-- Add items into ox_inventory/data/items.lua
 	['auto_parts'] = {
 		label = 'Auto Parts',
 		weight = 5,
 	},
 
+	-- Add items into ox_inventory/data/items.lua
+	['recyclablematerial'] = {
+		label = 'Recyclable Material',
+		weight = 5,
+	},
+
 	['chop_lockpick'] = {
 		label = 'Lockpick',
-		weight = 150,
+		weight = 25,
 	},
 
 	['chop_torch'] = {
@@ -10042,6 +10729,7 @@ return {
 		weight = 150, 
 		stack = false, 
 		close = true, 
+        allowArmed = true,
 		description = 'Somekind of lost Phone?' 
 	},
 
@@ -10050,6 +10738,814 @@ return {
 		weight = 250, 
 		stack = false, 
 		close = true, 
+        allowArmed = true,
 		description = 'Somekind of lost VPN from Soleware?' 
+	},
+	
+	['flare'] = { 
+		label = 'Flare', 
+		weight = 150, 
+		stack = false, 
+		close = true, 
+        allowArmed = true,
+		description = 'I wonder what it will signal...?' 
+	},
+	
+	['ankle_monitor'] = {
+		label = 'Ankle Monitor',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['power_saw'] = {
+		label = 'Power Saw',
+		weight = 5000,
+		stack = true,
+		close = true,
+	},
+
+	['prisunflower'] = {
+		label = 'Prisunflower',
+		weight = 50,
+		stack = true,
+		close = false,
+	},
+
+	['prisunflower_seed'] = {
+		label = 'Prisunflower seed',
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	['jail_chemicals'] = {
+		label = 'Chemicals',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
+	['slammer'] = {
+		label = 'Slammer',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
+	['jail_lab_tools'] = {
+		label = 'Laboratory Equipment',
+		weight = 100,
+		stack = true,
+		close = false,
+	},
+
+	['jail_cigarette'] = {
+		label = 'Cigarette',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
+	['jail_lighter'] = {
+		label = 'Handmade lighter',
+		weight = 50,
+		stack = true,
+		close = true,
+	},
+
+	['jail_explosive'] = {
+		label = 'Handmade explosive',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['plastic_knife'] = {
+		label = 'Plastic knife',
+		weight = 5,
+		stack = true,
+		close = false,
+	},
+
+	['plastic_spoon'] = {
+		label = 'Plastic spoon',
+		weight = 5,
+		stack = true,
+		close = false,
+	},
+
+	['plastic_fork'] = {
+		label = 'Plastic fork',
+		weight = 5,
+		stack = true,
+		close = false,
+	},
+
+	['sharpened_plastic_knife'] = {
+		label = 'Sharpened plastic knife',
+		weight = 5,
+		stack = true,
+		close = true,
+	},
+
+	['sharpened_plastic_spoon'] = {
+		label = 'Sharpened plastic spoon',
+		weight = 5,
+		stack = true,
+		close = true,
+	},
+
+	['sharpened_plastic_fork'] = {
+		label = 'Sharpened plastic fork',
+		weight = 5,
+		stack = true,
+		close = true,
+	},
+
+	['freedom_chip'] = {
+		label = 'A32 Freedom Chip',
+		weight = 10,
+		stack = true,
+		close = true,
+	},
+
+	['fence_cutters'] = {
+		label = 'Fence cutters',
+		weight = 1000,
+		stack = true,
+		close = true,
+	},
+
+	['jail_shovel'] = {
+		label = 'Handmade shovel',
+		weight = 3000,
+		stack = true,
+		close = true,
+	},
+
+	['jail_security_card'] = {
+		label = 'Prison security card',
+		weight = 50,
+		stack = true,
+		close = false,
+	},
+
+	['tape'] = {
+		label = 'Tape',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
+	['electric_cable'] = {
+		label = 'Electric cable',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
+	['tin_foil'] = {
+		label = 'Tin foil',
+		weight = 10,
+		stack = true,
+		close = false,
+	},
+
+	['prison_mdt'] = {
+		label = 'Prison MDT',
+		weight = 100,
+		stack = true,
+		close = true,
+	},
+	
+	['craftingtable'] = {
+		label = 'Crafting Table',
+		weight = 5000,
+		stack = false,
+		close = true,
+	},
+	
+	['blueprint'] = {
+		label = 'Blueprint',
+		weight = 10,
+		stack = false,
+		close = false,
+		degrade = 40320,
+		decay = true,
+	},
+	
+	['blueprint_thermite'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_browning'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_dp9'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_p226'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_combatpistol'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_ammo38'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_ammo22'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	['blueprint_ammo50'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+
+	['rolledbp'] = {
+		label = 'Rolled Blueprint',
+		weight = 10,
+		consume = 1,
+		stack = false,
+		close = false,
+		client = 
+		{
+			image = 'rolledbp.png',
+		}
+	},
+	
+	
+	['kq_easteregg'] = {
+		label = 'Easter Egg',
+		weight = 5,
+		stack = true,
+		close = false,
+	},
+	
+	['glass_cutter'] = {
+	label = 'Glass Cutter',
+	weight = 1000,
+	stack = false,
+	close = false,
+	degrade = 40320,
+	decay = true,
+	description = '',
+	client = {
+	image = 'glass_cutter.png',
+	}
+	},
+
+	['giant_gem'] = {
+	label = 'Giant Gem',
+	weight = 2500,
+	stack = false,
+	close = false,
+	description = '',
+	client = {
+	image = 'giant_gem.png',
+	}
+	},
+
+	['pliers'] = {
+	label = 'Pliers',
+	weight = 125,
+	stack = false,
+	close = false,
+	description = 'A pair of pliers',
+	client = {
+		image = 'pliers.png',
+	}
+	},
+		
+	['flight_device'] = {
+	label = 'Flapper Hero',
+	weight = 125,
+	stack = false,
+	close = false,
+	description = '?????????',
+	client = {
+		image = 'flight_device.png',
+	}
+	},
+	
+
+	['flight_phone'] = {
+	label = 'Flight Phone',
+	weight = 300,
+	stack = false,
+	close = false,
+	description = '?????????',
+	client = {
+	image = 'flight_phone.png',
+	}
+	},
+	
+	['paletocardone'] = {
+	label = 'Paleto Card A',
+	weight = 0,
+	stack = false,
+	close = false,
+	description = 'A security card for Paleto Bank',
+	client = {
+	image = 'paletocardone.png',
+	}
+	},
+
+	['paletocardtwo'] = {
+	label = 'Paleto Card B',
+	weight = 0,
+	stack = false,
+	close = false,
+	description = 'A security card for Paleto Bank',
+	client = {
+	image = 'paletocardtwo.png',
+	}
+	},
+
+	['hackcard'] = {
+	label = 'Hackcard',
+	weight = 50,
+	stack = false,
+	close = false,
+	description = 'Hack card',
+	client = {
+	image = 'hackcard.png',
+	}
+	},
+
+	['paleto_key'] = {
+	label = 'Paleto Bank Key',
+	weight = 100,
+	stack = false,
+	close = false,
+	description = 'Paleto Bank Key',
+	client = {
+	image = 'paleto_key.png',
+	}
+	},
+	
+	["decryptor"] = {
+	label = "Decrypt-o-matic",
+	weight = 300,
+	stack = false,
+	close = false,
+	description = "Decrypt PIN based encryptions",
+	client = {
+	image = "decryptomatic.png",
+	}
+	},
+
+	['gps_tracker'] = {
+		label = 'Police Tracker',
+		weight = 0,
+		stack = false,
+		consume = 0,
+		server = {
+			export = 'Renewed-Dutyblips.toggleItem'
+		}
+	},
+
+	['smokegrenade'] = {
+		label = 'Smoke Grenade',
+		weight = 500,
+		stack = true,
+		consume = 0,
+	},
+
+	['prescription_pad'] = {        
+		label = 'Prescription Pad',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = 'For use by medical professionals only',    
+	},
+	['prescription'] = {        
+		label = 'Prescription Receipt',        
+		weight = 20,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},      
+	['adrenaline'] = {        
+		label = 'Adrenaline',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = 'The Label Has Been Ripped Off',    
+	},          
+	-- ['oxy'] = {        
+	-- 	label = 'Oxy',        
+	-- 	weight = 200,         
+	-- 	stack = false,        
+	-- 	close = true,        
+	-- 	description = 'The Label Has Been Ripped Off',    
+	-- },    
+	-- ['xanax'] = {        
+	-- 	label = 'Xanax',        
+	-- 	weight = 200,         
+	-- 	stack = false,        
+	-- 	close = true,        
+	-- 	description = nil,    
+	-- },
+	['steriods'] = {        
+		label = 'Steriods',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},
+	['cough_syrup'] = {        
+		label = 'Cough Syrup',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},
+	['lean_cup'] = {        
+		label = 'Styrofoam Cup',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},
+	['sprunk_bottle'] = {        
+		label = 'Bottle of Sprunk',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},
+	['lean'] = {        
+		label = 'Cup of Lean',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},
+	['narkan'] = {        
+		label = 'Narkan',        
+		weight = 200,         
+		stack = false,        
+		close = true,        
+		description = nil,    
+	},
+	['morphine30'] = {
+		label = 'Morphine 30MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	['morphine15'] = {
+		label = 'Morphine 15MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	['perc30'] = {
+		label = 'Percocet 30MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	['perc10'] = {
+		label = 'Percocet 10MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	['perc5'] = {
+		label = 'Percocet 5MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	['vic10'] = {
+		label = 'Vicodin 10MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	['vic5'] = {
+		label = 'Vicodin 5MG',
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+	
+	['prop_light_white'] = {
+		label = 'White Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_yellow'] = {
+		label = 'Yellow Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_orange'] = {
+		label = 'Orange Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_pink'] = {
+		label = 'Pink Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_purple'] = {
+		label = 'Purple Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_red'] = {
+		label = 'Red Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_blue'] = {
+		label = 'Blue Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['prop_light_green'] = {
+		label = 'Green Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_light.png',
+		}
+	},
+	
+	['bar_light_white'] = {
+		label = 'White Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_orange'] = {
+		label = 'Orange Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_pink'] = {
+		label = 'Pink Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_purple'] = {
+		label = 'Purple Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_red'] = {
+		label = 'Red Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_blue'] = {
+		label = 'Blue Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_green'] = {
+		label = 'Green Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+	
+	['bar_light_yellow'] = {
+		label = 'Yellow Prop Light',
+		weight = 500,
+		-- consume = 1,
+		stack = true,
+		close = false,
+		client = 
+		{
+			image = 'prop_tube.png',
+		}
+	},
+
+	['bee-hive'] = {
+		label = 'Bee Hive',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['bee-honey'] = {
+		label = 'Bee Honey',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['bee-house'] = {
+		label = 'Bee House',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['bee-queen'] = {
+		label = 'Bee Queen',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['bee-wax'] = {
+		label = 'Bee Wax',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['bee-worker'] = {
+		label = 'Bee Worker',
+		weight = 500,
+		stack = true,
+		close = true,
+	},
+
+	['revivekit'] = {
+		label = 'Revive Kit',
+		weight = 100,
+		stack = true,
+		close = true,
+		description = 'When your pal needs that pick me up',
 	},
 }

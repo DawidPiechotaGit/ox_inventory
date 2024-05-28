@@ -58,5 +58,29 @@ return {
 			minZ = 26.09,
 			maxZ = 28.23
 		}
-	}
+	},
+	{
+		coords = vec3(-389.8875, -338.9244, 31.4004),
+		target = { -- qtarget support
+			name = 'rhpd_evidence', -- name of zone must be uniuqe
+			loc = vec3(-389.8875, -338.9244, 31.4004),
+			length = 3.0,
+			width = 6.0,
+			heading = 320,
+			minZ = 30.09,
+			maxZ = 32.23
+		}
+	},
+	{
+		coords = vec3(-414.2267, -400.1201, 24.0953),
+		target = { -- qtarget support
+			name = 'rhpd_evidenceLower', -- name of zone must be uniuqe
+			loc = vec3(-414.2267, -400.1201, 24.0953),
+			length = 3.0,
+			width = 6.0,
+			heading = 172.4971,
+			minZ = 23.59,
+			maxZ = 24.53
+		}
+	},
 }

@@ -88,14 +88,25 @@ local ox_inventory = exports[shared.resource]
 -- Clientside item use functions
 -----------------------------------------------------------------------------------------------
 
+Item('craftingtable', function(data, slot)
+	local model = "gr_prop_gr_bench_04b"
+	local id = "CraftingTable"..math.random(111111,999999)
+	TriggerEvent("zat-crafting:client:PlaceTable", id, model)
+end)
+
 Item('bandage', function(data, slot)
 	local maxHealth = GetEntityMaxHealth(cache.ped)
 	local health = GetEntityHealth(cache.ped)
 	ox_inventory:useItem(data, function(data)
 		if data then
 			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
-			lib.notify({ description = 'You feel better already' })
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
+			lib.notify({ title = 'Bandage', description = 'You wrapped up your wounds the best you could' })
 		end
 	end)
 end)
@@ -108,7 +119,12 @@ Item('bandaid_batman', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -122,7 +138,12 @@ Item('bandaid_camo', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -136,7 +157,12 @@ Item('bandaid_kitty', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -150,7 +176,12 @@ Item('bandaid_racecar', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -164,7 +195,12 @@ Item('bandaid_strawberry', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -178,7 +214,12 @@ Item('bandaid_mlp', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -192,7 +233,12 @@ Item('bandaid_unicorn', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -206,7 +252,12 @@ Item('bandaid_barbie', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -220,7 +271,12 @@ Item('bandaid_tmnt', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -234,7 +290,12 @@ Item('bandaid_power', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -248,7 +309,12 @@ Item('bandaid_teentitan', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -262,7 +328,12 @@ Item('bandaid_galaxy', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -276,7 +347,12 @@ Item('bandaid_mustache', function(data, slot)
 			--TriggerEvent('mythic_hospital:client:RemoveBleed')
             --TriggerEvent('mythic_hospital:client:ResetLimbs')
 			SetEntityHealth(cache.ped, math.min(maxHealth, health + 50))
-			TriggerEvent('hospital:client:HealInjuries', 'full')
+			-- TriggerEvent('hospital:client:HealInjuries', 'full')
+			TriggerEvent("aty_damages:healBleeding")
+			TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 			lib.notify({ description = 'You feel better already' })
 		end
 	end)
@@ -398,9 +474,43 @@ Item('medkit', function(data, slot)
 			if data then
 				--TriggerEvent('mythic_hospital:client:RemoveBleed')
 				--TriggerEvent('mythic_hospital:client:ResetLimbs')
-				TriggerEvent('hospital:client:HealInjuries', 'full')
+				-- TriggerEvent('hospital:client:HealInjuries', 'full')
+				TriggerEvent("aty_damages:healBleeding")
+				TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+			    TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+			    TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+			    TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 				SetEntityHealth(cache.ped, math.min(maxHealth, health + 100))
 				lib.notify({ description = 'You feel better already...' })
+			end
+		end)
+	-- end
+end)
+
+Item('tourniquet', function(data, slot)
+		ox_inventory:useItem(data, function(data)
+			if data then
+				--TriggerEvent('mythic_hospital:client:RemoveBleed')
+				--TriggerEvent('mythic_hospital:client:ResetLimbs')
+				-- TriggerEvent('hospital:client:HealInjuries', 'full')
+				TriggerEvent("aty_damages:healBleeding")
+				lib.notify({ title = 'Bleeding', description = 'Stopped the bleeding' })
+			end
+		end)
+end)
+
+Item('gauze', function(data, slot)
+	local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
+	-- if health < maxHealth then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				--TriggerEvent('mythic_hospital:client:RemoveBleed')
+				--TriggerEvent('mythic_hospital:client:ResetLimbs')
+				-- TriggerEvent('hospital:client:HealInjuries', 'full')
+				TriggerEvent("aty_damages:healBleeding")
+				SetEntityHealth(cache.ped, math.min(maxHealth, health + 20))
+				lib.notify({title = 'Gauze', description = 'Stopped bleeding and wrapped up wound' })
 			end
 		end)
 	-- end
@@ -414,7 +524,12 @@ Item('ifak', function(data, slot)
 			if data then
 				--TriggerEvent('mythic_hospital:client:RemoveBleed')
 				--TriggerEvent('mythic_hospital:client:ResetLimbs')
-				TriggerEvent('hospital:client:HealInjuries', 'full')
+				-- TriggerEvent('hospital:client:HealInjuries', 'full')
+				TriggerEvent("aty_damages:healBleeding")
+				TriggerEvent("aty_damages:heal", "leftarm") -- you can heal a players part.
+				TriggerEvent("aty_damages:heal", "rightarm") -- you can heal a players part.
+				TriggerEvent("aty_damages:heal", "leftleg") -- you can heal a players part.
+				TriggerEvent("aty_damages:heal", "rightleg") -- you can heal a players part.
 				SetEntityHealth(cache.ped, math.min(maxHealth, health + 100))
 				lib.notify({ description = 'You feel better already...' })
 			end
@@ -483,6 +598,32 @@ Item('topdress', function(data, slot)
 end)
 
 Item('trousers', function(data, slot)
+	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
+	if PlayerData.sex ~= slot.metadata.sex then
+	  	-- Trigger your notify here
+    	-- Text: This piece of clothing is not for "..sexLabel[PlayerData.sex]     
+	end
+  
+	TriggerEvent("mbt_metaclothes:checkDress", {
+		type = "Drawables",
+		index = slot.metadata.index, 
+		sex = PlayerData.sex,
+		cb = function(canDress)
+			if not canDress then
+				-- Trigger your notify here
+				return 
+			end 
+			
+			ox_inventory:useItem(data, function(data)
+				if data then
+					TriggerEvent("mbt_metaclothes:applyDress", slot.metadata)
+				end
+			end)
+		end
+	})
+end)
+
+Item('mask', function(data, slot)
 	local sexLabel = { ["m"] = "man", ["f"] = "woman"}
 	if PlayerData.sex ~= slot.metadata.sex then
 	  	-- Trigger your notify here
@@ -715,7 +856,7 @@ Item('bodyarmor_2', function(data, slot) -- Adds 60% of body armor
 		ox_inventory:useItem(data, function(data)
 			if data then
 				SetPlayerMaxArmour(PlayerData.id, 100)
-				SetPedArmour(cache.ped, 60)
+				SetPedArmour(cache.ped, GetPedArmour(cache.ped) + 60)
 			end
 		end)
 	end
@@ -756,6 +897,22 @@ Item('redwoodcigs', function(data, slot)
     end)
 end)
 
+Item('bmcoffe', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            TriggerEvent('oxinv:client:coffee')
+        end
+    end)
+end)
+
+RegisterNetEvent('oxinv:client:coffee', function()
+    if exports['ps-buffs']:HasBuff("intelligence") then
+	     lib.notify({ description = 'You are already energised, that coffee didnt help you' })
+	else
+        exports['ps-buffs']:AddBuff("intelligence", 900000)
+	end
+end)
+
 -- TESTING CIG
 -- Item('redwoods', function(data, slot)
 --     ox_inventory:useItem(data, function(data)
@@ -764,6 +921,99 @@ end)
 --         end
 --     end)
 -- end)
+
+Item('blueprint_thermite', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("thermite")
+        end
+    end)
+end)
+
+Item('blueprint_browning', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("WEAPON_BROWNING")
+        end
+    end)
+end)
+
+Item('blueprint_dp9', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("WEAPON_DP9")
+        end
+    end)
+end)
+
+Item('blueprint_p226', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("WEAPON_P226")
+        end
+    end)
+end)
+
+Item('blueprint_combatpistol', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("WEAPON_COMBATPISTOL")
+        end
+    end)
+end)
+
+Item('blueprint_ammo38', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("box_ammo_ammo38")
+        end
+    end)
+end)
+
+Item('blueprint_ammo22', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("box_ammo_ammo22")
+        end
+    end)
+end)
+
+Item('blueprint_ammo50', function(data, slot)
+    ox_inventory:useItem(data, function(data)
+        if data then
+            exports["zat-crafting"]:GiveBlueprint("box_ammo_ammo50")
+        end
+    end)
+end)
+
+Item('rolledbp', function(data, slot)
+	local randNum = math.random(1, 100)
+    ox_inventory:useItem(data, function(data)
+        if data then
+			if randNum > 90 then
+				exports["zat-crafting"]:GiveBlueprint("box_ammo_ammo50")
+			elseif randNum > 80 then
+				exports["zat-crafting"]:GiveBlueprint("box_ammo_ammo22")
+			elseif randNum > 70 then
+				exports["zat-crafting"]:GiveBlueprint("box_ammo_ammo38")
+			elseif randNum > 60 then
+				exports["zat-crafting"]:GiveBlueprint("WEAPON_COMBATPISTOL")
+			elseif randNum > 50 then
+				exports["zat-crafting"]:GiveBlueprint("WEAPON_P226")
+			elseif randNum > 40 then
+				exports["zat-crafting"]:GiveBlueprint("WEAPON_DP9")
+			elseif randNum > 30 then
+				exports["zat-crafting"]:GiveBlueprint("WEAPON_BROWNING")
+			elseif randNum > 20 then
+				exports["zat-crafting"]:GiveBlueprint("thermite")
+			elseif randNum > 10 then
+				exports["zat-crafting"]:GiveBlueprint("WEAPON_DP9")
+			elseif randNum > 0 then
+				exports["zat-crafting"]:GiveBlueprint("WEAPON_DP9")
+			end
+        end
+    end)
+end)
 
 Item('photo', function(data, slot)
     TriggerEvent('wert-camera:client:use-photo', slot.metadata.photourl)

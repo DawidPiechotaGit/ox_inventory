@@ -1,3 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
 if not lib then return end
 
 local Items = require 'modules.items.server'
@@ -154,15 +156,34 @@ lib.callback.register('ox_inventory:openShop', function(source, data)
 end)
 
 local function canAffordItem(inv, currency, price)
-	local canAfford = price >= 0 and Inventory.GetItem(inv, currency, false, true) >= price
+
+	if currency == 'bank' then
+        -- local player = server.GetPlayerFromId()
+		-- local player = server.Functions.GetPlayer(source)
+		local player = QBCore.Functions.GetPlayer(source)
+        -- canAfford = price >= 0 and player.getAccount('bank').money >= price
+		canAfford = price >= 0 and player.PlayerData.money.bank >= price
+    else
+		local canAfford = price >= 0 and Inventory.GetItem(inv, currency, false, true) >= price
+	end
 
 	return canAfford or {
 		type = 'error',
-		description = locale('cannot_afford', ('%s%s'):format((currency == 'money' and locale('$') or math.groupdigits(price)), (currency == 'money' and math.groupdigits(price) or ' '..Items(currency).label)))
+		description = locale('cannot_afford', ('%s%s'):format((currency == 'money' or currency == 'bank' and locale('$') or math.groupdigits(price)), (currency == 'money' or currency == 'bank' and math.groupdigits(price) or ' '..Items(currency).label)))
 	}
 end
 
 local function removeCurrency(inv, currency, price)
+
+	if currency == 'bank' then
+        -- local player = server.GetPlayerFromId()
+		
+		local Player = QBCore.Functions.GetPlayer(source)
+		-- local player = server.Functions.GetPlayer(source)
+		return Player.Functions.RemoveMoney('bank', price, 'Shop purchase')
+        -- return Player.removeAccountMoney('bank', price, 'shop purchase')
+    end
+
 	Inventory.RemoveItem(inv, currency, price)
 end
 
@@ -249,7 +270,6 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 					shopId = shopId,
 					toInventory = playerInv.id,
 					toSlot = data.toSlot,
-					fromSlot = fromData,
 					itemName = fromData.name,
 					metadata = metadata,
 					count = count,
@@ -268,7 +288,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
 				if server.syncInventory then server.syncInventory(playerInv) end
 
-				local message = locale('purchased_for', count, metadata?.label or fromItem.label, (currency == 'money' and locale('$') or math.groupdigits(price)), (currency == 'money' and math.groupdigits(price) or ' '..Items(currency).label))
+				local message = locale('purchased_for', count, fromItem.label, (currency == 'money' or currency == 'bank' and locale('$') or math.groupdigits(price)), (currency == 'money' or currency == 'bank' and math.groupdigits(price) or ' '..Items(currency).label))
 
 				if server.loglevel > 0 then
 					if server.loglevel > 1 or fromData.price >= 500 then

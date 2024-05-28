@@ -14,6 +14,15 @@ RegisterNetEvent('QBCore:Player:SetPlayerData', function(data)
 
 	local groups = PlayerData.groups
 
+	if GetResourceState("av_gangs") == 'started' then
+		gang = lib.callback.await('av_gangs:getData', 500)
+		if gang and gang.name then
+			currentGang = gang.name
+			PlayerData.groups[currentGang] = 0
+			OnPlayerData('groups', PlayerData.groups)
+		end
+	end
+
 	if not groups[data.job.name] or not groups[data.gang.name] or groups[data.job.name] ~= data.job.grade.level or groups[data.gang.name] ~= data.gang.grade.level then
 		PlayerData.groups = {
 			[data.job.name] = data.job.grade.level,
@@ -80,4 +89,16 @@ end)
 
 AddEventHandler(('__cfx_export_qb-inventory_HasItem'), function(setCB)
 	setCB(hasItem)
+end)
+
+RegisterNetEvent('av_gangs:update', function(gang)
+	if currentGang and PlayerData.groups[currentGang] then
+		PlayerData.groups[currentGang] = nil
+	end
+	if gang and gang.name then
+		currentGang = gang.name
+		PlayerData.groups[currentGang] = 0
+	end
+	print(json.encode(PlayerData.groups))
+	OnPlayerData('groups', PlayerData.groups)
 end)

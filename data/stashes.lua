@@ -32,6 +32,44 @@ return {
 	},
 
 	{
+		coords = vec3(-394.8202, -366.3374, 23.5460),
+		target = {
+			loc = vec3(-395.6202, -366.3374, 23.5460),
+			length = 1.2,
+			width = 5.6,
+			heading = 261,
+			minZ = 22.00,
+			maxZ = 26.00,
+			label = 'Open personal locker'
+		},
+		name = 'policelocker2',
+		label = 'Personal locker',
+		owner = true,
+		slots = 30,
+		weight = 50000,
+		groups = shared.police
+	},
+	
+	{
+		coords = vec3(-416.5218, -366.6467, 24.5422),
+		target = {
+			loc = vec3(-416.5218, -366.6467, 24.5422),
+			length = 1.2,
+			width = 5.6,
+			heading = 171,
+			minZ = 24.00,
+			maxZ = 25.00,
+			label = 'Open personal locker'
+		},
+		name = 'policelockerRHPD2',
+		label = 'Personal locker',
+		owner = true,
+		slots = 30,
+		weight = 50000,
+		groups = shared.police
+	},
+
+	{
 		coords = vec3(-597.3321, -1048.3860, 22.3442),
 		target = {
 			loc = vec3(-597.3321, -1048.3860, 22.3442),
@@ -143,6 +181,24 @@ return {
 		weight = 50000,
 		groups = {['ambulance'] = 0}
 	},
+	
+	{
+		coords = vec3(-664.8822, 323.8856, 92.1831),
+		target = {
+			loc = vec3(-664.8822, 323.8856, 92.1831),
+			length = 1.6,
+			width = 2.8,
+			heading = 355,
+			minZ = 92.34,
+			maxZ = 93.74
+		},
+		name = 'emslockereclipse',
+		label = 'Personal Locker',
+		owner = true,
+		slots = 30,
+		weight = 50000,
+		groups = {['ambulance'] = 0}
+	},
 
 	-- {
 	-- 	coords = vec3(301.3, -600.23, 43.28),
@@ -199,6 +255,24 @@ return {
 		weight = 1500000,
 		groups = {['ambulance'] = 0}
 	},
+	
+	{
+		coords = vec3(-679.0902, 328.2096, 88.0168),
+		target = {
+			loc = vec3(-679.0902, 328.2096, 88.0168),
+			length = 1.0,
+			width = 1.0,
+			heading = 169,
+			minZ = 87.50,
+			maxZ = 88.50
+		},
+		name = 'amublancestasheclipse',
+		label = 'Ambulance Stash',
+		owner = false,
+		slots = 300,
+		weight = 5000000,
+		groups = {['ambulance'] = 0}
+	},
 
 	{
 		coords = vec3(424.6951, -1910.9301, 25.3599),
@@ -219,23 +293,23 @@ return {
 		groups = {['taco'] = 0}
 	},
 
-	{
-		coords = vec3(-319.5605, -163.9627, 37.9990),
-		target = {
-			loc = vec3(-319.5605, -163.9627, 37.9990),
-			length = 2.0,
-			width = 3.0,
-			heading = 195,
-			minZ = 37.34,
-			maxZ = 39.74
-		},
-		name = 'autostorage',
-		label = 'LSC Stash',
-		owner = false,
-		slots = 100,
-		weight = 150000,
-		groups = {['auto'] = 0}
-	},
+	-- {
+		-- coords = vec3(-319.5605, -163.9627, 37.9990),
+		-- target = {
+			-- loc = vec3(-319.5605, -163.9627, 37.9990),
+			-- length = 2.0,
+			-- width = 3.0,
+			-- heading = 195,
+			-- minZ = 37.34,
+			-- maxZ = 39.74
+		-- },
+		-- name = 'lscstorage',
+		-- label = 'LSC Stash',
+		-- owner = false,
+		-- slots = 100,
+		-- weight = 150000,
+		-- groups = {['lsc'] = 0}
+	-- },
 
 	{
 		coords = vec3(128.6684, -3013.6704, 6.0409),
@@ -273,23 +347,23 @@ return {
 		groups = {['bennys'] = 0}
 	},
 
-	{
-		coords = vec3(-319.5605, -163.9627, 37.9990),
-		target = {
-			loc = vec3(-319.5605, -163.9627, 37.9990),
-			length = 2.0,
-			width = 3.0,
-			heading = 195,
-			minZ = 37.34,
-			maxZ = 39.74
-		},
-		name = 'lscstorage',
-		label = 'LSC Stash',
-		owner = false,
-		slots = 100,
-		weight = 150000,
-		groups = {['lsc'] = 0}
-	},
+	-- {
+		-- coords = vec3(-319.5605, -163.9627, 37.9990),
+		-- target = {
+			-- loc = vec3(-319.5605, -163.9627, 37.9990),
+			-- length = 2.0,
+			-- width = 3.0,
+			-- heading = 195,
+			-- minZ = 37.34,
+			-- maxZ = 39.74
+		-- },
+		-- name = 'lscstorage',
+		-- label = 'LSC Stash',
+		-- owner = false,
+		-- slots = 100,
+		-- weight = 150000,
+		-- groups = {['lsc'] = 0}
+	-- },
 
 	{
 		coords = vec3(-632.1817, 224.8099, 81.9874),
@@ -326,5 +400,24 @@ return {
 		weight = 50000,
 		groups = {['vu'] = 0}
 	},
+	
+	{
+        coords = vec3(-33.2646, -1098.7592, 27.2744),
+        target = {
+            loc = vec3(-33.2646, -1098.7592, 27.2744),
+            length = 1.2,
+            width = 5.6,
+            heading = 0,
+            minZ = 29.49,
+            maxZ = 32.09,
+            label = 'Open personal locker'
+        },
+        name = 'ballaslocker',
+        label = 'Ballas Locker',
+        owner = true,
+        slots = 70,
+        weight = 70000,
+        groups = { ['ballas'] = 0 } -- always use 0 for gangs
+    },
 
 }

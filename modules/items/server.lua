@@ -523,37 +523,88 @@ end)
 -- Ammo
 Item('box_ammo_ammo9', function(event, item, inventory, data, slot)
 	if event == 'usedItem' then
-    	Inventory.AddItem(inventory, 'ammo-9', 120)
+    	Inventory.AddItem(inventory, 'ammo-9', 30)
+	end
+end)
+
+Item('box_ammo_ammo50', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+    	Inventory.AddItem(inventory, 'ammo-50', 20)
 	end
 end)
 
 Item('box_ammo_ammo45', function(event, item, inventory, data, slot)
 	if event == 'usedItem' then
-    	Inventory.AddItem(inventory, 'ammo-45', 120)
+    	Inventory.AddItem(inventory, 'ammo-45', 30)
+	end
+end)
+
+Item('box_ammo_ammo38', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+    	Inventory.AddItem(inventory, 'ammo-38', 20)
+	end
+end)
+
+Item('box_ammo_ammo22', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+    	Inventory.AddItem(inventory, 'ammo-22', 20)
 	end
 end)
 
 Item('box_ammo_rifle1', function(event, item, inventory, data, slot)
 	if event == 'usedItem' then
-    	Inventory.AddItem(inventory, 'ammo-rifle', 120)
+    	Inventory.AddItem(inventory, 'ammo-rifle', 30)
 	end
 end)
 
 Item('box_ammo_rifle2', function(event, item, inventory, data, slot)
 	if event == 'usedItem' then
-    	Inventory.AddItem(inventory, 'ammo-rifle2', 120)
+    	Inventory.AddItem(inventory, 'ammo-rifle2', 30)
 	end
 end)
 
 Item('box_ammo_shotgun', function(event, item, inventory, data, slot)
 	if event == 'usedItem' then
-    	Inventory.AddItem(inventory, 'ammo-shotgun', 60)
+    	Inventory.AddItem(inventory, 'ammo-shotgun', 20)
 	end
 end)
 
 Item('box_ammo_sniper', function(event, item, inventory, data, slot)
 	if event == 'usedItem' then
-    	Inventory.AddItem(inventory, 'ammo-sniper', 30)
+    	Inventory.AddItem(inventory, 'ammo-sniper', 5)
+	end
+end)
+
+Item('cargo_box_race', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+		Inventory.AddItem(inventory, 'vpn', 1)
+		Inventory.AddItem(inventory, 'dongle', 1)
+		Inventory.AddItem(inventory, 'transponder', 1)
+		Inventory.AddItem(inventory, 'duffelbag', 1)
+		Inventory.AddItem(inventory, 'harness', 1)
+		Inventory.AddItem(inventory, 'ctclassictaco', 10)
+		Inventory.AddItem(inventory, 'bsslushy', 10)
+	end
+end)
+
+Item('cargo_box_cargo', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+		Inventory.AddItem(inventory, 'weapon_browning', 3)
+		Inventory.AddItem(inventory, 'bodyarmor_3', 10)
+		Inventory.AddItem(inventory, 'tourniquet', 5)
+		Inventory.AddItem(inventory, 'ifak', 15)
+		Inventory.AddItem(inventory, 'revivekit', 3)
+		Inventory.AddItem(inventory, 'ammo-9', 750)
+	end
+end)
+
+Item('cargo_box_end', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+    	Inventory.AddItem(inventory, 'money', 50000)
+		Inventory.AddItem(inventory, 'weapon_g17c', 3)
+		Inventory.AddItem(inventory, 'rolledbp', 1)
+		Inventory.AddItem(inventory, 'at_suppressor_light', 1)
+		Inventory.AddItem(inventory, 'bluedream_joint', 5)
 	end
 end)
 

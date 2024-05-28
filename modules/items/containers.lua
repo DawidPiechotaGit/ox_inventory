@@ -57,6 +57,12 @@ setContainerProperties('paperbag', {
 	blacklist = { 'testburger' }
 })
 
+-- setContainerProperties('duffelbag', {
+-- 	slots = 15,
+-- 	maxWeight = 50000,
+-- 	blacklist = { 'duffelbag' }
+-- })
+
 setContainerProperties('pizzabox', {
 	slots = 5,
 	maxWeight = 1000,
@@ -78,13 +84,13 @@ setContainerProperties('tacobag', {
 setContainerProperties('bm_cup_holders', {
 	slots = 6,
 	maxWeight = 5000,
-	whitelist = { 'coffe', 'bmstrawtea','bmtea','taco','bmfrenchlatte','bmhotchoc','frapcc','iceoffee','frap' }
+	whitelist = { 'bmcoffe', 'bmstrawtea','bmtea','bmfrenchlatte','bmhotchoc','bmfrapcc','bmiceoffee','bmfrap' }
 })
 
 setContainerProperties('bm_dessert_box', {
-	slots = 5,
+	slots = 6,
 	maxWeight = 5000,
-	whitelist = { 'cookies', 'croissant','glazeddonut','muffin2','creampie','bmcheesecake','bmchocstrawcake','bmchocstraw' }
+	whitelist = { 'bmcookies', 'bmcroissant','bmglazeddonut','bmmuffin2','bmcreampie','bmcheesecake','bmchocstrawcake','bmchocstraw' }
 })
 
 setContainerProperties('sowjar', {
@@ -94,7 +100,7 @@ setContainerProperties('sowjar', {
 })
 
 setContainerProperties('hollowtaco', {
-	slots = 3,
+	slots = 1,
 	maxWeight = 5000,
 	blacklist = { 'weapon_glock', 'weapon_glock20','weapon_bat','weapon_bats','weapon_flashlight','WEAPON_TASER','WEAPON_DP9','WEAPON_LTL','WEAPON_CERAMICPISTOL','WEAPON_BROWNING','weapon_dildo' }
 })
@@ -103,6 +109,23 @@ setContainerProperties('wallet', {
 	slots = 5,
 	maxWeight = 3000,
 	whitelist = { 'id_card', 'driver_license', 'weaponlicense', 'money' }
+})
+
+setContainerProperties('burgerbag', {
+	slots = 10,
+	maxWeight = 2500,
+	whitelist = { 
+		'burger_fries',
+		'burger_shotrings',
+		'burger_shotnuggets',
+		'bacon_cheeseburger',
+		'burger_bleeder',
+		'burger_heartstopper',
+		'burger_moneyshot',
+		'burger_torpedo',
+		'burger_softdrink',
+		'burger_coffee',
+	}
 })
 
 return containers

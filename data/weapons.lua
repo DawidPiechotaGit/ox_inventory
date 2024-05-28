@@ -1,5 +1,6 @@
 return {
 	Weapons = {
+
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
 			weight = 3300,
@@ -14,7 +15,13 @@ return {
 			ammoname = 'WEAPON_SNOWBALL',
 		},
 
-
+		['WEAPON_TECPISTOL'] = {
+			label = 'Tactical SMG',
+			weight = 1500,
+			durability = 0.075,
+			ammoname = 'ammo-9',
+		},
+		
 		['WEAPON_BROWNING'] = {
 			label = 'Browning Pistol',
 			weight = 700,
@@ -22,16 +29,57 @@ return {
 			ammoname = 'ammo-9',
 			caliber = '9x19mm Parabellum',
 		},
-
-		['WEAPON_TECPISTOL'] = {
-			label = 'Tactical SMG',
-			weight = 1500,
-			durability = 0.075,
+		
+		['WEAPON_SIG'] = {
+			label = 'Sig M18',
+			weight = 700,
+			durability = 0.22,
 			ammoname = 'ammo-9',
+			caliber = '9x19mm Parabellum',
+		},
+		
+		['WEAPON_VP9'] = {
+			label = 'VP9',
+			weight = 700,
+			durability = 0.22,
+			ammoname = 'ammo-9',
+			caliber = '9x19mm Parabellum',
+		},
+		
+		['WEAPON_P226'] = {
+			label = 'P226',
+			weight = 700,
+			durability = 0.22,
+			ammoname = 'ammo-9',
+			caliber = '9x19mm Parabellum',
+		},
+		
+		['WEAPON_G17C'] = {
+			label = 'Glock G17C',
+			weight = 700,
+			durability = 0.22,
+			ammoname = 'ammo-9',
+			caliber = '9x19mm Parabellum',
 		},
 
 		['WEAPON_GLOCK'] = {
 			label = 'PD Glock',
+			weight = 700,
+			durability = 0.22,
+			ammoname = 'ammo-9',
+			caliber = '9x19mm Parabellum',
+		},
+
+		['WEAPON_FNX45'] = {
+			label = 'FNX45',
+			weight = 700,
+			durability = 0.22,
+			ammoname = 'ammo-9',
+			caliber = '9x19mm Parabellum',
+		},
+
+		['WEAPON_SP45'] = {
+			label = 'SP45',
 			weight = 700,
 			durability = 0.22,
 			ammoname = 'ammo-9',
@@ -59,6 +107,14 @@ return {
 			weight = 700,
 			durability = 0.22,
 			ammoname = 'ammo-heavysniper'
+		},
+
+		['WEAPON_AK47M'] = {
+			label = 'AK47M',
+			weight = 4400,
+			durability = 0.05,
+			ammoname = 'ammo-rifle2',
+			caliber = '7.62x51mm NATO',
 		},
 
 		['WEAPON_ASSAULTRIFLE2'] = {
@@ -187,7 +243,6 @@ return {
 			caliber = '5.56x45mm NATO',
 		},
 
-
 		['WEAPON_ADVANCEDRIFLE'] = {
 			label = 'Groza',
 			weight = 3100,
@@ -198,7 +253,7 @@ return {
 		['WEAPON_APPISTOL'] = {
 			label = 'Glock 18c',
 			weight = 1400,
-			durability = 0.1,
+			durability = 0.2,
 			ammoname = 'ammo-9',
 		},
 
@@ -793,7 +848,7 @@ return {
 			label = 'SNS Pistol',
 			weight = 465,
 			durability = 0.1,
-			ammoname = 'ammo-45'
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SNSPISTOL_MK2'] = {
@@ -836,7 +891,7 @@ return {
 		},
 
 		['WEAPON_TASER'] = {
-			label = 'Tazer',
+			label = 'Taser',
 			weight = 227,
 			durability = 0.1,
 			ammoname = 'ammo-taser'
@@ -909,6 +964,7 @@ return {
 					`COMPONENT_AT_PI_FLSH`,
 					`COMPONENT_AT_PI_FLSH_02`,
 					`COMPONENT_AT_PI_FLSH_03`,
+					`COMPONENT_SIG_FLSH_01`
 				},
 				usetime = 2500
 			}
@@ -919,12 +975,12 @@ return {
 			weight = 280,
 			type = 'muzzle',
 			client = {
-                image = 'at_suppressor.png',
 				component = {
 					`COMPONENT_AT_PI_SUPP`,
 					`COMPONENT_AT_PI_SUPP_02`,
 					`COMPONENT_CERAMICPISTOL_SUPP`,
-					`COMPONENT_PISTOLXM3_SUPP`
+					`COMPONENT_PISTOLXM3_SUPP`,
+					`COMPONENT_SIG_SUPP_01`
 				},
 				usetime = 2500
 			}
@@ -935,12 +991,11 @@ return {
 			weight = 280,
 			type = 'muzzle',
 			client = {
-                image = 'at_suppressor.png',
 				component = {
 					`COMPONENT_AT_AR_SUPP`,
 					`COMPONENT_AT_AR_SUPP_02`,
 					`COMPONENT_AT_SR_SUPP`,
-					`COMPONENT_AT_SR_SUPP_03`,
+					`COMPONENT_AT_SR_SUPP_03`
 				},
 				usetime = 2500
 			}
@@ -983,18 +1038,20 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_extended.png',
 				component = {
 					`COMPONENT_APPISTOL_CLIP_02`,
 					`COMPONENT_CERAMICPISTOL_CLIP_02`,
 					`COMPONENT_COMBATPISTOL_CLIP_02`,
 					`COMPONENT_HEAVYPISTOL_CLIP_02`,
+					`COMPONENT_HEAVYPISTOL_CLIP_01`,
 					`COMPONENT_PISTOL_CLIP_02`,
 					`COMPONENT_PISTOL_MK2_CLIP_02`,
 					`COMPONENT_PISTOL50_CLIP_02`,
 					`COMPONENT_SNSPISTOL_CLIP_02`,
 					`COMPONENT_SNSPISTOL_MK2_CLIP_02`,
 					`COMPONENT_VINTAGEPISTOL_CLIP_02`,
+					`COMPONENT_1911A_CLIP_01`,
+					`COMPONENT_SIG_CLIP_02`
 				},
 				usetime = 2500
 			}
@@ -1005,7 +1062,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_extended.png',
 				component = {
 					`COMPONENT_ASSAULTSMG_CLIP_02`,
 					`COMPONENT_COMBATPDW_CLIP_02`,
@@ -1024,7 +1080,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_ASSAULTSHOTGUN_CLIP_02`,
 					`COMPONENT_HEAVYSHOTGUN_CLIP_02`,
@@ -1038,7 +1093,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_ADVANCEDRIFLE_CLIP_02`,
 					`COMPONENT_ASSAULTRIFLE_CLIP_02`,
@@ -1053,7 +1107,6 @@ return {
 					`COMPONENT_SPECIALCARBINE_CLIP_02`,
 					`COMPONENT_SPECIALCARBINE_MK2_CLIP_02`,
 					`COMPONENT_TACTICALRIFLE_CLIP_02`,
-					`COMPONENT_BATTLERIFLE_CLIP_02`,
 				},
 				usetime = 2500
 			}
@@ -1064,7 +1117,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_GUSENBERG_CLIP_02`,
 					`COMPONENT_MG_CLIP_02`,
@@ -1080,7 +1132,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_HEAVYSNIPER_MK2_CLIP_02`,
 					`COMPONENT_MARKSMANRIFLE_CLIP_02`,
@@ -1095,7 +1146,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_COMBATPDW_CLIP_03`,
 					`COMPONENT_MACHINEPISTOL_CLIP_03`,
@@ -1110,7 +1160,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_HEAVYSHOTGUN_CLIP_03`
 				},
@@ -1123,7 +1172,6 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
-                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_ASSAULTRIFLE_CLIP_03`,
 					`COMPONENT_COMPACTRIFLE_CLIP_03`,
@@ -1249,7 +1297,8 @@ return {
 					`COMPONENT_AT_PI_RAIL`,
 					`COMPONENT_AT_PI_RAIL_02`,
 					`COMPONENT_AT_SIGHTS`,
-					`COMPONENT_AT_SIGHTS_SMG`
+					`COMPONENT_AT_SIGHTS_SMG`,
+					`COMPONENT_SIG_SCOPE_01`
 				},
 				usetime = 2500
 			}
@@ -1966,7 +2015,7 @@ return {
 		},
 
 		['ammo-taser'] = {
-			label = 'Tazer Cartridge',
+			label = 'Taser Cartridge',
 			weight = 2,
 		},
 

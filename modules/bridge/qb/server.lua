@@ -13,6 +13,20 @@ AddEventHandler('QBCore:Server:OnJobUpdate', function(source, job)
 	inventory.player.groups[job.name] = job.grade.level
 end)
 
+AddEventHandler('av_gangs:update', function(source, gang)
+	local inventory = Inventory(source)
+	if not inventory then return end
+	if inventory.player.gang then
+		inventory.player.groups[inventory.player.gang] = nil
+	end
+	if gang and gang.name then
+		inventory.player.gang = gang.name
+		inventory.player.groups[gang.name] = 0
+	else
+		inventory.player.gang = nil
+	end
+end)
+
 AddEventHandler('QBCore:Server:OnGangUpdate', function(source, gang)
 	local inventory = Inventory(source)
 	if not inventory then return end
@@ -116,6 +130,13 @@ function server.setPlayerData(player)
 		[player.job.name] = player.job.grade.level,
 		[player.gang.name] = player.gang.grade.level
 	}
+
+	if GetResourceState('av_gangs') == "started" then
+		local gang = exports['av_gangs']:getGang(player.source)
+		if gang and gang.name then
+			groups[gang.name] = 0
+		end
+	end
 
 	return {
 		source = player.source,
