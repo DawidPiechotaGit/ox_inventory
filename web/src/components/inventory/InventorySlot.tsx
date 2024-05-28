@@ -183,7 +183,8 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                       })} kg`
                   : ''}
               </p> */}
-              <p>{item.count >= 2 ? (item.count ? `X` + item.count.toLocaleString('en-us') : '') : ''}</p>
+              {/* <p>{item.count >= 2 ? (item.count ? `x` + item.count.toLocaleString('en-us') : '') : ''}</p> */}
+              <p>{item.count >= 2 ? (item.count ? item.count.toLocaleString('en-us') : '') : ''}</p>
             </div>
           </div>
           <div>
@@ -225,9 +226,9 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
               </>
             )}
             <div className="inventory-slot-label-box">
-              <div className="inventory-slot-label-text">
+              {/* <div className="inventory-slot-label-text">
                 {item.metadata?.label ? item.metadata.label : Items[item.name]?.label || item.name}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

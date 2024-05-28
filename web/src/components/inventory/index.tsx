@@ -51,7 +51,7 @@ const Inventory: React.FC = () => {
           </div> */}
           {/* <div className="inventory-wrapper-container"> */}
           <LeftInventory />
-          <InventoryControl />
+          {/* <InventoryControl /> */}
           <RightInventory />
           <Tooltip />
           <InventoryContext />

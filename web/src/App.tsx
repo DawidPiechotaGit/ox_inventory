@@ -28,6 +28,7 @@ debugData([
             slot: 1,
             name: 'iron',
             weight: 3000,
+            durability: 500,
             metadata: {
               description: `name: Svetozar Miletic  \n Gender: Male`,
               ammo: 3,
@@ -43,8 +44,9 @@ debugData([
             slot: 4,
             name: 'water',
             weight: 100,
-            count: 1,
-            metadata: { description: 'Generic item description' },
+            count: 55,
+            durability: 100,
+            metadata: { description: 'Generic item description', durability: 96 },
           },
           { slot: 5, name: 'water', weight: 100, count: 1 },
           {
@@ -52,6 +54,7 @@ debugData([
             name: 'backwoods',
             weight: 100,
             count: 1,
+            degrade: 500,
             metadata: {
               label: 'Russian Cream',
               imageurl: 'https://i.imgur.com/2xHhTTz.png',

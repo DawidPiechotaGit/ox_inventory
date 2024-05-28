@@ -5,6 +5,7 @@ import InventorySlot from './InventorySlot';
 import { getTotalWeight } from '../../helpers';
 import { useAppSelector } from '../../store';
 import { useIntersection } from '../../hooks/useIntersection';
+import InventoryControl from './InventoryControl';
 
 const PAGE_SIZE = 30;
 
@@ -46,20 +47,27 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
           </>
         </div> */}
         <div>
-          <div className="inventory-grid-header-wrapper">
-            <span className="infobox">
-              <i className={inventory.type == 'player' ? 'fa-solid fa-person' : 'fas fa-box-open'}></i>
-            </span>
-            <a>{inventory.label}</a>
-            {inventory.maxWeight && (
-              <p>
-                {weight / 1000}
-                <span>/{inventory.maxWeight / 1000}</span>
-              </p>
-            )}
+          <div className='inventory-grid-header-wrapper-new'>
+            <div className="inventory-grid-header-wrapper">
+              <div className='header-title'>
+              {/* <span className="infobox">
+                <i className={inventory.type == 'player' ? 'fa-solid fa-person' : 'fas fa-box-open'}></i>
+              </span> */}
+              <a>{inventory.label}</a>
+              </div>
+              <div className='weight-text'>
+              {inventory.maxWeight && (
+                <p>
+                  {weight / 1000}
+                  <span>/{inventory.maxWeight / 1000}</span>
+                </p>
+              )}
+              </div>
+            </div>
+            {direction === 'left' ? (<InventoryControl />): (<div></div>)}
           </div>
         </div>
-        <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
+        {/* <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} /> */}
 
         {inventory.type == 'player' ? (
           <div

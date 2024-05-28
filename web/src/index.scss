@@ -14,7 +14,7 @@ $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
-$gridRows: 5;
+$gridRows: 4;
 $gridSize: 10.79vh;
 $gridGap: 4px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
@@ -152,17 +152,19 @@ button:active {
   // background-image: url('nui://ox_inventory/web/images/pngfirst.png');
   width: 100%;
   height: 100%;
-  background-color: #17202efc;
+  // background-color: #17202eaf;
+  // background-color:   rgb(4 4 4 / 95%);
+  background-color: rgb(0 0 0);
   position: absolute;
   background-repeat: repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .inventory-grid-header-wrapper a {
   position: relative;
   color: #19abca;
-  font-size: 23px;
+  font-size: 18px;
   text-shadow: #19abca 1px 0 10px;
   letter-spacing: -1;
   font-style: bold;
@@ -209,7 +211,7 @@ button:active {
     position: relative;
     transition: 200ms;
     // padding: 12px 8px;
-    padding: 15px 8px;
+    padding: 15px 5px;
     font-family: $customFont;
     font-size: 12px;
     font-weight: 400;
@@ -218,13 +220,17 @@ button:active {
     outline: none;
     border: none;
     color: #fff;
-    width: 30%;
+    // width: 30%;
     height: 0.2vh;
-    box-shadow: 0px 0px 20px 4px rgba(39, 53, 71, 0.816);
+    width: 3vw;
+    // box-shadow: 0px 0px 5px 4px rgba(19, 25, 34, 0.555);
+    margin-right: 3px;  
     // background-color: $seconaryColor;
     // background: radial-gradient(#36495ed0, #1a1f24d0);
     // background: #1a1f2496;
-    background: radial-gradient(circle, rgba(67, 82, 122, 0.288), rgba(48, 64, 85, 0.329));
+    // background: radial-gradient(circle, rgba(67, 82, 122, 0.288), rgba(48, 64, 85, 0.329));
+    background: radial-gradient(circle, rgb(22 30 37 / 68%), rgb(22 27 35 / 67%));
+    background: #182131e6;
     // border: solid 1px #19abca;
     &:focus-within {
       background-color: $secondaryColorDark;
@@ -419,7 +425,7 @@ button:active {
   padding: 15px;
   padding: 0px 15px 0px 15px;
   border-radius: 5px;
-  gap: 10px;
+  gap: 2px;
 }
 .inventory-grid-header-wrapper {
   // position: relative;
@@ -428,11 +434,13 @@ button:active {
   // left: 8%;
   // top: 40%;
   // transform: rotate(-90deg);
-  display: flex;
-  flex-direction: row;
+  // flex-direction: row;
   // justify-content: space-between;
-  gap: 20px;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   // justify-content: space-between;
   p {
     font-size: 26px;
@@ -441,16 +449,30 @@ button:active {
     font-weight: 400;
     margin-left: auto;
     position: relative;
-    top: 30px;
+    // top: 30px;
   }
 }
 
-.inventory-grid-header-wrapper > p {
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.inventory-grid-header-wrapper-new {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weight-text > p {
   text-align: end;
-  font-size: 26px;
+  font-size: 12px;
   font-weight: 400;
   span {
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 700; 
     color: rgb(109, 187, 218);
   }
 }
@@ -466,7 +488,8 @@ button:active {
 
 .inventory-grid-container-right {
   display: grid;
-  height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
+  // height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
+  height: $containerSize;
   grid-template-columns: repeat($gridCols, $gridSize);
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;
@@ -476,17 +499,22 @@ button:active {
 
 .shop-inventory-grid-container {
   display: grid;
-  height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
-  grid-template-columns: repeat(2, 24vh);
-  grid-auto-rows: $gridSize + 0.24vh;
+  // height: calc(#{5} * #{$gridSize + 0.22vh} + #{5} * #{$gridGap});
+  // grid-template-columns: repeat(2, 24vh);
+  height: $containerSize;
+  grid-template-columns: repeat($gridCols, $gridSize);
+  grid-auto-rows: $gridSize + 0.22vh;
+  // grid-auto-rows: $gridSize + 0.24vh;
   gap: $gridGap;
   overflow-y: scroll;
 }
 
 // inventory slots
 .inventory-slot {
-  background-color: #1a1f24d0;
-  background: radial-gradient(circle, rgba(67, 82, 122, 0.288), rgba(48, 64, 85, 0.329));
+  // background-color: #1a1f24d0;
+  background-color: #182131e6;
+  // background: radial-gradient(circle, rgba(67, 82, 122, 0.678), rgba(48, 64, 85, 0.671));
+  // background: radial-gradient(circle, rgb(22 30 37 / 68%), rgb(22 27 35 / 67%));
   // background: radial-gradient(#36495ed0, #1a1f24d0);
   // background: #1a1f24d0;
   background-repeat: no-repeat;
@@ -529,8 +557,8 @@ button:active {
 
 .inventory-slot-number {
   position: absolute;
-  right: -9%;
-  top: 40%;
+  right: 76%;
+  top: 8%;
   // background-color: #3c5268;
   background: radial-gradient(circle, rgba(67, 82, 122, 0.288), rgba(48, 64, 85, 0.329));
   // color: #19abca;
@@ -540,8 +568,8 @@ button:active {
   height: 12px;
   // border-top-left-radius: 0.25vh;
   // border-bottom-right-radius: 0.25vh;
-  border: 1px solid #19abca;
-  border-radius: 2px;
+  // border: 1px solid #19abca;
+  // border-radius: 2px;
   padding: 3px;
   // font-size: 12px;
   // font-weight: 700;
@@ -598,9 +626,10 @@ button:active {
   // width: 100%;
   p {
     font-size: 15px;
-    font-weight: 400;
-    color: #19abca;
+    font-weight: 100;
+    // color: #19abca;
     font-family: teko;
+    letter-spacing: 1px;
   }
 }
 
@@ -620,11 +649,11 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-left: 75%;
+  // padding-left: 75%;
   p {
     // font-size: 25px;
-    font-size: 18px;
-    text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    text-shadow: 0.1vh 0.1vh 0 rgba(42, 44, 40, 0.7);
     // font-weight: 300;
     font-weight: 100;
   }
@@ -703,11 +732,11 @@ button:active {
 
 .hotslot-wrapper {
   display: grid;
-  width: $gridSize;
+  // width: $gridSize;
   // height: calc(#{$gridRows} * #{11.5vh + 0.22vh} + #{$gridRows} * #{$gridGap});
-  height: 5.79vh;
-  grid-template-columns: repeat(1, 9.79vh);
-  grid-template-rows: repeat(5, 9.79vh);
+  // height: 5.79vh;
+  grid-template-columns: repeat(5, 10.79vh);
+  grid-template-rows: repeat(1, 10.79vh);
   gap: $gridGap;
 }
 
@@ -715,6 +744,7 @@ button:active {
   // background-color: rgba(12, 12, 17, 0.966);
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   // padding: 5px;
@@ -722,9 +752,9 @@ button:active {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   // height: $containerSize;
-  height: 5.79vh;
+  // height: 5.79vh;  
   // width: 23.5%;
-  margin-top: 17%;
+  margin-top: 2%;
   // margin-bottom: 6.5px;
   // right: 30%;
   // top: 11.5vh;
@@ -739,19 +769,28 @@ button:active {
   margin-top: 8px;
 }
 
+.hotslot-text {
+  width: 100%;
+  height: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
 .hotslot-header {
   text-align: start;
+  text-align: center  ;
   // font-size: 20px;
   // font-weight: 400;
-  font-size: 13px;
-  font-weight: 300;
+  color: #19abca;
+  font-size: 18px;
+  text-shadow: #19abca 1px 0 10px;
+  font-weight: 700;
   padding-left: 2.8%;
-  text-transform: uppercase;
   position: absolute;
-  top: 24vh;
-  // left: -4.8vh;
-  left: -5vh;
-  transform: rotate(-90deg);
+  // top: 24vh;
+  // left: -5vh;
+  // transform: rotate(-90deg);
 }
 
 .fade-line1 {
@@ -842,8 +881,10 @@ button:active {
 
 .durability-bar {
   background: rgba(0, 0, 0, 0.199);
-  height: 3px;
+  height: 6px;
   overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .weight-bar {

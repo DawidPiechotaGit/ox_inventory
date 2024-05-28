@@ -6,7 +6,7 @@ export const Items: {
   water: {
     name: 'water',
     close: false,
-    label: 'VODA',
+    label: 'Water',
     stack: true,
     usable: true,
     count: 0,
