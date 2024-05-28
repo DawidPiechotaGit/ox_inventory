@@ -5,8 +5,8 @@ import { selectItemAmount, setItemAmount } from '../../store/inventory';
 import { DragSource } from '../../typings';
 import { onUse } from '../../dnd/onUse';
 import { onGive } from '../../dnd/onGive';
-import { fetchNui } from '../../utils/fetchNui';
-import { Locale } from '../../store/locale';
+// import { fetchNui } from '../../utils/fetchNui';
+// import { Locale } from '../../store/locale';
 import UsefulControls from './UsefulControls';
 
 const InventoryControl: React.FC = () => {

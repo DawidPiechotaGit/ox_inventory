@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Inventory } from '../../typings';
-import WeightBar from '../utils/WeightBar';
+// import WeightBar from '../utils/WeightBar';
 import InventorySlot from './InventorySlot';
 import { getTotalWeight } from '../../helpers';
 import { useAppSelector } from '../../store';

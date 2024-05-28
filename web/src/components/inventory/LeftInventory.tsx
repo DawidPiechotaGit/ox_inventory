@@ -2,7 +2,6 @@ import InventoryGrid from './InventoryGrid';
 import { useAppSelector } from '../../store';
 import { selectLeftInventory } from '../../store/inventory';
 import HotslotInventory from './HotslotInventory';
-import InventoryControl from './InventoryControl';
 
 const LeftInventory: React.FC = () => {
   const leftInventory = useAppSelector(selectLeftInventory);
