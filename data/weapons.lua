@@ -1,5 +1,19 @@
 return {
 	Weapons = {
+		['WEAPON_BATTLERIFLE'] = {
+			label = 'Battle Rifle',
+			weight = 3300,
+			durability = 0.03,
+			ammoname = 'ammo-rifle2',
+		},
+
+		['WEAPON_SNOWLAUNCHER'] = {
+			label = 'Snowball Launcher',
+			weight = 1000,
+			durability = 0.03,
+			ammoname = 'WEAPON_SNOWBALL',
+		},
+
 
 		['WEAPON_BROWNING'] = {
 			label = 'Browning Pistol',
@@ -7,6 +21,13 @@ return {
 			durability = 0.22,
 			ammoname = 'ammo-9',
 			caliber = '9x19mm Parabellum',
+		},
+
+		['WEAPON_TECPISTOL'] = {
+			label = 'Tactical SMG',
+			weight = 1500,
+			durability = 0.075,
+			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_GLOCK'] = {
@@ -165,6 +186,7 @@ return {
 			ammoname = 'ammo-rifle',
 			caliber = '5.56x45mm NATO',
 		},
+
 
 		['WEAPON_ADVANCEDRIFLE'] = {
 			label = 'Groza',
@@ -918,7 +940,7 @@ return {
 					`COMPONENT_AT_AR_SUPP`,
 					`COMPONENT_AT_AR_SUPP_02`,
 					`COMPONENT_AT_SR_SUPP`,
-					`COMPONENT_AT_SR_SUPP_03`
+					`COMPONENT_AT_SR_SUPP_03`,
 				},
 				usetime = 2500
 			}
@@ -1031,6 +1053,7 @@ return {
 					`COMPONENT_SPECIALCARBINE_CLIP_02`,
 					`COMPONENT_SPECIALCARBINE_MK2_CLIP_02`,
 					`COMPONENT_TACTICALRIFLE_CLIP_02`,
+					`COMPONENT_BATTLERIFLE_CLIP_02`,
 				},
 				usetime = 2500
 			}
