@@ -20,7 +20,7 @@ debugData([
         id: 'test',
         type: 'player',
         slots: 50,
-        label: 'Bob Smith',
+        label: 'PlayerPlayerPlayer Smith',
         weight: 3000,
         maxWeight: 5000,
         items: [
@@ -64,9 +64,9 @@ debugData([
       },
       rightInventory: {
         id: 'shop',
-        type: 'stash',
+        type: 'shop',
         slots: 5000,
-        label: 'Bob Smith',
+        label: 'Dawid SmithSmithSmith',
         weight: 3000,
         maxWeight: 35000,
         items: [
@@ -74,11 +74,9 @@ debugData([
             slot: 1,
             name: 'lockpick',
             weight: 500,
-            price: 300,
+            price: 30000,
             ingredients: {
-              iron: 5,
-              copper: 12,
-              powersaw: 0.1,
+              water: 5,
             },
             metadata: {
               description: 'Simple lockpick that breaks easily and can pick basic door locks',

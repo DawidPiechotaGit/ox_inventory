@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Inventory } from '../../typings';
-// import WeightBar from '../utils/WeightBar';
+import WeightBar from '../utils/WeightBar';
 import InventorySlot from './InventorySlot';
 import { getTotalWeight } from '../../helpers';
 import { useAppSelector } from '../../store';
 import { useIntersection } from '../../hooks/useIntersection';
-import InventoryControl from './InventoryControl';
+// import InventoryControl from './InventoryControl';
 
 const PAGE_SIZE = 30;
 
@@ -50,24 +50,28 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
           <div className='inventory-grid-header-wrapper-new'>
             <div className="inventory-grid-header-wrapper">
               <div className='header-title'>
-              {/* <span className="infobox">
-                <i className={inventory.type == 'player' ? 'fa-solid fa-person' : 'fas fa-box-open'}></i>
-              </span> */}
-              <a>{inventory.label}</a>
+                <span className="infobox">
+                  <i className={inventory.type == 'player' ? 'fa-solid fa-person' : 'fas fa-box-open'}></i>
+                </span> 
+                <div className='square'>
+                </div>
+                <a>{inventory.label}</a>
               </div>
-              <div className='weight-text'>
-              {inventory.maxWeight && (
-                <p>
-                  {weight / 1000}
-                  <span>/{inventory.maxWeight / 1000}</span>
-                </p>
-              )}
+              <div>
+                <div className='weight-text'>
+                  {inventory.maxWeight && (
+                    <p>
+                      {weight / 1000}
+                      <span>/{inventory.maxWeight / 1000}</span>
+                    </p>
+                  )}
+                </div>
+                <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
               </div>
             </div>
-            {direction === 'left' ? (<InventoryControl />): (<div></div>)}
           </div>
         </div>
-        {/* <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} /> */}
+        
 
         {inventory.type == 'player' ? (
           <div

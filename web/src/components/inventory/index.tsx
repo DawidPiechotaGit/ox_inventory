@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useNuiEvent from '../../hooks/useNuiEvent';
-import InventoryControl from './InventoryControl';
+// import InventoryControl from './InventoryControl';
 import InventoryHotbar from './InventoryHotbar';
 import { useAppDispatch } from '../../store';
 import { refreshSlots, setAdditionalMetadata, setupInventory } from '../../store/inventory';
@@ -8,7 +8,7 @@ import { useExitListener } from '../../hooks/useExitListener';
 import type { Inventory as InventoryProps } from '../../typings';
 import RightInventory from './RightInventory';
 import LeftInventory from './LeftInventory';
-import HotslotInventory from './HotslotInventory';
+// import HotslotInventory from './HotslotInventory';
 import Tooltip from '../utils/Tooltip';
 import { closeTooltip } from '../../store/tooltip';
 import InventoryContext from './InventoryContext';

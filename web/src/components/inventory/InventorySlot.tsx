@@ -225,11 +225,11 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                 )}
               </>
             )}
-            <div className="inventory-slot-label-box">
-              {/* <div className="inventory-slot-label-text">
-                {item.metadata?.label ? item.metadata.label : Items[item.name]?.label || item.name}
-              </div> */}
-            </div>
+            {/* <div className="inventory-slot-label-box">
+              <div className="inventory-slot-label-text">
+               {item.metadata?.label ? item.metadata.label : Items[item.name]?.label || item.name}
+              </div>
+            </div> */}
           </div>
         </div>
       )}
