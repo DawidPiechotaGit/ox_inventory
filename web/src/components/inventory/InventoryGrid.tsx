@@ -27,7 +27,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory; direction: 'left' | 'right
   }, [entry]);
   return (
     <>
-      <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
+      <div className={direction === 'left' ? 'inventory-grid-wrapper inventory-grid-wrapper-left' : 'inventory-grid-wrapper'} style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
         {/* <div className="inventory-grid-container"> */}
         {/* <div className={direction === 'left' ? 'inventory-grid-container' : 'inventory-grid-container-right'}>
           <>

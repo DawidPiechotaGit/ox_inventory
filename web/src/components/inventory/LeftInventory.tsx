@@ -2,7 +2,7 @@ import InventoryGrid from './InventoryGrid';
 import { useAppSelector } from '../../store';
 import { selectLeftInventory } from '../../store/inventory';
 import HotslotInventory from './HotslotInventory';
-import InventoryControl from './InventoryControl';
+// import InventoryControl from './InventoryControl';
 
 const LeftInventory: React.FC = () => {
   const leftInventory = useAppSelector(selectLeftInventory);
@@ -15,7 +15,7 @@ const LeftInventory: React.FC = () => {
           <div className="hotslot-text">
             {/* <div className="fade-line1"></div> */}
             <p className="hotslot-header">Hotbar</p>
-            <InventoryControl />
+            {/* <InventoryControl /> */}
             <div className="fade-line2"></div>
           </div>
           <HotslotInventory />
